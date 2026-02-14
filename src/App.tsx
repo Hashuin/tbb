@@ -1235,6 +1235,7 @@ const content = {
       empty: 'Aun no hay registros para esta seccion.',
       interested: 'interesados',
       needHelp: 'necesitan ayuda',
+      andMore: '+ {count} más',
       gearRequests: 'Solicitudes de equipo',
       bossesTitle: 'Interes por boss',
       activitiesTitle: 'Interes por actividades',
@@ -1491,6 +1492,7 @@ const content = {
       empty: 'No entries yet for this section.',
       interested: 'interested',
       needHelp: 'need help',
+      andMore: '+ {count} more',
       gearRequests: 'Gear requests',
       bossesTitle: 'Interest by boss',
       activitiesTitle: 'Interest by activity',
@@ -2109,6 +2111,7 @@ function App() {
   const [language, setLanguage] = useState<Language>('es')
   const [theme, setTheme] = useState<Theme>('dark')
   const [navOpen, setNavOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [submitError, setSubmitError] = useState<string | null>(null)
   const [itemRequests, setItemRequests] = useState<ItemRequest[]>([
@@ -2146,6 +2149,15 @@ function App() {
     })
 
     return () => subscription.unsubscribe()
+  }, [])
+
+  // Detect scroll for navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   const handleAdminLogin = () => {
@@ -2412,20 +2424,31 @@ function App() {
     )
   }
 
-  const renderEntryList = (entries: InterestEntry[]) => (
-    <ul className="interest-list">
-      {entries.map((entry, index) => (
-        <li key={`${entry.name}-${entry.created_at ?? index}`} className="interest-entry">
-          <strong>{entry.name}</strong>
-          <small>
-            {entry.role}
-            {entry.level ? ` · ${entry.level}` : ''}
-            {entry.availability ? ` · ${entry.availability}` : ''}
-          </small>
-        </li>
-      ))}
-    </ul>
-  )
+  const renderEntryList = (entries: InterestEntry[]) => {
+    const maxShow = 5
+    const visibleEntries = entries.slice(0, maxShow)
+    const remaining = entries.length - maxShow
+    
+    return (
+      <ul className="interest-list">
+        {visibleEntries.map((entry, index) => (
+          <li key={`${entry.name}-${entry.created_at ?? index}`} className="interest-entry">
+            <strong>{entry.name}</strong>
+            <small>
+              {entry.role}
+              {entry.level ? ` · ${entry.level}` : ''}
+              {entry.availability ? ` · ${entry.availability}` : ''}
+            </small>
+          </li>
+        ))}
+        {remaining > 0 && (
+          <li className="interest-more">
+            {data.interests.andMore.replace('{count}', remaining.toString())}
+          </li>
+        )}
+      </ul>
+    )
+  }
 
   const renderGearRequests = () => (
     <ul className="interest-list">
@@ -2501,7 +2524,7 @@ function App() {
 
   return (
     <div className="page">
-      <nav className={`navbar ${navOpen ? 'open' : ''}`} aria-label="Primary">
+      <nav className={`navbar ${navOpen ? 'open' : ''} ${scrolled ? 'scrolled' : ''}`} aria-label="Primary">
         <div className="nav-inner">
           <div className="nav-brand">
             <img src="/logo/logopng.png" alt="The Bloody Brotherhood" className="nav-logo" />

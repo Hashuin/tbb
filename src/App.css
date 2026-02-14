@@ -834,6 +834,35 @@
   display: grid;
   gap: 8px;
   margin-top: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.interest-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.interest-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.interest-list::-webkit-scrollbar-thumb {
+  background: rgba(178, 138, 79, 0.4);
+  border-radius: 3px;
+}
+
+.interest-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(178, 138, 79, 0.6);
+}
+
+.interest-more {
+  text-align: center;
+  color: var(--accent-strong);
+  font-weight: 600;
+  padding: 8px;
+  font-size: 0.88rem;
 }
 
 .interest-entry {
@@ -1069,14 +1098,16 @@
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  animation: rise 0.6s ease forwards;
+  /* Elementos visibles por defecto, animación sutil opcional */
+  opacity: 1;
+  animation: subtleRise 0.5s ease;
 }
 
-@keyframes rise {
+@keyframes subtleRise {
+  from {
+    transform: translateY(8px);
+  }
   to {
-    opacity: 1;
     transform: translateY(0);
   }
 }
