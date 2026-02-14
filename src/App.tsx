@@ -2602,6 +2602,7 @@ function App() {
             <div className="route-view" key={location.pathname}>
               <header className="hero">
                 <div className="hero-top">
+                  <img src="/logo/logopng.png" alt="The Bloody Brotherhood" className="guild-logo" />
                   <span className="badge">{data.badge}</span>
                 </div>
                 <div className="hero-content">
