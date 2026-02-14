@@ -999,7 +999,7 @@ const dungeonGuides = [
 
 const content = {
   es: {
-    badge: 'Gremio Wakfu - Impulso Endgame',
+    badge: 'The Bloody Brotherhood',
     navTitle: 'Endgame 230-245',
     navToggle: 'Menú',
     title: 'Impulso Contenido Endgame 230-245',
@@ -1260,7 +1260,7 @@ const content = {
     footer: 'Impulso organizado para avanzar juntos.',
   },
   en: {
-    badge: 'Wakfu Guild - Endgame Boost',
+    badge: 'The Bloody Brotherhood',
     navTitle: 'Endgame 230-245',
     navToggle: 'Menu',
     title: 'Endgame Content Boost 230-245',
@@ -2504,8 +2504,11 @@ function App() {
       <nav className={`navbar ${navOpen ? 'open' : ''}`} aria-label="Primary">
         <div className="nav-inner">
           <div className="nav-brand">
-            <span className="nav-title">{data.navTitle}</span>
-            <span className="nav-subtitle">{data.badge}</span>
+            <img src="/logo/logopng.png" alt="The Bloody Brotherhood" className="nav-logo" />
+            <div>
+              <span className="nav-title">{data.navTitle}</span>
+              <span className="nav-subtitle">{data.badge}</span>
+            </div>
           </div>
           <button
             className="nav-toggle"

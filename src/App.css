@@ -26,9 +26,24 @@
 }
 
 .nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.nav-brand > div {
   display: grid;
   gap: 4px;
   min-width: 0;
+}
+
+.nav-logo {
+  height: 36px;
+  width: 36px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  flex-shrink: 0;
 }
 
 .nav-title {
@@ -185,6 +200,18 @@
   flex-wrap: wrap;
   position: relative;
   z-index: 1;
+}
+
+.guild-logo {
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s ease;
+}
+
+.guild-logo:hover {
+  transform: scale(1.05);
 }
 
 .toggles {
