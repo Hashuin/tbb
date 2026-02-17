@@ -44,6 +44,13 @@
   object-fit: contain;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
   flex-shrink: 0;
+  animation: iconFloat 5s ease-in-out infinite;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.nav-brand:hover .nav-logo {
+  transform: translateY(-1px) scale(1.05);
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.35));
 }
 
 .nav-title {
@@ -79,6 +86,15 @@
   color: var(--muted);
   border: 1px solid transparent;
   font-size: 0.72rem;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-strong);
+  border-color: rgba(178, 138, 79, 0.35);
+  background: rgba(178, 138, 79, 0.1);
+  transform: translateY(-1px);
 }
 
 .nav-links a.active {
@@ -174,6 +190,22 @@
   box-shadow: var(--shadow);
   position: relative;
   overflow: hidden;
+  isolation: isolate;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: -25% auto auto -10%;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(178, 138, 79, 0.24), transparent 70%);
+  filter: blur(4px);
+  opacity: 0.65;
+  pointer-events: none;
+  animation: heroGlowDrift 8s ease-in-out infinite;
+  z-index: 0;
 }
 
 .hero::after {
@@ -190,6 +222,7 @@
     radial-gradient(circle at top right, rgba(178, 138, 79, 0.2), transparent 60%);
   pointer-events: none;
   opacity: 0.5;
+  animation: heroTextureShift 12s ease-in-out infinite;
 }
 
 .hero-top {
@@ -208,6 +241,7 @@
   object-fit: contain;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
   transition: transform 0.3s ease;
+  animation: iconFloat 6s ease-in-out infinite;
 }
 
 .guild-logo:hover {
@@ -229,6 +263,12 @@
   padding: 8px 16px;
   border-radius: 999px;
   border: 1px solid rgba(178, 138, 79, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-top:hover .badge {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(178, 138, 79, 0.18);
 }
 
 .lang-toggle,
@@ -256,6 +296,13 @@
   font-size: 0.9rem;
   display: grid;
   place-items: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.lang-toggle button:hover,
+.theme-toggle button:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .lang-toggle button.active,
@@ -272,6 +319,7 @@
   align-items: center;
   position: relative;
   z-index: 1;
+  animation: softFadeUp 0.5s ease;
 }
 
 .hero-text h1 {
@@ -311,6 +359,8 @@
   border-radius: 999px;
   font-weight: 600;
   border: 1px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease,
+    background 0.2s ease;
 }
 
 .primary {
@@ -330,6 +380,20 @@
   font-size: 0.8rem;
 }
 
+.primary:hover,
+.ghost:hover {
+  transform: translateY(-1px);
+}
+
+.primary:hover {
+  box-shadow: 0 16px 26px rgba(178, 138, 79, 0.35);
+}
+
+.ghost:hover {
+  border-color: rgba(178, 138, 79, 0.45);
+  background: rgba(178, 138, 79, 0.12);
+}
+
 .hero-panel {
   background: rgba(12, 17, 23, 0.5);
   border-radius: 20px;
@@ -338,6 +402,12 @@
   gap: 16px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.hero-panel:hover {
+  transform: translateY(-2px);
+  border-color: rgba(178, 138, 79, 0.24);
 }
 
 .stat {
@@ -409,6 +479,20 @@
   font-size: clamp(1.8rem, 2.6vw, 2.4rem);
   margin-bottom: 12px;
   color: var(--accent-strong);
+  position: relative;
+  width: fit-content;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 56%;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(178, 138, 79, 0.85), transparent);
+  opacity: 0.7;
 }
 
 .section-header p {
@@ -444,7 +528,24 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 10px 16px;
   border-radius: 999px;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  animation: cardStaggerIn 0.45s ease both;
 }
+
+.pill-list li:hover {
+  transform: translateY(-2px);
+  border-color: rgba(178, 138, 79, 0.38);
+  background: rgba(178, 138, 79, 0.12);
+}
+
+.pill-list li:nth-child(1) { animation-delay: 0.06s; }
+.pill-list li:nth-child(2) { animation-delay: 0.1s; }
+.pill-list li:nth-child(3) { animation-delay: 0.14s; }
+.pill-list li:nth-child(4) { animation-delay: 0.18s; }
+.pill-list li:nth-child(5) { animation-delay: 0.22s; }
+.pill-list li:nth-child(6) { animation-delay: 0.26s; }
+.pill-list li:nth-child(7) { animation-delay: 0.3s; }
+.pill-list li:nth-child(8) { animation-delay: 0.34s; }
 
 .grid {
   display: grid;
@@ -467,7 +568,24 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   display: grid;
   gap: 10px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  animation: cardStaggerIn 0.45s ease both;
+}
+
+.quick-grid .quick-card:nth-child(1) {
+  animation-delay: 0.06s;
+}
+
+.quick-grid .quick-card:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.quick-grid .quick-card:nth-child(3) {
+  animation-delay: 0.18s;
+}
+
+.quick-grid .quick-card:nth-child(4) {
+  animation-delay: 0.24s;
 }
 
 .quick-card h3 {
@@ -491,6 +609,7 @@
 .quick-card:hover {
   transform: translateY(-4px);
   border-color: rgba(178, 138, 79, 0.4);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.32);
 }
 
 .card {
@@ -499,6 +618,20 @@
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.22s ease, border-color 0.22s ease;
+  animation: cardStaggerIn 0.45s ease both;
+}
+
+.grid .card:nth-child(1) { animation-delay: 0.06s; }
+.grid .card:nth-child(2) { animation-delay: 0.12s; }
+.grid .card:nth-child(3) { animation-delay: 0.18s; }
+.grid .card:nth-child(4) { animation-delay: 0.24s; }
+.grid .card:nth-child(5) { animation-delay: 0.3s; }
+.grid .card:nth-child(6) { animation-delay: 0.36s; }
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(178, 138, 79, 0.35);
 }
 
 .card h3 {
@@ -518,6 +651,19 @@
   border-radius: 16px;
   padding: 16px;
   border: 1px dashed rgba(255, 255, 255, 0.12);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  animation: cardStaggerIn 0.45s ease both;
+}
+
+.steps .step:nth-child(1) { animation-delay: 0.06s; }
+.steps .step:nth-child(2) { animation-delay: 0.12s; }
+.steps .step:nth-child(3) { animation-delay: 0.18s; }
+.steps .step:nth-child(4) { animation-delay: 0.24s; }
+.steps .step:nth-child(5) { animation-delay: 0.3s; }
+
+.step:hover {
+  transform: translateY(-2px);
+  border-color: rgba(178, 138, 79, 0.4);
 }
 
 .step-index {
@@ -540,6 +686,12 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 18px 32px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.boss-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(178, 138, 79, 0.42);
 }
 
 .boss-media {
@@ -551,6 +703,11 @@
   align-items: flex-start;
   justify-content: flex-end;
   padding: 12px;
+  transition: transform 0.4s ease;
+}
+
+.boss-card:hover .boss-media {
+  transform: scale(1.04);
 }
 
 .boss-id {
@@ -560,6 +717,12 @@
   border-radius: 999px;
   font-size: 0.75rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boss-card:hover .boss-id {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.3);
 }
 
 .boss-body {
@@ -589,6 +752,12 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 20px;
   box-shadow: 0 18px 32px rgba(0, 0, 0, 0.35);
+  transition: transform 0.24s ease, border-color 0.24s ease;
+}
+
+.dungeon-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(178, 138, 79, 0.3);
 }
 
 .dungeon-header {
@@ -798,6 +967,19 @@
   border-radius: 16px;
   padding: 18px;
   border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  animation: cardStaggerIn 0.45s ease both;
+}
+
+.schedule .schedule-item:nth-child(1) { animation-delay: 0.06s; }
+.schedule .schedule-item:nth-child(2) { animation-delay: 0.12s; }
+.schedule .schedule-item:nth-child(3) { animation-delay: 0.18s; }
+.schedule .schedule-item:nth-child(4) { animation-delay: 0.24s; }
+.schedule .schedule-item:nth-child(5) { animation-delay: 0.3s; }
+
+.schedule-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(178, 138, 79, 0.34);
 }
 
 .schedule-item span {
@@ -815,6 +997,12 @@
   border-radius: 18px;
   margin-top: 20px;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.callout:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.28);
 }
 
 .interest-summary {
@@ -1148,6 +1336,7 @@
   gap: 16px;
   max-width: 760px;
   margin-top: 24px;
+  animation: softFadeUp 0.45s ease;
 }
 
 .form label {
@@ -1165,6 +1354,16 @@
   background: rgba(12, 17, 23, 0.8);
   color: var(--ink);
   font: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: rgba(178, 138, 79, 0.52);
+  box-shadow: 0 0 0 3px rgba(178, 138, 79, 0.16);
+  transform: translateY(-1px);
 }
 
 .form textarea {
@@ -1178,6 +1377,12 @@
   padding: 16px;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.interest-group:hover {
+  transform: translateY(-2px);
+  border-color: rgba(178, 138, 79, 0.34);
 }
 
 .interest-group h4 {
@@ -1251,6 +1456,12 @@
   padding: 16px;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.items-block:hover {
+  transform: translateY(-2px);
+  border-color: rgba(178, 138, 79, 0.32);
 }
 
 .items-header {
@@ -1315,6 +1526,19 @@
   border-radius: 14px;
   padding: 14px 16px;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  animation: cardStaggerIn 0.45s ease both;
+}
+
+.glance-list li:nth-child(1) {
+  animation-delay: 0.08s;
+}
+
+.glance-list li:nth-child(2) {
+  animation-delay: 0.14s;
+}
+
+.glance-list li:nth-child(3) {
+  animation-delay: 0.2s;
 }
 
 .summary-list li {
@@ -1322,13 +1546,32 @@
   border-radius: 14px;
   padding: 14px 16px;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  animation: cardStaggerIn 0.45s ease both;
 }
+
+.summary-list li:hover {
+  transform: translateY(-2px);
+  border-color: rgba(178, 138, 79, 0.35);
+}
+
+.summary-list li:nth-child(1) { animation-delay: 0.06s; }
+.summary-list li:nth-child(2) { animation-delay: 0.12s; }
+.summary-list li:nth-child(3) { animation-delay: 0.18s; }
+.summary-list li:nth-child(4) { animation-delay: 0.24s; }
+.summary-list li:nth-child(5) { animation-delay: 0.3s; }
 
 .summary-details {
   background: rgba(12, 17, 23, 0.6);
   padding: 18px;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.summary-details:hover {
+  transform: translateY(-2px);
+  border-color: rgba(178, 138, 79, 0.32);
 }
 
 .summary-details summary {
@@ -1357,10 +1600,87 @@
   }
 }
 
+@keyframes iconFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes heroGlowDrift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.58;
+  }
+  50% {
+    transform: translate3d(20px, 12px, 0) scale(1.08);
+    opacity: 0.76;
+  }
+}
+
+@keyframes heroTextureShift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-6px, 6px, 0);
+  }
+}
+
+@keyframes cardStaggerIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes softFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .route-view,
   .reveal,
-  .quick-card {
+  .quick-card,
+  .nav-logo,
+  .guild-logo {
+    animation: none;
+    transform: none;
+    transition: none;
+  }
+
+  .hero::before,
+  .hero::after,
+  .glance-list li,
+  .hero-content {
+    animation: none;
+  }
+
+  .pill-list li,
+  .grid .card,
+  .steps .step,
+  .schedule .schedule-item,
+  .summary-list li,
+  .form,
+  .interest-group,
+  .items-block,
+  .summary-details {
     animation: none;
     transform: none;
     transition: none;
