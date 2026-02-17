@@ -1123,36 +1123,43 @@ const content = {
         {
           id: 180,
           name: 'Mazmorra de los Devastadores',
+          image: '/wakassets/bossIllustrations/180.png',
           mechanics: ['Fases con rotacion de roles', 'Control de posicion', 'Mitigacion de burst'],
         },
         {
           id: 176,
           name: 'Mazmorra de los Fitoformes',
+          image: '/wakassets/bossIllustrations/176.png',
           mechanics: ['Gestion de estados', 'Orden de objetivos', 'Lineas de vision'],
         },
         {
           id: 178,
           name: 'Mazmorra de los Demorribles',
+          image: '/wakassets/bossIllustrations/178.png',
           mechanics: ['Limpieza de invocaciones', 'Debuffs criticos', 'Timing de reanimacion'],
         },
         {
           id: 177,
           name: 'Mazmorra de los Vaciantes',
+          image: '/wakassets/bossIllustrations/177.png',
           mechanics: ['Control de mapa', 'Rotacion de turnos clave', 'Sincronizacion de DPS'],
         },
         {
           id: 179,
           name: 'Mazmorra de los Idos',
+          image: '/wakassets/bossIllustrations/179.png',
           mechanics: ['Gestion de mental', 'Triggers de sala', 'Fases de supervivencia'],
         },
         {
           id: 187,
           name: 'Mazmorra Pezgajosos Abisales',
+          image: '/wakassets/bossIllustrations/187.png',
           mechanics: ['Control de zonas', 'Gestion de estados', 'Prioridad de objetivos'],
         },
         {
           id: 188,
           name: 'Mazmorra Steamers',
+          image: '/wakassets/bossIllustrations/188.png',
           mechanics: ['Reserva de stasis', 'Posicionamiento vs zonas', 'Control de mecanos'],
         },
       ],
@@ -1384,36 +1391,43 @@ const content = {
         {
           id: 180,
           name: 'Destroyer Dungeon',
+          image: '/wakassets/bossIllustrations/180.png',
           mechanics: ['Role rotations by phase', 'Position control', 'Burst mitigation'],
         },
         {
           id: 176,
           name: 'Phytomorph Dungeon',
+          image: '/wakassets/bossIllustrations/176.png',
           mechanics: ['State management', 'Target order', 'Line of sight'],
         },
         {
           id: 178,
           name: 'Demhorribles Dungeon',
+          image: '/wakassets/bossIllustrations/178.png',
           mechanics: ['Summon cleanup', 'Critical debuffs', 'Revive timing'],
         },
         {
           id: 177,
           name: 'Voidivion Dungeon',
+          image: '/wakassets/bossIllustrations/177.png',
           mechanics: ['Map control', 'Key turn rotations', 'DPS sync'],
         },
         {
           id: 179,
           name: 'Streye Dungeon',
+          image: '/wakassets/bossIllustrations/179.png',
           mechanics: ['Mental management', 'Room triggers', 'Survival phases'],
         },
         {
           id: 187,
           name: 'Abyssal Creeper Dungeon',
+          image: '/wakassets/bossIllustrations/187.png',
           mechanics: ['Zone control', 'State management', 'Target priority'],
         },
         {
           id: 188,
           name: 'Foggernaut Dungeon',
+          image: '/wakassets/bossIllustrations/188.png',
           mechanics: ['Stasis reserve', 'Positioning vs zones', 'Mekano control'],
         },
       ],
@@ -1816,22 +1830,104 @@ type AdminPanelProps = {
 
 function AdminPanel({ content, onSave, onReset, onLogout }: AdminPanelProps) {
   const [editLang, setEditLang] = useState<Language>('es')
+  const [editSection, setEditSection] = useState<
+    | 'general'
+    | 'objetivo'
+    | 'plan'
+    | 'guias'
+    | 'bosses'
+    | 'actividades'
+    | 'equipamiento'
+    | 'registro'
+    | 'resumen'
+    | 'avanzado'
+  >('general')
+  const [draftContent, setDraftContent] = useState<typeof content>(content)
   const [jsonText, setJsonText] = useState('')
   const [error, setError] = useState<string | null>(null)
   const [saved, setSaved] = useState(false)
   const [saving, setSaving] = useState(false)
 
+  const hasPendingChanges = useMemo(
+    () => JSON.stringify(draftContent) !== JSON.stringify(content),
+    [draftContent, content],
+  )
+
   useEffect(() => {
-    setJsonText(JSON.stringify(content[editLang], null, 2))
-  }, [content, editLang])
+    setDraftContent(content)
+  }, [content])
+
+  useEffect(() => {
+    setJsonText(JSON.stringify(draftContent[editLang], null, 2))
+  }, [draftContent, editLang])
+
+  const linesToArray = (value: string) =>
+    value
+      .split('\n')
+      .map((line) => line.trim())
+      .filter(Boolean)
+
+  const arrayToLines = (value?: readonly string[]) => (value || []).join('\n')
+
+  const setDraftValue = (path: Array<string | number>, value: unknown) => {
+    setDraftContent((prev) => {
+      const next = JSON.parse(JSON.stringify(prev)) as typeof content
+      let cursor: unknown = next[editLang]
+
+      for (let index = 0; index < path.length - 1; index += 1) {
+        const key = path[index]
+
+        if (typeof key === 'number') {
+          if (!Array.isArray(cursor)) return prev
+          cursor = cursor[key]
+          continue
+        }
+
+        if (typeof cursor !== 'object' || cursor === null) return prev
+        cursor = (cursor as Record<string, unknown>)[key]
+      }
+
+      const lastKey = path[path.length - 1]
+      if (typeof lastKey === 'number') {
+        if (!Array.isArray(cursor)) return prev
+        cursor[lastKey] = value
+        return next
+      }
+
+      if (typeof cursor !== 'object' || cursor === null) return prev
+      ;(cursor as Record<string, unknown>)[lastKey] = value
+      return next
+    })
+  }
+
+  const langData = draftContent[editLang]
+  const sectionAnimationKey = `${editLang}-${editSection}`
+  const adminSections = [
+    { key: 'general', label: 'General', icon: '🏷️', hint: 'Identidad, título y CTA principal' },
+    { key: 'objetivo', label: 'Objetivo', icon: '🎯', hint: 'Mensaje central y bullets clave' },
+    { key: 'plan', label: 'Plan', icon: '🗂️', hint: 'Bloques del plan de progreso' },
+    { key: 'guias', label: 'Guías', icon: '📚', hint: 'Texto guía y pasos de aprendizaje' },
+    { key: 'bosses', label: 'Bosses', icon: '👹', hint: 'Nombres, mecánicas e imágenes' },
+    { key: 'actividades', label: 'Actividades', icon: '📅', hint: 'Agenda y cadencia semanal' },
+    { key: 'equipamiento', label: 'Equipamiento', icon: '🧩', hint: 'Texto de rotación de equipo' },
+    { key: 'registro', label: 'Registro', icon: '📝', hint: 'Mensajes del formulario' },
+    { key: 'resumen', label: 'Resumen', icon: '📌', hint: 'Cierre y texto resumen' },
+    { key: 'avanzado', label: 'Avanzado (JSON)', icon: '⚙️', hint: 'Edición técnica completa' },
+  ] as const
+  const activeSection = adminSections.find((section) => section.key === editSection)
 
   const handleSave = async () => {
     setSaving(true)
     setError(null)
     
     try {
-      const parsed = JSON.parse(jsonText)
-      const newContent = { ...content, [editLang]: parsed }
+      const newContent =
+        editSection === 'avanzado'
+          ? {
+              ...draftContent,
+              [editLang]: JSON.parse(jsonText),
+            }
+          : draftContent
       
       // Save to Supabase first (if configured)
       if (isSupabaseConfigured && supabase) {
@@ -1850,6 +1946,7 @@ function AdminPanel({ content, onSave, onReset, onLogout }: AdminPanelProps) {
       
       // Save locally and update state
       onSave(newContent)
+      setDraftContent(newContent)
       setSaved(true)
       setTimeout(() => setSaved(false), 3000)
     } catch (e) {
@@ -1878,7 +1975,7 @@ function AdminPanel({ content, onSave, onReset, onLogout }: AdminPanelProps) {
     reader.onload = (event) => {
       try {
         const imported = JSON.parse(event.target?.result as string)
-        onSave(imported)
+        setDraftContent(imported)
         setError(null)
         setSaved(true)
         setTimeout(() => setSaved(false), 2000)
@@ -1889,147 +1986,527 @@ function AdminPanel({ content, onSave, onReset, onLogout }: AdminPanelProps) {
     reader.readAsText(file)
   }
 
+  const renderSectionEditor = () => {
+    const inputStyle: React.CSSProperties = {
+      width: '100%',
+      padding: '0.72rem 0.85rem',
+      borderRadius: '10px',
+      border: '1px solid rgba(255, 255, 255, 0.15)',
+      background: 'rgba(7, 12, 17, 0.55)',
+      color: 'inherit',
+      marginTop: '0.35rem',
+      transition: 'border-color 0.2s ease, transform 0.2s ease',
+    }
+
+    const textareaStyle: React.CSSProperties = {
+      ...inputStyle,
+      minHeight: '110px',
+      resize: 'vertical',
+      lineHeight: 1.5,
+    }
+
+    const groupStyle: React.CSSProperties = {
+      marginBottom: '1rem',
+      padding: '1rem',
+      border: '1px solid rgba(255, 255, 255, 0.08)',
+      borderRadius: '14px',
+      background: 'linear-gradient(145deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01))',
+      boxShadow: '0 8px 20px rgba(0, 0, 0, 0.2)',
+    }
+
+    const labelStyle: React.CSSProperties = {
+      display: 'block',
+      fontWeight: 600,
+      marginBottom: '0.25rem',
+      color: 'var(--accent-strong)',
+    }
+
+    if (editSection === 'avanzado') {
+      return (
+        <>
+          <div style={{ marginBottom: '1rem', fontSize: '0.9rem', color: 'var(--color-text-secondary)' }}>
+            <p style={{ margin: 0 }}>
+              Modo avanzado para cambios técnicos. Si prefieres algo simple, usa las secciones de formularios.
+            </p>
+          </div>
+          <textarea
+            value={jsonText}
+            onChange={(e) => setJsonText(e.target.value)}
+            spellCheck={false}
+            style={{
+              width: '100%',
+              minHeight: '560px',
+              padding: '1rem',
+              fontFamily: 'monospace',
+              fontSize: '14px',
+              lineHeight: '1.6',
+              border: '1px solid var(--color-border)',
+              borderRadius: '6px',
+              background: 'var(--color-bg-secondary)',
+              color: 'inherit',
+              resize: 'vertical',
+            }}
+          />
+        </>
+      )
+    }
+
+    if (editSection === 'general') {
+      return (
+        <>
+          <div style={groupStyle}>
+            <label style={labelStyle}>Nombre del gremio</label>
+            <input
+              value={langData.badge || ''}
+              onChange={(e) => setDraftValue(['badge'], e.target.value)}
+              style={inputStyle}
+            />
+          </div>
+          <div style={groupStyle}>
+            <label style={labelStyle}>Título principal</label>
+            <input
+              value={langData.title || ''}
+              onChange={(e) => setDraftValue(['title'], e.target.value)}
+              style={inputStyle}
+            />
+            <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Subtítulo</label>
+            <textarea
+              value={langData.subtitle || ''}
+              onChange={(e) => setDraftValue(['subtitle'], e.target.value)}
+              style={textareaStyle}
+            />
+          </div>
+          <div style={groupStyle}>
+            <label style={labelStyle}>Botón principal</label>
+            <input
+              value={langData.ctaPrimary || ''}
+              onChange={(e) => setDraftValue(['ctaPrimary'], e.target.value)}
+              style={inputStyle}
+            />
+            <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Botón secundario</label>
+            <input
+              value={langData.ctaSecondary || ''}
+              onChange={(e) => setDraftValue(['ctaSecondary'], e.target.value)}
+              style={inputStyle}
+            />
+          </div>
+          <div style={groupStyle}>
+            <label style={labelStyle}>Texto de transición</label>
+            <textarea
+              value={langData.transition || ''}
+              onChange={(e) => setDraftValue(['transition'], e.target.value)}
+              style={textareaStyle}
+            />
+            <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Footer</label>
+            <input
+              value={langData.footer || ''}
+              onChange={(e) => setDraftValue(['footer'], e.target.value)}
+              style={inputStyle}
+            />
+          </div>
+        </>
+      )
+    }
+
+    if (editSection === 'objetivo') {
+      return (
+        <div style={groupStyle}>
+          <label style={labelStyle}>Título de sección</label>
+          <input
+            value={langData.objectives?.title || ''}
+            onChange={(e) => setDraftValue(['objectives', 'title'], e.target.value)}
+            style={inputStyle}
+          />
+          <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Texto principal</label>
+          <textarea
+            value={langData.objectives?.lead || ''}
+            onChange={(e) => setDraftValue(['objectives', 'lead'], e.target.value)}
+            style={textareaStyle}
+          />
+          <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Puntos clave (una línea por punto)</label>
+          <textarea
+            value={arrayToLines(langData.objectives?.bullets)}
+            onChange={(e) => setDraftValue(['objectives', 'bullets'], linesToArray(e.target.value))}
+            style={textareaStyle}
+          />
+        </div>
+      )
+    }
+
+    if (editSection === 'plan') {
+      return (
+        <>
+          <div style={groupStyle}>
+            <label style={labelStyle}>Título de sección</label>
+            <input
+              value={langData.plan?.title || ''}
+              onChange={(e) => setDraftValue(['plan', 'title'], e.target.value)}
+              style={inputStyle}
+            />
+          </div>
+          {(langData.plan?.items || []).map((item, index) => (
+            <div style={groupStyle} key={`plan-item-${index}`}>
+              <label style={labelStyle}>Bloque {index + 1} - Título</label>
+              <input
+                value={item.title || ''}
+                onChange={(e) => setDraftValue(['plan', 'items', index, 'title'], e.target.value)}
+                style={inputStyle}
+              />
+              <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Bloque {index + 1} - Descripción</label>
+              <textarea
+                value={item.text || ''}
+                onChange={(e) => setDraftValue(['plan', 'items', index, 'text'], e.target.value)}
+                style={textareaStyle}
+              />
+            </div>
+          ))}
+        </>
+      )
+    }
+
+    if (editSection === 'guias') {
+      return (
+        <div style={groupStyle}>
+          <label style={labelStyle}>Título</label>
+          <input
+            value={langData.guides?.title || ''}
+            onChange={(e) => setDraftValue(['guides', 'title'], e.target.value)}
+            style={inputStyle}
+          />
+          <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Texto principal</label>
+          <textarea
+            value={langData.guides?.lead || ''}
+            onChange={(e) => setDraftValue(['guides', 'lead'], e.target.value)}
+            style={textareaStyle}
+          />
+          <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Pasos (una línea por paso)</label>
+          <textarea
+            value={arrayToLines(langData.guides?.steps)}
+            onChange={(e) => setDraftValue(['guides', 'steps'], linesToArray(e.target.value))}
+            style={textareaStyle}
+          />
+        </div>
+      )
+    }
+
+    if (editSection === 'bosses') {
+      return (
+        <>
+          <div style={groupStyle}>
+            <label style={labelStyle}>Título de sección</label>
+            <input
+              value={langData.bosses?.title || ''}
+              onChange={(e) => setDraftValue(['bosses', 'title'], e.target.value)}
+              style={inputStyle}
+            />
+            <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Texto principal</label>
+            <textarea
+              value={langData.bosses?.lead || ''}
+              onChange={(e) => setDraftValue(['bosses', 'lead'], e.target.value)}
+              style={textareaStyle}
+            />
+          </div>
+          {(langData.bosses?.items || []).map((boss, index) => {
+            const bossImage = boss.image?.trim()
+              ? boss.image
+              : `/wakassets/bossIllustrations/${boss.id}.png`
+
+            return (
+            <div style={groupStyle} key={`boss-item-${boss.id}-${index}`}>
+              <div
+                style={{
+                  marginBottom: '0.8rem',
+                  borderRadius: '10px',
+                  minHeight: '130px',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  border: '1px solid var(--color-border)',
+                  backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.8)), url(${bossImage})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              >
+                <span
+                  style={{
+                    position: 'absolute',
+                    top: '10px',
+                    right: '10px',
+                    background: 'rgba(0, 0, 0, 0.55)',
+                    color: 'white',
+                    padding: '0.25rem 0.5rem',
+                    borderRadius: '999px',
+                    fontSize: '0.8rem',
+                    fontWeight: 700,
+                  }}
+                >
+                  #{boss.id}
+                </span>
+                <div style={{ position: 'absolute', left: '12px', bottom: '10px', color: 'white' }}>
+                  <div style={{ fontWeight: 700, fontSize: '1rem' }}>{boss.name}</div>
+                  <div style={{ fontSize: '0.82rem', opacity: 0.9 }}>
+                    {(boss.mechanics || []).slice(0, 1).join('')}
+                  </div>
+                </div>
+              </div>
+
+              <label style={labelStyle}>Boss #{boss.id} - Nombre</label>
+              <input
+                value={boss.name || ''}
+                onChange={(e) => setDraftValue(['bosses', 'items', index, 'name'], e.target.value)}
+                style={inputStyle}
+              />
+              <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Imagen (URL o ruta local)</label>
+              <input
+                value={boss.image || ''}
+                onChange={(e) => setDraftValue(['bosses', 'items', index, 'image'], e.target.value)}
+                placeholder={`/wakassets/bossIllustrations/${boss.id}.png`}
+                style={inputStyle}
+              />
+              <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Mecánicas (una línea por mecánica)</label>
+              <textarea
+                value={arrayToLines(boss.mechanics)}
+                onChange={(e) => setDraftValue(['bosses', 'items', index, 'mechanics'], linesToArray(e.target.value))}
+                style={textareaStyle}
+              />
+            </div>
+            )
+          })}
+        </>
+      )
+    }
+
+    if (editSection === 'actividades') {
+      return (
+        <>
+          <div style={groupStyle}>
+            <label style={labelStyle}>Título de sección</label>
+            <input
+              value={langData.schedule?.title || ''}
+              onChange={(e) => setDraftValue(['schedule', 'title'], e.target.value)}
+              style={inputStyle}
+            />
+          </div>
+          {(langData.schedule?.items || []).map((activity, index) => (
+            <div style={groupStyle} key={`activity-item-${index}`}>
+              <label style={labelStyle}>Actividad #{index + 1} - Nombre</label>
+              <input
+                value={activity.name || ''}
+                onChange={(e) => setDraftValue(['schedule', 'items', index, 'name'], e.target.value)}
+                style={inputStyle}
+              />
+              <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Enfoque</label>
+              <textarea
+                value={activity.focus || ''}
+                onChange={(e) => setDraftValue(['schedule', 'items', index, 'focus'], e.target.value)}
+                style={textareaStyle}
+              />
+              <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Cadencia</label>
+              <input
+                value={activity.cadence || ''}
+                onChange={(e) => setDraftValue(['schedule', 'items', index, 'cadence'], e.target.value)}
+                style={inputStyle}
+              />
+            </div>
+          ))}
+        </>
+      )
+    }
+
+    if (editSection === 'equipamiento') {
+      return (
+        <div style={groupStyle}>
+          <label style={labelStyle}>Título</label>
+          <input
+            value={langData.gear?.title || ''}
+            onChange={(e) => setDraftValue(['gear', 'title'], e.target.value)}
+            style={inputStyle}
+          />
+          <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Texto principal</label>
+          <textarea
+            value={langData.gear?.lead || ''}
+            onChange={(e) => setDraftValue(['gear', 'lead'], e.target.value)}
+            style={textareaStyle}
+          />
+          <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Nota</label>
+          <textarea
+            value={langData.gear?.note || ''}
+            onChange={(e) => setDraftValue(['gear', 'note'], e.target.value)}
+            style={textareaStyle}
+          />
+        </div>
+      )
+    }
+
+    if (editSection === 'registro') {
+      return (
+        <div style={groupStyle}>
+          <label style={labelStyle}>Título</label>
+          <input
+            value={langData.form?.title || ''}
+            onChange={(e) => setDraftValue(['form', 'title'], e.target.value)}
+            style={inputStyle}
+          />
+          <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Texto principal</label>
+          <textarea
+            value={langData.form?.lead || ''}
+            onChange={(e) => setDraftValue(['form', 'lead'], e.target.value)}
+            style={textareaStyle}
+          />
+          <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Nota</label>
+          <textarea
+            value={langData.form?.note || ''}
+            onChange={(e) => setDraftValue(['form', 'note'], e.target.value)}
+            style={textareaStyle}
+          />
+          <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Advertencia</label>
+          <textarea
+            value={langData.form?.warning || ''}
+            onChange={(e) => setDraftValue(['form', 'warning'], e.target.value)}
+            style={textareaStyle}
+          />
+          <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Texto éxito</label>
+          <textarea
+            value={langData.form?.success || ''}
+            onChange={(e) => setDraftValue(['form', 'success'], e.target.value)}
+            style={textareaStyle}
+          />
+          <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Texto error</label>
+          <textarea
+            value={langData.form?.error || ''}
+            onChange={(e) => setDraftValue(['form', 'error'], e.target.value)}
+            style={textareaStyle}
+          />
+        </div>
+      )
+    }
+
+    return (
+      <div style={groupStyle}>
+        <label style={labelStyle}>Título</label>
+        <input
+          value={langData.summary?.title || ''}
+          onChange={(e) => setDraftValue(['summary', 'title'], e.target.value)}
+          style={inputStyle}
+        />
+        <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Highlights (una línea por punto)</label>
+        <textarea
+          value={arrayToLines(langData.summary?.highlights)}
+          onChange={(e) => setDraftValue(['summary', 'highlights'], linesToArray(e.target.value))}
+          style={textareaStyle}
+        />
+        <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Título texto completo</label>
+        <input
+          value={langData.summary?.fullTitle || ''}
+          onChange={(e) => setDraftValue(['summary', 'fullTitle'], e.target.value)}
+          style={inputStyle}
+        />
+        <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Texto completo (una línea por párrafo)</label>
+        <textarea
+          value={arrayToLines(langData.summary?.fullText)}
+          onChange={(e) => setDraftValue(['summary', 'fullText'], linesToArray(e.target.value))}
+          style={textareaStyle}
+        />
+      </div>
+    )
+  }
+
   return (
-    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-      <div style={{ marginBottom: '2rem', display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
-        <div style={{ display: 'flex', gap: '0.5rem' }}>
+    <div className="admin-panel">
+      <div className="admin-toolbar-card">
+        <div className="admin-toolbar-top">
+          <div className="admin-lang-switch">
           <button
             onClick={() => setEditLang('es')}
-            style={{
-              padding: '0.5rem 1rem',
-              background: editLang === 'es' ? 'var(--color-primary)' : 'transparent',
-              border: '1px solid var(--color-primary)',
-              borderRadius: '4px',
-              cursor: 'pointer',
-              color: 'inherit',
-            }}
+            className={`admin-pill ${editLang === 'es' ? 'active' : ''}`}
           >
             Español
           </button>
           <button
             onClick={() => setEditLang('en')}
-            style={{
-              padding: '0.5rem 1rem',
-              background: editLang === 'en' ? 'var(--color-primary)' : 'transparent',
-              border: '1px solid var(--color-primary)',
-              borderRadius: '4px',
-              cursor: 'pointer',
-              color: 'inherit',
-            }}
+            className={`admin-pill ${editLang === 'en' ? 'active' : ''}`}
           >
             English
           </button>
         </div>
 
-        <div style={{ flex: 1 }} />
+          <div className={`admin-status-chip ${saving ? 'saving' : saved ? 'saved' : hasPendingChanges ? 'pending' : ''}`}>
+            {saving
+              ? '⏳ Guardando...'
+              : saved
+                ? '✅ Guardado'
+                : hasPendingChanges
+                  ? '📝 Cambios pendientes'
+                  : '✔ Sin cambios'}
+          </div>
+        </div>
 
-        <button
-          onClick={handleSave}
-          disabled={saving}
-          style={{
-            padding: '0.5rem 1.5rem',
-            background: saving ? '#95a5a6' : 'var(--color-primary)',
-            border: 'none',
-            borderRadius: '4px',
-            cursor: saving ? 'not-allowed' : 'pointer',
-            color: 'white',
-            fontWeight: 'bold',
-            opacity: saving ? 0.7 : 1,
-          }}
-        >
-          {saving ? '⏳ Guardando...' : '💾 Guardar Cambios'}
-        </button>
+        <div className="admin-toolbar-actions">
+          <button
+            onClick={handleSave}
+            disabled={saving}
+            className="primary"
+          >
+            {saving ? '⏳ Guardando...' : '💾 Guardar Cambios'}
+          </button>
 
-        <button
-          onClick={handleExport}
-          style={{
-            padding: '0.5rem 1.5rem',
-            background: 'transparent',
-            border: '1px solid var(--color-primary)',
-            borderRadius: '4px',
-            cursor: 'pointer',
-            color: 'inherit',
-          }}
-        >
-          📥 Exportar
-        </button>
+          <button
+            onClick={handleExport}
+            className="ghost"
+          >
+            📥 Exportar
+          </button>
 
-        <label
-          style={{
-            padding: '0.5rem 1.5rem',
-            background: 'transparent',
-            border: '1px solid var(--color-primary)',
-            borderRadius: '4px',
-            cursor: 'pointer',
-            display: 'inline-block',
-          }}
-        >
-          📤 Importar
-          <input
-            type="file"
-            accept=".json"
-            onChange={handleImport}
-            style={{ display: 'none' }}
-          />
-        </label>
+          <label className="ghost admin-upload-label">
+            📤 Importar
+            <input
+              type="file"
+              accept=".json"
+              onChange={handleImport}
+              style={{ display: 'none' }}
+            />
+          </label>
 
-        <button
-          onClick={async () => {
-            if (confirm('¿Resetear todo el contenido a valores por defecto?')) {
-              setSaving(true)
-              setError(null)
-              
-              try {
-                // Delete from Supabase
-                if (isSupabaseConfigured && supabase) {
-                  await supabase
-                    .from('app_content')
-                    .delete()
-                    .eq('id', 1)
-                }
+          <button
+            onClick={async () => {
+              if (confirm('¿Resetear todo el contenido a valores por defecto?')) {
+                setSaving(true)
+                setError(null)
                 
-                // Reset local state
-                onReset()
-                setSaved(true)
-                setTimeout(() => setSaved(false), 3000)
-              } catch {
-                setError('Error al resetear contenido')
-              } finally {
-                setSaving(false)
+                try {
+                  if (isSupabaseConfigured && supabase) {
+                    await supabase
+                      .from('app_content')
+                      .delete()
+                      .eq('id', 1)
+                  }
+                  
+                  onReset()
+                  setSaved(true)
+                  setTimeout(() => setSaved(false), 3000)
+                } catch {
+                  setError('Error al resetear contenido')
+                } finally {
+                  setSaving(false)
+                }
               }
-            }
-          }}
-          disabled={saving}
-          style={{
-            padding: '0.5rem 1.5rem',
-            background: 'transparent',
-            border: '1px solid #e74c3c',
-            borderRadius: '4px',
-            cursor: saving ? 'not-allowed' : 'pointer',
-            color: '#e74c3c',
-            opacity: saving ? 0.5 : 1,
-          }}
-        >
-          🔄 Resetear
-        </button>
+            }}
+            disabled={saving}
+            className="ghost admin-danger"
+          >
+            🔄 Resetear
+          </button>
 
-        <button
-          onClick={() => {
-            if (confirm('¿Cerrar sesión de administrador?')) {
-              onLogout()
-            }
-          }}
-          style={{
-            padding: '0.5rem 1.5rem',
-            background: 'transparent',
-            border: '1px solid var(--color-text-secondary)',
-            borderRadius: '4px',
-            cursor: 'pointer',
-            color: 'var(--color-text-secondary)',
-          }}
-        >
-          🚪 Cerrar Sesión
-        </button>
+          <button
+            onClick={() => {
+              if (confirm('¿Cerrar sesión de administrador?')) {
+                onLogout()
+              }
+            }}
+            className="ghost"
+          >
+            🚪 Cerrar Sesión
+          </button>
+        </div>
       </div>
 
       {error && (
@@ -2060,49 +2537,83 @@ function AdminPanel({ content, onSave, onReset, onLogout }: AdminPanelProps) {
         </div>
       )}
 
-      <div style={{ marginBottom: '1rem', fontSize: '0.9rem', color: 'var(--color-text-secondary)' }}>
+      <div className="admin-info-card">
         {isSupabaseConfigured ? (
           <>
-            <p style={{ marginBottom: '0.5rem', padding: '0.75rem', background: 'var(--color-bg-secondary)', borderRadius: '4px', border: '1px solid var(--color-primary)' }}>
+            <p className="admin-info-mode">
               <strong>🌐 Modo Supabase:</strong> Los cambios se guardan en la base de datos y son visibles para todos los usuarios.
             </p>
             <p>
-              <strong>Instrucciones:</strong> Edita el JSON directamente. Al guardar, el contenido se sincroniza con Supabase y todos los usuarios verán los cambios.
+              <strong>Instrucciones:</strong> Edita los campos por sección. Al guardar, el contenido se sincroniza con Supabase y todos los usuarios verán los cambios.
             </p>
           </>
         ) : (
           <>
-            <p style={{ marginBottom: '0.5rem', padding: '0.75rem', background: '#f39c12', color: 'white', borderRadius: '4px' }}>
+            <p className="admin-info-mode">
               <strong>⚠️ Modo Local:</strong> Supabase no está configurado. Los cambios solo se guardan en tu navegador.
             </p>
             <p>
-              <strong>Instrucciones:</strong> Edita el JSON directamente. Los cambios se guardan solo en localStorage de tu navegador.
+              <strong>Instrucciones:</strong> Edita los campos por sección. Los cambios se guardan solo en localStorage de tu navegador.
             </p>
           </>
         )}
         <p>
-          💡 <strong>Tip:</strong> Usa Ctrl+F para buscar textos específicos. Mantén el formato JSON válido.
+          💡 <strong>Tip:</strong> Para cambios técnicos muy puntuales, usa la sección “Avanzado (JSON)”.
         </p>
       </div>
 
-      <textarea
-        value={jsonText}
-        onChange={(e) => setJsonText(e.target.value)}
-        spellCheck={false}
-        style={{
-          width: '100%',
-          minHeight: '600px',
-          padding: '1rem',
-          fontFamily: 'monospace',
-          fontSize: '14px',
-          lineHeight: '1.6',
-          border: '1px solid var(--color-border)',
-          borderRadius: '4px',
-          background: 'var(--color-bg-secondary)',
-          color: 'inherit',
-          resize: 'vertical',
-        }}
-      />
+      <div className="admin-sections">
+        {adminSections.map((section) => (
+          <button
+            key={section.key}
+            onClick={() => setEditSection(section.key as typeof editSection)}
+            className={`admin-section-tab ${editSection === section.key ? 'active' : ''}`}
+          >
+            <span>{section.icon}</span>
+            {section.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="admin-editor-layout">
+        <div className="admin-editor-main">
+          <div className="admin-editor-header">
+            <div>
+              <h3>
+                {activeSection?.icon} {activeSection?.label}
+              </h3>
+              <p>{activeSection?.hint}</p>
+            </div>
+          </div>
+          <div key={sectionAnimationKey} className="admin-section-content">
+            {renderSectionEditor()}
+          </div>
+        </div>
+
+        <aside className="admin-editor-side">
+          <h4>Vista rápida</h4>
+          <ul>
+            <li>
+              <strong>Idioma activo:</strong> {editLang === 'es' ? 'Español' : 'English'}
+            </li>
+            <li>
+              <strong>Sección:</strong> {activeSection?.label}
+            </li>
+            <li>
+              <strong>Bosses:</strong> {langData.bosses?.items?.length || 0}
+            </li>
+            <li>
+              <strong>Actividades:</strong> {langData.schedule?.items?.length || 0}
+            </li>
+            <li>
+              <strong>Estado:</strong> {saving ? 'Guardando…' : hasPendingChanges ? 'Pendiente' : 'Sin cambios'}
+            </li>
+          </ul>
+          <p>
+            Consejo: usa <strong>Guardar Cambios</strong> al terminar cada bloque para mantener iteraciones pequeñas.
+          </p>
+        </aside>
+      </div>
     </div>
   )
 }
@@ -2215,6 +2726,7 @@ function App() {
   
   const activeContent = customContent || content
   const data = activeContent[language]
+  const isAdminRoute = location.pathname === '/admin'
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme
@@ -2524,103 +3036,105 @@ function App() {
 
   return (
     <div className="page">
-      <nav className={`navbar ${navOpen ? 'open' : ''} ${scrolled ? 'scrolled' : ''}`} aria-label="Primary">
-        <div className="nav-inner">
-          <div className="nav-brand">
-            <img src="/logo/logopng.png" alt="The Bloody Brotherhood" className="nav-logo" />
-            <div>
-              <span className="nav-title">{data.navTitle}</span>
-              <span className="nav-subtitle">{data.badge}</span>
-            </div>
-          </div>
-          <button
-            className="nav-toggle"
-            type="button"
-            onClick={() => setNavOpen((open) => !open)}
-            aria-expanded={navOpen}
-            aria-controls="nav-panel"
-          >
-            {data.navToggle}
-          </button>
-          <div className="nav-panel" id="nav-panel">
-            <div className="nav-links" role="list">
-              {data.nav.map((item) => (
-                <NavLink
-                  key={item.id}
-                  to={sectionRoutes[item.id as keyof typeof sectionRoutes]}
-                  end={item.id === 'inicio'}
-                  className={({ isActive }) =>
-                    [
-                      'nav-link',
-                      item.id === 'registro' ? 'nav-link--registro' : '',
-                      isActive || currentSection === item.id ? 'active' : '',
-                    ]
-                      .filter(Boolean)
-                      .join(' ')
-                  }
-                  onClick={() => setNavOpen(false)}
-                >
-                  {item.label}
-                </NavLink>
-              ))}
-            </div>
-            <Link className="nav-cta" to={sectionRoutes.registro}>
-              {registerLabel}
-            </Link>
-            <div className="toggles">
-              <div className="lang-toggle icon-toggle" role="group" aria-label="Language">
-                <button
-                  className={language === 'es' ? 'active' : ''}
-                  onClick={() => setLanguage('es')}
-                  type="button"
-                  aria-label="Español"
-                  title="Español"
-                >
-                  🇪🇸
-                  <span className="sr-only">ES</span>
-                </button>
-                <button
-                  className={language === 'en' ? 'active' : ''}
-                  onClick={() => setLanguage('en')}
-                  type="button"
-                  aria-label="English"
-                  title="English"
-                >
-                  🇺🇸
-                  <span className="sr-only">EN</span>
-                </button>
-              </div>
-              <div className="theme-toggle icon-toggle" role="group" aria-label="Theme">
-                <button
-                  className={theme === 'dark' ? 'active' : ''}
-                  onClick={() => setTheme('dark')}
-                  type="button"
-                  aria-label={data.themeOptions.dark}
-                  title={data.themeOptions.dark}
-                >
-                  🌙
-                  <span className="sr-only">{data.themeOptions.dark}</span>
-                </button>
-                <button
-                  className={theme === 'light' ? 'active' : ''}
-                  onClick={() => setTheme('light')}
-                  type="button"
-                  aria-label={data.themeOptions.light}
-                  title={data.themeOptions.light}
-                >
-                  ☀️
-                  <span className="sr-only">{data.themeOptions.light}</span>
-                </button>
+      {!isAdminRoute && (
+        <nav className={`navbar ${navOpen ? 'open' : ''} ${scrolled ? 'scrolled' : ''}`} aria-label="Primary">
+          <div className="nav-inner">
+            <div className="nav-brand">
+              <img src="/logo/logopng.png" alt="The Bloody Brotherhood" className="nav-logo" />
+              <div>
+                <span className="nav-title">{data.navTitle}</span>
+                <span className="nav-subtitle">{data.badge}</span>
               </div>
             </div>
+            <button
+              className="nav-toggle"
+              type="button"
+              onClick={() => setNavOpen((open) => !open)}
+              aria-expanded={navOpen}
+              aria-controls="nav-panel"
+            >
+              {data.navToggle}
+            </button>
+            <div className="nav-panel" id="nav-panel">
+              <div className="nav-links" role="list">
+                {data.nav.map((item) => (
+                  <NavLink
+                    key={item.id}
+                    to={sectionRoutes[item.id as keyof typeof sectionRoutes]}
+                    end={item.id === 'inicio'}
+                    className={({ isActive }) =>
+                      [
+                        'nav-link',
+                        item.id === 'registro' ? 'nav-link--registro' : '',
+                        isActive || currentSection === item.id ? 'active' : '',
+                      ]
+                        .filter(Boolean)
+                        .join(' ')
+                    }
+                    onClick={() => setNavOpen(false)}
+                  >
+                    {item.label}
+                  </NavLink>
+                ))}
+              </div>
+              <Link className="nav-cta" to={sectionRoutes.registro}>
+                {registerLabel}
+              </Link>
+              <div className="toggles">
+                <div className="lang-toggle icon-toggle" role="group" aria-label="Language">
+                  <button
+                    className={language === 'es' ? 'active' : ''}
+                    onClick={() => setLanguage('es')}
+                    type="button"
+                    aria-label="Español"
+                    title="Español"
+                  >
+                    🇪🇸
+                    <span className="sr-only">ES</span>
+                  </button>
+                  <button
+                    className={language === 'en' ? 'active' : ''}
+                    onClick={() => setLanguage('en')}
+                    type="button"
+                    aria-label="English"
+                    title="English"
+                  >
+                    🇺🇸
+                    <span className="sr-only">EN</span>
+                  </button>
+                </div>
+                <div className="theme-toggle icon-toggle" role="group" aria-label="Theme">
+                  <button
+                    className={theme === 'dark' ? 'active' : ''}
+                    onClick={() => setTheme('dark')}
+                    type="button"
+                    aria-label={data.themeOptions.dark}
+                    title={data.themeOptions.dark}
+                  >
+                    🌙
+                    <span className="sr-only">{data.themeOptions.dark}</span>
+                  </button>
+                  <button
+                    className={theme === 'light' ? 'active' : ''}
+                    onClick={() => setTheme('light')}
+                    type="button"
+                    aria-label={data.themeOptions.light}
+                    title={data.themeOptions.light}
+                  >
+                    ☀️
+                    <span className="sr-only">{data.themeOptions.light}</span>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div
-          className="nav-overlay"
-          aria-hidden={!navOpen}
-          onClick={() => setNavOpen(false)}
-        />
-      </nav>
+          <div
+            className="nav-overlay"
+            aria-hidden={!navOpen}
+            onClick={() => setNavOpen(false)}
+          />
+        </nav>
+      )}
       <Routes>
         <Route
           path={sectionRoutes.inicio}
@@ -2943,12 +3457,16 @@ function App() {
                 <div className="boss-grid">
                   {data.bosses.items.map((boss) => {
                     const interested = interestByBoss.get(boss.id) || [];
+                    const bossImage = boss.image?.trim()
+                      ? boss.image
+                      : `/wakassets/bossIllustrations/${boss.id}.png`
+
                     return (
                       <article className="boss-card" key={boss.id}>
                         <div
                           className="boss-media"
                           style={{
-                            backgroundImage: `url(/wakassets/bossIllustrations/${boss.id}.png)`,
+                            backgroundImage: `url(${bossImage})`,
                           }}
                         >
                           <span className="boss-id">#{boss.id}</span>
