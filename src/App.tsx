@@ -3107,22 +3107,20 @@ const content = {
     themeOptions: { dark: 'Oscuro', light: 'Claro' },
     nav: [
       { id: 'inicio', label: 'Inicio' },
-      { id: 'objetivo', label: 'Objetivo' },
       { id: 'plan', label: 'Plan' },
       { id: 'guias', label: 'Guias' },
       { id: 'estelas', label: 'Estelas' },
       { id: 'bosses', label: 'Bosses' },
-      { id: 'actividades', label: 'Actividades' },
+      { id: 'clases', label: 'Clases' },
       { id: 'registro', label: 'Registro' },
-      { id: 'resumen', label: 'Resumen' },
     ],
     viewSubtitles: {
       objetivo: 'Que buscamos lograr con el impulso',
-      plan: 'Como organizaremos el avance',
+      plan: 'Impulsar el contenido 230-245 de forma organizada para que mas jugadores puedan llegar y mantenerse en estas franjas.',
       guias: 'Materiales y practicas guiadas',
       estelas: 'Guías de estela de intervención',
       bosses: 'Primer set de dungeons clave',
-      actividades: 'Cadencia y objetivos por semana',
+      clases: 'Roles, builds y guías por clase',
       equipamiento: 'Circulacion de piezas utiles',
       registro: 'Formulario para coordinar roles',
       resumen: 'Puntos clave del anuncio',
@@ -3180,6 +3178,7 @@ const content = {
     },
     plan: {
       title: 'Que vamos a hacer',
+      lead: 'Impulsar el contenido 230-245 de forma organizada para que mas jugadores puedan llegar y mantenerse en estas franjas.',
       items: [
         {
           title: 'Canal dedicado 230-245',
@@ -3324,27 +3323,42 @@ const content = {
           id: 'cire-momore',
           name: 'Cire Momore',
           keyRequired: 'Llave de intervención de Cire Momore',
-          appliesTo: ['Pezgajosos Abisales'],
+          appliesTo: ['Steamers', 'Pezgajosos Abisales'],
           overview: [
-            'Intervención disponible en competitivo y stasis 2 mínimo.',
-            'Añade a Cire Momore al combate cuando la estela está activa.',
-            'No requiere reactivación tras derrota.',
+            'Inicia combate en la esquina superior izquierda (Steamers y Pezgajosos Abisales).',
+            'Comienza con 3 PM y gana +2 PM por turno.',
+            'Al usar Aspiración de Alma y absorber una flor, reinicia sus PM.',
+            'Al invocar a Cire Momore, una Asesirena o Unidad stasificadora abandona el combate.',
           ],
           table: {
-            actionHeader: 'Referencia',
+            actionHeader: 'Elemento',
             effectHeader: 'Detalle',
             rows: [
-              { action: 'Botín intervención', effect: 'Incluye piezas de Cire Momore (vela, armadura, coiffe y mano).' },
+              { action: 'Flores', effect: 'Cuando muere un mob (excepto Raeliss/Sir Kurn Flex), aparece una flor. Un jugador debe pisarla para obtenerla.' },
+              { action: 'Bonus de flor', effect: 'Otorga +4 PA y +2 PM. Los bonus no son acumulables.' },
+              { action: 'Aspiración de Alma (con flor)', effect: 'Pierdes la flor y Cire Momore reinicia sus PM.' },
+              { action: 'Aspiración de Alma (sin flor)', effect: 'Pierdes 4000 PdV máximos (acumulable).' },
+              { action: 'Aspiración x3', effect: 'Si un jugador recibe 3 Aspiraciones, muere directamente (sin K.O.).' },
+              { action: 'Fatalidad', effect: 'Daño Stasis en línea, alcance 2-6.' },
+              { action: 'Rompespanima', effect: 'Daño Stasis constante, alcance 1-12, hasta 2 veces por turno.' },
+              { action: 'Aspiración de Alma', effect: 'Zona CaC. Absorbe flores, reinicia PM y castiga con pérdida de vida máxima.' },
             ],
           },
-          dungeonEffects: [],
+          dungeonEffects: [
+            'Es fundamental no terminar turno en CaC de Cire Momore.',
+            'Prioriza limpiar mobs rápido para generar flores y repartirlas con orden.',
+          ],
           tips: [
+            'Pegar y moverse: evita quedarte expuesto cerca del jefe.',
+            'Usa invocaciones o bloqueadores para estorbar y forzar absorciones en objetivos controlados.',
+            'Vigila a quienes ya tengan 2 Aspiraciones: no pueden arriesgar una tercera.',
           ],
         },
       ],
     },
     schedule: {
       title: 'Actividades sugeridas',
+      lead: 'Cadencia propuesta para mantener progreso y práctica de mecánicas.',
       items: [
         {
           name: 'Ereboria',
@@ -3362,6 +3376,11 @@ const content = {
           cadence: 'Rotativo',
         },
       ],
+    },
+    classes: {
+      title: 'Clases',
+      lead: '',
+      items: [],
     },
     gear: {
       title: 'Rotacion de equipamiento',
@@ -3385,7 +3404,7 @@ const content = {
         contact: 'Contacto (Discord)',
         build: 'Detalles de tu build / set actual',
         interestBosses: 'Interes en bosses',
-        interestActivities: 'Interes en actividades',
+        interestActivities: 'Interes en clases',
         interestGuides: 'Interes en guias',
         item: 'Item solicitado',
         slot: 'Slot / tipo',
@@ -3424,7 +3443,7 @@ const content = {
       andMore: '+ {count} más',
       gearRequests: 'Solicitudes de equipo',
       bossesTitle: 'Interes por boss',
-      activitiesTitle: 'Interes por actividades',
+      activitiesTitle: 'Interes por clases',
       guidesTitle: 'Interes por guias',
       gearTitle: 'Items solicitados',
       gearEmpty: 'Aun no hay items registrados.',
@@ -3459,22 +3478,20 @@ const content = {
     themeOptions: { dark: 'Dark', light: 'Light' },
     nav: [
       { id: 'inicio', label: 'Home' },
-      { id: 'objetivo', label: 'Goal' },
       { id: 'plan', label: 'Plan' },
       { id: 'guias', label: 'Guides' },
       { id: 'estelas', label: 'Steles' },
       { id: 'bosses', label: 'Bosses' },
-      { id: 'actividades', label: 'Activities' },
+      { id: 'clases', label: 'Classes' },
       { id: 'registro', label: 'Sign up' },
-      { id: 'resumen', label: 'Summary' },
     ],
     viewSubtitles: {
       objetivo: 'What we want to achieve with the boost',
-      plan: 'How we will organize progress',
+      plan: 'Boost 230-245 content in an organized way so more players can reach and stay in these ranges.',
       guias: 'Materials and guided practice',
       estelas: 'Intervention stele guides',
       bosses: 'First set of key dungeons',
-      actividades: 'Weekly cadence and goals',
+      clases: 'Class guides and build references',
       equipamiento: 'Circulating useful pieces',
       registro: 'Form to align roles',
       resumen: 'Key points of the announcement',
@@ -3532,6 +3549,7 @@ const content = {
     },
     plan: {
       title: 'What we will do',
+      lead: 'Boost 230-245 content in an organized way so more players can reach and stay in these ranges.',
       items: [
         {
           title: 'Dedicated 230-245 channel',
@@ -3675,28 +3693,42 @@ const content = {
           id: 'cire-momore',
           name: 'Cire Momore',
           keyRequired: 'Cire Momore Intervention Key',
-          appliesTo: ['Abyssal Creeper'],
+          appliesTo: ['Foggernaut', 'Abyssal Creeper'],
           overview: [
-            'Intervention available in competitive mode with minimum stasis 2.',
-            'Adds Cire Momore to the fight when the stele is active.',
-            'No reactivation required after defeat.',
+            'Starts in the upper-left corner (Foggernaut and Abyssal Creeper dungeons).',
+            'Starts with 3 MP and gains +2 MP each turn.',
+            'When it casts Soul Siphon and absorbs a flower, its MP is reset.',
+            'When Cire Momore is summoned, one Asesirena/Stasis Unit leaves the fight.',
           ],
           table: {
-            actionHeader: 'Reference',
+            actionHeader: 'Element',
             effectHeader: 'Detail',
             rows: [
-              { action: 'Intervention loot', effect: 'Includes Cire Momore pieces (candle, armor, hat, hand).' },
+              { action: 'Flowers', effect: 'When a mob dies (except Raeliss/Sir Kurn Flex), a flower appears. A player must step on it to collect it.' },
+              { action: 'Flower buff', effect: 'Grants +4 AP and +2 MP. Buffs do not stack.' },
+              { action: 'Soul Siphon (with flower)', effect: 'You lose the flower and Cire Momore resets its MP.' },
+              { action: 'Soul Siphon (no flower)', effect: 'You lose 4000 max HP (stacking).' },
+              { action: 'Soul Siphon x3', effect: 'If a player is hit by 3 Soul Siphons, they die instantly (no K.O.).' },
+              { action: 'Fatality', effect: 'Stasis line damage, 2-6 range.' },
+              { action: 'Rompespanima', effect: 'Consistent Stasis damage, 1-12 range, up to 2 casts per turn.' },
+              { action: 'Soul Siphon', effect: 'Melee area. Absorbs flowers, resets MP, and applies max-HP loss.' },
             ],
           },
-          dungeonEffects: [],
+          dungeonEffects: [
+            'Do not end your turn in melee range of Cire Momore.',
+            'Clear mobs quickly to spawn flowers and assign pickups in advance.',
+          ],
           tips: [
-            'Use this stele as a controlled practice step before harder full runs.',
+            'Hit and reposition each turn; do not stay exposed near the boss.',
+            'Use summons or blockers to disrupt pathing and absorb casts on controlled targets.',
+            'Track players already at 2 Soul Siphons; they cannot risk a third hit.',
           ],
         },
       ],
     },
     schedule: {
       title: 'Suggested activities',
+      lead: 'Suggested cadence to keep progression and mechanics practice consistent.',
       items: [
         {
           name: 'Ereboria',
@@ -3714,6 +3746,11 @@ const content = {
           cadence: 'Rotating',
         },
       ],
+    },
+    classes: {
+      title: 'Classes',
+      lead: 'Add classes from admin: name, short recommendations, and links to suggested sets.',
+      items: [],
     },
     gear: {
       title: 'Gear rotation',
@@ -3735,7 +3772,7 @@ const content = {
         contact: 'Contact (Discord)',
         build: 'Build / current set details',
         interestBosses: 'Interested bosses',
-        interestActivities: 'Interested activities',
+        interestActivities: 'Interested classes',
         interestGuides: 'Interested guides',
         item: 'Requested item',
         slot: 'Slot / type',
@@ -3772,7 +3809,7 @@ const content = {
       andMore: '+ {count} more',
       gearRequests: 'Gear requests',
       bossesTitle: 'Interest by boss',
-      activitiesTitle: 'Interest by activity',
+      activitiesTitle: 'Interest by class',
       guidesTitle: 'Interest by guide',
       gearTitle: 'Requested items',
       gearEmpty: 'No items registered yet.',
@@ -3830,11 +3867,96 @@ const sectionRoutes = {
   guias: '/guias',
   estelas: '/estelas',
   bosses: '/bosses',
-  actividades: '/actividades',
+  clases: '/clases',
   equipamiento: '/equipamiento',
   registro: '/registro',
   resumen: '/resumen',
 } as const
+
+type ClassGender = 'male' | 'female'
+
+type ClassBreedOption = {
+  key: string
+  nameEs: string
+  nameEn: string
+  maleId: number
+  femaleId: number
+}
+
+type ClassSetLink = {
+  url: string
+  label?: string
+}
+
+const classBreedOptions: readonly ClassBreedOption[] = [
+  { key: 'feca', nameEs: 'Feca', nameEn: 'Feca', maleId: 10, femaleId: 11 },
+  { key: 'osamodas', nameEs: 'Osamodas', nameEn: 'Osamodas', maleId: 20, femaleId: 21 },
+  { key: 'anutrof', nameEs: 'Anutrof', nameEn: 'Anutrof', maleId: 30, femaleId: 31 },
+  { key: 'sram', nameEs: 'Sram', nameEn: 'Sram', maleId: 40, femaleId: 41 },
+  { key: 'xelor', nameEs: 'Xelor', nameEn: 'Xelor', maleId: 50, femaleId: 51 },
+  { key: 'zurcarak', nameEs: 'Zurcarak', nameEn: 'Zurcarak', maleId: 60, femaleId: 61 },
+  { key: 'eniripsa', nameEs: 'Eniripsa', nameEn: 'Eniripsa', maleId: 70, femaleId: 71 },
+  { key: 'yopuka', nameEs: 'Yopuka', nameEn: 'Yopuka', maleId: 80, femaleId: 81 },
+  { key: 'ocra', nameEs: 'Ocra', nameEn: 'Ocra', maleId: 90, femaleId: 91 },
+  { key: 'sadida', nameEs: 'Sadida', nameEn: 'Sadida', maleId: 100, femaleId: 101 },
+  { key: 'sacrogrito', nameEs: 'Sacrogrito', nameEn: 'Sacrogrito', maleId: 110, femaleId: 111 },
+  { key: 'pandawa', nameEs: 'Pandawa', nameEn: 'Pandawa', maleId: 120, femaleId: 121 },
+  { key: 'tymador', nameEs: 'Tymador', nameEn: 'Tymador', maleId: 130, femaleId: 131 },
+  { key: 'zobal', nameEs: 'Zobal', nameEn: 'Zobal', maleId: 140, femaleId: 141 },
+  { key: 'uginak', nameEs: 'Uginak', nameEn: 'Uginak', maleId: 150, femaleId: 151 },
+  { key: 'steamer', nameEs: 'Steamer', nameEn: 'Steamer', maleId: 160, femaleId: 161 },
+  { key: 'selatrop', nameEs: 'Selatrop', nameEn: 'Selatrop', maleId: 180, femaleId: 181 },
+  { key: 'hipermago', nameEs: 'Hipermago', nameEn: 'Hipermago', maleId: 190, femaleId: 191 },
+] as const
+
+const availableBreedIllustrationIds = new Set([
+  10, 11, 20, 21, 30, 31, 40, 41, 50, 51, 60, 61, 70, 71, 80, 81, 90, 91,
+  100, 101, 110, 111, 120, 121, 130, 131, 140, 141, 150, 151, 160, 161,
+  180, 181, 190, 191,
+])
+
+const getClassBreedOption = (breed?: string) =>
+  classBreedOptions.find((option) => option.key === breed)
+
+const getClassNameFromBreed = (
+  breed: string | undefined,
+  language: Language,
+  fallbackName: string,
+) => {
+  const option = getClassBreedOption(breed)
+  if (!option) return fallbackName
+  return language === 'es' ? option.nameEs : option.nameEn
+}
+
+const getClassImageFromBreed = (
+  breed: string | undefined,
+  gender: ClassGender,
+  fallbackImage: string,
+) => {
+  const option = getClassBreedOption(breed)
+  if (!option) return fallbackImage
+
+  const preferredId = gender === 'female' ? option.femaleId : option.maleId
+  if (availableBreedIllustrationIds.has(preferredId)) {
+    return `/wakassets/breedsIllusrations/${preferredId}.png`
+  }
+
+  const fallbackId = option.maleId
+  if (availableBreedIllustrationIds.has(fallbackId)) {
+    return `/wakassets/breedsIllusrations/${fallbackId}.png`
+  }
+
+  return fallbackImage
+}
+
+const normalizeClassLinks = (
+  links?: readonly (string | ClassSetLink)[],
+): ClassSetLink[] =>
+  (links || []).map((link) =>
+    typeof link === 'string'
+      ? { url: link, label: '' }
+      : { url: link.url || '', label: link.label || '' },
+  )
 
 // Helper to get text in selected language
 const getText = (
@@ -4100,7 +4222,7 @@ function AdminPanel({ content, onSave, onReset, onLogout }: AdminPanelProps) {
     | 'plan'
     | 'guias'
     | 'bosses'
-    | 'actividades'
+    | 'clases'
     | 'equipamiento'
     | 'registro'
     | 'resumen'
@@ -4140,15 +4262,23 @@ function AdminPanel({ content, onSave, onReset, onLogout }: AdminPanelProps) {
 
       for (let index = 0; index < path.length - 1; index += 1) {
         const key = path[index]
+        const nextKey = path[index + 1]
 
         if (typeof key === 'number') {
           if (!Array.isArray(cursor)) return prev
+          if (cursor[key] === undefined || cursor[key] === null) {
+            cursor[key] = typeof nextKey === 'number' ? [] : {}
+          }
           cursor = cursor[key]
           continue
         }
 
         if (typeof cursor !== 'object' || cursor === null) return prev
-        cursor = (cursor as Record<string, unknown>)[key]
+        const record = cursor as Record<string, unknown>
+        if (record[key] === undefined || record[key] === null) {
+          record[key] = typeof nextKey === 'number' ? [] : {}
+        }
+        cursor = record[key]
       }
 
       const lastKey = path[path.length - 1]
@@ -4172,7 +4302,7 @@ function AdminPanel({ content, onSave, onReset, onLogout }: AdminPanelProps) {
     { key: 'plan', label: 'Plan', icon: '🗂️', hint: 'Bloques del plan de progreso' },
     { key: 'guias', label: 'Guías', icon: '📚', hint: 'Texto guía y pasos de aprendizaje' },
     { key: 'bosses', label: 'Bosses', icon: '👹', hint: 'Nombres, mecánicas e imágenes' },
-    { key: 'actividades', label: 'Actividades', icon: '📅', hint: 'Agenda y cadencia semanal' },
+    { key: 'clases', label: 'Clases', icon: '🧠', hint: 'Nombre, descripción y enlaces de sets' },
     { key: 'equipamiento', label: 'Equipamiento', icon: '🧩', hint: 'Texto de rotación de equipo' },
     { key: 'registro', label: 'Registro', icon: '📝', hint: 'Mensajes del formulario' },
     { key: 'resumen', label: 'Resumen', icon: '📌', hint: 'Cierre y texto resumen' },
@@ -4407,6 +4537,12 @@ function AdminPanel({ content, onSave, onReset, onLogout }: AdminPanelProps) {
               onChange={(e) => setDraftValue(['plan', 'title'], e.target.value)}
               style={inputStyle}
             />
+            <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Descripción de sección</label>
+            <textarea
+              value={langData.plan?.lead || ''}
+              onChange={(e) => setDraftValue(['plan', 'lead'], e.target.value)}
+              style={textareaStyle}
+            />
           </div>
           {(langData.plan?.items || []).map((item, index) => (
             <div style={groupStyle} key={`plan-item-${index}`}>
@@ -4539,39 +4675,180 @@ function AdminPanel({ content, onSave, onReset, onLogout }: AdminPanelProps) {
       )
     }
 
-    if (editSection === 'actividades') {
+    if (editSection === 'clases') {
+      type AdminClassItem = {
+        breed?: string
+        gender?: ClassGender
+        name?: string
+        image?: string
+        description?: string
+        links?: readonly (string | ClassSetLink)[]
+      }
+
+      const classItems =
+        ((langData as unknown as { classes?: { items?: readonly AdminClassItem[] } }).classes?.items || [])
+
+      const addClass = () => {
+        const nextItems = [
+          ...classItems,
+          { breed: 'feca', gender: 'male' as ClassGender, description: '', links: [] as string[] },
+        ]
+        setDraftValue(['classes', 'items'], nextItems)
+      }
+
+      const removeClass = (index: number) => {
+        const nextItems = classItems.filter((_, itemIndex) => itemIndex !== index)
+        setDraftValue(['classes', 'items'], nextItems)
+      }
+
+      const addLink = (classIndex: number) => {
+        const currentLinks = normalizeClassLinks(classItems[classIndex]?.links)
+        setDraftValue(['classes', 'items', classIndex, 'links'], [...currentLinks, { url: '', label: '' }])
+      }
+
+      const removeLink = (classIndex: number, linkIndex: number) => {
+        const currentLinks = normalizeClassLinks(classItems[classIndex]?.links)
+        const nextLinks = currentLinks.filter((_, index: number) => index !== linkIndex)
+        setDraftValue(['classes', 'items', classIndex, 'links'], nextLinks)
+      }
+
+      const updateLinkField = (
+        classIndex: number,
+        linkIndex: number,
+        field: 'url' | 'label',
+        value: string,
+      ) => {
+        const currentLinks = normalizeClassLinks(classItems[classIndex]?.links)
+        const nextLinks = currentLinks.map((link, index) =>
+          index === linkIndex ? { ...link, [field]: value } : link,
+        )
+        setDraftValue(['classes', 'items', classIndex, 'links'], nextLinks)
+      }
+
       return (
         <>
           <div style={groupStyle}>
             <label style={labelStyle}>Título de sección</label>
             <input
-              value={langData.schedule?.title || ''}
-              onChange={(e) => setDraftValue(['schedule', 'title'], e.target.value)}
+              value={langData.classes?.title || ''}
+              onChange={(e) => setDraftValue(['classes', 'title'], e.target.value)}
               style={inputStyle}
             />
+            <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Descripción de sección</label>
+            <textarea
+              value={langData.classes?.lead || ''}
+              onChange={(e) => setDraftValue(['classes', 'lead'], e.target.value)}
+              style={textareaStyle}
+            />
+            <button type="button" className="ghost small" onClick={addClass} style={{ marginTop: '0.8rem' }}>
+              Añadir clase
+            </button>
           </div>
-          {(langData.schedule?.items || []).map((activity, index) => (
-            <div style={groupStyle} key={`activity-item-${index}`}>
-              <label style={labelStyle}>Actividad #{index + 1} - Nombre</label>
-              <input
-                value={activity.name || ''}
-                onChange={(e) => setDraftValue(['schedule', 'items', index, 'name'], e.target.value)}
-                style={inputStyle}
-              />
-              <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Enfoque</label>
-              <textarea
-                value={activity.focus || ''}
-                onChange={(e) => setDraftValue(['schedule', 'items', index, 'focus'], e.target.value)}
-                style={textareaStyle}
-              />
-              <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Cadencia</label>
-              <input
-                value={activity.cadence || ''}
-                onChange={(e) => setDraftValue(['schedule', 'items', index, 'cadence'], e.target.value)}
-                style={inputStyle}
-              />
-            </div>
-          ))}
+          <div className="admin-class-accordion">
+            {classItems.map((classItem, index) => {
+              const selectedGender: ClassGender = classItem.gender === 'female' ? 'female' : 'male'
+              const selectedName = getClassNameFromBreed(classItem.breed, editLang, classItem.name || '')
+              const selectedImage = getClassImageFromBreed(classItem.breed, selectedGender, classItem.image || '')
+
+              return (
+                <details className="admin-class-item" key={`class-item-${index}`}>
+                  <summary className="admin-class-item__summary">
+                    <span>{selectedName || `Clase #${index + 1}`}</span>
+                    <span className="admin-class-item__meta">#{index + 1}</span>
+                    <button
+                      type="button"
+                      className="ghost small"
+                      onClick={(event) => {
+                        event.preventDefault()
+                        event.stopPropagation()
+                        removeClass(index)
+                      }}
+                    >
+                      Quitar clase
+                    </button>
+                  </summary>
+                  <div style={groupStyle}>
+                    <label style={{ ...labelStyle, marginTop: '0.2rem' }}>Raza</label>
+                    <select
+                      value={classItem.breed || ''}
+                      onChange={(e) => setDraftValue(['classes', 'items', index, 'breed'], e.target.value)}
+                      style={inputStyle}
+                    >
+                      <option value="">Selecciona raza</option>
+                      {classBreedOptions.map((breedOption) => (
+                        <option key={breedOption.key} value={breedOption.key}>
+                          {editLang === 'es' ? breedOption.nameEs : breedOption.nameEn}
+                        </option>
+                      ))}
+                    </select>
+                    <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Ilustración</label>
+                    <select
+                      value={selectedGender}
+                      onChange={(e) => setDraftValue(['classes', 'items', index, 'gender'], e.target.value as ClassGender)}
+                      style={inputStyle}
+                    >
+                      <option value="male">Hombre</option>
+                      <option value="female">Mujer</option>
+                    </select>
+                    <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Nombre automático</label>
+                    <input value={selectedName} readOnly style={{ ...inputStyle, opacity: 0.85 }} />
+                    <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Imagen automática</label>
+                    <input value={selectedImage} readOnly style={{ ...inputStyle, opacity: 0.85 }} />
+                    {selectedImage ? (
+                      <div
+                        style={{
+                          marginTop: '0.8rem',
+                          borderRadius: '10px',
+                          minHeight: '170px',
+                          overflow: 'hidden',
+                          border: '1px solid var(--color-border)',
+                          backgroundImage: `url(${selectedImage})`,
+                          backgroundSize: 'auto 145%',
+                          backgroundRepeat: 'no-repeat',
+                          backgroundPosition: 'center 22%',
+                          backgroundColor: 'rgba(8, 12, 18, 0.55)',
+                        }}
+                      />
+                    ) : null}
+                    <label style={{ ...labelStyle, marginTop: '0.8rem' }}>Descripción / recomendaciones</label>
+                    <textarea
+                      value={classItem.description || ''}
+                      onChange={(e) => setDraftValue(['classes', 'items', index, 'description'], e.target.value)}
+                      style={textareaStyle}
+                    />
+
+                    <div style={{ display: 'grid', gap: '0.6rem', marginTop: '0.8rem' }}>
+                      <label style={labelStyle}>Vínculos a sets</label>
+                      {normalizeClassLinks(classItem.links).map((link, linkIndex) => (
+                        <div key={`class-${index}-link-${linkIndex}`} style={{ display: 'grid', gap: '0.45rem' }}>
+                          <input
+                            value={link.url}
+                            onChange={(e) => updateLinkField(index, linkIndex, 'url', e.target.value)}
+                            placeholder="https://..."
+                            style={inputStyle}
+                          />
+                          <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                            <input
+                              value={link.label || ''}
+                              onChange={(e) => updateLinkField(index, linkIndex, 'label', e.target.value)}
+                              placeholder="Descripción del vínculo (ej: Build crítico PvE)"
+                              style={inputStyle}
+                            />
+                            <button type="button" className="ghost small" onClick={() => removeLink(index, linkIndex)}>
+                              Quitar
+                            </button>
+                          </div>
+                        </div>
+                      ))}
+                      <button type="button" className="ghost small" onClick={() => addLink(index)}>
+                        Añadir vínculo
+                      </button>
+                    </div>
+                  </div>
+                </details>
+              )
+            })}
+          </div>
         </>
       )
     }
@@ -4867,7 +5144,7 @@ function AdminPanel({ content, onSave, onReset, onLogout }: AdminPanelProps) {
               <strong>Bosses:</strong> {langData.bosses?.items?.length || 0}
             </li>
             <li>
-              <strong>Actividades:</strong> {langData.schedule?.items?.length || 0}
+              <strong>Clases:</strong> {langData.classes?.items?.length || 0}
             </li>
             <li>
               <strong>Estado:</strong> {saving ? 'Guardando…' : hasPendingChanges ? 'Pendiente' : 'Sin cambios'}
@@ -4991,6 +5268,47 @@ function App() {
   const activeContent = customContent || content
   const data = activeContent[language]
   const stelesHubData = data.stelesHub || content[language].stelesHub
+  const planLeadText = data.plan.lead || content[language].plan.lead || data.objectives.lead
+  const classesData = useMemo(() => {
+    type ClassItemShape = {
+      breed?: string
+      gender?: ClassGender
+      name?: string
+      image?: string
+      description?: string
+      links?: readonly (string | ClassSetLink)[]
+    }
+    type ClassSectionShape = {
+      title?: string
+      lead?: string
+      items?: readonly ClassItemShape[]
+    }
+
+    const baseClasses = content[language].classes as ClassSectionShape
+    const customClasses = (data as unknown as { classes?: ClassSectionShape }).classes
+    const classItems = (customClasses?.items || []).map((item) => ({
+      breed: item.breed || '',
+      gender: item.gender === 'female' ? 'female' : 'male',
+      name: getClassNameFromBreed(item.breed, language, item.name || ''),
+      image: getClassImageFromBreed(item.breed, item.gender === 'female' ? 'female' : 'male', item.image || ''),
+      description: item.description || '',
+      links: normalizeClassLinks(item.links).filter((link) => Boolean(link.url.trim())),
+    }))
+
+    if (classItems.length > 0 || customClasses?.title || customClasses?.lead) {
+      return {
+        title: customClasses?.title || baseClasses.title || '',
+        lead: customClasses?.lead || baseClasses.lead || '',
+        items: classItems,
+      }
+    }
+
+    return {
+      title: baseClasses.title || '',
+      lead: baseClasses.lead || '',
+      items: [],
+    }
+  }, [data.classes, language])
   const mergedDungeonGuides = useMemo(() => {
     const current = data.guides.dungeons || []
     const currentById = new Map(current.map((dungeon) => [dungeon.id, dungeon]))
@@ -5029,12 +5347,30 @@ function App() {
   }, [location.pathname, location.hash, mergedDungeonGuides.length])
 
   const resolvedNav = useMemo(() => {
-    if (data.nav.some((item) => item.id === 'estelas')) {
-      return data.nav
+    const hiddenNavIds = new Set(['objetivo', 'resumen'])
+    const normalizedNav = data.nav.map((item) => {
+      const normalizedId = String(item.id) === 'actividades' ? 'clases' : item.id
+      const normalizedLabel =
+        normalizedId === 'clases'
+          ? language === 'es'
+            ? 'Clases'
+            : 'Classes'
+          : item.label
+
+      return {
+        ...item,
+        id: normalizedId,
+        label: normalizedLabel,
+      }
+    })
+    const filteredNav = normalizedNav.filter((item) => !hiddenNavIds.has(String(item.id)))
+
+    if (filteredNav.some((item) => item.id === 'estelas')) {
+      return filteredNav
     }
 
-    const insertAfter = data.nav.findIndex((item) => item.id === 'guias')
-    const navCopy = [...data.nav]
+    const insertAfter = filteredNav.findIndex((item) => item.id === 'guias')
+    const navCopy = [...filteredNav]
     const estelasLabel = language === 'es' ? 'Estelas' : 'Steles'
 
     if (insertAfter === -1) {
@@ -5556,6 +5892,7 @@ function App() {
               <section className="section reveal">
                 <div className="section-header">
                   <h2>{data.plan.title}</h2>
+                  {planLeadText ? <p>{planLeadText}</p> : null}
                 </div>
                 <div className="grid">
                   {data.plan.items.map((item) => (
@@ -5904,38 +6241,74 @@ function App() {
           }
         />
         <Route
-          path={sectionRoutes.actividades}
+          path={sectionRoutes.clases}
           element={
             <div className="route-view" key={location.pathname}>
               <ViewHeader />
               <section className="section reveal">
                 <div className="section-header">
-                  <h2>{data.schedule.title}</h2>
+                  <h2>{classesData.title}</h2>
+                  {classesData.lead ? <p>{classesData.lead}</p> : null}
                 </div>
-                <div className="schedule">
-                  {data.schedule.items.map((item) => {
-                    const interested = interestByActivity.get(item.name) || [];
-                    return (
-                      <div className="schedule-item" key={item.name}>
-                        <h3>{item.name}</h3>
-                        <p>{item.focus}</p>
-                        <span>{item.cadence}</span>
-                        {interested.length > 0 && (
-                          <div className="interest-summary">
-                            <strong>
-                              {interested.length} {data.interests.interested}
-                            </strong>
-                            {renderEntryList(interested)}
+                {classesData.items.length > 0 ? (
+                  <div className="class-accordion">
+                    {classesData.items.map((item, index) => {
+                      const interested = interestByActivity.get(String(index)) || []
+                      const classImage = item.image?.trim()
+                      const className = item.name || `${language === 'es' ? 'Clase' : 'Class'} ${index + 1}`
+                      return (
+                        <details className="class-item" key={`${className}-${index}`}>
+                          <summary className="class-item__summary">
+                            <span>{className}</span>
+                            <span className="class-item__chevron">▾</span>
+                          </summary>
+                          <div className="class-item__body">
+                            {classImage ? (
+                              <div
+                                className="class-media"
+                                style={{
+                                  backgroundImage: `url(${classImage})`,
+                                }}
+                              />
+                            ) : null}
+                            {item.description ? <p>{item.description}</p> : null}
+                            {item.links && item.links.length > 0 ? (
+                              <div className="class-links">
+                                <h4>{language === 'es' ? 'Sets sugeridos' : 'Suggested sets'}</h4>
+                                {item.links.map((link, linkIndex) => (
+                                  <a key={`${className}-link-${linkIndex}`} href={link.url} target="_blank" rel="noreferrer">
+                                    {link.label?.trim() ? link.label : link.url}
+                                  </a>
+                                ))}
+                              </div>
+                            ) : null}
+                            {interested.length > 0 ? (
+                              <div className="interest-summary">
+                                <strong>
+                                  {interested.length} {data.interests.interested}
+                                </strong>
+                                {renderEntryList(interested)}
+                              </div>
+                            ) : null}
                           </div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
+                        </details>
+                      )
+                    })}
+                  </div>
+                ) : (
+                  <div className="callout">
+                    <p>
+                      {language === 'es'
+                        ? 'Aún no hay clases cargadas. Agrégalas desde el panel Admin en la sección Clases.'
+                        : 'No classes configured yet. Add them from Admin in the Classes section.'}
+                    </p>
+                  </div>
+                )}
               </section>
             </div>
           }
         />
+        <Route path="/actividades" element={<Navigate to={sectionRoutes.clases} replace />} />
         <Route
           path={sectionRoutes.equipamiento}
           element={
@@ -6081,9 +6454,9 @@ function App() {
                     <div className="interest-group">
                       <h3>{data.form.fields.interestActivities}</h3>
                       <div className="interest-options">
-                        {data.schedule.items.map((item, index) => (
-                          <label key={item.name} className="interest-option">
-                            <span>{item.name}</span>
+                        {classesData.items.map((item, index) => (
+                          <label key={`${item.name || 'class'}-${index}`} className="interest-option">
+                            <span>{item.name || `${language === 'es' ? 'Clase' : 'Class'} ${index + 1}`}</span>
                             <input
                               type="checkbox"
                               checked={interestActivities.includes(index)}
@@ -6188,7 +6561,8 @@ function App() {
             </div>
           }
         />
-        <Route
+        {/* Hidden resumen route - uncomment to restore */}
+        {/* <Route
           path={sectionRoutes.resumen}
           element={
             <div className="route-view" key={location.pathname}>
@@ -6215,7 +6589,7 @@ function App() {
               </section>
             </div>
           }
-        />
+        /> */}
         <Route
           path="/admin"
           element={
