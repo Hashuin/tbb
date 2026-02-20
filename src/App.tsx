@@ -3430,7 +3430,7 @@ const content = {
       priorities: ['Alta', 'Media', 'Baja'],
       submit: 'Enviar interes',
       success:
-        'Listo. Tu interes quedo registrado para organizar actividades y guias.',
+        'Listo. Tu interes quedo registrado para organizar dungeons.',
       error:
         'Hubo un problema al guardar. Revisa la configuracion o intenta mas tarde.',
     },
@@ -3797,7 +3797,7 @@ const content = {
       removeItem: 'Remove',
       priorities: ['High', 'Medium', 'Low'],
       submit: 'Send interest',
-      success: 'Done. Your interest is recorded for activities and guides.',
+      success: 'Done. Your interest is recorded for dungeons.',
       error: 'Something went wrong. Check configuration or try later.',
     },
     interests: {
@@ -3837,7 +3837,6 @@ type Language = keyof typeof content
 type MultiidiomaTrad = { fr: string; en: string; es: string }
 type Theme = 'dark' | 'light'
 type ItemRequest = {
-  id: number
   item: string
   slot: string
   priority: string
@@ -3987,15 +3986,6 @@ const uiLabels = {
   dropsBoss: { fr: 'Drops du boss', en: 'Boss Drops', es: 'Botín del Jefe' },
   passif: { fr: 'Passif:', en: 'Passive:', es: 'Pasivo:' },
 } as const
-
-const createEmptyItem = (offset = 0): ItemRequest => ({
-  id: Date.now() + offset,
-  item: '',
-  slot: '',
-  priority: '',
-  source: '',
-  notes: '',
-})
 
 // Supabase Auth Admin Login
 type AdminLoginProps = {
@@ -5166,11 +5156,6 @@ function App() {
   const [scrolled, setScrolled] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [submitError, setSubmitError] = useState<string | null>(null)
-  const [itemRequests, setItemRequests] = useState<ItemRequest[]>([
-    createEmptyItem(),
-  ])
-  const [interestBosses, setInterestBosses] = useState<number[]>([])
-  const [interestActivities, setInterestActivities] = useState<number[]>([])
   const [interestGuides, setInterestGuides] = useState<number[]>([])
   const [interestEntries, setInterestEntries] = useState<InterestEntry[]>([])
   const [availabilityDays, setAvailabilityDays] = useState<string[]>([])
@@ -5410,33 +5395,6 @@ function App() {
     [],
   )
 
-  const interestByBoss = useMemo(() => {
-    const map = new Map<number, InterestEntry[]>()
-    interestEntries.forEach((entry) => {
-      entry.interest_boss_ids?.forEach((id) => {
-        if (!map.has(id)) {
-          map.set(id, [])
-        }
-        map.get(id)?.push(entry)
-      })
-    })
-    return map
-  }, [interestEntries])
-
-  const interestByActivity = useMemo(() => {
-    const map = new Map<string, InterestEntry[]>()
-    interestEntries.forEach((entry) => {
-      entry.interest_activity_ids?.forEach((id) => {
-        const key = String(id)
-        if (!map.has(key)) {
-          map.set(key, [])
-        }
-        map.get(key)?.push(entry)
-      })
-    })
-    return map
-  }, [interestEntries])
-
   const interestByGuide = useMemo(() => {
     const map = new Map<string, InterestEntry[]>()
     interestEntries.forEach((entry) => {
@@ -5519,11 +5477,6 @@ function App() {
 
     const form = event.currentTarget
     const formData = new FormData(form)
-    const cleanedRequests = itemRequests.filter((request) =>
-      Object.entries(request).some(([key, value]) =>
-        key === 'id' ? false : Boolean(value),
-      ),
-    )
 
     const availabilityString = availabilityDays.length > 0 && availabilityStart && availabilityEnd
       ? `${availabilityDays.join(' ')} ${availabilityStart}-${availabilityEnd}`
@@ -5537,9 +5490,9 @@ function App() {
       availability: availabilityString,
       contact: String(formData.get('contact') || ''),
       build: String(formData.get('build') || ''),
-      item_requests: cleanedRequests,
-      interest_boss_ids: interestBosses,
-      interest_activity_ids: interestActivities,
+      item_requests: [],
+      interest_boss_ids: [],
+      interest_activity_ids: [],
       interest_guide_ids: interestGuides,
       created_at: new Date().toISOString(),
     }
@@ -5554,7 +5507,17 @@ function App() {
     if (isSupabaseConfigured && supabase) {
       const { error } = await supabase.from('guild_interest').insert(payload)
       if (error) {
-        setSubmitError(data.form.error)
+        const looksForbidden =
+          error.code === '42501' ||
+          /403|forbidden|permission|policy|rls/i.test(error.message || '')
+
+        setSubmitError(
+          looksForbidden
+            ? language === 'es'
+              ? 'Guardado localmente. Supabase rechazó la inserción (403/RLS). Revisa políticas de la tabla guild_interest.'
+              : 'Saved locally. Supabase rejected the insert (403/RLS). Check guild_interest table policies.'
+            : data.form.error,
+        )
         setSubmitted(false)
         return
       }
@@ -5562,28 +5525,11 @@ function App() {
     }
 
     form.reset()
-    setItemRequests([createEmptyItem()])
-    setInterestBosses([])
-    setInterestActivities([])
     setInterestGuides([])
     setAvailabilityDays([])
     setAvailabilityStart('')
     setAvailabilityEnd('')
     setSubmitted(true)
-  }
-
-  const updateItem = (id: number, field: keyof ItemRequest, value: string) => {
-    setItemRequests((prev) =>
-      prev.map((item) => (item.id === id ? { ...item, [field]: value } : item)),
-    )
-  }
-
-  const addItem = () => {
-    setItemRequests((prev) => [...prev, createEmptyItem(prev.length)])
-  }
-
-  const removeItem = (id: number) => {
-    setItemRequests((prev) => prev.filter((item) => item.id !== id))
   }
 
   const toggleInterest = (
@@ -5918,19 +5864,10 @@ function App() {
                 </div>
                 <div className="steps">
                   {data.guides.steps.map((step, index) => {
-                    const interested = interestByGuide.get(step) || [];
                     return (
                       <div className="step" key={step}>
                         <span className="step-index">0{index + 1}</span>
                         <p>{step}</p>
-                        {interested.length > 0 && (
-                          <div className="interest-summary">
-                            <strong>
-                              {interested.length} {data.interests.needHelp}
-                            </strong>
-                            {renderEntryList(interested)}
-                          </div>
-                        )}
                       </div>
                     );
                   })}
@@ -5943,7 +5880,10 @@ function App() {
                     <p>{data.guides.dungeonLead}</p>
                   </div>
                   <div className="dungeon-grid">
-                    {mergedDungeonGuides.map((dungeon) => (
+                    {mergedDungeonGuides.map((dungeon, dungeonIndex) => {
+                      const interested = interestByGuide.get(String(dungeonIndex)) || []
+
+                      return (
                       <article className="dungeon-card" key={dungeon.id} id={`guide-${dungeon.id}`}>
                         <header className="dungeon-header">
                           <div>
@@ -5960,6 +5900,14 @@ function App() {
                             return <li key={String(text).slice(0, 50)}>{text}</li>
                           })}
                         </ul>
+                        {interested.length > 0 ? (
+                          <div className="interest-summary">
+                            <strong>
+                              {interested.length} {data.interests.needHelp}
+                            </strong>
+                            {renderEntryList(interested)}
+                          </div>
+                        ) : null}
                         <div className="dungeon-details">
                           <details className="dungeon-section">
                             <summary>{getText(uiLabels.monstres, language)}</summary>
@@ -6094,7 +6042,7 @@ function App() {
                           </details>
                         </div>
                       </article>
-                    ))}
+                    )})}
                   </div>
                 </section>
               ) : null}
@@ -6188,8 +6136,14 @@ function App() {
                 </div>
                 <div className="boss-grid">
                   {data.bosses.items.map((boss) => {
-                    const interested = interestByBoss.get(boss.id) || [];
                     const bossGuideId = (boss as { guideId?: string }).guideId || bossGuideById.get(boss.id)
+                    const bossDungeonIndex = bossGuideId
+                      ? mergedDungeonGuides.findIndex((dungeon) => dungeon.id === bossGuideId)
+                      : -1
+                    const interested =
+                      bossDungeonIndex >= 0
+                        ? interestByGuide.get(String(bossDungeonIndex)) || []
+                        : []
                     const hasGuideLink = Boolean(bossGuideId)
                     const bossImage = boss.image?.trim()
                       ? boss.image
@@ -6253,7 +6207,6 @@ function App() {
                 {classesData.items.length > 0 ? (
                   <div className="class-accordion">
                     {classesData.items.map((item, index) => {
-                      const interested = interestByActivity.get(String(index)) || []
                       const classImage = item.image?.trim()
                       const className = item.name || `${language === 'es' ? 'Clase' : 'Class'} ${index + 1}`
                       return (
@@ -6280,14 +6233,6 @@ function App() {
                                     {link.label?.trim() ? link.label : link.url}
                                   </a>
                                 ))}
-                              </div>
-                            ) : null}
-                            {interested.length > 0 ? (
-                              <div className="interest-summary">
-                                <strong>
-                                  {interested.length} {data.interests.interested}
-                                </strong>
-                                {renderEntryList(interested)}
                               </div>
                             ) : null}
                           </div>
@@ -6435,48 +6380,11 @@ function App() {
                   </label>
                   <div className="interest-block">
                     <div className="interest-group">
-                      <h3>{data.form.fields.interestBosses}</h3>
+                      <h3>{language === 'es' ? 'Interés en dungeons' : 'Interested dungeons'}</h3>
                       <div className="interest-options">
-                        {data.bosses.items.map((boss) => (
-                          <label key={boss.id} className="interest-option">
-                            <span>{boss.name}</span>
-                            <input
-                              type="checkbox"
-                              checked={interestBosses.includes(boss.id)}
-                              onChange={() =>
-                                toggleInterest(boss.id, setInterestBosses)
-                              }
-                            />
-                          </label>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="interest-group">
-                      <h3>{data.form.fields.interestActivities}</h3>
-                      <div className="interest-options">
-                        {classesData.items.map((item, index) => (
-                          <label key={`${item.name || 'class'}-${index}`} className="interest-option">
-                            <span>{item.name || `${language === 'es' ? 'Clase' : 'Class'} ${index + 1}`}</span>
-                            <input
-                              type="checkbox"
-                              checked={interestActivities.includes(index)}
-                              onChange={() =>
-                                toggleInterest(
-                                  index,
-                                  setInterestActivities,
-                                )
-                              }
-                            />
-                          </label>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="interest-group">
-                      <h3>{data.form.fields.interestGuides}</h3>
-                      <div className="interest-options">
-                        {data.guides.steps.map((step, index) => (
-                          <label key={step} className="interest-option">
-                            <span>{step}</span>
+                        {mergedDungeonGuides.map((dungeon, index) => (
+                          <label key={dungeon.id} className="interest-option">
+                            <span>{getText(dungeon.name, language)}</span>
                             <input
                               type="checkbox"
                               checked={interestGuides.includes(index)}
@@ -6489,72 +6397,10 @@ function App() {
                       </div>
                     </div>
                   </div>
-                  <div className="items-block">
-                    <div className="items-header">
-                      <h3>{data.form.fields.item}</h3>
-                      <button type="button" className="ghost" onClick={addItem}>
-                        {data.form.addItem}
-                      </button>
-                    </div>
-                    {itemRequests.map((request, index) => (
-                      <div className="item-row" key={request.id}>
-                        <input
-                          placeholder={data.form.fields.item}
-                          value={request.item}
-                          onChange={(event) =>
-                            updateItem(request.id, 'item', event.target.value)
-                          }
-                        />
-                        <input
-                          placeholder={data.form.fields.slot}
-                          value={request.slot}
-                          onChange={(event) =>
-                            updateItem(request.id, 'slot', event.target.value)
-                          }
-                        />
-                        <select
-                          value={request.priority}
-                          onChange={(event) =>
-                            updateItem(request.id, 'priority', event.target.value)
-                          }
-                        >
-                          <option value="">{data.form.fields.priority}</option>
-                          {data.form.priorities.map((priority) => (
-                            <option key={priority} value={priority}>
-                              {priority}
-                            </option>
-                          ))}
-                        </select>
-                        <input
-                          placeholder={data.form.fields.source}
-                          value={request.source}
-                          onChange={(event) =>
-                            updateItem(request.id, 'source', event.target.value)
-                          }
-                        />
-                        <input
-                          placeholder={data.form.fields.notes}
-                          value={request.notes}
-                          onChange={(event) =>
-                            updateItem(request.id, 'notes', event.target.value)
-                          }
-                        />
-                        {index > 0 ? (
-                          <button
-                            type="button"
-                            className="ghost small"
-                            onClick={() => removeItem(request.id)}
-                          >
-                            {data.form.removeItem}
-                          </button>
-                        ) : null}
-                      </div>
-                    ))}
-                  </div>
                   <button type="submit" className="primary">
                     {data.form.submit}
                   </button>
-                  {submitted ? <p className="success">{data.form.success}</p> : null}
+                  {submitted && !submitError ? <p className="success">{data.form.success}</p> : null}
                   {submitError ? <p className="error">{submitError}</p> : null}
                 </form>
               </section>
