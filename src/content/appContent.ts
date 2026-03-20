@@ -1,4 +1,4 @@
-﻿// Extracted static content from App.tsx for maintainability
+// Extracted static content from App.tsx for maintainability
 
 import type { AppContent } from '../domain/content/types'
 
@@ -32,7 +32,7 @@ export const dungeonGuides = [
       {
         fr: 'Limitez vos degats directs sur les unites stasificatrices.',
         en: 'Limit direct damage on Stasis Units.',
-        es: 'Limita el daÃ±o directo sobre las Unidades Estasificadoras.',
+        es: 'Limita el daño directo sobre las Unidades Estasificadoras.',
       },
       {
         fr: 'Passif rouge: ne pas rester en melee.',
@@ -42,37 +42,37 @@ export const dungeonGuides = [
       {
         fr: 'Passif vert: ne pas infliger de degats directs.',
         en: 'Green passive: do not deal direct damage.',
-        es: 'Pasivo verde: no inflige daÃ±o directo.',
+        es: 'Pasivo verde: no inflige daño directo.',
       },
       {
         fr: "Passif violet: ne pas etre proche (3 cases) d'un allie.",
         en: "Purple passive: do not be close (3 cells) to an ally.",
-        es: "Pasivo pÃºrpura: no estÃ©s cerca (3 celdas) de un aliado.",
+        es: "Pasivo púrpura: no estés cerca (3 celdas) de un aliado.",
       },
     ],
     monsters: [
       {
-        name: { fr: "Artilleur d'elite", en: "Elite Gunner", es: "Artillero de Ã©lite" },
+        name: { fr: "Artilleur d'elite", en: "Elite Gunner", es: "Artillero de élite" },
         level: { fr: 'Niv. 224 (Stasis 2)', en: 'Lvl. 224 (Stasis 2)', es: 'Niv. 224 (Estasis 2)' },
-        bonus: { fr: 'Bonus de Velocite: 50% Dommages infliges', en: 'Speed Bonus: 50% Increased Damage', es: 'BonificaciÃ³n de Velocidad: 50% DaÃ±o Aumentado' },
-        description: { fr: "Il possede 2 sorts, 1 passif et il n'a pas de faiblesse specifique.", en: "Has 2 spells, 1 passive and no specific weakness.", es: "Tiene 2 hechizos, 1 pasivo y no tiene debilidad especÃ­fica." },
+        bonus: { fr: 'Bonus de Velocite: 50% Dommages infliges', en: 'Speed Bonus: 50% Increased Damage', es: 'Bonificación de Velocidad: 50% Daño Aumentado' },
+        description: { fr: "Il possede 2 sorts, 1 passif et il n'a pas de faiblesse specifique.", en: "Has 2 spells, 1 passive and no specific weakness.", es: "Tiene 2 hechizos, 1 pasivo y no tiene debilidad específica." },
         spells: [
           {
             name: { fr: 'Explosis', en: 'Explosis', es: 'Explosis' },
-            effect: { fr: 'Sort de zone. Inflige des degats Stasis et rebondit X fois a 3 cases des cibles.', en: 'AoE spell. Deals Stasis damage and bounces X times to targets within 3 cells.', es: 'Hechizo de Ã¡rea. Inflige daÃ±o Estasis y rebota X veces a objetivos a 3 celdas.' },
+            effect: { fr: 'Sort de zone. Inflige des degats Stasis et rebondit X fois a 3 cases des cibles.', en: 'AoE spell. Deals Stasis damage and bounces X times to targets within 3 cells.', es: 'Hechizo de área. Inflige daño Estasis y rebota X veces a objetivos a 3 celdas.' },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
-            range: { fr: '2-10 PO, en ligne', en: '2-10 Range, line', es: '2-10 PO, en lÃ­nea' },
+            range: { fr: '2-10 PO, en ligne', en: '2-10 Range, line', es: '2-10 PO, en línea' },
             limit: { fr: '1/cible, 3/tour', en: '1/target, 3/turn', es: '1/objetivo, 3/turno' },
           },
           {
             name: { fr: 'Bombardement Stasis', en: 'Stasis Bombardment', es: 'Bombardeo Estasis' },
             tag: { fr: 'Ultime', en: 'Ultimate', es: 'Definitiva' },
-            effect: { fr: 'Sort de zone en cercle de taille 2 autour de chaque cible. Cible aleatoirement X ennemis.', en: 'AoE spell in size-2 circle around each target. Randomly targets X enemies.', es: 'Hechizo de Ã¡rea en cÃ­rculo tamaÃ±o 2 alrededor de cada objetivo. Apunta aleatoriamente a X enemigos.' },
+            effect: { fr: 'Sort de zone en cercle de taille 2 autour de chaque cible. Cible aleatoirement X ennemis.', en: 'AoE spell in size-2 circle around each target. Randomly targets X enemies.', es: 'Hechizo de área en círculo tamaño 2 alrededor de cada objetivo. Apunta aleatoriamente a X enemigos.' },
             cost: { fr: '0 PA', en: '0 AP', es: '0 PA' },
             limit: { fr: '1/tour', en: '1/turn', es: '1/turno' },
           },
         ],
-        passive: { fr: "A chaque rebond effectue, +1 reserve de stasis. A la mort, inflige des degats stasis en cercle de taille 2.", en: "Each bounce gives +1 Stasis Reserve. On death, deals Stasis damage in size-2 circle.", es: "Cada rebote da +1 Reserva de Estasis. Al morir, inflige daÃ±o Estasis en cÃ­rculo tamaÃ±o 2." },
+        passive: { fr: "A chaque rebond effectue, +1 reserve de stasis. A la mort, inflige des degats stasis en cercle de taille 2.", en: "Each bounce gives +1 Stasis Reserve. On death, deals Stasis damage in size-2 circle.", es: "Cada rebote da +1 Reserva de Estasis. Al morir, inflige daño Estasis en círculo tamaño 2." },
         notes: [],
         stats: [
           { fr: 'PV 22.172', en: 'HP 22,172', es: 'PV 22.172' },
@@ -83,7 +83,7 @@ export const dungeonGuides = [
           { fr: 'Tacle 350', en: 'Lock 350', es: 'Placaje 350' },
           { fr: 'Esquive 1600', en: 'Dodge 1,600', es: 'Esquiva 1600' },
           { fr: 'Parade 10%', en: 'Block 10%', es: 'Parada 10%' },
-          { fr: 'Critique 35%', en: 'Critical 35%', es: 'CrÃ­tico 35%' },
+          { fr: 'Critique 35%', en: 'Critical 35%', es: 'Crítico 35%' },
           { fr: 'Volonte 20', en: 'Willpower 20', es: 'Voluntad 20' },
           { fr: 'Resist 74% (610)', en: 'Resist 74% (610)', es: 'Resist 74% (610)' },
         ],
@@ -91,31 +91,31 @@ export const dungeonGuides = [
       {
         name: { fr: 'Mekano', en: 'Mekano', es: 'Mekano' },
         level: { fr: 'Niv. 218 (Stasis 2)', en: 'Lvl. 218 (Stasis 2)', es: 'Niv. 218 (Estasis 2)' },
-        bonus: { fr: 'Bonus de Velocite: 2 PM', en: 'Speed Bonus: 2 MP', es: 'BonificaciÃ³n de Velocidad: 2 PM' },
-        description: { fr: "Il possede 3 sorts, 1 passif et il n'a pas de faiblesse specifique.", en: "Has 3 spells, 1 passive and no specific weakness.", es: "Tiene 3 hechizos, 1 pasivo y no tiene debilidad especÃ­fica." },
+        bonus: { fr: 'Bonus de Velocite: 2 PM', en: 'Speed Bonus: 2 MP', es: 'Bonificación de Velocidad: 2 PM' },
+        description: { fr: "Il possede 3 sorts, 1 passif et il n'a pas de faiblesse specifique.", en: "Has 3 spells, 1 passive and no specific weakness.", es: "Tiene 3 hechizos, 1 pasivo y no tiene debilidad específica." },
         spells: [
           {
             name: { fr: 'Remontage', en: 'Wind-up', es: 'Remonte' },
-            effect: { fr: "Soigne et donne de l'armure a un allie (20 % PdV max du Mekano).", en: "Heals and gives armor to an ally (20% of Mekano's max HP).", es: "Cura y da armadura a un aliado (20% de PV mÃ¡x. del Mekano)." },
+            effect: { fr: "Soigne et donne de l'armure a un allie (20 % PdV max du Mekano).", en: "Heals and gives armor to an ally (20% of Mekano's max HP).", es: "Cura y da armadura a un aliado (20% de PV máx. del Mekano)." },
             cost: { fr: '3 PA', en: '3 AP', es: '3 PA' },
             range: { fr: '1-2 PO', en: '1-2 Range', es: '1-2 PO' },
             limit: { fr: '1/cible, 3/tour', en: '1/target, 3/turn', es: '1/objetivo, 3/turno' },
           },
           {
             name: { fr: 'Coup de clef', en: 'Wrench Strike', es: 'Golpe de llave' },
-            effect: { fr: 'Inflige des degats Stasis.', en: 'Deals Stasis damage.', es: 'Inflige daÃ±o Estasis.' },
+            effect: { fr: 'Inflige des degats Stasis.', en: 'Deals Stasis damage.', es: 'Inflige daño Estasis.' },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             range: { fr: '1 PO', en: '1 Range', es: '1 PO' },
             limit: { fr: '1/cible, 3/tour', en: '1/target, 3/turn', es: '1/objetivo, 3/turno' },
           },
           {
-            name: { fr: 'Transmission', en: 'Transmission', es: 'TransmisiÃ³n' },
+            name: { fr: 'Transmission', en: 'Transmission', es: 'Transmisión' },
             tag: { fr: 'Ultime', en: 'Ultimate', es: 'Definitiva' },
-            effect: { fr: "Maximise la reserve de stasis d'un allie (boss compris) et donne un bonus de X fois 10 % Di (1 tour).", en: "Maximizes an ally's Stasis Reserve (boss included) and gives a bonus of X times 10% increased damage (1 turn).", es: "Maximiza la Reserva de Estasis de un aliado (jefe incluido) y da una bonificaciÃ³n de X veces 10% daÃ±o aumentado (1 turno)." },
+            effect: { fr: "Maximise la reserve de stasis d'un allie (boss compris) et donne un bonus de X fois 10 % Di (1 tour).", en: "Maximizes an ally's Stasis Reserve (boss included) and gives a bonus of X times 10% increased damage (1 turn).", es: "Maximiza la Reserva de Estasis de un aliado (jefe incluido) y da una bonificación de X veces 10% daño aumentado (1 turno)." },
             cost: { fr: '0 PA', en: '0 AP', es: '0 PA' },
           },
         ],
-        passive: { fr: "A chaque don d'armure a un allie, +1 reserve de stasis. En fin de tour, pose X mines de stasis. A la mort, degats stasis autour de chaque mine.", en: "Each armor given to an ally gives +1 Stasis Reserve. End of turn, places X Stasis mines. On death, Stasis damage around each mine.", es: "Cada armadura dada a un aliado da +1 Reserva de Estasis. Fin de turno, coloca X minas de Estasis. Al morir, daÃ±o Estasis alrededor de cada mina." },
+        passive: { fr: "A chaque don d'armure a un allie, +1 reserve de stasis. En fin de tour, pose X mines de stasis. A la mort, degats stasis autour de chaque mine.", en: "Each armor given to an ally gives +1 Stasis Reserve. End of turn, places X Stasis mines. On death, Stasis damage around each mine.", es: "Cada armadura dada a un aliado da +1 Reserva de Estasis. Fin de turno, coloca X minas de Estasis. Al morir, daño Estasis alrededor de cada mina." },
         notes: [
           { fr: "Attention: le Mekano peut utiliser son Ultime le tour meme ou il passe a 5 reserve de stasis.", en: "Warning: Mekano can use its Ultimate the same turn it reaches 5 Stasis Reserve.", es: "Advertencia: El Mekano puede usar su Definitiva el mismo turno en que alcanza 5 Reserva de Estasis." },
         ],
@@ -128,7 +128,7 @@ export const dungeonGuides = [
           { fr: 'Tacle 700', en: 'Lock 700', es: 'Placaje 700' },
           { fr: 'Esquive 700', en: 'Dodge 700', es: 'Esquiva 700' },
           { fr: 'Parade 35%', en: 'Block 35%', es: 'Parada 35%' },
-          { fr: 'Critique 15%', en: 'Critical 15%', es: 'CrÃ­tico 15%' },
+          { fr: 'Critique 15%', en: 'Critical 15%', es: 'Crítico 15%' },
           { fr: 'Volonte 35', en: 'Willpower 35', es: 'Voluntad 35' },
           { fr: 'Resist 76% (650)', en: 'Resist 76% (650)', es: 'Resist 76% (650)' },
         ],
@@ -136,21 +136,21 @@ export const dungeonGuides = [
       {
         name: { fr: 'Unite stasificatrice', en: 'Stasis Unit', es: 'Unidad estasificadora' },
         level: { fr: 'Niv. 220 (Stasis 2)', en: 'Lvl. 220 (Stasis 2)', es: 'Niv. 220 (Estasis 2)' },
-        bonus: { fr: 'Bonus de Velocite: 50 Resistance Elementaire', en: 'Speed Bonus: 50 Elemental Resistance', es: 'BonificaciÃ³n de Velocidad: 50 Resistencia Elemental' },
-        description: { fr: "Il possede 2 sorts, 1 passif et il n'a pas de faiblesse specifique.", en: "Has 2 spells, 1 passive and no specific weakness.", es: "Tiene 2 hechizos, 1 pasivo y no tiene debilidad especÃ­fica." },
+        bonus: { fr: 'Bonus de Velocite: 50 Resistance Elementaire', en: 'Speed Bonus: 50 Elemental Resistance', es: 'Bonificación de Velocidad: 50 Resistencia Elemental' },
+        description: { fr: "Il possede 2 sorts, 1 passif et il n'a pas de faiblesse specifique.", en: "Has 2 spells, 1 passive and no specific weakness.", es: "Tiene 2 hechizos, 1 pasivo y no tiene debilidad específica." },
         spells: [
           {
-            name: { fr: 'Deplacement tactique', en: 'Tactical Displacement', es: 'Desplazamiento tÃ¡ctico' },
-            effect: { fr: 'Passe derriere la cible et inflige des degats Stasis.', en: 'Moves behind the target and deals Stasis damage.', es: 'Pasa detrÃ¡s del objetivo e inflige daÃ±o Estasis.' },
+            name: { fr: 'Deplacement tactique', en: 'Tactical Displacement', es: 'Desplazamiento táctico' },
+            effect: { fr: 'Passe derriere la cible et inflige des degats Stasis.', en: 'Moves behind the target and deals Stasis damage.', es: 'Pasa detrás del objetivo e inflige daño Estasis.' },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
-            range: { fr: '3-5 PO, en ligne, sans ligne de vue', en: '3-5 Range, line, no LoS', es: '3-5 PO, en lÃ­nea, sin lÃ­nea de visiÃ³n' },
+            range: { fr: '3-5 PO, en ligne, sans ligne de vue', en: '3-5 Range, line, no LoS', es: '3-5 PO, en línea, sin línea de visión' },
             limit: { fr: '1/cible, 2/tour', en: '1/target, 2/turn', es: '1/objetivo, 2/turno' },
           },
           {
             name: { fr: 'Decharge Stasis', en: 'Stasis Discharge', es: 'Descarga Estasis' },
-            effect: { fr: 'Inflige des degats Stasis et retire 4 PM.', en: 'Deals Stasis damage and removes 4 MP.', es: 'Inflige daÃ±o Estasis y quita 4 PM.' },
+            effect: { fr: 'Inflige des degats Stasis et retire 4 PM.', en: 'Deals Stasis damage and removes 4 MP.', es: 'Inflige daño Estasis y quita 4 PM.' },
             cost: { fr: '3 PA', en: '3 AP', es: '3 PA' },
-            range: { fr: '0 PO, cercle taille 1+X', en: '0 Range, circle size 1+X', es: '0 PO, cÃ­rculo tamaÃ±o 1+X' },
+            range: { fr: '0 PO, cercle taille 1+X', en: '0 Range, circle size 1+X', es: '0 PO, círculo tamaño 1+X' },
             limit: { fr: '1/tour', en: '1/turn', es: '1/turno' },
           },
           {
@@ -161,7 +161,7 @@ export const dungeonGuides = [
             limit: { fr: '1/tour', en: '1/turn', es: '1/turno' },
           },
         ],
-        passive: { fr: "A chaque degat direct subi, +1 reserve de stasis. A la mort, retire 100 PM a l'attaquant.", en: "Each direct damage taken gives +1 Stasis Reserve. On death, removes 100 MP from attacker.", es: "Cada daÃ±o directo recibido da +1 Reserva de Estasis. Al morir, quita 100 PM al atacante." },
+        passive: { fr: "A chaque degat direct subi, +1 reserve de stasis. A la mort, retire 100 PM a l'attaquant.", en: "Each direct damage taken gives +1 Stasis Reserve. On death, removes 100 MP from attacker.", es: "Cada daño directo recibido da +1 Reserva de Estasis. Al morir, quita 100 PM al atacante." },
         notes: [],
         stats: [
           { fr: 'PV 16.707', en: 'HP 16,707', es: 'PV 16.707' },
@@ -172,7 +172,7 @@ export const dungeonGuides = [
           { fr: 'Tacle 1600', en: 'Lock 1,600', es: 'Placaje 1600' },
           { fr: 'Esquive 600', en: 'Dodge 600', es: 'Esquiva 600' },
           { fr: 'Parade 45%', en: 'Block 45%', es: 'Parada 45%' },
-          { fr: 'Critique 15%', en: 'Critical 15%', es: 'CrÃ­tico 15%' },
+          { fr: 'Critique 15%', en: 'Critical 15%', es: 'Crítico 15%' },
           { fr: 'Volonte 35', en: 'Willpower 35', es: 'Voluntad 35' },
           { fr: 'Resist 81% (750)', en: 'Resist 81% (750)', es: 'Resist 81% (750)' },
         ],
@@ -181,62 +181,62 @@ export const dungeonGuides = [
     boss: {
       name: { fr: 'Sir Comte Flex', en: 'Sir Count Flex', es: 'Sir Conde Flex' },
       level: { fr: 'Niv. 233 (Stasis 2)', en: 'Lvl. 233 (Stasis 2)', es: 'Niv. 233 (Estasis 2)' },
-      description: { fr: "Il possede 6 sorts et 1 passif d'artillerie aleatoire qui change tous les 2 tours.", en: "Has 6 spells and 1 random artillery passive that changes every 2 turns.", es: "Tiene 6 hechizos y 1 pasivo de artillerÃ­a aleatorio que cambia cada 2 turnos." },
+      description: { fr: "Il possede 6 sorts et 1 passif d'artillerie aleatoire qui change tous les 2 tours.", en: "Has 6 spells and 1 random artillery passive that changes every 2 turns.", es: "Tiene 6 hechizos y 1 pasivo de artillería aleatorio que cambia cada 2 turnos." },
       spells: [
         {
-          name: { fr: 'Tir automatique', en: 'Automatic Fire', es: 'Disparo automÃ¡tico' },
-          effect: { fr: 'Inflige des degats Stasis.', en: 'Deals Stasis damage.', es: 'Inflige daÃ±o Estasis.' },
+          name: { fr: 'Tir automatique', en: 'Automatic Fire', es: 'Disparo automático' },
+          effect: { fr: 'Inflige des degats Stasis.', en: 'Deals Stasis damage.', es: 'Inflige daño Estasis.' },
           cost: { fr: '3 PA', en: '3 AP', es: '3 PA' },
-          range: { fr: '5-âˆž PO', en: '5-âˆž Range', es: '5-âˆž PO' },
+          range: { fr: '5-∞ PO', en: '5-∞ Range', es: '5-∞ PO' },
           limit: { fr: '1/cible, 2/tour', en: '1/target, 2/turn', es: '1/objetivo, 2/turno' },
         },
         {
           name: { fr: 'Attaque blindee', en: 'Armored Attack', es: 'Ataque blindado' },
-          effect: { fr: 'Inflige des degats Stasis et pousse de 2 cases.', en: 'Deals Stasis damage and pushes 2 cells.', es: 'Inflige daÃ±o Estasis y empuja 2 celdas.' },
+          effect: { fr: 'Inflige des degats Stasis et pousse de 2 cases.', en: 'Deals Stasis damage and pushes 2 cells.', es: 'Inflige daño Estasis y empuja 2 celdas.' },
           cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
           range: { fr: '2-3 PO', en: '2-3 Range', es: '2-3 PO' },
           limit: { fr: '1/cible, 2/tour', en: '1/target, 2/turn', es: '1/objetivo, 2/turno' },
         },
         {
-          name: { fr: 'Perforation', en: 'Perforation', es: 'PerforaciÃ³n' },
-          effect: { fr: 'Inflige des degats Stasis, retire 4 PM et stabilise la cible.', en: 'Deals Stasis damage, removes 4 MP and stabilizes the target.', es: 'Inflige daÃ±o Estasis, quita 4 PM y estabiliza al objetivo.' },
+          name: { fr: 'Perforation', en: 'Perforation', es: 'Perforación' },
+          effect: { fr: 'Inflige des degats Stasis, retire 4 PM et stabilise la cible.', en: 'Deals Stasis damage, removes 4 MP and stabilizes the target.', es: 'Inflige daño Estasis, quita 4 PM y estabiliza al objetivo.' },
           cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
           range: { fr: '2 PO', en: '2 Range', es: '2 PO' },
           limit: { fr: '1/tour', en: '1/turn', es: '1/turno' },
         },
         {
           name: { fr: 'Deploiement', en: 'Deployment', es: 'Despliegue' },
-          effect: { fr: "Se teleporte sur la cible la plus eloignee et inflige des degats Stasis. Recharge 2 tours.", en: "Teleports to the furthest target and deals Stasis damage. 2-turn cooldown.", es: "Se teletransporta al objetivo mÃ¡s lejano e inflige daÃ±o Estasis. Recarga 2 turnos." },
+          effect: { fr: "Se teleporte sur la cible la plus eloignee et inflige des degats Stasis. Recharge 2 tours.", en: "Teleports to the furthest target and deals Stasis damage. 2-turn cooldown.", es: "Se teletransporta al objetivo más lejano e inflige daño Estasis. Recarga 2 turnos." },
           cost: { fr: '0 PA', en: '0 AP', es: '0 PA' },
-          range: { fr: 'Cercle taille 3', en: 'Circle size 3', es: 'CÃ­rculo tamaÃ±o 3' },
+          range: { fr: 'Cercle taille 3', en: 'Circle size 3', es: 'Círculo tamaño 3' },
         },
         {
-          name: { fr: "Canon d'assaut", en: 'Assault Cannon', es: 'CaÃ±Ã³n de asalto' },
-          effect: { fr: 'Inflige de lourds degats Stasis en ligne epaisse de 3 cases.', en: 'Deals heavy Stasis damage in a 3-cell-wide line.', es: 'Inflige daÃ±o Estasis intenso en lÃ­nea gruesa de 3 celdas.' },
+          name: { fr: "Canon d'assaut", en: 'Assault Cannon', es: 'Cañón de asalto' },
+          effect: { fr: 'Inflige de lourds degats Stasis en ligne epaisse de 3 cases.', en: 'Deals heavy Stasis damage in a 3-cell-wide line.', es: 'Inflige daño Estasis intenso en línea gruesa de 3 celdas.' },
           cost: { fr: '0 PA', en: '0 AP', es: '0 PA' },
           limit: { fr: 'Lance au debut de chaque tour', en: 'Casts at start of each turn', es: 'Lanza al inicio de cada turno' },
         },
         {
           name: { fr: 'Le compte est bon', en: 'Perfect Aim', es: 'Cuenta exacta' },
           tag: { fr: 'Ultime', en: 'Ultimate', es: 'Definitiva' },
-          effect: { fr: "Sort de zone variable dependant du passif d'artillerie. Inflige des degats Stasis aux adversaires et autour d'eux.", en: "Variable AoE spell depending on artillery passive. Deals Stasis damage to opponents and around them.", es: "Hechizo de Ã¡rea variable segÃºn pasivo de artillerÃ­a. Inflige daÃ±o Estasis a los adversarios y alrededor de ellos." },
+          effect: { fr: "Sort de zone variable dependant du passif d'artillerie. Inflige des degats Stasis aux adversaires et autour d'eux.", en: "Variable AoE spell depending on artillery passive. Deals Stasis damage to opponents and around them.", es: "Hechizo de área variable según pasivo de artillería. Inflige daño Estasis a los adversarios y alrededor de ellos." },
           cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
         },
       ],
       passives: [
         {
-          name: { fr: 'Artillerie de demolition', en: 'Demolition Artillery', es: 'ArtillerÃ­a de DemoliciÃ³n' },
+          name: { fr: 'Artillerie de demolition', en: 'Demolition Artillery', es: 'Artillería de Demolición' },
           effect: { fr: "En debut de tour, +1 reserve de stasis par ennemi a 3 cases. Pose X mines. 'Le compte est bon' devient une croix infinie.", en: "At start of turn, +1 Stasis Reserve per enemy within 3 cells. Places X mines. 'Perfect Aim' becomes an infinite cross.", es: "Al inicio del turno, +1 Reserva de Estasis por enemigo a 3 celdas. Coloca X minas. 'Cuenta Exacta' se convierte en cruz infinita." },
           notes: [{ fr: 'Bug actuel: le boss gagne 2 reserves de stasis par ennemi.', en: 'Current bug: boss gains 2 Stasis Reserves per enemy.', es: 'Bug actual: el jefe gana 2 Reservas de Estasis por enemigo.' }],
         },
         {
-          name: { fr: 'Artillerie perforante', en: 'Piercing Artillery', es: 'ArtillerÃ­a Perforante' },
-          effect: { fr: "A chaque rebond, +1 reserve de stasis. Degats rebondissent X fois. 'Le compte est bon' devient un anneau 3-5.", en: "Each bounce gives +1 Stasis Reserve. Damage bounces X times. 'Perfect Aim' becomes a 3-5 ring.", es: "Cada rebote da +1 Reserva de Estasis. El daÃ±o rebota X veces. 'Cuenta Exacta' se convierte en anillo 3-5." },
+          name: { fr: 'Artillerie perforante', en: 'Piercing Artillery', es: 'Artillería Perforante' },
+          effect: { fr: "A chaque rebond, +1 reserve de stasis. Degats rebondissent X fois. 'Le compte est bon' devient un anneau 3-5.", en: "Each bounce gives +1 Stasis Reserve. Damage bounces X times. 'Perfect Aim' becomes a 3-5 ring.", es: "Cada rebote da +1 Reserva de Estasis. El daño rebota X veces. 'Cuenta Exacta' se convierte en anillo 3-5." },
           notes: [],
         },
         {
-          name: { fr: 'Artillerie lourde', en: 'Heavy Artillery', es: 'ArtillerÃ­a Pesada' },
-          effect: { fr: "A chaque degat direct subi, +1 reserve de stasis. Retire 1+X PM. 'Le compte est bon' devient un cercle taille 3.", en: "Each direct damage taken gives +1 Stasis Reserve. Removes 1+X MP. 'Perfect Aim' becomes a size-3 circle.", es: "Cada daÃ±o directo recibido da +1 Reserva de Estasis. Quita 1+X PM. 'Cuenta Exacta' se convierte en cÃ­rculo tamaÃ±o 3." },
+          name: { fr: 'Artillerie lourde', en: 'Heavy Artillery', es: 'Artillería Pesada' },
+          effect: { fr: "A chaque degat direct subi, +1 reserve de stasis. Retire 1+X PM. 'Le compte est bon' devient un cercle taille 3.", en: "Each direct damage taken gives +1 Stasis Reserve. Removes 1+X MP. 'Perfect Aim' becomes a size-3 circle.", es: "Cada daño directo recibido da +1 Reserva de Estasis. Quita 1+X PM. 'Cuenta Exacta' se convierte en círculo tamaño 3." },
           notes: [],
         },
       ],
@@ -249,7 +249,7 @@ export const dungeonGuides = [
         { fr: 'Tacle 1500', en: 'Lock 1,500', es: 'Placaje 1500' },
         { fr: 'Esquive 2000', en: 'Dodge 2,000', es: 'Esquiva 2000' },
         { fr: 'Parade 40%', en: 'Block 40%', es: 'Parada 40%' },
-        { fr: 'Critique 35%', en: 'Critical 35%', es: 'CrÃ­tico 35%' },
+        { fr: 'Critique 35%', en: 'Critical 35%', es: 'Crítico 35%' },
         { fr: 'Volonte 30', en: 'Willpower 30', es: 'Voluntad 30' },
         { fr: 'Resist 77% (660)', en: 'Resist 77% (660)', es: 'Resist 77% (660)' },
       ],
@@ -261,7 +261,7 @@ export const dungeonGuides = [
           {
             fr: "Chaque monstre et le boss possedent le passif Reserve de Stasis. Il augmente a la mort d'un monstre ou via actions specifiques.",
             en: "Each monster and the boss have the Stasis Reserve passive. It increases on monster death or via specific actions.",
-            es: "Cada monstruo y el jefe tienen el pasivo Reserva de Estasis. Aumenta a la muerte de un monstruo o por acciones especÃ­ficas.",
+            es: "Cada monstruo y el jefe tienen el pasivo Reserva de Estasis. Aumenta a la muerte de un monstruo o por acciones específicas.",
           },
           {
             fr: "A partir du niveau 5, le porteur gagne 400 Resistance elementaire et debloque l'Ultime.",
@@ -276,48 +276,48 @@ export const dungeonGuides = [
           {
             fr: "Le boss commence chaque tour par 'Canon d'assaut' puis son Ultime s'il l'a.",
             en: "The boss starts each turn with 'Assault Cannon' then its Ultimate if available.",
-            es: "El jefe comienza cada turno con 'CaÃ±Ã³n de Asalto' luego su Habilidad Definitiva si la tiene.",
+            es: "El jefe comienza cada turno con 'Cañón de Asalto' luego su Habilidad Definitiva si la tiene.",
           },
           {
             fr: "Votre objectif est de limiter le nombre d'Ultimes en tuant un maximum d'ennemis le meme tour en respectant son passif.",
             en: "Your goal is to limit Ultimates by killing max enemies in one turn while respecting its passive.",
-            es: "Tu objetivo es limitar las Habilidades Definitivas matando mÃ¡ximo enemigos en un turno respetando su pasivo.",
+            es: "Tu objetivo es limitar las Habilidades Definitivas matando máximo enemigos en un turno respetando su pasivo.",
           },
           {
             fr: "Attention au positionnement: l'Ultime fait de gros degats sur la zone autour des cibles.",
             en: "Watch positioning: the Ultimate deals heavy damage on the area around targets.",
-            es: "Cuidado con el posicionamiento: la Habilidad Definitiva inflige daÃ±o severo en el Ã¡rea alrededor de los objetivos.",
+            es: "Cuidado con el posicionamiento: la Habilidad Definitiva inflige daño severo en el área alrededor de los objetivos.",
           },
           {
             fr: "Tous les 2 tours a partir du tour 4, il utilise 'Deploiement' et se teleporte sur la cible la plus loin.",
             en: "Every 2 turns from turn 4, it uses 'Deployment' and teleports to the furthest target.",
-            es: "Cada 2 turnos a partir del turno 4, usa 'Despliegue' y se teletransporta al objetivo mÃ¡s lejano.",
+            es: "Cada 2 turnos a partir del turno 4, usa 'Despliegue' y se teletransporta al objetivo más lejano.",
           },
         ],
       },
     ],
-    plan: { fr: 'Cliquer ici pour derouler le plan du donjon.', en: 'Click here to unfold the dungeon plan.', es: 'Haz clic aquÃ­ para desplegar el plan de la mazmorra.' },
+    plan: { fr: 'Cliquer ici pour derouler le plan du donjon.', en: 'Click here to unfold the dungeon plan.', es: 'Haz clic aquí para desplegar el plan de la mazmorra.' },
     steles: {
       lead: { 
         fr: 'Ce donjon possede 4 steles, une par salle. Chaque stele ajoute un proto-boss a la salle et au combat final.',
         en: 'This dungeon has 4 steles, one per room. Each stele adds a proto-boss to the room and final fight.',
-        es: 'Esta mazmorra tiene 4 estelas, una por sala. Cada estela aÃ±ade un proto-jefe a la sala y al combate final.',
+        es: 'Esta mazmorra tiene 4 estelas, una por sala. Cada estela añade un proto-jefe a la sala y al combate final.',
       },
       notes: [
         {
           fr: 'Si une stele est activee, le boss final invoque le proto-boss (jusqua 5 boss).',
           en: 'If a stele is activated, the final boss summons the proto-boss (up to 5 bosses).',
-          es: 'Si una estela estÃ¡ activada, el jefe final invoca el proto-jefe (hasta 5 jefes).',
+          es: 'Si una estela está activada, el jefe final invoca el proto-jefe (hasta 5 jefes).',
         },
         {
           fr: "Pour ouvrir les steles: 8 ressources d'Ereboria (Masque du forban, Substance de mort-brules, Poil roux).",
           en: "To open steles: 8 Ereboria resources (Rogue Mask, Deathburn Substance, Red Hair).",
-          es: "Para abrir estelas: 8 recursos de Ereboria (MÃ¡scara de PÃ­caro, Sustancia de Quemadura Mortal, Pelo Rojo).",
+          es: "Para abrir estelas: 8 recursos de Ereboria (Máscara de Pícaro, Sustancia de Quemadura Mortal, Pelo Rojo).",
         },
         {
           fr: 'Chaque proto-boss ajoute 2 equipements a la table de loot et 10 Sioupere-Glou infernale.',
           en: 'Each proto-boss adds 2 equipment to the loot table and 10 Infernal Sioupere-Glou.',
-          es: 'Cada proto-jefe aÃ±ade 2 equipamientos a la tabla de botÃ­n y 10 Sioupere-Glou Infernal.',
+          es: 'Cada proto-jefe añade 2 equipamientos a la tabla de botín y 10 Sioupere-Glou Infernal.',
         },
         {
           fr: "Au combat final: 1 Bout d'armure de garde steamer par personne si 1 proto-boss, 3 si 2, 6 si 3.",
@@ -328,23 +328,23 @@ export const dungeonGuides = [
       protoBosses: [
         {
           name: { fr: 'Protopoulpe', en: 'Proto-Octopus', es: 'Protopulpo' },
-          description: { fr: "Il possede 2 sorts, 1 passif et il n'a pas de faiblesse specifique.", en: "Has 2 spells, 1 passive and no specific weakness.", es: "Tiene 2 hechizos, 1 pasivo y no tiene debilidad especÃ­fica." },
+          description: { fr: "Il possede 2 sorts, 1 passif et il n'a pas de faiblesse specifique.", en: "Has 2 spells, 1 passive and no specific weakness.", es: "Tiene 2 hechizos, 1 pasivo y no tiene debilidad específica." },
           spells: [
             {
-              name: { fr: 'Deflagration stasifiee', en: 'Stasified Deflagration', es: 'DeflagraciÃ³n estasificada' },
-              effect: { fr: 'Inflige de lourds degats Stasis en ligne epaisse de 3 cases.', en: 'Deals heavy Stasis damage in a 3-cell-wide line.', es: 'Inflige daÃ±o Estasis intenso en lÃ­nea gruesa de 3 celdas.' },
+              name: { fr: 'Deflagration stasifiee', en: 'Stasified Deflagration', es: 'Deflagración estasificada' },
+              effect: { fr: 'Inflige de lourds degats Stasis en ligne epaisse de 3 cases.', en: 'Deals heavy Stasis damage in a 3-cell-wide line.', es: 'Inflige daño Estasis intenso en línea gruesa de 3 celdas.' },
               cost: { fr: '0 PA', en: '0 AP', es: '0 PA' },
               limit: { fr: 'Lance au debut de chaque tour', en: 'Casts at start of each turn', es: 'Lanza al inicio de cada turno' },
             },
             {
               name: { fr: "Jet d'encre stasifie", en: 'Stasified Ink Jet', es: 'Chorro de tinta estasificado' },
-              effect: { fr: 'Inflige des degats Stasis et retire 3 PM et 2 PO.', en: 'Deals Stasis damage and removes 3 MP and 2 Range.', es: 'Inflige daÃ±o Estasis y quita 3 PM y 2 Rango.' },
+              effect: { fr: 'Inflige des degats Stasis et retire 3 PM et 2 PO.', en: 'Deals Stasis damage and removes 3 MP and 2 Range.', es: 'Inflige daño Estasis y quita 3 PM y 2 Rango.' },
               cost: { fr: '2 PA', en: '2 AP', es: '2 PA' },
-              range: { fr: 'Croix taille 1, âˆž PO', en: 'Cross size 1, âˆž Range', es: 'Cruz tamaÃ±o 1, âˆž PO' },
+              range: { fr: 'Croix taille 1, ∞ PO', en: 'Cross size 1, ∞ Range', es: 'Cruz tamaño 1, ∞ PO' },
               limit: { fr: '1/cible, 3/tour', en: '1/target, 3/turn', es: '1/objetivo, 3/turno' },
             },
           ],
-          passive: { fr: "Immunise si l'attaquant n'est pas aligne avec la case centrale. En fin de tour, se teleporte sur une case d'eau aleatoire.", en: "Immune if attacker is not aligned with central cell. End of turn, teleports to a random water cell.", es: "Inmune si el atacante no estÃ¡ alineado con la celda central. Fin de turno, se teletransporta a una celda de agua aleatoria." },
+          passive: { fr: "Immunise si l'attaquant n'est pas aligne avec la case centrale. En fin de tour, se teleporte sur une case d'eau aleatoire.", en: "Immune if attacker is not aligned with central cell. End of turn, teleports to a random water cell.", es: "Inmune si el atacante no está alineado con la celda central. Fin de turno, se teletransporta a una celda de agua aleatoria." },
           notes: [],
           stats: [
             { fr: 'PV 191.546', en: 'HP 191,546', es: 'PV 191.546' },
@@ -355,33 +355,33 @@ export const dungeonGuides = [
             { fr: 'Tacle 300', en: 'Lock 300', es: 'Placaje 300' },
             { fr: 'Esquive 0', en: 'Dodge 0', es: 'Esquiva 0' },
             { fr: 'Parade 33%', en: 'Block 33%', es: 'Parada 33%' },
-            { fr: 'Critique 25%', en: 'Critical 25%', es: 'CrÃ­tico 25%' },
+            { fr: 'Critique 25%', en: 'Critical 25%', es: 'Crítico 25%' },
             { fr: 'Volonte 30', en: 'Willpower 30', es: 'Voluntad 30' },
             { fr: 'Resist 75% (625)', en: 'Resist 75% (625)', es: 'Resist 75% (625)' },
           ],
         },
         {
           name: { fr: 'Protosquelette', en: 'Proto-Skeleton', es: 'Protoesqueleto' },
-          description: { fr: "Il possede 2 sorts et il n'a pas de faiblesse specifique.", en: "Has 2 spells and no specific weakness.", es: "Tiene 2 hechizos y no tiene debilidad especÃ­fica." },
+          description: { fr: "Il possede 2 sorts et il n'a pas de faiblesse specifique.", en: "Has 2 spells and no specific weakness.", es: "Tiene 2 hechizos y no tiene debilidad específica." },
           spells: [
             {
-              name: { fr: 'Courroux des anciens stasifie', en: 'Stasified Ancient Wrath', es: 'CÃ³lera de los antiguos estasificada' },
-              effect: { fr: 'Inflige de lourds degats Stasis en cercle taille 4.', en: 'Deals heavy Stasis damage in size-4 circle.', es: 'Inflige daÃ±o Estasis intenso en cÃ­rculo tamaÃ±o 4.' },
+              name: { fr: 'Courroux des anciens stasifie', en: 'Stasified Ancient Wrath', es: 'Cólera de los antiguos estasificada' },
+              effect: { fr: 'Inflige de lourds degats Stasis en cercle taille 4.', en: 'Deals heavy Stasis damage in size-4 circle.', es: 'Inflige daño Estasis intenso en círculo tamaño 4.' },
               cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
               range: { fr: '0 PO', en: '0 Range', es: '0 PO' },
               limit: { fr: 'Lance au debut de chaque tour', en: 'Casts at start of each turn', es: 'Lanza al inicio de cada turno' },
             },
             {
               name: { fr: 'Jet de flammes stasifie', en: 'Stasified Flame Jet', es: 'Chorro de llamas estasificado' },
-              effect: { fr: 'Inflige des degats Stasis en croix de taille 1.', en: 'Deals Stasis damage in size-1 cross.', es: 'Inflige daÃ±o Estasis en cruz tamaÃ±o 1.' },
+              effect: { fr: 'Inflige des degats Stasis en croix de taille 1.', en: 'Deals Stasis damage in size-1 cross.', es: 'Inflige daño Estasis en cruz tamaño 1.' },
               cost: { fr: '3 PA', en: '3 AP', es: '3 PA' },
-              range: { fr: 'âˆž PO', en: 'âˆž Range', es: 'âˆž PO' },
+              range: { fr: '∞ PO', en: '∞ Range', es: '∞ PO' },
               limit: { fr: '1/cible, 3/tour', en: '1/target, 3/turn', es: '1/objetivo, 3/turno' },
             },
           ],
           passive: '',
           notes: [
-            { fr: "Dans la chambre d'experimentation, deux lasers bloquant la ligne de vue changent tous les 2 tours.", en: "In the experimentation chamber, two line-of-sight blocking lasers change every 2 turns.", es: "En la cÃ¡mara de experimentaciÃ³n, dos lÃ¡seres que bloquean lÃ­nea de visiÃ³n cambian cada 2 turnos." },
+            { fr: "Dans la chambre d'experimentation, deux lasers bloquant la ligne de vue changent tous les 2 tours.", en: "In the experimentation chamber, two line-of-sight blocking lasers change every 2 turns.", es: "En la cámara de experimentación, dos láseres que bloquean línea de visión cambian cada 2 turnos." },
           ],
           stats: [
             { fr: 'PV 175.347', en: 'HP 175,347', es: 'PV 175.347' },
@@ -392,32 +392,32 @@ export const dungeonGuides = [
             { fr: 'Tacle 1200', en: 'Lock 1,200', es: 'Placaje 1200' },
             { fr: 'Esquive 0', en: 'Dodge 0', es: 'Esquiva 0' },
             { fr: 'Parade 25%', en: 'Block 25%', es: 'Parada 25%' },
-            { fr: 'Critique 33%', en: 'Critical 33%', es: 'CrÃ­tico 33%' },
+            { fr: 'Critique 33%', en: 'Critical 33%', es: 'Crítico 33%' },
             { fr: 'Volonte 10', en: 'Willpower 10', es: 'Voluntad 10' },
             { fr: 'Resist 73% (595)', en: 'Resist 73% (595)', es: 'Resist 73% (595)' },
           ],
         },
         {
           name: { fr: 'Protogolem', en: 'Proto-Golem', es: 'Protogolem' },
-          description: { fr: "Il possede 3 sorts, 1 passif et il n'a pas de faiblesse specifique.", en: "Has 3 spells, 1 passive and no specific weakness.", es: "Tiene 3 hechizos, 1 pasivo y no tiene debilidad especÃ­fica." },
+          description: { fr: "Il possede 3 sorts, 1 passif et il n'a pas de faiblesse specifique.", en: "Has 3 spells, 1 passive and no specific weakness.", es: "Tiene 3 hechizos, 1 pasivo y no tiene debilidad específica." },
           spells: [
             {
-              name: { fr: 'Tremblement mecanique stasifie', en: 'Stasified Mechanical Quake', es: 'Temblor mecÃ¡nico estasificado' },
-              effect: { fr: 'Inflige des degats Stasis en ligne de taille 7.', en: 'Deals Stasis damage in a size-7 line.', es: 'Inflige daÃ±o Estasis en lÃ­nea de tamaÃ±o 7.' },
+              name: { fr: 'Tremblement mecanique stasifie', en: 'Stasified Mechanical Quake', es: 'Temblor mecánico estasificado' },
+              effect: { fr: 'Inflige des degats Stasis en ligne de taille 7.', en: 'Deals Stasis damage in a size-7 line.', es: 'Inflige daño Estasis en línea de tamaño 7.' },
               cost: { fr: '3 PA', en: '3 AP', es: '3 PA' },
               range: { fr: '2 PO', en: '2 Range', es: '2 PO' },
               limit: { fr: '1/tour', en: '1/turn', es: '1/turno' },
             },
             {
               name: { fr: 'Vent de liberte stasifie', en: 'Stasified Freedom Wind', es: 'Viento de libertad estasificado' },
-              effect: { fr: 'Inflige des degats Stasis et repousse de 3 cases.', en: 'Deals Stasis damage and pushes 3 cells.', es: 'Inflige daÃ±o Estasis y empuja 3 celdas.' },
+              effect: { fr: 'Inflige des degats Stasis et repousse de 3 cases.', en: 'Deals Stasis damage and pushes 3 cells.', es: 'Inflige daño Estasis y empuja 3 celdas.' },
               cost: { fr: '0 PA', en: '0 AP', es: '0 PA' },
-              range: { fr: 'Cercle taille 4', en: 'Circle size 4', es: 'CÃ­rculo tamaÃ±o 4' },
+              range: { fr: 'Cercle taille 4', en: 'Circle size 4', es: 'Círculo tamaño 4' },
               limit: { fr: "1/tour, lance uniquement s'il ne peut pas se deplacer", en: "1/turn, casts only if can't move", es: "1/turno, lanza solo si no puede moverse" },
             },
             {
               name: { fr: 'Broyage stasifie', en: 'Stasified Crushing', es: 'Triturado estasificado' },
-              effect: { fr: 'Inflige des degats Stasis.', en: 'Deals Stasis damage.', es: 'Inflige daÃ±o Estasis.' },
+              effect: { fr: 'Inflige des degats Stasis.', en: 'Deals Stasis damage.', es: 'Inflige daño Estasis.' },
               cost: { fr: '3 PA', en: '3 AP', es: '3 PA' },
               range: { fr: '2-3 PO', en: '2-3 Range', es: '2-3 PO' },
               limit: { fr: '1/cible, 2/tour', en: '1/target, 2/turn', es: '1/objetivo, 2/turno' },
@@ -436,7 +436,7 @@ export const dungeonGuides = [
             { fr: 'Tacle 1200', en: 'Lock 1,200', es: 'Placaje 1200' },
             { fr: 'Esquive 800', en: 'Dodge 800', es: 'Esquiva 800' },
             { fr: 'Parade 28%', en: 'Block 28%', es: 'Parada 28%' },
-            { fr: 'Critique 22%', en: 'Critical 22%', es: 'CrÃ­tico 22%' },
+            { fr: 'Critique 22%', en: 'Critical 22%', es: 'Crítico 22%' },
             { fr: 'Volonte 20', en: 'Willpower 20', es: 'Voluntad 20' },
             { fr: 'Resist 71% (560)', en: 'Resist 71% (560)', es: 'Resist 71% (560)' },
           ],
@@ -444,15 +444,15 @@ export const dungeonGuides = [
       ],
       crystals: {
         types: [
-          { fr: 'Cristal de melee: Immunise aux degats a distance.', en: 'Melee Crystal: Immune to ranged damage.', es: 'Cristal de cuerpo a cuerpo: Inmune al daÃ±o a distancia.' },
-          { fr: 'Cristal de distance: Immunise aux degats en melee.', en: 'Ranged Crystal: Immune to melee damage.', es: 'Cristal de distancia: Inmune al daÃ±o cuerpo a cuerpo.' },
-          { fr: 'Cristal de resistance: Gagne 200 Resistance elementaire par degat direct subi.', en: 'Resistance Crystal: Gains 200 Elemental Resistance per direct damage taken.', es: 'Cristal de resistencia: Gana 200 Resistencia Elemental por daÃ±o directo recibido.' },
-          { fr: "Cristal d'armure: 20 % PdV et armure de 200 % PdV max.", en: 'Armor Crystal: 20% HP and 200% max HP armor.', es: 'Cristal de armadura: 20% PV y armadura de 200% PV mÃ¡x.' },
+          { fr: 'Cristal de melee: Immunise aux degats a distance.', en: 'Melee Crystal: Immune to ranged damage.', es: 'Cristal de cuerpo a cuerpo: Inmune al daño a distancia.' },
+          { fr: 'Cristal de distance: Immunise aux degats en melee.', en: 'Ranged Crystal: Immune to melee damage.', es: 'Cristal de distancia: Inmune al daño cuerpo a cuerpo.' },
+          { fr: 'Cristal de resistance: Gagne 200 Resistance elementaire par degat direct subi.', en: 'Resistance Crystal: Gains 200 Elemental Resistance per direct damage taken.', es: 'Cristal de resistencia: Gana 200 Resistencia Elemental por daño directo recibido.' },
+          { fr: "Cristal d'armure: 20 % PdV et armure de 200 % PdV max.", en: 'Armor Crystal: 20% HP and 200% max HP armor.', es: 'Cristal de armadura: 20% PV y armadura de 200% PV máx.' },
         ],
         notes: [
           { fr: 'Un cristal devient inactif a 1 PV. Le Protogolem reactive un cristal par tour, sans doublon.', en: 'A crystal becomes inactive at 1 HP. Protogolem reactivates one crystal per turn, no duplicate.', es: 'Un cristal se vuelve inactivo a 1 PV. El Protogolem reactiva un cristal por turno, sin duplicado.' },
           { fr: "Si vous baissez les resistances, rendez les cristaux inactifs le meme tour. Attention au Mekano qui peut soigner.", en: "If you lower resistances, make crystals inactive the same turn. Watch out for Mekano who can heal.", es: "Si bajas las resistencias, deja los cristales inactivos el mismo turno. Cuidado con el Mekano que puede curar." },
-          { fr: 'On peut faire le combat sans desactiver les cristaux: le bonus %Di cumulable compense.', en: 'Can do the fight without deactivating crystals: the stacking %increased damage compensates.', es: 'Puedes hacer el combate sin desactivar los cristales: el bonificaciÃ³n % daÃ±o aumentado acumulable compensa.' },
+          { fr: 'On peut faire le combat sans desactiver les cristaux: le bonus %Di cumulable compense.', en: 'Can do the fight without deactivating crystals: the stacking %increased damage compensates.', es: 'Puedes hacer el combate sin desactivar los cristales: el bonificación % daño aumentado acumulable compensa.' },
         ],
         stats: [
           'Niv. 230',
@@ -469,7 +469,7 @@ export const dungeonGuides = [
         {
           fr: "En mode Competitif, le boss peut drop une Pierre d'aventure pour certaines sublimations epiques/reliques.",
           en: "In Competitive mode, the boss can drop an Adventure Stone for certain epic/relic sublimations.",
-          es: "En modo Competitivo, el jefe puede soltar una Piedra de Aventura para ciertas sublimaciones Ã©picas/reliquias.",
+          es: "En modo Competitivo, el jefe puede soltar una Piedra de Aventura para ciertas sublimaciones épicas/reliquias.",
         },
       ],
       monsterDrops: [
@@ -574,17 +574,17 @@ export const dungeonGuides = [
       {
         fr: "Les monstres sont invulnerables si vous n'avez pas la ligne de vue sur eux au moment des degats.",
         en: "Monsters are invulnerable if you don't have line of sight when dealing damage.",
-        es: "Los monstruos son invulnerables si no tienes lÃ­nea de visiÃ³n cuando inflige daÃ±o.",
+        es: "Los monstruos son invulnerables si no tienes línea de visión cuando inflige daño.",
       },
       {
         fr: 'Attention aux Assassirenes: K.O. en un coup si vous etes en berserk.',
         en: 'Watch Assassirenes: one-shot KO if you are in berserk.',
-        es: 'Ten cuidado con los Asesinatos: K.O. de un golpe si estÃ¡s en furia.',
+        es: 'Ten cuidado con los Asesinatos: K.O. de un golpe si estás en furia.',
       },
       {
         fr: "Avant de mettre de l'armure, eliminez les Cogneurs (ils volent toute l'armure).",
         en: "Before adding armor, eliminate Biters (they steal all armor).",
-        es: "Antes de aÃ±adir armadura, elimina los Mordedores (roban toda la armadura).",
+        es: "Antes de añadir armadura, elimina los Mordedores (roban toda la armadura).",
       },
       {
         fr: "Au boss, marchez sur les prisons d'eau pour limiter les cases de noyade (aidez-vous d'invocations).",
@@ -599,28 +599,28 @@ export const dungeonGuides = [
       {
         fr: 'Tuer Pohl donne un bonus cumulable de PA/PM (idealement un DPT).',
         en: 'Killing Pohl gives a stacking bonus of AP/MP (ideally a DPS).',
-        es: 'Matar a Pohl da un bonificaciÃ³n acumulable de PA/PM (idealmente un DPS).',
+        es: 'Matar a Pohl da un bonificación acumulable de PA/PM (idealmente un DPS).',
       },
     ],
     monsters: [
       {
         name: { fr: 'Assassirene', en: 'Assassiren', es: 'Aseisirena' },
         level: { fr: 'Niv. 220 (Stasis 2)', en: 'Lvl. 220 (Stasis 2)', es: 'Niv. 220 (Estasis 2)' },
-        bonus: { fr: 'Bonus de Velocite: 2 PM', en: 'Speed Bonus: 2 MP', es: 'BonificaciÃ³n de Velocidad: 2 PM' },
-        description: { fr: "Il possede 2 sorts, 1 passif. Sa plus basse resistance est l'element air.", en: "Has 2 spells, 1 passive. Weakest resistance is Air.", es: "Tiene 2 hechizos, 1 pasivo. Su resistencia mÃ¡s baja es Aire." },
+        bonus: { fr: 'Bonus de Velocite: 2 PM', en: 'Speed Bonus: 2 MP', es: 'Bonificación de Velocidad: 2 PM' },
+        description: { fr: "Il possede 2 sorts, 1 passif. Sa plus basse resistance est l'element air.", en: "Has 2 spells, 1 passive. Weakest resistance is Air.", es: "Tiene 2 hechizos, 1 pasivo. Su resistencia más baja es Aire." },
         spells: [
           {
             name: { fr: 'Baiser mortel', en: 'Deadly Kiss', es: 'Beso mortal' },
-            effect: { fr: 'La cible tombe a 1 PdV. Si elle a moins de 50 % PdV ou est une invocation, elle meurt.', en: 'Target falls to 1 HP. If below 50% HP or is a summon, it dies.', es: 'El objetivo cae a 1 PV. Si tiene menos del 50% PV o es una invocaciÃ³n, muere.' },
+            effect: { fr: 'La cible tombe a 1 PdV. Si elle a moins de 50 % PdV ou est une invocation, elle meurt.', en: 'Target falls to 1 HP. If below 50% HP or is a summon, it dies.', es: 'El objetivo cae a 1 PV. Si tiene menos del 50% PV o es una invocación, muere.' },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             range: { fr: '1 PO', en: '1 Range', es: '1 PO' },
             limit: { fr: '1/cible', en: '1/target', es: '1/objetivo' },
           },
           {
             name: { fr: 'Rengaine abyssale', en: 'Abyssal Refrain', es: 'Estribillo abisal' },
-            effect: { fr: "Donne de l'armure a un allie (20 % PdV max de l'assassirene).", en: "Gives armor to an ally (20% of Assassirene's max HP).", es: "Da armadura a un aliado (20% de PV mÃ¡x. del Asesinato)." },
+            effect: { fr: "Donne de l'armure a un allie (20 % PdV max de l'assassirene).", en: "Gives armor to an ally (20% of Assassirene's max HP).", es: "Da armadura a un aliado (20% de PV máx. del Asesinato)." },
             cost: { fr: '3 PA', en: '3 AP', es: '3 PA' },
-            range: { fr: '1-4 PO, sans ligne de vue', en: '1-4 Range, no LoS', es: '1-4 PO, sin lÃ­nea de visiÃ³n' },
+            range: { fr: '1-4 PO, sans ligne de vue', en: '1-4 Range, no LoS', es: '1-4 PO, sin línea de visión' },
             limit: { fr: '1/cible', en: '1/target', es: '1/objetivo' },
           },
         ],
@@ -635,7 +635,7 @@ export const dungeonGuides = [
           { fr: 'Tacle 300', en: 'Lock 300', es: 'Placaje 300' },
           { fr: 'Esquive 1600', en: 'Dodge 1,600', es: 'Esquiva 1600' },
           { fr: 'Parade 30%', en: 'Block 30%', es: 'Parada 30%' },
-          { fr: 'Critique 8%', en: 'Critical 8%', es: 'CrÃ­tico 8%' },
+          { fr: 'Critique 8%', en: 'Critical 8%', es: 'Crítico 8%' },
           { fr: 'Volonte 45', en: 'Willpower 45', es: 'Voluntad 45' },
           { fr: 'Resist 71% (555)', en: 'Resist 71% (555)', es: 'Resist 71% (555)' },
           { fr: 'Resist 79% (720)', en: 'Resist 79% (720)', es: 'Resist 79% (720)' },
@@ -646,25 +646,25 @@ export const dungeonGuides = [
       {
         name: { fr: 'Petit-poisseux', en: 'Little Creeper', es: 'Pezgajosito' },
         level: { fr: 'Niv. 218 (Stasis 2)', en: 'Lvl. 218 (Stasis 2)', es: 'Niv. 218 (Estasis 2)' },
-        bonus: { fr: 'Bonus de Velocite: 50% Dommages infliges et -100 Resistance Dos', en: 'Speed Bonus: 50% Increased Damage and -100 Back Resistance', es: 'BonificaciÃ³n de Velocidad: 50% DaÃ±o Aumentado y -100 Resistencia de Espalda' },
-        description: { fr: "Il possede 2 sorts, 1 passif et il n'a pas de faiblesse specifique.", en: "Has 2 spells, 1 passive and no specific weakness.", es: "Tiene 2 hechizos, 1 pasivo y no tiene debilidad especÃ­fica." },
+        bonus: { fr: 'Bonus de Velocite: 50% Dommages infliges et -100 Resistance Dos', en: 'Speed Bonus: 50% Increased Damage and -100 Back Resistance', es: 'Bonificación de Velocidad: 50% Daño Aumentado y -100 Resistencia de Espalda' },
+        description: { fr: "Il possede 2 sorts, 1 passif et il n'a pas de faiblesse specifique.", en: "Has 2 spells, 1 passive and no specific weakness.", es: "Tiene 2 hechizos, 1 pasivo y no tiene debilidad específica." },
         spells: [
           {
             name: { fr: 'Morsure poisseuse', en: 'Sticky Bite', es: 'Mordedura pegajosa' },
-            effect: { fr: 'Inflige des degats feu et se soigne du meme montant.', en: 'Deals Fire damage and heals for the same amount.', es: 'Inflige daÃ±o Fuego y se cura la misma cantidad.' },
+            effect: { fr: 'Inflige des degats feu et se soigne du meme montant.', en: 'Deals Fire damage and heals for the same amount.', es: 'Inflige daño Fuego y se cura la misma cantidad.' },
             cost: { fr: '3 PA', en: '3 AP', es: '3 PA' },
             range: { fr: '1 PO', en: '1 Range', es: '1 PO' },
             limit: { fr: '1/cible', en: '1/target', es: '1/objetivo' },
           },
           {
             name: { fr: 'Clameur abyssale', en: 'Abyssal Clamor', es: 'Clamor abisal' },
-            effect: { fr: 'Inflige des degats air et pousse de 2 cases.', en: 'Deals Air damage and pushes 2 cells.', es: 'Inflige daÃ±o Aire y empuja 2 celdas.' },
+            effect: { fr: 'Inflige des degats air et pousse de 2 cases.', en: 'Deals Air damage and pushes 2 cells.', es: 'Inflige daño Aire y empuja 2 celdas.' },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
-            range: { fr: '2-5 PO, en ligne', en: '2-5 Range, line', es: '2-5 PO, en lÃ­nea' },
+            range: { fr: '2-5 PO, en ligne', en: '2-5 Range, line', es: '2-5 PO, en línea' },
             limit: { fr: '1/cible', en: '1/target', es: '1/objetivo' },
           },
         ],
-        passive: { fr: "Au debut du tour, echange de position avec l'adversaire le plus eloigne.", en: "At start of turn, swaps position with furthest opponent.", es: "Al inicio del turno, intercambia posiciÃ³n con el adversario mÃ¡s lejano." },
+        passive: { fr: "Au debut du tour, echange de position avec l'adversaire le plus eloigne.", en: "At start of turn, swaps position with furthest opponent.", es: "Al inicio del turno, intercambia posición con el adversario más lejano." },
         notes: [],
         stats: [
           { fr: 'PV 18.291', en: 'HP 18,291', es: 'PV 18.291' },
@@ -675,7 +675,7 @@ export const dungeonGuides = [
           { fr: 'Tacle 700', en: 'Lock 700', es: 'Placaje 700' },
           { fr: 'Esquive 700', en: 'Dodge 700', es: 'Esquiva 700' },
           { fr: 'Parade 15%', en: 'Block 15%', es: 'Parada 15%' },
-          { fr: 'Critique 35%', en: 'Critical 35%', es: 'CrÃ­tico 35%' },
+          { fr: 'Critique 35%', en: 'Critical 35%', es: 'Crítico 35%' },
           { fr: 'Volonte 20', en: 'Willpower 20', es: 'Voluntad 20' },
           { fr: 'Resist 71% (570)', en: 'Resist 71% (570)', es: 'Resist 71% (570)' },
         ],
@@ -683,19 +683,19 @@ export const dungeonGuides = [
       {
         name: { fr: 'Cogneur abyssal', en: 'Abyssal Biter', es: 'Mordedor abisal' },
         level: { fr: 'Niv. 224 (Stasis 2)', en: 'Lvl. 224 (Stasis 2)', es: 'Niv. 224 (Estasis 2)' },
-        bonus: { fr: 'Bonus de Velocite: 50% Dommages infliges', en: 'Speed Bonus: 50% Increased Damage', es: 'BonificaciÃ³n de Velocidad: 50% DaÃ±o Aumentado' },
-        description: { fr: "Il possede 2 sorts. Ses plus basses resistances sont les elements feu et eau.", en: "Has 2 spells. Weakest resistances are Fire and Water.", es: "Tiene 2 hechizos. Sus resistencias mÃ¡s bajas son Fuego y Agua." },
+        bonus: { fr: 'Bonus de Velocite: 50% Dommages infliges', en: 'Speed Bonus: 50% Increased Damage', es: 'Bonificación de Velocidad: 50% Daño Aumentado' },
+        description: { fr: "Il possede 2 sorts. Ses plus basses resistances sont les elements feu et eau.", en: "Has 2 spells. Weakest resistances are Fire and Water.", es: "Tiene 2 hechizos. Sus resistencias más bajas son Fuego y Agua." },
         spells: [
           {
             name: { fr: 'Courant poisseux', en: 'Creepy Current', es: 'Corriente pegajosa' },
-            effect: { fr: 'Inflige des degats eau et attire de 6 cases.', en: 'Deals Water damage and pulls 6 cells.', es: 'Inflige daÃ±o Agua y atrae 6 celdas.' },
+            effect: { fr: 'Inflige des degats eau et attire de 6 cases.', en: 'Deals Water damage and pulls 6 cells.', es: 'Inflige daño Agua y atrae 6 celdas.' },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
-            range: { fr: '2-7 PO, en ligne', en: '2-7 Range, line', es: '2-7 PO, en lÃ­nea' },
+            range: { fr: '2-7 PO, en ligne', en: '2-7 Range, line', es: '2-7 PO, en línea' },
             limit: { fr: '1/tour', en: '1/turn', es: '1/turno' },
           },
           {
-            name: { fr: 'Gloutonnerie', en: 'Gluttony', es: 'GlotonÃ­a' },
-            effect: { fr: "Inflige des degats terre et vole toute l'armure de la cible et 100 Resistance elementaire (cumulable).", en: "Deals Earth damage and steals all target's armor and 100 Elemental Resistance (stacking).", es: "Inflige daÃ±o Tierra y roba toda la armadura del objetivo y 100 Resistencia Elemental (acumulable)." },
+            name: { fr: 'Gloutonnerie', en: 'Gluttony', es: 'Glotonía' },
+            effect: { fr: "Inflige des degats terre et vole toute l'armure de la cible et 100 Resistance elementaire (cumulable).", en: "Deals Earth damage and steals all target's armor and 100 Elemental Resistance (stacking).", es: "Inflige daño Tierra y roba toda la armadura del objetivo y 100 Resistencia Elemental (acumulable)." },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             range: { fr: '1 PO', en: '1 Range', es: '1 PO' },
             limit: { fr: '1/cible', en: '1/target', es: '1/objetivo' },
@@ -712,7 +712,7 @@ export const dungeonGuides = [
           { fr: 'Tacle 2000', en: 'Lock 2,000', es: 'Placaje 2000' },
           { fr: 'Esquive 200', en: 'Dodge 200', es: 'Esquiva 200' },
           { fr: 'Parade 35%', en: 'Block 35%', es: 'Parada 35%' },
-          { fr: 'Critique 25%', en: 'Critical 25%', es: 'CrÃ­tico 25%' },
+          { fr: 'Critique 25%', en: 'Critical 25%', es: 'Crítico 25%' },
           { fr: 'Volonte 30', en: 'Willpower 30', es: 'Voluntad 30' },
           { fr: 'Resist 76% (650)', en: 'Resist 76% (650)', es: 'Resist 76% (650)' },
           { fr: 'Resist 80% (730)', en: 'Resist 80% (730)', es: 'Resist 80% (730)' },
@@ -720,22 +720,22 @@ export const dungeonGuides = [
         ],
       },
       {
-        name: { fr: 'Pohl le poulpe (Invocation)', en: 'Pohl the Squid (Summon)', es: 'Pohl el pulpo (InvocaciÃ³n)' },
+        name: { fr: 'Pohl le poulpe (Invocation)', en: 'Pohl the Squid (Summon)', es: 'Pohl el pulpo (Invocación)' },
         level: { fr: 'Niv. 233 (Stasis 2)', en: 'Lvl. 233 (Stasis 2)', es: 'Niv. 233 (Estasis 2)' },
         bonus: '',
-        description: { fr: 'Invocation. Ses plus basses resistances sont les elements terre et air.', en: 'Summon. Weakest resistances are Earth and Air.', es: 'InvocaciÃ³n. Sus resistencias mÃ¡s bajas son Tierra y Aire.' },
+        description: { fr: 'Invocation. Ses plus basses resistances sont les elements terre et air.', en: 'Summon. Weakest resistances are Earth and Air.', es: 'Invocación. Sus resistencias más bajas son Tierra y Aire.' },
         spells: [
           {
             name: { fr: "Jet d'encre", en: 'Ink Jet', es: 'Chorro de tinta' },
-            effect: { fr: 'Inflige des degats feu et retire 2 PO.', en: 'Deals Fire damage and removes 2 Range.', es: 'Inflige daÃ±o Fuego y quita 2 Rango.' },
+            effect: { fr: 'Inflige des degats feu et retire 2 PO.', en: 'Deals Fire damage and removes 2 Range.', es: 'Inflige daño Fuego y quita 2 Rango.' },
             cost: { fr: '2 PA', en: '2 AP', es: '2 PA' },
-            range: { fr: 'Croix taille 1, âˆž PO', en: 'Cross size 1, âˆž Range', es: 'Cruz tamaÃ±o 1, âˆž PO' },
+            range: { fr: 'Croix taille 1, ∞ PO', en: 'Cross size 1, ∞ Range', es: 'Cruz tamaño 1, ∞ PO' },
             limit: { fr: '1/cible, 3/tour', en: '1/target, 3/turn', es: '1/objetivo, 3/turno' },
           },
           {
-            name: { fr: 'Deflagration', en: 'Deflagration', es: 'DeflagraciÃ³n' },
+            name: { fr: 'Deflagration', en: 'Deflagration', es: 'Deflagración' },
             tag: { fr: 'Auto', en: 'Auto', es: 'Auto' },
-            effect: { fr: 'Inflige de lourds degats feu et retire les cases de noyade touchees.', en: 'Deals heavy Fire damage and removes hit drowning tiles.', es: 'Inflige daÃ±o Fuego intenso y quita las celdas de ahogo tocadas.' },
+            effect: { fr: 'Inflige de lourds degats feu et retire les cases de noyade touchees.', en: 'Deals heavy Fire damage and removes hit drowning tiles.', es: 'Inflige daño Fuego intenso y quita las celdas de ahogo tocadas.' },
             cost: { fr: '0 PA', en: '0 AP', es: '0 PA' },
             limit: { fr: 'Lance au debut de chaque tour', en: 'Casts at start of each turn', es: 'Lanza al inicio de cada turno' },
           },
@@ -743,7 +743,7 @@ export const dungeonGuides = [
         passive: '',
         notes: [
           { fr: "Se teleporte a la fin de tour sur un des trois points d'eau.", en: "Teleports at end of turn to one of three water points.", es: "Se teletransporta al final del turno a uno de los tres puntos de agua." },
-          { fr: 'Bonus K.O.: 5 PA et 2 PM (2 tours). Le second donne 10 PA et 5 PM.', en: 'K.O. Bonus: 5 AP and 2 MP (2 turns). Second gives 10 AP and 5 MP.', es: 'BonificaciÃ³n K.O.: 5 PA y 2 PM (2 turnos). El segundo da 10 PA y 5 PM.' },
+          { fr: 'Bonus K.O.: 5 PA et 2 PM (2 tours). Le second donne 10 PA et 5 PM.', en: 'K.O. Bonus: 5 AP and 2 MP (2 turns). Second gives 10 AP and 5 MP.', es: 'Bonificación K.O.: 5 PA y 2 PM (2 turnos). El segundo da 10 PA y 5 PM.' },
         ],
         stats: [
           { fr: 'PV 80.000', en: 'HP 80,000', es: 'PV 80.000' },
@@ -754,7 +754,7 @@ export const dungeonGuides = [
           { fr: 'Tacle 80', en: 'Lock 80', es: 'Placaje 80' },
           { fr: 'Esquive 0', en: 'Dodge 0', es: 'Esquiva 0' },
           { fr: 'Parade 22%', en: 'Block 22%', es: 'Parada 22%' },
-          { fr: 'Critique 26%', en: 'Critical 26%', es: 'CrÃ­tico 26%' },
+          { fr: 'Critique 26%', en: 'Critical 26%', es: 'Crítico 26%' },
           { fr: 'Volonte 18', en: 'Willpower 18', es: 'Voluntad 18' },
           { fr: 'Resist 71% (560)', en: 'Resist 71% (560)', es: 'Resist 71% (560)' },
           { fr: 'Resist 67% (500)', en: 'Resist 67% (500)', es: 'Resist 67% (500)' },
@@ -764,25 +764,25 @@ export const dungeonGuides = [
     boss: {
       name: { fr: 'Raeliss', en: 'Raeliss', es: 'Raeliss' },
       level: { fr: 'Niv. 233 (Stasis 2)', en: 'Lvl. 233 (Stasis 2)', es: 'Niv. 233 (Estasis 2)' },
-      description: { fr: "Il possede 4 sorts et sa plus basse resistance est l'element terre.", en: "Has 4 spells and weakest resistance is Earth.", es: "Tiene 4 hechizos y su resistencia mÃ¡s baja es Tierra." },
+      description: { fr: "Il possede 4 sorts et sa plus basse resistance est l'element terre.", en: "Has 4 spells and weakest resistance is Earth.", es: "Tiene 4 hechizos y su resistencia más baja es Tierra." },
       spells: [
         {
-          name: { fr: 'Siphon abyssal', en: 'Abyssal Siphon', es: 'SifÃ³n abisal' },
-          effect: { fr: 'Inflige des degats air et attire de 3 cases. Les cibles autres que la cible subissent 2x plus de degats.', en: 'Deals Air damage and pulls 3 cells. Targets other than main target take 2x more damage.', es: 'Inflige daÃ±o Aire y atrae 3 celdas. Los objetivos distintos al principal reciben 2x mÃ¡s daÃ±o.' },
+          name: { fr: 'Siphon abyssal', en: 'Abyssal Siphon', es: 'Sifón abisal' },
+          effect: { fr: 'Inflige des degats air et attire de 3 cases. Les cibles autres que la cible subissent 2x plus de degats.', en: 'Deals Air damage and pulls 3 cells. Targets other than main target take 2x more damage.', es: 'Inflige daño Aire y atrae 3 celdas. Los objetivos distintos al principal reciben 2x más daño.' },
           cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
-          range: { fr: 'Croix taille 4 (2-6 PO, en ligne)', en: 'Cross size 4 (2-6 Range, line)', es: 'Cruz tamaÃ±o 4 (2-6 PO, en lÃ­nea)' },
+          range: { fr: 'Croix taille 4 (2-6 PO, en ligne)', en: 'Cross size 4 (2-6 Range, line)', es: 'Cruz tamaño 4 (2-6 PO, en línea)' },
           limit: { fr: '1/cible, 2/tour', en: '1/target, 2/turn', es: '1/objetivo, 2/turno' },
         },
         {
-          name: { fr: 'Tentattaque poisseuse', en: 'Sticky Tentacle Attack', es: 'Ataque de tentÃ¡culo pegajoso' },
-          effect: { fr: 'Inflige de lourds degats terre et retire 100 Resistance elementaire (2 tours), cumulable 6 fois.', en: 'Deals heavy Earth damage and removes 100 Elemental Resistance (2 turns), stacks 6 times.', es: 'Inflige daÃ±o Tierra intenso y quita 100 Resistencia Elemental (2 turnos), acumulable 6 veces.' },
+          name: { fr: 'Tentattaque poisseuse', en: 'Sticky Tentacle Attack', es: 'Ataque de tentáculo pegajoso' },
+          effect: { fr: 'Inflige de lourds degats terre et retire 100 Resistance elementaire (2 tours), cumulable 6 fois.', en: 'Deals heavy Earth damage and removes 100 Elemental Resistance (2 turns), stacks 6 times.', es: 'Inflige daño Tierra intenso y quita 100 Resistencia Elemental (2 turnos), acumulable 6 veces.' },
           cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
           range: { fr: '1 PO', en: '1 Range', es: '1 PO' },
           limit: { fr: '1/cible, 2/tour', en: '1/target, 2/turn', es: '1/objetivo, 2/turno' },
         },
         {
           name: { fr: 'Torrent', en: 'Torrent', es: 'Torrente' },
-          effect: { fr: "Declenche les glyphes Prison d'eau et inflige des degats eau en cercle taille 2. Pose ensuite une case de noyade.", en: "Triggers Water Prison glyphs and deals Water damage in size-2 circle. Then places a drowning tile.", es: "Activa glifos de PrisiÃ³n de Agua e inflige daÃ±o Agua en cÃ­rculo tamaÃ±o 2. Luego coloca una celda de ahogo." },
+          effect: { fr: "Declenche les glyphes Prison d'eau et inflige des degats eau en cercle taille 2. Pose ensuite une case de noyade.", en: "Triggers Water Prison glyphs and deals Water damage in size-2 circle. Then places a drowning tile.", es: "Activa glifos de Prisión de Agua e inflige daño Agua en círculo tamaño 2. Luego coloca una celda de ahogo." },
           cost: { fr: '3 PA', en: '3 AP', es: '3 PA' },
           limit: { fr: 'Lance au debut de chaque tour', en: 'Casts at start of each turn', es: 'Lanza al inicio de cada turno' },
         },
@@ -802,7 +802,7 @@ export const dungeonGuides = [
         { fr: 'Tacle 1400', en: 'Lock 1,400', es: 'Placaje 1400' },
         { fr: 'Esquive 800', en: 'Dodge 800', es: 'Esquiva 800' },
         { fr: 'Parade 30%', en: 'Block 30%', es: 'Parada 30%' },
-        { fr: 'Critique 30%', en: 'Critical 30%', es: 'CrÃ­tico 30%' },
+        { fr: 'Critique 30%', en: 'Critical 30%', es: 'Crítico 30%' },
         { fr: 'Volonte 35', en: 'Willpower 35', es: 'Voluntad 35' },
         { fr: 'Resist 75% (630)', en: 'Resist 75% (630)', es: 'Resist 75% (630)' },
         { fr: 'Resist 69% (530)', en: 'Resist 69% (530)', es: 'Resist 69% (530)' },
@@ -816,17 +816,17 @@ export const dungeonGuides = [
           {
             fr: "Les monstres sont invulnerables si vous n'avez pas la ligne de vue sur eux.",
             en: "Monsters are invulnerable if you don't have line of sight.",
-            es: "Los monstruos son invulnerables si no tienes lÃ­nea de visiÃ³n.",
+            es: "Los monstruos son invulnerables si no tienes línea de visión.",
           },
           {
             fr: "A la fin de leur tour, ils posent des glyphes Prison d'eau qui bloquent la ligne de vue.",
             en: "End of turn, they place Water Prison glyphs that block line of sight.",
-            es: "Fin del turno, colocan glifos de PrisiÃ³n de Agua que bloquean la lÃ­nea de visiÃ³n.",
+            es: "Fin del turno, colocan glifos de Prisión de Agua que bloquean la línea de visión.",
           },
           {
             fr: "On peut enlever un glyphe en marchant dessus (perte de 3 PM).",
             en: "You can remove a glyph by walking on it (lose 3 MP).",
-            es: "Puedes quitar un glifo caminando sobre Ã©l (pierdes 3 PM).",
+            es: "Puedes quitar un glifo caminando sobre él (pierdes 3 PM).",
           },
           {
             fr: "Autre option: infliger > 10 % PdV en une attaque; les glyphes sont retires et le monstre gagne 3 PM.",
@@ -846,7 +846,7 @@ export const dungeonGuides = [
           {
             fr: "A la fin de chaque tour, il pose des glyphes Prison d'eau: tour impair autour de lui, pair autour des allies.",
             en: "End of each turn, he places Water Prison glyphs: odd turn around him, even around allies.",
-            es: "Fin de cada turno, coloca glifos de PrisiÃ³n de Agua: turno impar alrededor suyo, par alrededor de aliados.",
+            es: "Fin de cada turno, coloca glifos de Prisión de Agua: turno impar alrededor suyo, par alrededor de aliados.",
           },
           {
             fr: "Avec 'Torrent', ces glyphes deviennent des cases de noyade qui mettent K.O. si on marche dessus.",
@@ -856,48 +856,48 @@ export const dungeonGuides = [
           {
             fr: "Pohl le poulpe (phase 2+) peut retirer des cases via 'Deflagration'.",
             en: "Pohl the Squid (phase 2+) can remove tiles via 'Deflagration'.",
-            es: "Pohl el Pulpo (fase 2+) puede quitar celdas via 'DeflagraciÃ³n'.",
+            es: "Pohl el Pulpo (fase 2+) puede quitar celdas via 'Deflagración'.",
           },
           {
             fr: "Raeliss est melee: restez proche pour eviter qu'il gagne trop de %Di en tours de velocite.",
             en: "Raeliss is melee: stay close to avoid him gaining too much %increased damage in speed turns.",
-            es: "Raeliss hace combate cuerpo a cuerpo: mantente cerca para evitar que gane demasiado % daÃ±o aumentado.",
+            es: "Raeliss hace combate cuerpo a cuerpo: mantente cerca para evitar que gane demasiado % daño aumentado.",
           },
           {
             fr: "Conseil: jouer en mode tactique pour bien voir les cases de noyade.",
             en: "Tip: play in tactical mode to see drowning tiles clearly.",
-            es: "Consejo: juega en modo tÃ¡ctico para ver claramente las celdas de ahogo.",
+            es: "Consejo: juega en modo táctico para ver claramente las celdas de ahogo.",
           },
         ],
       },
     ],
-    plan: { fr: 'Cliquer ici pour derouler le plan du donjon.', en: 'Click here to unfold the dungeon plan.', es: 'Haz clic aquÃ­ para desplegar el plan de la mazmorra.' },
+    plan: { fr: 'Cliquer ici pour derouler le plan du donjon.', en: 'Click here to unfold the dungeon plan.', es: 'Haz clic aquí para desplegar el plan de la mazmorra.' },
     steles: {
       lead: {
         fr: "Steles d'intervention: activation possible en competitif et stasis 2 minimum.",
         en: "Intervention steles: can be activated in competitive and minimum stasis 2.",
-        es: "Estelas de intervenciÃ³n: pueden activarse en competitivo con mÃ­nimo estasis 2.",
+        es: "Estelas de intervención: pueden activarse en competitivo con mínimo estasis 2.",
       },
       notes: [
         {
           fr: "Ajoute le boss Cire Momore au combat (stele d'intervention).",
           en: "Adds boss Cire Momore to the fight (intervention stele).",
-          es: "AÃ±ade al jefe Cire Momore al combate (estela de intervenciÃ³n).",
+          es: "Añade al jefe Cire Momore al combate (estela de intervención).",
         },
         {
           fr: "L'activation coute une Clef d'intervention de Cire Momore (ebenistes niv. 145).",
           en: "Activation costs a Cire Momore Intervention Key (carpenters lvl 145).",
-          es: "La activaciÃ³n cuesta una Llave de IntervenciÃ³n de Cire Momore (carpinteros niv. 145).",
+          es: "La activación cuesta una Llave de Intervención de Cire Momore (carpinteros niv. 145).",
         },
         {
           fr: 'Pas besoin de reactiver apres une defaite.',
           en: 'No need to reactivate after a defeat.',
-          es: 'No es necesario reactivar despuÃ©s de una derrota.',
+          es: 'No es necesario reactivar después de una derrota.',
         },
         {
           fr: 'Loot de stele: Bougie, Armure, Coiffe, Main de Cire Momore.',
           en: 'Stele loot: Candle, Armor, Hat, Hand of Cire Momore.',
-          es: 'BotÃ­n de estela: Vela, Armadura, Sombrero, Mano de Cire Momore.',
+          es: 'Botín de estela: Vela, Armadura, Sombrero, Mano de Cire Momore.',
         },
       ],
       protoBosses: [],
@@ -912,7 +912,7 @@ export const dungeonGuides = [
         {
           fr: "En mode Competitif, le boss peut drop une Pierre d'equilibre (sublimations epiques/reliques).",
           en: "In Competitive mode, the boss can drop an Equilibrium Stone (epic/relic sublimations).",
-          es: "En modo Competitivo, el jefe puede soltar una Piedra de Equilibrio (sublimaciones Ã©picas/reliquias).",
+          es: "En modo Competitivo, el jefe puede soltar una Piedra de Equilibrio (sublimaciones épicas/reliquias).",
         },
       ],
       monsterDrops: [
@@ -1000,7 +1000,7 @@ export const dungeonGuides = [
     subtitle: {
       fr: "Boss: K'abah'al, Gardien de la route des morts",
       en: "Boss: K'abah'al, Guardian of the Road of the Dead",
-      es: "Jefe: K'abah'al, GuardiÃ¡n del Camino de los Muertos",
+      es: "Jefe: K'abah'al, Guardián del Camino de los Muertos",
     },
     levelRange: { fr: 'Niv. 216', en: 'Lvl. 216', es: 'Niv. 216' },
     summary: [
@@ -1017,7 +1017,7 @@ export const dungeonGuides = [
       {
         fr: 'Le coeur du combat tourne autour des Residus, des fusions et des marques.',
         en: 'Core mechanics revolve around Residues, fusions, and marks.',
-        es: 'La mecÃ¡nica central gira en torno a Residuos, fusiones y marcas.',
+        es: 'La mecánica central gira en torno a Residuos, fusiones y marcas.',
       },
       {
         fr: "Attention a K'abah'al: tres dangereux si les fusions de Residus s'enchainent.",
@@ -1027,7 +1027,7 @@ export const dungeonGuides = [
       {
         fr: 'Certaines informations restent en validation et peuvent evoluer.',
         en: 'Some details are still being validated and may change.',
-        es: 'Algunos detalles siguen en validaciÃ³n y pueden cambiar.',
+        es: 'Algunos detalles siguen en validación y pueden cambiar.',
       },
     ],
     monsters: [
@@ -1050,17 +1050,17 @@ export const dungeonGuides = [
             effect: {
               fr: "Monocible 1 PO, degats eau, pousse de 5 cases et applique Marque du ravage (2 tours).",
               en: 'Single target 1 range, water damage, pushes 5 cells and applies Ravage Mark (2 turns).',
-              es: 'Monobjetivo 1 alcance, daÃ±o agua, empuja 5 casillas y aplica Marca del Ravage (2 turnos).',
+              es: 'Monobjetivo 1 alcance, daño agua, empuja 5 casillas y aplica Marca del Ravage (2 turnos).',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             limit: { fr: '1/cible, 2/tour', en: '1/target, 2/turn', es: '1/objetivo, 2/turno' },
           },
           {
-            name: { fr: 'Coup de faux raccord', en: 'False Scythe Cut', es: 'Corte de guadaÃ±a falsa' },
+            name: { fr: 'Coup de faux raccord', en: 'False Scythe Cut', es: 'Corte de guadaña falsa' },
             effect: {
               fr: 'Zone sur un Residu, degats feu et transposition avec le Residu cible.',
               en: 'AoE on a Residue, fire damage and swaps position with target Residue.',
-              es: 'Ãrea sobre un Residuo, daÃ±o fuego e intercambio de posiciÃ³n con el Residuo objetivo.',
+              es: 'Área sobre un Residuo, daño fuego e intercambio de posición con el Residuo objetivo.',
             },
             cost: { fr: '2 PA', en: '2 AP', es: '2 PA' },
             range: { fr: '1-10 PO', en: '1-10 Range', es: '1-10 PO' },
@@ -1070,18 +1070,18 @@ export const dungeonGuides = [
         passive: {
           fr: 'Ravageur: a sa mort, invoque un Residu qui joue juste apres le tueur.',
           en: 'Ravager: on death, summons a Residue that acts right after the killer.',
-          es: 'Ravageur: al morir, invoca un Residuo que juega justo despuÃ©s del asesino.',
+          es: 'Ravageur: al morir, invoca un Residuo que juega justo después del asesino.',
         },
         notes: [
           {
             fr: 'Marque du ravage: les dommages subis sont repercutes sur les autres porteurs de la marque.',
             en: 'Ravage Mark: damage taken is mirrored to other marked targets.',
-            es: 'Marca del Ravage: el daÃ±o recibido se replica a otros portadores de la marca.',
+            es: 'Marca del Ravage: el daño recibido se replica a otros portadores de la marca.',
           },
         ],
         stats: [
           { fr: 'Role: DPS utilitaire', en: 'Role: Utility DPS', es: 'Rol: DPS utilitario' },
-          { fr: 'Element de pression: Eau/Feu', en: 'Pressure element: Water/Fire', es: 'Elemento de presiÃ³n: Agua/Fuego' },
+          { fr: 'Element de pression: Eau/Feu', en: 'Pressure element: Water/Fire', es: 'Elemento de presión: Agua/Fuego' },
         ],
       },
       {
@@ -1095,26 +1095,26 @@ export const dungeonGuides = [
         description: {
           fr: 'Devient invisible et punit les equipes sans revelation reguliere.',
           en: 'Turns invisible and punishes teams without regular reveal.',
-          es: 'Se vuelve invisible y castiga a equipos sin revelaciÃ³n constante.',
+          es: 'Se vuelve invisible y castiga a equipos sin revelación constante.',
         },
         spells: [
           {
-            name: { fr: 'Coup de fouet', en: 'Whip Strike', es: 'Golpe de lÃ¡tigo' },
+            name: { fr: 'Coup de fouet', en: 'Whip Strike', es: 'Golpe de látigo' },
             effect: {
               fr: 'Monocible en ligne, degats air et retire 2 PO.',
               en: 'Single target in line, air damage and removes 2 range.',
-              es: 'Monobjetivo en lÃ­nea, daÃ±o aire y quita 2 alcance.',
+              es: 'Monobjetivo en línea, daño aire y quita 2 alcance.',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             range: { fr: '1-6 PO', en: '1-6 Range', es: '1-6 PO' },
             limit: { fr: '1/cible, 2/tour', en: '1/target, 2/turn', es: '1/objetivo, 2/turno' },
           },
           {
-            name: { fr: 'Maitre mentalite', en: 'Mind Mastery', es: 'MaestrÃ­a mental' },
+            name: { fr: 'Maitre mentalite', en: 'Mind Mastery', es: 'Maestría mental' },
             effect: {
               fr: "Zone sur Residu: degats terre et rend le Residu invisible (3 tours).",
               en: 'AoE on Residue: earth damage and makes Residue invisible (3 turns).',
-              es: 'Ãrea sobre Residuo: daÃ±o tierra y vuelve invisible al Residuo (3 turnos).',
+              es: 'Área sobre Residuo: daño tierra y vuelve invisible al Residuo (3 turnos).',
             },
             cost: { fr: '2 PA', en: '2 AP', es: '2 PA' },
             range: { fr: '1-10 PO', en: '1-10 Range', es: '1-10 PO' },
@@ -1124,13 +1124,13 @@ export const dungeonGuides = [
         passive: {
           fr: "L'obscur: devient invisible en debut de tour et gagne 50 % DI permanent s'il reste invisible.",
           en: 'The Dark One: becomes invisible at turn start and gains permanent 50% damage if still invisible next turn.',
-          es: 'El Oscuro: se vuelve invisible al inicio y gana 50% daÃ±o permanente si sigue invisible en su siguiente turno.',
+          es: 'El Oscuro: se vuelve invisible al inicio y gana 50% daño permanente si sigue invisible en su siguiente turno.',
         },
         notes: [
           {
             fr: "Les degats directs et indirects retirent l'invisibilite.",
             en: 'Both direct and indirect damage remove invisibility.',
-            es: 'El daÃ±o directo e indirecto elimina la invisibilidad.',
+            es: 'El daño directo e indirecto elimina la invisibilidad.',
           },
           {
             fr: 'Ravageur: a sa mort, invoque un Residu.',
@@ -1139,7 +1139,7 @@ export const dungeonGuides = [
           },
         ],
         stats: [
-          { fr: 'Role: pression tactique', en: 'Role: tactical pressure', es: 'Rol: presiÃ³n tÃ¡ctica' },
+          { fr: 'Role: pression tactique', en: 'Role: tactical pressure', es: 'Rol: presión táctica' },
         ],
       },
       {
@@ -1161,17 +1161,17 @@ export const dungeonGuides = [
             effect: {
               fr: 'Monocible 1 PO, degats terre, retire 2 PO et 3 PM.',
               en: 'Single target 1 range, earth damage, removes 2 range and 3 MP.',
-              es: 'Monobjetivo 1 alcance, daÃ±o tierra, quita 2 alcance y 3 PM.',
+              es: 'Monobjetivo 1 alcance, daño tierra, quita 2 alcance y 3 PM.',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             limit: { fr: '1/cible, 3/tour', en: '1/target, 3/turn', es: '1/objetivo, 3/turno' },
           },
           {
-            name: { fr: 'Gloutonie', en: 'Gluttony', es: 'GlotonerÃ­a' },
+            name: { fr: 'Gloutonie', en: 'Gluttony', es: 'Glotonería' },
             effect: {
               fr: 'Mange une invocation ou un Residu, soigne, gagne 1 PM et 25 % DI cumulable.',
               en: 'Eats a summon or Residue, heals, gains 1 MP and stackable 25% increased damage.',
-              es: 'Devora una invocaciÃ³n o Residuo, se cura, gana 1 PM y 25% daÃ±o aumentado acumulable.',
+              es: 'Devora una invocación o Residuo, se cura, gana 1 PM y 25% daño aumentado acumulable.',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             limit: { fr: '1/cible, 3/tour', en: '1/target, 3/turn', es: '1/objetivo, 3/turno' },
@@ -1180,7 +1180,7 @@ export const dungeonGuides = [
         passive: {
           fr: 'Ventre sans fond: le soin depassant les PV max est ajoute aux PV max.',
           en: 'Bottomless Stomach: healing beyond max HP increases max HP.',
-          es: 'Vientre sin fondo: la curaciÃ³n sobre PV mÃ¡ximos se aÃ±ade a PV mÃ¡ximos.',
+          es: 'Vientre sin fondo: la curación sobre PV máximos se añade a PV máximos.',
         },
         notes: [
           {
@@ -1199,17 +1199,17 @@ export const dungeonGuides = [
         ],
       },
       {
-        name: { fr: 'Residu (Invocation)', en: 'Residue (Summon)', es: 'Residuo (InvocaciÃ³n)' },
-        level: { fr: 'Invocation', en: 'Summon', es: 'InvocaciÃ³n' },
-        bonus: { fr: 'Unite de fusion', en: 'Fusion unit', es: 'Unidad de fusiÃ³n' },
+        name: { fr: 'Residu (Invocation)', en: 'Residue (Summon)', es: 'Residuo (Invocación)' },
+        level: { fr: 'Invocation', en: 'Summon', es: 'Invocación' },
+        bonus: { fr: 'Unite de fusion', en: 'Fusion unit', es: 'Unidad de fusión' },
         description: {
           fr: 'Noyau mecanique du donjon: fusion, reflet de degats et buff melee.',
           en: 'Core mechanic unit: fusion, reflected damage and melee buff.',
-          es: 'Unidad mecÃ¡nica central: fusiÃ³n, reflejo de daÃ±o y buff melee.',
+          es: 'Unidad mecánica central: fusión, reflejo de daño y buff melee.',
         },
         spells: [
           {
-            name: { fr: 'Fuuu-sion', en: 'Fuuu-sion', es: 'Fuuu-siÃ³n' },
+            name: { fr: 'Fuuu-sion', en: 'Fuuu-sion', es: 'Fuuu-sión' },
             effect: {
               fr: 'Fusionne avec un autre Residu et invoque un Ravageur aleatoire a 50 % PV.',
               en: 'Fuses with another Residue and summons a random Ravager at 50% HP.',
@@ -1222,7 +1222,7 @@ export const dungeonGuides = [
         passive: {
           fr: 'Les allies au contact infligent 30 % DI, et les degats recus sont annules puis renvoyes a l attaquant.',
           en: 'Adjacent fighters deal 30% increased damage, and incoming damage is canceled then reflected to attacker.',
-          es: 'Combatientes adyacentes infligen 30% mÃ¡s daÃ±o, y el daÃ±o recibido se anula y se devuelve al atacante.',
+          es: 'Combatientes adyacentes infligen 30% más daño, y el daño recibido se anula y se devuelve al atacante.',
         },
         notes: [
           {
@@ -1233,18 +1233,18 @@ export const dungeonGuides = [
           {
             fr: 'Les Residus jouent immediatement apres leur apparition.',
             en: 'Residues act immediately after being summoned.',
-            es: 'Los Residuos actÃºan inmediatamente tras aparecer.',
+            es: 'Los Residuos actúan inmediatamente tras aparecer.',
           },
         ],
         stats: [
-          { fr: 'Priorite: controle/fusion', en: 'Priority: control/fusion', es: 'Prioridad: control/fusiÃ³n' },
+          { fr: 'Priorite: controle/fusion', en: 'Priority: control/fusion', es: 'Prioridad: control/fusión' },
         ],
       },
       {
         name: {
           fr: "K'abah'al, Gardien de la route des morts",
           en: "K'abah'al, Guardian of the Road of the Dead",
-          es: "K'abah'al, GuardiÃ¡n del Camino de los Muertos",
+          es: "K'abah'al, Guardián del Camino de los Muertos",
         },
         level: { fr: 'Boss', en: 'Boss', es: 'Jefe' },
         bonus: {
@@ -1255,15 +1255,15 @@ export const dungeonGuides = [
         description: {
           fr: "Version boss en salle finale. Manipule marques, transpositions et executions.",
           en: 'Boss-room version. Manipulates marks, transpositions and executions.',
-          es: 'VersiÃ³n de jefe final. Manipula marcas, transposiciones y ejecuciones.',
+          es: 'Versión de jefe final. Manipula marcas, transposiciones y ejecuciones.',
         },
         spells: [
           {
-            name: { fr: 'Devastation', en: 'Devastation', es: 'DevastaciÃ³n' },
+            name: { fr: 'Devastation', en: 'Devastation', es: 'Devastación' },
             effect: {
               fr: 'Lance automatiquement de lourds degats feu sur Marques Residuelles et Residus en debut de tour.',
               en: 'Automatically deals heavy fire damage on Residual Marks and active Residues at turn start.',
-              es: 'Lanza automÃ¡ticamente daÃ±o fuego muy alto sobre Marcas Residuales y Residuos al inicio del turno.',
+              es: 'Lanza automáticamente daño fuego muy alto sobre Marcas Residuales y Residuos al inicio del turno.',
             },
             cost: { fr: '0 PA', en: '0 AP', es: '0 PA' },
           },
@@ -1272,7 +1272,7 @@ export const dungeonGuides = [
             effect: {
               fr: 'Teleportation au contact dune cible isolee, puis degats air.',
               en: 'Teleports into melee with an isolated target, then deals air damage.',
-              es: 'Se teletransporta en melee con un objetivo aislado y luego inflige daÃ±o aire.',
+              es: 'Se teletransporta en melee con un objetivo aislado y luego inflige daño aire.',
             },
             cost: { fr: '2 PA', en: '2 AP', es: '2 PA' },
             range: { fr: 'Toute la carte', en: 'Whole map', es: 'Todo el mapa' },
@@ -1282,7 +1282,7 @@ export const dungeonGuides = [
             effect: {
               fr: 'Degats terre et applique Dernier souffle + Plaie profonde (2 tours).',
               en: 'Earth damage and applies Last Breath + Deep Wound (2 turns).',
-              es: 'DaÃ±o tierra y aplica Ãšltimo Aliento + Herida Profunda (2 turnos).',
+              es: 'Daño tierra y aplica Último Aliento + Herida Profunda (2 turnos).',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             range: { fr: '1 PO', en: '1 Range', es: '1 PO' },
@@ -1298,7 +1298,7 @@ export const dungeonGuides = [
           {
             fr: 'Absorption funeste: a chaque fusion, -60 resist elementaire et +30 % DI, puis pose une Marque Residuelle proche des joueurs.',
             en: 'Doom Absorption: each fusion gives -60 elemental resistance and +30% increased damage, then places a Residual Mark near players.',
-            es: 'AbsorciÃ³n funesta: cada fusiÃ³n da -60 resistencia elemental y +30% daÃ±o aumentado, y coloca una Marca Residual cerca de jugadores.',
+            es: 'Absorción funesta: cada fusión da -60 resistencia elemental y +30% daño aumentado, y coloca una Marca Residual cerca de jugadores.',
           },
         ],
         stats: [
@@ -1309,18 +1309,18 @@ export const dungeonGuides = [
         name: {
           fr: "Residu de K'abah'al (Invocation)",
           en: "K'abah'al Residue (Summon)",
-          es: "Residuo de K'abah'al (InvocaciÃ³n)",
+          es: "Residuo de K'abah'al (Invocación)",
         },
-        level: { fr: 'Invocation', en: 'Summon', es: 'InvocaciÃ³n' },
-        bonus: { fr: 'Fusion boss', en: 'Boss fusion', es: 'FusiÃ³n de jefe' },
+        level: { fr: 'Invocation', en: 'Summon', es: 'Invocación' },
+        bonus: { fr: 'Fusion boss', en: 'Boss fusion', es: 'Fusión de jefe' },
         description: {
           fr: "Version boss du Residu. Peut fusionner pour invoquer un K'abah'al a 20 % PV.",
           en: "Boss version of Residue. Can fuse to summon a K'abah'al at 20% HP.",
-          es: "VersiÃ³n de jefe del Residuo. Puede fusionarse para invocar un K'abah'al al 20% de PV.",
+          es: "Versión de jefe del Residuo. Puede fusionarse para invocar un K'abah'al al 20% de PV.",
         },
         spells: [
           {
-            name: { fr: 'Fuuu-sion', en: 'Fuuu-sion', es: 'Fuuu-siÃ³n' },
+            name: { fr: 'Fuuu-sion', en: 'Fuuu-sion', es: 'Fuuu-sión' },
             effect: {
               fr: "Fusionne avec un autre Residu de K'abah'al pour invoquer un K'abah'al a 20 % PV.",
               en: "Fuses with another K'abah'al Residue to summon a K'abah'al at 20% HP.",
@@ -1333,17 +1333,17 @@ export const dungeonGuides = [
         passive: {
           fr: 'Comme le Residu normal: +30 % DI melee et reflet des degats recus.',
           en: 'Same as normal Residue: +30% melee increased damage and reflected incoming damage.',
-          es: 'Como Residuo normal: +30% daÃ±o melee y reflejo del daÃ±o recibido.',
+          es: 'Como Residuo normal: +30% daño melee y reflejo del daño recibido.',
         },
         notes: [
           {
             fr: "Si la fusion se produit, le nouveau K'abah'al n'invoque plus de Residus a sa mort.",
             en: "If fusion occurs, the newly summoned K'abah'al no longer summons Residues on death.",
-            es: "Si se produce la fusiÃ³n, el nuevo K'abah'al ya no invoca Residuos al morir.",
+            es: "Si se produce la fusión, el nuevo K'abah'al ya no invoca Residuos al morir.",
           },
         ],
         stats: [
-          { fr: 'Priorite: interruption de fusion', en: 'Priority: interrupt fusion', es: 'Prioridad: interrumpir fusiÃ³n' },
+          { fr: 'Priorite: interruption de fusion', en: 'Priority: interrupt fusion', es: 'Prioridad: interrumpir fusión' },
         ],
       },
     ],
@@ -1351,7 +1351,7 @@ export const dungeonGuides = [
       name: {
         fr: "K'abah'al, Gardien de la route des morts",
         en: "K'abah'al, Guardian of the Road of the Dead",
-        es: "K'abah'al, GuardiÃ¡n del Camino de los Muertos",
+        es: "K'abah'al, Guardián del Camino de los Muertos",
       },
       level: { fr: 'Niv. 216+', en: 'Lvl. 216+', es: 'Niv. 216+' },
       description: {
@@ -1361,7 +1361,7 @@ export const dungeonGuides = [
       },
       spells: [
         {
-          name: { fr: 'Confusion mortelle', en: 'Deadly Confusion', es: 'ConfusiÃ³n mortal' },
+          name: { fr: 'Confusion mortelle', en: 'Deadly Confusion', es: 'Confusión mortal' },
           effect: {
             fr: 'Transpose deux ennemis sur toute la carte avant Envol final.',
             en: 'Swaps two enemies anywhere on the map before Final Flight.',
@@ -1375,26 +1375,26 @@ export const dungeonGuides = [
           effect: {
             fr: 'Monocible a distance sans ligne de vue, degats feu.',
             en: 'Single-target ranged attack without line of sight, fire damage.',
-            es: 'Ataque monobjetivo a distancia sin lÃ­nea de visiÃ³n, daÃ±o fuego.',
+            es: 'Ataque monobjetivo a distancia sin línea de visión, daño fuego.',
           },
           cost: { fr: '3 PA', en: '3 AP', es: '3 PA' },
-          range: { fr: '2 PO et +', en: '2+ Range', es: '2 PO o mÃ¡s' },
+          range: { fr: '2 PO et +', en: '2+ Range', es: '2 PO o más' },
           limit: { fr: '1/cible, 3/tour', en: '1/target, 3/turn', es: '1/objetivo, 3/turno' },
         },
       ],
       passives: [
         {
-          name: { fr: 'Absorption funeste', en: 'Doom Absorption', es: 'AbsorciÃ³n funesta' },
+          name: { fr: 'Absorption funeste', en: 'Doom Absorption', es: 'Absorción funesta' },
           effect: {
             fr: 'Par fusion: -60 resist elementaire, +30 % DI, et generation de Marque Residuelle.',
             en: 'Per fusion: -60 elemental resistance, +30% increased damage, and Residual Mark generation.',
-            es: 'Por fusiÃ³n: -60 resistencia elemental, +30% daÃ±o aumentado y generaciÃ³n de Marca Residual.',
+            es: 'Por fusión: -60 resistencia elemental, +30% daño aumentado y generación de Marca Residual.',
           },
           notes: [],
         },
       ],
       stats: [
-        { fr: 'Role: execution/isolation', en: 'Role: execution/isolation', es: 'Rol: ejecuciÃ³n/aislamiento' },
+        { fr: 'Role: execution/isolation', en: 'Role: execution/isolation', es: 'Rol: ejecución/aislamiento' },
       ],
     },
     mechanics: [
@@ -1404,22 +1404,22 @@ export const dungeonGuides = [
           {
             fr: 'Premiere salle: composition orientee Ravageurs. Salle boss: K abah al + Druidres + Maitres des tenebres + Gloutos.',
             en: 'First room: Ravager-oriented composition. Boss room: K abah al + Druidres + Masters of Darkness + Gloutos.',
-            es: 'Primera sala: composiciÃ³n centrada en Ravageurs. Sala de jefe: K abah al + Druidres + Maestros de tinieblas + Gloutos.',
+            es: 'Primera sala: composición centrada en Ravageurs. Sala de jefe: K abah al + Druidres + Maestros de tinieblas + Gloutos.',
           },
           {
             fr: 'Les Residus ne sont plus desincarnes automatiquement quand il ne reste que des Residus.',
             en: 'Residues are no longer automatically removed when only Residues remain.',
-            es: 'Los Residuos ya no se desincorporan automÃ¡ticamente cuando solo quedan Residuos.',
+            es: 'Los Residuos ya no se desincorporan automáticamente cuando solo quedan Residuos.',
           },
         ],
       },
       {
-        title: { fr: 'Mecaniques clefs', en: 'Key Mechanics', es: 'MecÃ¡nicas clave' },
+        title: { fr: 'Mecaniques clefs', en: 'Key Mechanics', es: 'Mecánicas clave' },
         paragraphs: [
           {
             fr: 'Interrompez les fusions de Residus rapidement: elles alimentent la montee en puissance du boss.',
             en: 'Interrupt Residue fusions quickly: they fuel the boss scaling.',
-            es: 'Interrumpe rÃ¡pido las fusiones de Residuos: alimentan el escalado del jefe.',
+            es: 'Interrumpe rápido las fusiones de Residuos: alimentan el escalado del jefe.',
           },
           {
             fr: 'Evitez les cibles isolees: K abah al peut les punir avec Envol final puis Dechiquetage.',
@@ -1429,12 +1429,12 @@ export const dungeonGuides = [
           {
             fr: 'Revelation et pression continue sur les unites invisibles pour limiter les bonus permanents.',
             en: 'Maintain reveal and pressure on invisible units to limit permanent buffs.',
-            es: 'MantÃ©n revelaciÃ³n y presiÃ³n sobre unidades invisibles para limitar bonificaciones permanentes.',
+            es: 'Mantén revelación y presión sobre unidades invisibles para limitar bonificaciones permanentes.',
           },
           {
             fr: 'Controlez les Residus proches du groupe pour reduire reflet de degats et buff melee adverse.',
             en: 'Control Residues near your group to reduce reflected damage and enemy melee buff.',
-            es: 'Controla Residuos cerca del grupo para reducir reflejo de daÃ±o y buff melee enemigo.',
+            es: 'Controla Residuos cerca del grupo para reducir reflejo de daño y buff melee enemigo.',
           },
         ],
       },
@@ -1444,7 +1444,7 @@ export const dungeonGuides = [
           {
             fr: 'Priorite 1: casser les chaines de fusion.',
             en: 'Priority 1: break fusion chains.',
-            es: 'Prioridad 1: romper cadenas de fusiÃ³n.',
+            es: 'Prioridad 1: romper cadenas de fusión.',
           },
           {
             fr: 'Priorite 2: eviter les isolements et reassembler les cibles transpositionnees.',
@@ -1454,12 +1454,12 @@ export const dungeonGuides = [
           {
             fr: 'Priorite 3: temporiser les pics de degats du boss et finir les menaces Glouto/Maitre des tenebres.',
             en: 'Priority 3: survive boss burst windows and finish Glouto/Master of Darkness threats.',
-            es: 'Prioridad 3: aguantar picos de daÃ±o del jefe y cerrar amenazas de Glouto/Maestro de tinieblas.',
+            es: 'Prioridad 3: aguantar picos de daño del jefe y cerrar amenazas de Glouto/Maestro de tinieblas.',
           },
           {
             fr: 'Guide en evolution: certaines interactions restent a confirmer.',
             en: 'Guide in progress: some interactions still require confirmation.',
-            es: 'GuÃ­a en progreso: algunas interacciones aÃºn requieren confirmaciÃ³n.',
+            es: 'Guía en progreso: algunas interacciones aún requieren confirmación.',
           },
         ],
       },
@@ -1467,60 +1467,60 @@ export const dungeonGuides = [
     plan: {
       fr: 'Composition recommandee: 1 tank, 1 support, 4 DPS flex. Prioriser controle de fusion et anti-isolation.',
       en: 'Recommended comp: 1 tank, 1 support, 4 flex DPS. Prioritize fusion control and anti-isolation.',
-      es: 'ComposiciÃ³n recomendada: 1 tank, 1 support, 4 DPS flex. Prioriza control de fusiÃ³n y anti-aislamiento.',
+      es: 'Composición recomendada: 1 tank, 1 support, 4 DPS flex. Prioriza control de fusión y anti-aislamiento.',
     },
     steles: {
       lead: {
-        fr: "StÃ¨le d'intervention Anathar: nÃ©cessite une Clef d'intervention d'Anathar.",
+        fr: "Stèle d'intervention Anathar: nécessite une Clef d'intervention d'Anathar.",
         en: 'Anathar intervention stele: requires an Anathar Intervention Key.',
-        es: 'Estela de intervenciÃ³n de Anathar: requiere una Llave de intervenciÃ³n de Anathar.',
+        es: 'Estela de intervención de Anathar: requiere una Llave de intervención de Anathar.',
       },
       notes: [
         {
-          fr: "Anathar utilise 3 sorts clÃ©s: Golpe DemonÃ­aco (contact), Marca d'Anathar (portÃ©e globale) et Infierno DemonÃ­aco.",
+          fr: "Anathar utilise 3 sorts clés: Golpe Demoníaco (contact), Marca d'Anathar (portée globale) et Infierno Demoníaco.",
           en: 'Anathar uses 3 key spells: Demonic Strike (melee), Mark of Anathar (global range), and Demonic Hellfire.',
-          es: 'Anathar usa 3 hechizos clave: Golpe DemonÃ­aco (contacto), Marca de Anathar (alcance global) e Infierno DemonÃ­aco.',
+          es: 'Anathar usa 3 hechizos clave: Golpe Demoníaco (contacto), Marca de Anathar (alcance global) e Infierno Demoníaco.',
         },
         {
-          fr: "Ã€ la fin de son tour, Anathar observe le joueur marquÃ© et rÃ©plique jusqu'Ã  4 actions diffÃ©rentes au dÃ©but de son tour suivant.",
+          fr: "À la fin de son tour, Anathar observe le joueur marqué et réplique jusqu'à 4 actions différentes au début de son tour suivant.",
           en: 'At end of turn, Anathar observes the marked player and replicates up to 4 different actions at the start of its next turn.',
           es: 'Al final de su turno, Anathar observa al jugador marcado y replica hasta 4 acciones diferentes al inicio de su siguiente turno.',
         },
         {
-          fr: "S'il observe moins de 4 actions, il peut lancer Infierno DemonÃ­aco: dÃ©gÃ¢ts modÃ©rÃ©s Ã  tous les joueurs (Ã©lÃ©ment alÃ©atoire).",
+          fr: "S'il observe moins de 4 actions, il peut lancer Infierno Demoníaco: dégâts modérés à tous les joueurs (élément aléatoire).",
           en: 'If it observes fewer than 4 actions, it can cast Demonic Hellfire: moderate damage to all players (random element).',
-          es: 'Si observa menos de 4 acciones, puede lanzar Infierno DemonÃ­aco: daÃ±os moderados a todos los jugadores (elemento aleatorio).',
+          es: 'Si observa menos de 4 acciones, puede lanzar Infierno Demoníaco: daños moderados a todos los jugadores (elemento aleatorio).',
         },
         {
-          fr: "Infierno DemonÃ­aco renforcÃ©: si 2 actions ou moins, les ennemis gagnent +25% DI et +150 rÃ©sistance (1 tour); si 0 action, ils rÃ©cupÃ¨rent 50% de leurs PdV perdus.",
+          fr: "Infierno Demoníaco renforcé: si 2 actions ou moins, les ennemis gagnent +25% DI et +150 résistance (1 tour); si 0 action, ils récupèrent 50% de leurs PdV perdus.",
           en: 'Enhanced Demonic Hellfire: with 2 or fewer actions, enemies gain +25% damage dealt and +150 resistance (1 turn); with 0 actions, they recover 50% of missing HP.',
-          es: 'Infierno DemonÃ­aco potenciado: con 2 acciones o menos, los enemigos ganan +25% daÃ±os infligidos y +150 resistencias (1 turno); con 0 acciones, recuperan 50% de sus PdV perdidos.',
+          es: 'Infierno Demoníaco potenciado: con 2 acciones o menos, los enemigos ganan +25% daños infligidos y +150 resistencias (1 turno); con 0 acciones, recuperan 50% de sus PdV perdidos.',
         },
         {
-          fr: 'Effet spÃ©cifique Ravageurs: Ã  sa mort, Anathar laisse un RÃ©sidu.',
+          fr: 'Effet spécifique Ravageurs: à sa mort, Anathar laisse un Résidu.',
           en: 'Ravagers specific effect: on death, Anathar leaves a Residue.',
-          es: 'Efecto especÃ­fico Devastadores: al morir, Anathar deja un Residuo.',
+          es: 'Efecto específico Devastadores: al morir, Anathar deja un Residuo.',
         },
         {
-          fr: 'La table des effets par action (PM/PA, soins, armure, placements, dÃ©gÃ¢ts Ã©lÃ©mentaires) suit la table de rÃ©fÃ©rence Anathar.',
+          fr: 'La table des effets par action (PM/PA, soins, armure, placements, dégâts élémentaires) suit la table de référence Anathar.',
           en: 'The action-to-effect mapping (MP/AP, healing, armor, positioning, elemental damage) follows the Anathar reference table.',
-          es: 'El mapeo acciÃ³n-efecto (PM/PA, curas, armadura, posicionamiento, daÃ±os elementales) sigue la tabla de referencia de Anathar.',
+          es: 'El mapeo acción-efecto (PM/PA, curas, armadura, posicionamiento, daños elementales) sigue la tabla de referencia de Anathar.',
         },
       ],
       protoBosses: [],
       crystals: {
         types: [
           {
-            fr: "Action du marquÃ© Ã  Ã©viter: retrait PA/PM massif, buffs de stats, tÃ©lÃ©portations et dÃ©gÃ¢ts Ã©lÃ©mentaires superflus.",
+            fr: "Action du marqué à éviter: retrait PA/PM massif, buffs de stats, téléportations et dégâts élémentaires superflus.",
             en: 'Marked-player actions to avoid: heavy AP/MP removal, stat buffs, extra teleports and unnecessary elemental hits.',
-            es: 'Acciones a evitar del marcado: retiro masivo de PA/PM, buffs de stats, teletransportes y daÃ±os elementales innecesarios.',
+            es: 'Acciones a evitar del marcado: retiro masivo de PA/PM, buffs de stats, teletransportes y daños elementales innecesarios.',
           },
         ],
         notes: [
           {
-            fr: 'Objectif de tour marquÃ©: limiter les actions diffÃ©rentes pour contrÃ´ler la rÃ©plication.',
+            fr: 'Objectif de tour marqué: limiter les actions différentes pour contrôler la réplication.',
             en: 'Marked-turn objective: limit different actions to control replication.',
-            es: 'Objetivo del turno marcado: limitar acciones diferentes para controlar la replicaciÃ³n.',
+            es: 'Objetivo del turno marcado: limitar acciones diferentes para controlar la replicación.',
           },
         ],
         stats: [],
@@ -1531,7 +1531,7 @@ export const dungeonGuides = [
         {
           fr: 'Section omise sur demande (drops non inclus pour cette iteration).',
           en: 'Section intentionally omitted (drops not included in this iteration).',
-          es: 'SecciÃ³n omitida intencionalmente (drops no incluidos en esta iteraciÃ³n).',
+          es: 'Sección omitida intencionalmente (drops no incluidos en esta iteración).',
         },
       ],
       monsterDrops: [],
@@ -1541,14 +1541,14 @@ export const dungeonGuides = [
       location: {
         fr: 'Section omise sur demande.',
         en: 'Section intentionally omitted.',
-        es: 'SecciÃ³n omitida intencionalmente.',
+        es: 'Sección omitida intencionalmente.',
       },
       items: [],
     },
   },
   {
     id: 'egares',
-    name: { fr: 'Donjon Ã‰garÃ©s', en: 'Lost Ones Dungeon', es: 'Mazmorra de los Idos' },
+    name: { fr: 'Donjon Égarés', en: 'Lost Ones Dungeon', es: 'Mazmorra de los Idos' },
     subtitle: {
       fr: 'Boss: !@#dh`~',
       en: 'Boss: !@#dh`~',
@@ -1562,24 +1562,24 @@ export const dungeonGuides = [
         es: 'Mazmorra para 6 jugadores, 2 salas y sin llave.',
       },
       {
-        fr: 'Tous les Ã‰garÃ©s ont une mÃ©canique de Fuite avec Ã©change de position selon le type de dÃ©gÃ¢ts subis.',
+        fr: 'Tous les Égarés ont une mécanique de Fuite avec échange de position selon le type de dégâts subis.',
         en: 'All Lost Ones have an Escape mechanic with position swap depending on damage type received.',
-        es: 'Todos los Extraviados tienen una mecÃ¡nica de Huida con intercambio de posiciÃ³n segÃºn el tipo de daÃ±o recibido.',
+        es: 'Todos los Extraviados tienen una mecánica de Huida con intercambio de posición según el tipo de daño recibido.',
       },
       {
-        fr: 'MÃ©canique clÃ© du donjon: mettre tous les Ã‰garÃ©s KO en moins de 2 tours pour finir le combat.',
+        fr: 'Mécanique clé du donjon: mettre tous les Égarés KO en moins de 2 tours pour finir le combat.',
         en: 'Key dungeon mechanic: knock all Lost Ones to 1 HP within less than 2 turns to end the fight.',
-        es: 'MecÃ¡nica clave: dejar KO a todos los Extraviados en menos de 2 turnos para terminar el combate.',
+        es: 'Mecánica clave: dejar KO a todos los Extraviados en menos de 2 turnos para terminar el combate.',
       },
       {
-        fr: 'Certaines informations restent en validation et seront complÃ©tÃ©es.',
+        fr: 'Certaines informations restent en validation et seront complétées.',
         en: 'Some details are still being validated and will be expanded.',
-        es: 'Algunos detalles siguen en validaciÃ³n y se ampliarÃ¡n.',
+        es: 'Algunos detalles siguen en validación y se ampliarán.',
       },
     ],
     monsters: [
       {
-        name: { fr: 'RÃ©manâ€™Hante', en: 'RemanHante', es: 'RÃ©manHante' },
+        name: { fr: 'Réman’Hante', en: 'RemanHante', es: 'RémanHante' },
         level: { fr: 'Niv. 216', en: 'Lvl. 216', es: 'Niv. 216' },
         bonus: {
           fr: 'Faiblesse principale: Air',
@@ -1587,40 +1587,40 @@ export const dungeonGuides = [
           es: 'Debilidad principal: Aire',
         },
         description: {
-          fr: '2 sorts offensifs de mÃªlÃ©e/zone + passif RÃ©manence.',
+          fr: '2 sorts offensifs de mêlée/zone + passif Rémanence.',
           en: '2 offensive melee/area spells + Remanence passive.',
           es: '2 hechizos ofensivos de melee/zona + pasivo Remanencia.',
         },
         spells: [
           {
-            name: { fr: 'Toupie dÃ©mentielle', en: 'Demented Spin', es: 'Peonza demente' },
+            name: { fr: 'Toupie démentielle', en: 'Demented Spin', es: 'Peonza demente' },
             effect: {
-              fr: 'Monocible 1 PO, dÃ©gÃ¢ts air.',
+              fr: 'Monocible 1 PO, dégâts air.',
               en: 'Single-target 1 range, air damage.',
-              es: 'Monobjetivo 1 alcance, daÃ±o aire.',
+              es: 'Monobjetivo 1 alcance, daño aire.',
             },
             cost: { fr: '5 PA', en: '5 AP', es: '5 PA' },
             limit: { fr: '1/cible, 3/tour', en: '1/target, 3/turn', es: '1/objetivo, 3/turno' },
           },
           {
-            name: { fr: 'Toupie de la dÃ©mence', en: 'Madness Spin', es: 'Peonza de la demencia' },
+            name: { fr: 'Toupie de la démence', en: 'Madness Spin', es: 'Peonza de la demencia' },
             effect: {
-              fr: 'Zone croix taille 5 (0 PO), dÃ©gÃ¢ts air et attire les ennemis au contact.',
+              fr: 'Zone croix taille 5 (0 PO), dégâts air et attire les ennemis au contact.',
               en: 'Size-5 cross AoE (0 range), air damage and pulls enemies into melee.',
-              es: 'Ãrea en cruz tamaÃ±o 5 (0 alcance), daÃ±o aire y atrae enemigos al cuerpo a cuerpo.',
+              es: 'Área en cruz tamaño 5 (0 alcance), daño aire y atrae enemigos al cuerpo a cuerpo.',
             },
             cost: { fr: '3 PA', en: '3 AP', es: '3 PA' },
             limit: { fr: '1/tour', en: '1/turn', es: '1/turno' },
           },
         ],
         passive: {
-          fr: 'RÃ©manence: Ã©change avec lâ€™alliÃ© le plus Ã©loignÃ© si dÃ©gÃ¢ts distance. Zone dâ€™arrivÃ©e: alliÃ©s gagnent +50 RÃ©sistance Ã‰lÃ©mentaire (cumul 2, 2 tours).',
+          fr: 'Rémanence: échange avec l’allié le plus éloigné si dégâts distance. Zone d’arrivée: alliés gagnent +50 Résistance Élémentaire (cumul 2, 2 tours).',
           en: 'Remanence: swaps with farthest ally if hit by ranged damage. Arrival zone grants allies +50 Elemental Resistance (stack 2, 2 turns).',
-          es: 'Remanencia: intercambia con el aliado mÃ¡s lejano si recibe daÃ±o a distancia. En zona de llegada, aliados ganan +50 Resistencia Elemental (acumula 2, 2 turnos).',
+          es: 'Remanencia: intercambia con el aliado más lejano si recibe daño a distancia. En zona de llegada, aliados ganan +50 Resistencia Elemental (acumula 2, 2 turnos).',
         },
         notes: [],
         stats: [
-          { fr: 'RÃ´le: attraction et setup', en: 'Role: pull/setup', es: 'Rol: atracciÃ³n y setup' },
+          { fr: 'Rôle: attraction et setup', en: 'Role: pull/setup', es: 'Rol: atracción y setup' },
         ],
       },
       {
@@ -1632,40 +1632,40 @@ export const dungeonGuides = [
           es: 'Debilidad principal: Tierra',
         },
         description: {
-          fr: 'Monstre de focus mono-cible avec montÃ©e de dÃ©gÃ¢ts via Mauvais Å“il.',
+          fr: 'Monstre de focus mono-cible avec montée de dégâts via Mauvais œil.',
           en: 'Single-target focus unit with scaling damage through Evil Eye stacks.',
-          es: 'Unidad de foco monobjetivo con escalado de daÃ±o mediante Ojo Maligno.',
+          es: 'Unidad de foco monobjetivo con escalado de daño mediante Ojo Maligno.',
         },
         spells: [
           {
-            name: { fr: 'Regard mÃ©chant dÃ©mentiel', en: 'Demented Evil Glare', es: 'Mirada maligna demente' },
+            name: { fr: 'Regard méchant démentiel', en: 'Demented Evil Glare', es: 'Mirada maligna demente' },
             effect: {
-              fr: 'Monocible 1-3 PO, dÃ©gÃ¢ts eau, applique Mauvais Å“il (+1 niv, max 8). Gagne 1 PM infini par lancer en fin de tour (max 10).',
+              fr: 'Monocible 1-3 PO, dégâts eau, applique Mauvais œil (+1 niv, max 8). Gagne 1 PM infini par lancer en fin de tour (max 10).',
               en: 'Single-target 1-3 range, water damage, applies Evil Eye (+1 level, max 8). Gains 1 infinite MP per cast at end of turn (max 10).',
-              es: 'Monobjetivo 1-3 alcance, daÃ±o agua, aplica Ojo Maligno (+1 nivel, mÃ¡x 8). Gana 1 PM infinito por lanzamiento al final de turno (mÃ¡x 10).',
+              es: 'Monobjetivo 1-3 alcance, daño agua, aplica Ojo Maligno (+1 nivel, máx 8). Gana 1 PM infinito por lanzamiento al final de turno (máx 10).',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             limit: { fr: '1/cible, 3/tour', en: '1/target, 3/turn', es: '1/objetivo, 3/turno' },
           },
         ],
         passive: {
-          fr: 'DÃ©tachevrotant: Ã©change avec alliÃ© le plus Ã©loignÃ© si dÃ©gÃ¢ts de dos. -30% dÃ©gÃ¢ts subis face/cÃ´tÃ©, +30% de dos. Zone dâ€™arrivÃ©e: +50 RÃ©sistance Ã‰lÃ©mentaire aux alliÃ©s (cumul 2).',
+          fr: 'Détachevrotant: échange avec allié le plus éloigné si dégâts de dos. -30% dégâts subis face/côté, +30% de dos. Zone d’arrivée: +50 Résistance Élémentaire aux alliés (cumul 2).',
           en: 'Detachevrotant: swaps with farthest ally if hit from behind. -30% damage taken front/side, +30% from back. Arrival zone grants +50 Elemental Resistance to allies (stack 2).',
-          es: 'Detachevrotant: intercambia con aliado mÃ¡s lejano si recibe daÃ±o por la espalda. -30% daÃ±o recibido frente/lateral, +30% por espalda. Zona de llegada: +50 Resistencia Elemental a aliados (acumula 2).',
+          es: 'Detachevrotant: intercambia con aliado más lejano si recibe daño por la espalda. -30% daño recibido frente/lateral, +30% por espalda. Zona de llegada: +50 Resistencia Elemental a aliados (acumula 2).',
         },
         notes: [
           {
-            fr: 'Mauvais Å“il augmente trÃ¨s vite le burst reÃ§u de ce sort.',
+            fr: 'Mauvais œil augmente très vite le burst reçu de ce sort.',
             en: 'Evil Eye quickly amplifies the burst from this spell.',
-            es: 'Ojo Maligno aumenta muy rÃ¡pido el burst recibido de este hechizo.',
+            es: 'Ojo Maligno aumenta muy rápido el burst recibido de este hechizo.',
           },
         ],
         stats: [
-          { fr: 'RÃ´le: exÃ©cution mono-cible', en: 'Role: single-target execution', es: 'Rol: ejecuciÃ³n monobjetivo' },
+          { fr: 'Rôle: exécution mono-cible', en: 'Role: single-target execution', es: 'Rol: ejecución monobjetivo' },
         ],
       },
       {
-        name: { fr: 'Ã‰srevni', en: 'Esrevni', es: 'Ã‰srevni' },
+        name: { fr: 'Ésrevni', en: 'Esrevni', es: 'Ésrevni' },
         level: { fr: 'Niv. 216', en: 'Lvl. 216', es: 'Niv. 216' },
         bonus: {
           fr: 'Faiblesse principale: Terre',
@@ -1673,74 +1673,74 @@ export const dungeonGuides = [
           es: 'Debilidad principal: Tierra',
         },
         description: {
-          fr: 'DÃ©gÃ¢ts feu Ã  distance avec vol de vie et scaling sur PV manquants.',
+          fr: 'Dégâts feu à distance avec vol de vie et scaling sur PV manquants.',
           en: 'Ranged fire damage with life steal and missing-HP scaling.',
-          es: 'DaÃ±o fuego a distancia con robo de vida y escalado por PV faltantes.',
+          es: 'Daño fuego a distancia con robo de vida y escalado por PV faltantes.',
         },
         spells: [
           {
-            name: { fr: 'Lancer de la dÃ©mence', en: 'Madness Throw', es: 'Lanzamiento de la demencia' },
+            name: { fr: 'Lancer de la démence', en: 'Madness Throw', es: 'Lanzamiento de la demencia' },
             effect: {
-              fr: 'Monocible en ligne 1-10 PO, dÃ©gÃ¢ts feu et vole 100% des dommages infligÃ©s.',
+              fr: 'Monocible en ligne 1-10 PO, dégâts feu et vole 100% des dommages infligés.',
               en: 'Single-target in line 1-10 range, fire damage and steals 100% of damage dealt.',
-              es: 'Monobjetivo en lÃ­nea 1-10 alcance, daÃ±o fuego y roba 100% del daÃ±o infligido.',
+              es: 'Monobjetivo en línea 1-10 alcance, daño fuego y roba 100% del daño infligido.',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             limit: { fr: '1/cible, 3/tour', en: '1/target, 3/turn', es: '1/objetivo, 3/turno' },
           },
         ],
         passive: {
-          fr: 'Ã€ lâ€™envers: Ã©change avec alliÃ© le plus Ã©loignÃ© si dÃ©gÃ¢ts mÃªlÃ©e. +1% dÃ©gÃ¢ts infligÃ©s par % PV manquant. Zone dâ€™arrivÃ©e: +50 RÃ©sistance Ã‰lÃ©mentaire aux alliÃ©s (cumul 2).',
+          fr: 'À l’envers: échange avec allié le plus éloigné si dégâts mêlée. +1% dégâts infligés par % PV manquant. Zone d’arrivée: +50 Résistance Élémentaire aux alliés (cumul 2).',
           en: 'Upside Down: swaps with farthest ally if hit by melee damage. +1% damage dealt per % missing HP. Arrival zone grants +50 Elemental Resistance to allies (stack 2).',
-          es: 'Al revÃ©s: intercambia con aliado mÃ¡s lejano si recibe daÃ±o melee. +1% daÃ±o infligido por cada % de PV faltante. Zona de llegada: +50 Resistencia Elemental a aliados (acumula 2).',
+          es: 'Al revés: intercambia con aliado más lejano si recibe daño melee. +1% daño infligido por cada % de PV faltante. Zona de llegada: +50 Resistencia Elemental a aliados (acumula 2).',
         },
         notes: [],
         stats: [
-          { fr: 'RÃ´le: menace de sustain', en: 'Role: sustain threat', es: 'Rol: amenaza de sustain' },
+          { fr: 'Rôle: menace de sustain', en: 'Role: sustain threat', es: 'Rol: amenaza de sustain' },
         ],
       },
       {
         name: { fr: '!@#dh`~ (Boss)', en: '!@#dh`~ (Boss)', es: '!@#dh`~ (Jefe)' },
         level: { fr: 'Boss', en: 'Boss', es: 'Jefe' },
         bonus: {
-          fr: 'StabilisÃ© + immunitÃ© retrait PM',
+          fr: 'Stabilisé + immunité retrait PM',
           en: 'Stabilized + MP removal immunity',
           es: 'Estabilizado + inmunidad a retiro de PM',
         },
         description: {
-          fr: 'Boss orientÃ© contrÃ´le de zone via glyphes ligne infinie + pression mono-cible globale.',
+          fr: 'Boss orienté contrôle de zone via glyphes ligne infinie + pression mono-cible globale.',
           en: 'Zone-control boss with infinite-line glyphs + global single-target pressure.',
-          es: 'Jefe de control de zona con glifos en lÃ­nea infinita + presiÃ³n monobjetivo global.',
+          es: 'Jefe de control de zona con glifos en línea infinita + presión monobjetivo global.',
         },
         spells: [
           {
-            name: { fr: '|]} LJo00{Â¨:,', en: '|]} LJo00{Â¨:,', es: '|]} LJo00{Â¨:,' },
+            name: { fr: '|]} LJo00{¨:,', en: '|]} LJo00{¨:,', es: '|]} LJo00{¨:,' },
             effect: {
-              fr: 'Pose automatiquement des glyphes en rectangle largeur 3 (ligne infinie) devant et sous le lanceur. Les glyphes infligent de lourds dÃ©gÃ¢ts terre (1 fois/tour).',
+              fr: 'Pose automatiquement des glyphes en rectangle largeur 3 (ligne infinie) devant et sous le lanceur. Les glyphes infligent de lourds dégâts terre (1 fois/tour).',
               en: 'Automatically places rectangle glyphs width 3 (infinite length) in front and below caster. Glyphs deal heavy earth damage (once/turn).',
-              es: 'Coloca automÃ¡ticamente glifos en rectÃ¡ngulo de ancho 3 (lÃ­nea infinita) frente y debajo del lanzador. Los glifos infligen daÃ±o tierra muy alto (1 vez/turno).',
+              es: 'Coloca automáticamente glifos en rectángulo de ancho 3 (línea infinita) frente y debajo del lanzador. Los glifos infligen daño tierra muy alto (1 vez/turno).',
             },
             cost: { fr: '2 PA', en: '2 AP', es: '2 PA' },
           },
           {
-            name: { fr: 'Un tiens vaut mieux que deux tu lâ€™auras', en: 'One in hand is better than two in the bush', es: 'MÃ¡s vale uno en mano que dos volando' },
+            name: { fr: 'Un tiens vaut mieux que deux tu l’auras', en: 'One in hand is better than two in the bush', es: 'Más vale uno en mano que dos volando' },
             effect: {
-              fr: 'Monocible sur toute la carte avec ligne de vue, dÃ©gÃ¢ts feu.',
+              fr: 'Monocible sur toute la carte avec ligne de vue, dégâts feu.',
               en: 'Single-target anywhere on map with line of sight, fire damage.',
-              es: 'Monobjetivo en todo el mapa con lÃ­nea de visiÃ³n, daÃ±o fuego.',
+              es: 'Monobjetivo en todo el mapa con línea de visión, daño fuego.',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             limit: { fr: '1/cible', en: '1/target', es: '1/objetivo' },
           },
         ],
         passive: {
-          fr: 'Ã€ chaque jour suffit Ã  sa peine: -75 RÃ©sistance Dos. Fuite active si perd 10% PV en un tour, Ã©change avec alliÃ© le plus Ã©loignÃ©. Zone dâ€™arrivÃ©e: +50 RÃ©sistance Ã‰lÃ©mentaire alliÃ©s (cumul 2).',
+          fr: 'À chaque jour suffit à sa peine: -75 Résistance Dos. Fuite active si perd 10% PV en un tour, échange avec allié le plus éloigné. Zone d’arrivée: +50 Résistance Élémentaire alliés (cumul 2).',
           en: 'Each day has enough trouble: -75 Back Resistance. Escape triggers if it loses 10% HP in one turn, swapping with farthest ally. Arrival zone: +50 Elemental Resistance for allies (stack 2).',
-          es: 'A cada dÃ­a le basta su pena: -75 Resistencia de Espalda. Huida se activa si pierde 10% PV en un turno, intercambiando con el aliado mÃ¡s lejano. Zona de llegada: +50 Resistencia Elemental a aliados (acumula 2).',
+          es: 'A cada día le basta su pena: -75 Resistencia de Espalda. Huida se activa si pierde 10% PV en un turno, intercambiando con el aliado más lejano. Zona de llegada: +50 Resistencia Elemental a aliados (acumula 2).',
         },
         notes: [],
         stats: [
-          { fr: 'RÃ´le: contrÃ´le zone + punition', en: 'Role: zone control + punishment', es: 'Rol: control de zona + castigo' },
+          { fr: 'Rôle: contrôle zone + punition', en: 'Role: zone control + punishment', es: 'Rol: control de zona + castigo' },
         ],
       },
     ],
@@ -1748,26 +1748,26 @@ export const dungeonGuides = [
       name: { fr: '!@#dh`~', en: '!@#dh`~', es: '!@#dh`~' },
       level: { fr: 'Niv. 216+', en: 'Lvl. 216+', es: 'Niv. 216+' },
       description: {
-        fr: 'Boss stable, orientÃ© glyphes en ligne et focus map-wide.',
+        fr: 'Boss stable, orienté glyphes en ligne et focus map-wide.',
         en: 'Stable boss focused on line glyphs and map-wide single-target pressure.',
-        es: 'Jefe estable enfocado en glifos en lÃ­nea y presiÃ³n monobjetivo global.',
+        es: 'Jefe estable enfocado en glifos en línea y presión monobjetivo global.',
       },
       spells: [
         {
-          name: { fr: 'Glyphe ligne infinie', en: 'Infinite Line Glyph', es: 'Glifo de lÃ­nea infinita' },
+          name: { fr: 'Glyphe ligne infinie', en: 'Infinite Line Glyph', es: 'Glifo de línea infinita' },
           effect: {
-            fr: 'Zone rectangulaire de largeur 3, lourds dÃ©gÃ¢ts terre sur entrÃ©e/dÃ©but de tour.',
+            fr: 'Zone rectangulaire de largeur 3, lourds dégâts terre sur entrée/début de tour.',
             en: 'Rectangle zone width 3, heavy earth damage on entry/start of turn.',
-            es: 'Zona rectangular ancho 3, daÃ±o tierra muy alto al entrar/inicio de turno.',
+            es: 'Zona rectangular ancho 3, daño tierra muy alto al entrar/inicio de turno.',
           },
           cost: { fr: '2 PA', en: '2 AP', es: '2 PA' },
         },
       ],
       passives: [
         {
-          name: { fr: 'Ã€ chaque jour suffit Ã  sa peine', en: 'Enough trouble for each day', es: 'A cada dÃ­a le basta su pena' },
+          name: { fr: 'À chaque jour suffit à sa peine', en: 'Enough trouble for each day', es: 'A cada día le basta su pena' },
           effect: {
-            fr: 'StabilisÃ©, immunitÃ© retrait PM, fuite spÃ©ciale sur perte de 10% PV/tour.',
+            fr: 'Stabilisé, immunité retrait PM, fuite spéciale sur perte de 10% PV/tour.',
             en: 'Stabilized, immune to MP removal, special escape when losing 10% HP/turn.',
             es: 'Estabilizado, inmune a retiro de PM, huida especial al perder 10% PV/turno.',
           },
@@ -1775,22 +1775,22 @@ export const dungeonGuides = [
         },
       ],
       stats: [
-        { fr: 'RÃ´le: boss de zoning', en: 'Role: zoning boss', es: 'Rol: jefe de zonificaciÃ³n' },
+        { fr: 'Rôle: boss de zoning', en: 'Role: zoning boss', es: 'Rol: jefe de zonificación' },
       ],
     },
     mechanics: [
       {
-        title: { fr: 'Fuite des Ã‰garÃ©s', en: 'Lost Ones Escape', es: 'Huida de los Extraviados' },
+        title: { fr: 'Fuite des Égarés', en: 'Lost Ones Escape', es: 'Huida de los Extraviados' },
         paragraphs: [
           {
-            fr: 'Tous les Ã‰garÃ©s ont une mÃ©canique de Fuite, mÃªme sâ€™il ne reste quâ€™un seul monstre.',
+            fr: 'Tous les Égarés ont une mécanique de Fuite, même s’il ne reste qu’un seul monstre.',
             en: 'All Lost Ones have an Escape mechanic, even if only one monster remains.',
-            es: 'Todos los Extraviados tienen mecÃ¡nica de Huida, incluso si queda un solo monstruo.',
+            es: 'Todos los Extraviados tienen mecánica de Huida, incluso si queda un solo monstruo.',
           },
           {
-            fr: 'La Fuite peut Ãªtre contrÃ©e par stabilisation, sauf sur le boss.',
+            fr: 'La Fuite peut être contrée par stabilisation, sauf sur le boss.',
             en: 'Escape can be countered by stabilization, except on the boss.',
-            es: 'La Huida puede contrarrestarse con estabilizaciÃ³n, excepto en el jefe.',
+            es: 'La Huida puede contrarrestarse con estabilización, excepto en el jefe.',
           },
         ],
       },
@@ -1798,42 +1798,42 @@ export const dungeonGuides = [
         title: { fr: 'Marionettes et Sur un fil', en: 'Marionettes and On a String', es: 'Marionetas y Sobre un hilo' },
         paragraphs: [
           {
-            fr: 'Les Ã‰garÃ©s ne meurent pas seuls: Ã  1 PV, ils passent en Ã©tat Sur un fil.',
+            fr: 'Les Égarés ne meurent pas seuls: à 1 PV, ils passent en état Sur un fil.',
             en: 'Lost Ones do not die individually: at 1 HP they enter the On a String state.',
             es: 'Los Extraviados no mueren individualmente: a 1 PV entran en estado Sobre un hilo.',
           },
           {
-            fr: 'Sur un fil: ressuscite aprÃ¨s 2 tours (50% PV, valeur divisÃ©e par 2 Ã  chaque rÃ©surrection), passe son tour et est insensible pendant lâ€™Ã©tat.',
+            fr: 'Sur un fil: ressuscite après 2 tours (50% PV, valeur divisée par 2 à chaque résurrection), passe son tour et est insensible pendant l’état.',
             en: 'On a String: resurrects after 2 turns (50% HP, halved each resurrection), skips turn and is insensitive while in state.',
-            es: 'Sobre un hilo: resucita tras 2 turnos (50% PV, valor dividido entre 2 en cada resurrecciÃ³n), pasa turno y es insensible durante el estado.',
+            es: 'Sobre un hilo: resucita tras 2 turnos (50% PV, valor dividido entre 2 en cada resurrección), pasa turno y es insensible durante el estado.',
           },
           {
-            fr: 'Condition de fin: mettre tous les Ã‰garÃ©s Sur un fil en moins de 2 tours.',
+            fr: 'Condition de fin: mettre tous les Égarés Sur un fil en moins de 2 tours.',
             en: 'Finish condition: put all Lost Ones into On a String in under 2 turns.',
-            es: 'CondiciÃ³n de finalizaciÃ³n: poner a todos los Extraviados en Sobre un hilo en menos de 2 turnos.',
+            es: 'Condición de finalización: poner a todos los Extraviados en Sobre un hilo en menos de 2 turnos.',
           },
         ],
       },
       {
-        title: { fr: 'Salle 1, salle boss et stratÃ©gie', en: 'Room 1, boss room and strategy', es: 'Sala 1, sala de jefe y estrategia' },
+        title: { fr: 'Salle 1, salle boss et stratégie', en: 'Room 1, boss room and strategy', es: 'Sala 1, sala de jefe y estrategia' },
         paragraphs: [
           {
-            fr: 'Salle 1: 3 + 3 + 2 Ã‰garÃ©s. Salle boss: !@#dh`~ + 3 + 2 + 2 Ã‰garÃ©s.',
+            fr: 'Salle 1: 3 + 3 + 2 Égarés. Salle boss: !@#dh`~ + 3 + 2 + 2 Égarés.',
             en: 'Room 1: 3 + 3 + 2 Lost Ones. Boss room: !@#dh`~ + 3 + 2 + 2 Lost Ones.',
             es: 'Sala 1: 3 + 3 + 2 Extraviados. Sala de jefe: !@#dh`~ + 3 + 2 + 2 Extraviados.',
           },
           {
-            fr: 'PrioritÃ©: contrÃ´ler les placements, gÃ©rer les Fuites et synchroniser les KO.',
+            fr: 'Priorité: contrôler les placements, gérer les Fuites et synchroniser les KO.',
             en: 'Priority: control positions, manage Escapes, and synchronize KOs.',
             es: 'Prioridad: controlar posicionamientos, gestionar Huidas y sincronizar KOs.',
           },
           {
-            fr: 'Le boss ajoute une forte pression de glyphes, il faut protÃ©ger les trajectoires sÃ»res.',
+            fr: 'Le boss ajoute une forte pression de glyphes, il faut protéger les trajectoires sûres.',
             en: 'The boss adds heavy glyph pressure, so safe movement lanes must be protected.',
-            es: 'El jefe aÃ±ade mucha presiÃ³n de glifos, por lo que hay que proteger rutas seguras de movimiento.',
+            es: 'El jefe añade mucha presión de glifos, por lo que hay que proteger rutas seguras de movimiento.',
           },
           {
-            fr: 'StratÃ©gie dÃ©taillÃ©e en cours de complÃ©tion.',
+            fr: 'Stratégie détaillée en cours de complétion.',
             en: 'Detailed strategy is still being completed.',
             es: 'La estrategia detallada sigue en proceso de completarse.',
           },
@@ -1841,52 +1841,52 @@ export const dungeonGuides = [
       },
     ],
     plan: {
-      fr: 'Plan recommandÃ©: contrÃ´le + stabilisation + burst coordonnÃ© pour forcer les KO synchronisÃ©s.',
+      fr: 'Plan recommandé: contrôle + stabilisation + burst coordonné pour forcer les KO synchronisés.',
       en: 'Recommended plan: control + stabilization + coordinated burst to force synchronized KOs.',
-      es: 'Plan recomendado: control + estabilizaciÃ³n + burst coordinado para forzar KOs sincronizados.',
+      es: 'Plan recomendado: control + estabilización + burst coordinado para forzar KOs sincronizados.',
     },
     steles: {
       lead: {
-        fr: "StÃ¨le d'intervention Anathar: nÃ©cessite une Clef d'intervention d'Anathar.",
+        fr: "Stèle d'intervention Anathar: nécessite une Clef d'intervention d'Anathar.",
         en: 'Anathar intervention stele: requires an Anathar Intervention Key.',
-        es: 'Estela de intervenciÃ³n de Anathar: requiere una Llave de intervenciÃ³n de Anathar.',
+        es: 'Estela de intervención de Anathar: requiere una Llave de intervención de Anathar.',
       },
       notes: [
         {
-          fr: "Anathar marque gÃ©nÃ©ralement le joueur le plus Ã©loignÃ©, puis rÃ©plique jusqu'Ã  4 actions observÃ©es Ã  son tour suivant.",
+          fr: "Anathar marque généralement le joueur le plus éloigné, puis réplique jusqu'à 4 actions observées à son tour suivant.",
           en: 'Anathar usually marks the farthest player, then replicates up to 4 observed actions on its next turn.',
-          es: 'Anathar suele marcar al jugador mÃ¡s lejano y luego replica hasta 4 acciones observadas en su siguiente turno.',
+          es: 'Anathar suele marcar al jugador más lejano y luego replica hasta 4 acciones observadas en su siguiente turno.',
         },
         {
-          fr: "Si moins de 4 actions sont observÃ©es, Infierno DemonÃ­aco s'active et devient plus dangereux avec peu d'actions.",
+          fr: "Si moins de 4 actions sont observées, Infierno Demoníaco s'active et devient plus dangereux avec peu d'actions.",
           en: 'If fewer than 4 actions are observed, Demonic Hellfire triggers and becomes stronger with fewer actions.',
-          es: 'Si se observan menos de 4 acciones, se activa Infierno DemonÃ­aco y se vuelve mÃ¡s peligroso cuantas menos acciones haya.',
+          es: 'Si se observan menos de 4 acciones, se activa Infierno Demoníaco y se vuelve más peligroso cuantas menos acciones haya.',
         },
         {
-          fr: 'Effet spÃ©cifique Ã‰garÃ©s: Anathar doit aussi Ãªtre mis Ã  1 PdV comme les autres monstres/boss.',
+          fr: 'Effet spécifique Égarés: Anathar doit aussi être mis à 1 PdV comme les autres monstres/boss.',
           en: 'Lost Ones specific effect: Anathar must also be reduced to 1 HP like the other mobs/boss.',
-          es: 'Efecto especÃ­fico Idos: Anathar tambiÃ©n debe quedar a 1 PdV como el resto de mobs/jefe.',
+          es: 'Efecto específico Idos: Anathar también debe quedar a 1 PdV como el resto de mobs/jefe.',
         },
         {
-          fr: 'La table des effets par action (PM/PA, soins, armure, placements, dÃ©gÃ¢ts Ã©lÃ©mentaires) suit la table de rÃ©fÃ©rence Anathar.',
+          fr: 'La table des effets par action (PM/PA, soins, armure, placements, dégâts élémentaires) suit la table de référence Anathar.',
           en: 'The action-to-effect mapping (MP/AP, healing, armor, positioning, elemental damage) follows the Anathar reference table.',
-          es: 'El mapeo acciÃ³n-efecto (PM/PA, curas, armadura, posicionamiento, daÃ±os elementales) sigue la tabla de referencia de Anathar.',
+          es: 'El mapeo acción-efecto (PM/PA, curas, armadura, posicionamiento, daños elementales) sigue la tabla de referencia de Anathar.',
         },
       ],
       protoBosses: [],
       crystals: {
         types: [
           {
-            fr: "Action du marquÃ© Ã  Ã©viter: retrait PA/PM, dons PA/PM, tÃ©lÃ©portations et dÃ©gÃ¢ts Ã©lÃ©mentaires non nÃ©cessaires.",
+            fr: "Action du marqué à éviter: retrait PA/PM, dons PA/PM, téléportations et dégâts élémentaires non nécessaires.",
             en: 'Marked-player actions to avoid: AP/MP removal, AP/MP buffs, teleports and unnecessary elemental damage actions.',
-            es: 'Acciones del marcado a evitar: retiro/don de PA/PM, teletransportes y acciones de daÃ±o elemental no necesarias.',
+            es: 'Acciones del marcado a evitar: retiro/don de PA/PM, teletransportes y acciones de daño elemental no necesarias.',
           },
         ],
         notes: [
           {
-            fr: 'Conserver un tour marquÃ© lisible et court pour rÃ©duire le risque de rÃ©plication punitive.',
+            fr: 'Conserver un tour marqué lisible et court pour réduire le risque de réplication punitive.',
             en: 'Keep marked turns simple and short to reduce punitive replication risk.',
-            es: 'Mantener turnos del marcado simples y cortos para reducir riesgo de replicaciÃ³n punitiva.',
+            es: 'Mantener turnos del marcado simples y cortos para reducir riesgo de replicación punitiva.',
           },
         ],
         stats: [],
@@ -1895,9 +1895,9 @@ export const dungeonGuides = [
     drops: {
       notes: [
         {
-          fr: 'Section maintenue dans la structure, contenu drops Ã  complÃ©ter.',
+          fr: 'Section maintenue dans la structure, contenu drops à compléter.',
           en: 'Section kept in structure, drops content pending completion.',
-          es: 'SecciÃ³n mantenida en la estructura, contenido de drops pendiente.',
+          es: 'Sección mantenida en la estructura, contenido de drops pendiente.',
         },
       ],
       monsterDrops: [],
@@ -1905,20 +1905,20 @@ export const dungeonGuides = [
     },
     croupier: {
       location: {
-        fr: 'Section Ã  complÃ©ter.',
+        fr: 'Section à compléter.',
         en: 'Section to be completed.',
-        es: 'SecciÃ³n por completar.',
+        es: 'Sección por completar.',
       },
       items: [],
     },
   },
   {
     id: 'demhorribles',
-    name: { fr: 'Donjon DÃ©mhorribles', en: 'Demhorribles Dungeon', es: 'Mazmorra Demorribles' },
+    name: { fr: 'Donjon Démhorribles', en: 'Demhorribles Dungeon', es: 'Mazmorra Demorribles' },
     subtitle: {
-      fr: 'Boss: CratÃ©ros, Bourreau de la fin',
+      fr: 'Boss: Cratéros, Bourreau de la fin',
       en: 'Boss: Crateros, Executioner of the End',
-      es: 'Jefe: CratÃ©ros, Verdugo del fin',
+      es: 'Jefe: Cratéros, Verdugo del fin',
     },
     levelRange: { fr: 'Niv. 216', en: 'Lvl. 216', es: 'Niv. 216' },
     summary: [
@@ -1928,19 +1928,19 @@ export const dungeonGuides = [
         es: 'Mazmorra para 6 jugadores, 2 salas y sin llave.',
       },
       {
-        fr: 'MÃ©canique centrale: jouer depuis les glyphes posÃ©s par les monstres pour Ã©viter la rÃ©duction de dÃ©gÃ¢ts.',
+        fr: 'Mécanique centrale: jouer depuis les glyphes posés par les monstres pour éviter la réduction de dégâts.',
         en: 'Core mechanic: attack from monster-created glyphs to avoid heavy damage reduction.',
-        es: 'MecÃ¡nica central: atacar desde los glifos colocados por los monstruos para evitar la gran reducciÃ³n de daÃ±o.',
+        es: 'Mecánica central: atacar desde los glifos colocados por los monstruos para evitar la gran reducción de daño.',
       },
       {
-        fr: 'Les PV des DÃ©mhorribles sont harmonisÃ©s par salle (plus bas en salle 1, plus Ã©levÃ©s en salle boss).',
+        fr: 'Les PV des Démhorribles sont harmonisés par salle (plus bas en salle 1, plus élevés en salle boss).',
         en: 'Demhorribles HP are normalized per room (lower in room 1, higher in boss room).',
-        es: 'Los PV de los DÃ©mhorribles estÃ¡n normalizados por sala (mÃ¡s bajos en sala 1 y mÃ¡s altos en sala de jefe).',
+        es: 'Los PV de los Démhorribles están normalizados por sala (más bajos en sala 1 y más altos en sala de jefe).',
       },
       {
-        fr: 'Certaines informations (stratÃ©gie, drops dÃ©taillÃ©s, croupier) seront complÃ©tÃ©es ultÃ©rieurement.',
+        fr: 'Certaines informations (stratégie, drops détaillés, croupier) seront complétées ultérieurement.',
         en: 'Some details (strategy, detailed drops, croupier) will be completed later.',
-        es: 'Algunos detalles (estrategia, drops detallados, croupier) se completarÃ¡n mÃ¡s adelante.',
+        es: 'Algunos detalles (estrategia, drops detallados, croupier) se completarán más adelante.',
       },
     ],
     monsters: [
@@ -1953,36 +1953,36 @@ export const dungeonGuides = [
           es: 'Debilidad principal: Aire',
         },
         description: {
-          fr: 'Monstre parasite orientÃ© vol de vie et liaison HÃ´te/Parasite.',
+          fr: 'Monstre parasite orienté vol de vie et liaison Hôte/Parasite.',
           en: 'Parasite-type monster focused on life steal and Host/Parasite link.',
-          es: 'Monstruo parÃ¡sito orientado al robo de vida y vÃ­nculo HuÃ©sped/ParÃ¡sito.',
+          es: 'Monstruo parásito orientado al robo de vida y vínculo Huésped/Parásito.',
         },
         spells: [
           {
             name: { fr: 'Morsure parasitaire', en: 'Parasitic Bite', es: 'Mordida parasitaria' },
             effect: {
-              fr: 'Monocible 1 PO, gros dÃ©gÃ¢ts feu, vole 100% des dommages. Applique Parasite au lanceur et HÃ´te Ã  la cible.',
+              fr: 'Monocible 1 PO, gros dégâts feu, vole 100% des dommages. Applique Parasite au lanceur et Hôte à la cible.',
               en: 'Single-target 1 range, heavy fire damage, steals 100% damage dealt. Applies Parasite to caster and Host to target.',
-              es: 'Monobjetivo 1 alcance, gran daÃ±o fuego, roba 100% del daÃ±o infligido. Aplica ParÃ¡sito al lanzador y HuÃ©sped al objetivo.',
+              es: 'Monobjetivo 1 alcance, gran daño fuego, roba 100% del daño infligido. Aplica Parásito al lanzador y Huésped al objetivo.',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             limit: { fr: '1/tour', en: '1/turn', es: '1/turno' },
           },
         ],
         passive: {
-          fr: 'DÃ©mhorribles: pose un glyphe anneau (rayon 3, taille 2) quand il subit des dommages. Hors glyphe: -80% dommages reÃ§us. Depuis son glyphe: +20% dommages reÃ§us.',
+          fr: 'Démhorribles: pose un glyphe anneau (rayon 3, taille 2) quand il subit des dommages. Hors glyphe: -80% dommages reçus. Depuis son glyphe: +20% dommages reçus.',
           en: 'Demhorribles: places a ring glyph (radius 3, size 2) when damaged. Off-glyph: -80% damage taken. From its glyph: +20% damage taken.',
-          es: 'DÃ©mhorribles: coloca un glifo anillo (radio 3, tamaÃ±o 2) al recibir daÃ±o. Fuera del glifo: -80% daÃ±o recibido. Desde su glifo: +20% daÃ±o recibido.',
+          es: 'Démhorribles: coloca un glifo anillo (radio 3, tamaño 2) al recibir daño. Fuera del glifo: -80% daño recibido. Desde su glifo: +20% daño recibido.',
         },
         notes: [
           {
-            fr: 'Parasite relance la Morsure parasitaire sur son HÃ´te en dÃ©but de tour avec dommages doublÃ©s.',
+            fr: 'Parasite relance la Morsure parasitaire sur son Hôte en début de tour avec dommages doublés.',
             en: 'Parasite recasts Parasitic Bite on its Host at turn start with doubled damage.',
-            es: 'ParÃ¡sito relanza Mordida parasitaria sobre su HuÃ©sped al inicio de turno con daÃ±o duplicado.',
+            es: 'Parásito relanza Mordida parasitaria sobre su Huésped al inicio de turno con daño duplicado.',
           },
         ],
         stats: [
-          { fr: 'RÃ´le: pression mono-cible', en: 'Role: single-target pressure', es: 'Rol: presiÃ³n monobjetivo' },
+          { fr: 'Rôle: pression mono-cible', en: 'Role: single-target pressure', es: 'Rol: presión monobjetivo' },
         ],
       },
       {
@@ -1994,50 +1994,50 @@ export const dungeonGuides = [
           es: 'Debilidad principal: Tierra',
         },
         description: {
-          fr: 'Monstre de harcÃ¨lement Ã  distance avec vol dâ€™armure en zone.',
+          fr: 'Monstre de harcèlement à distance avec vol d’armure en zone.',
           en: 'Ranged harassment unit with area armor steal.',
-          es: 'Unidad de hostigamiento a distancia con robo de armadura en Ã¡rea.',
+          es: 'Unidad de hostigamiento a distancia con robo de armadura en área.',
         },
         spells: [
           {
-            name: { fr: 'HarcÃ¨lement', en: 'Harassment', es: 'Acoso' },
+            name: { fr: 'Harcèlement', en: 'Harassment', es: 'Acoso' },
             effect: {
-              fr: 'Monocible 3-6 PO modifiable, dÃ©gÃ¢ts air, applique +1 niv. HarcÃ¨lement (max 3).',
+              fr: 'Monocible 3-6 PO modifiable, dégâts air, applique +1 niv. Harcèlement (max 3).',
               en: 'Single-target 3-6 modifiable range, air damage, applies +1 Harassment level (max 3).',
-              es: 'Monobjetivo 3-6 alcance modificable, daÃ±o aire, aplica +1 nivel de Acoso (mÃ¡x 3).',
+              es: 'Monobjetivo 3-6 alcance modificable, daño aire, aplica +1 nivel de Acoso (máx 3).',
             },
             cost: { fr: '3 PA', en: '3 AP', es: '3 PA' },
             limit: { fr: '1/cible, 2/tour', en: '1/target, 2/turn', es: '1/objetivo, 2/turno' },
           },
           {
-            name: { fr: 'Auto-dÃ©fense', en: 'Self Defense', es: 'Autodefensa' },
+            name: { fr: 'Auto-défense', en: 'Self Defense', es: 'Autodefensa' },
             effect: {
-              fr: 'Zone cercle taille 2 (0 PO), vole 100% armure ennemie, dÃ©gÃ¢ts feu, applique Incurable niv. 5.',
+              fr: 'Zone cercle taille 2 (0 PO), vole 100% armure ennemie, dégâts feu, applique Incurable niv. 5.',
               en: 'Size-2 circle AoE (0 range), steals 100% enemy armor, fire damage, applies Unhealable lvl 5.',
-              es: 'Ãrea cÃ­rculo tamaÃ±o 2 (0 alcance), roba 100% armadura enemiga, daÃ±o fuego, aplica Incurable niv. 5.',
+              es: 'Área círculo tamaño 2 (0 alcance), roba 100% armadura enemiga, daño fuego, aplica Incurable niv. 5.',
             },
             cost: { fr: '6 PA', en: '6 AP', es: '6 PA' },
             limit: { fr: '1/tour', en: '1/turn', es: '1/turno' },
           },
         ],
         passive: {
-          fr: 'DÃ©mhorribles: pose un glyphe croix diagonale taille 2 sous lui quand il subit des dommages. Hors glyphe: -80% dommages reÃ§us. Depuis son glyphe: +20% dommages reÃ§us.',
+          fr: 'Démhorribles: pose un glyphe croix diagonale taille 2 sous lui quand il subit des dommages. Hors glyphe: -80% dommages reçus. Depuis son glyphe: +20% dommages reçus.',
           en: 'Demhorribles: places a diagonal cross glyph size 2 when damaged. Off-glyph: -80% damage taken. From its glyph: +20% damage taken.',
-          es: 'DÃ©mhorribles: coloca un glifo de cruz diagonal tamaÃ±o 2 al recibir daÃ±o. Fuera del glifo: -80% daÃ±o recibido. Desde su glifo: +20% daÃ±o recibido.',
+          es: 'Démhorribles: coloca un glifo de cruz diagonal tamaño 2 al recibir daño. Fuera del glifo: -80% daño recibido. Desde su glifo: +20% daño recibido.',
         },
         notes: [
           {
-            fr: 'HarcÃ¨lement inflige des dÃ©gÃ¢ts air Ã  lâ€™alliÃ© le plus proche du porteur au dÃ©but de son tour.',
+            fr: 'Harcèlement inflige des dégâts air à l’allié le plus proche du porteur au début de son tour.',
             en: 'Harassment deals air damage to the nearest ally of the carrier at turn start.',
-            es: 'Acoso inflige daÃ±o aire al aliado mÃ¡s cercano del portador al inicio de su turno.',
+            es: 'Acoso inflige daño aire al aliado más cercano del portador al inicio de su turno.',
           },
         ],
         stats: [
-          { fr: 'RÃ´le: anti-armure / poke', en: 'Role: anti-armor / poke', es: 'Rol: antiarmadura / poke' },
+          { fr: 'Rôle: anti-armure / poke', en: 'Role: anti-armor / poke', es: 'Rol: antiarmadura / poke' },
         ],
       },
       {
-        name: { fr: 'Rapace dÃ©peceur', en: 'Rending Raptor', es: 'Rapaz despellejador' },
+        name: { fr: 'Rapace dépeceur', en: 'Rending Raptor', es: 'Rapaz despellejador' },
         level: { fr: 'Niv. 216', en: 'Lvl. 216', es: 'Niv. 216' },
         bonus: {
           fr: 'Faiblesse principale: Terre',
@@ -2045,58 +2045,58 @@ export const dungeonGuides = [
           es: 'Debilidad principal: Tierra',
         },
         description: {
-          fr: 'Assassin mobile qui empile Saignement pour amplifier DÃ©peÃ§age.',
+          fr: 'Assassin mobile qui empile Saignement pour amplifier Dépeçage.',
           en: 'Mobile assassin that stacks Bleeding to amplify Rending.',
-          es: 'Asesino mÃ³vil que acumula Sangrado para amplificar Despiece.',
+          es: 'Asesino móvil que acumula Sangrado para amplificar Despiece.',
         },
         spells: [
           {
             name: { fr: 'Bond', en: 'Leap', es: 'Salto' },
             effect: {
-              fr: 'Monocible 1-4 PO en ligne sans ligne de vue, se tÃ©lÃ©porte sur la case ciblÃ©e et gagne +100 RÃ©sistance Ã‰lÃ©mentaire (1 tour).',
+              fr: 'Monocible 1-4 PO en ligne sans ligne de vue, se téléporte sur la case ciblée et gagne +100 Résistance Élémentaire (1 tour).',
               en: 'Single-target 1-4 in-line without line of sight, teleports to target cell and gains +100 Elemental Resistance (1 turn).',
-              es: 'Monobjetivo 1-4 en lÃ­nea sin lÃ­nea de visiÃ³n, se teletransporta a la celda objetivo y gana +100 Resistencia Elemental (1 turno).',
+              es: 'Monobjetivo 1-4 en línea sin línea de visión, se teletransporta a la celda objetivo y gana +100 Resistencia Elemental (1 turno).',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             limit: { fr: 'Relance 2 tours', en: '2-turn cooldown', es: 'Recarga 2 turnos' },
           },
           {
-            name: { fr: 'DÃ©peÃ§age', en: 'Rending', es: 'Despiece' },
+            name: { fr: 'Dépeçage', en: 'Rending', es: 'Despiece' },
             effect: {
-              fr: 'Monocible 1-4 PO, dÃ©gÃ¢ts eau, applique +1 niv. Saignement (max 10).',
+              fr: 'Monocible 1-4 PO, dégâts eau, applique +1 niv. Saignement (max 10).',
               en: 'Single-target 1-4 range, water damage, applies +1 Bleeding level (max 10).',
-              es: 'Monobjetivo 1-4 alcance, daÃ±o agua, aplica +1 nivel de Sangrado (mÃ¡x 10).',
+              es: 'Monobjetivo 1-4 alcance, daño agua, aplica +1 nivel de Sangrado (máx 10).',
             },
             cost: { fr: '3 PA', en: '3 AP', es: '3 PA' },
             limit: { fr: '1/cible, 3/tour', en: '1/target, 3/turn', es: '1/objetivo, 3/turno' },
           },
         ],
         passive: {
-          fr: 'DÃ©mhorribles: pose une ligne taille 4 sur ses deux cÃ´tÃ©s quand il subit des dommages. Hors glyphe: -80% dommages reÃ§us. Depuis son glyphe: +20% dommages reÃ§us.',
+          fr: 'Démhorribles: pose une ligne taille 4 sur ses deux côtés quand il subit des dommages. Hors glyphe: -80% dommages reçus. Depuis son glyphe: +20% dommages reçus.',
           en: 'Demhorribles: places a size-4 line on both sides when damaged. Off-glyph: -80% damage taken. From its glyph: +20% damage taken.',
-          es: 'DÃ©mhorribles: coloca una lÃ­nea tamaÃ±o 4 en ambos lados al recibir daÃ±o. Fuera del glifo: -80% daÃ±o recibido. Desde su glifo: +20% daÃ±o recibido.',
+          es: 'Démhorribles: coloca una línea tamaño 4 en ambos lados al recibir daño. Fuera del glifo: -80% daño recibido. Desde su glifo: +20% daño recibido.',
         },
         notes: [
           {
-            fr: 'Saignement augmente les dommages subis par DÃ©peÃ§age de 50% par niveau (2 tours).',
+            fr: 'Saignement augmente les dommages subis par Dépeçage de 50% par niveau (2 tours).',
             en: 'Bleeding increases damage taken from Rending by 50% per stack (2 turns).',
-            es: 'Sangrado aumenta el daÃ±o recibido de Despiece en 50% por nivel (2 turnos).',
+            es: 'Sangrado aumenta el daño recibido de Despiece en 50% por nivel (2 turnos).',
           },
         ],
         stats: [
-          { fr: 'RÃ´le: burst progressif', en: 'Role: scaling burst', es: 'Rol: burst progresivo' },
+          { fr: 'Rôle: burst progressif', en: 'Role: scaling burst', es: 'Rol: burst progresivo' },
         ],
       },
       {
-        name: { fr: 'CratÃ©ros, Bourreau de la fin (Boss)', en: 'Crateros, Executioner of the End (Boss)', es: 'CratÃ©ros, Verdugo del fin (Jefe)' },
+        name: { fr: 'Cratéros, Bourreau de la fin (Boss)', en: 'Crateros, Executioner of the End (Boss)', es: 'Cratéros, Verdugo del fin (Jefe)' },
         level: { fr: 'Boss', en: 'Boss', es: 'Jefe' },
         bonus: {
-          fr: 'StabilisÃ©',
+          fr: 'Stabilisé',
           en: 'Stabilized',
           es: 'Estabilizado',
         },
         description: {
-          fr: 'Boss de contrÃ´le de placement et anti-armure avec montÃ©e en puissance Furieux.',
+          fr: 'Boss de contrôle de placement et anti-armure avec montée en puissance Furieux.',
           en: 'Position-control and anti-armor boss with Furious scaling.',
           es: 'Jefe de control de posicionamiento y antiarmadura con escalado Furioso.',
         },
@@ -2104,17 +2104,17 @@ export const dungeonGuides = [
           {
             name: { fr: 'Coup de collier', en: 'Leash Strike', es: 'Golpe de correa' },
             effect: {
-              fr: 'Monocible 1-4 PO, dÃ©gÃ¢ts eau, applique Incurable niv. 4.',
+              fr: 'Monocible 1-4 PO, dégâts eau, applique Incurable niv. 4.',
               en: 'Single-target 1-4 range, water damage, applies Unhealable lvl 4.',
-              es: 'Monobjetivo 1-4 alcance, daÃ±o agua, aplica Incurable niv. 4.',
+              es: 'Monobjetivo 1-4 alcance, daño agua, aplica Incurable niv. 4.',
             },
             cost: { fr: '2 PA', en: '2 AP', es: '2 PA' },
             limit: { fr: '1/cible, 3/tour', en: '1/target, 3/turn', es: '1/objetivo, 3/turno' },
           },
           {
-            name: { fr: 'Prison fatale', en: 'Fatal Prison', es: 'PrisiÃ³n fatal' },
+            name: { fr: 'Prison fatale', en: 'Fatal Prison', es: 'Prisión fatal' },
             effect: {
-              fr: 'TÃ©lÃ©porte un ennemi Ã©loignÃ© (8 PO et +) dans une zone proche du boss.',
+              fr: 'Téléporte un ennemi éloigné (8 PO et +) dans une zone proche du boss.',
               en: 'Teleports a distant enemy (8+ range) into an area near the boss.',
               es: 'Teletransporta un enemigo lejano (8+ alcance) a una zona cercana al jefe.',
             },
@@ -2122,40 +2122,40 @@ export const dungeonGuides = [
             limit: { fr: 'Relance 3 tours', en: '3-turn cooldown', es: 'Recarga 3 turnos' },
           },
           {
-            name: { fr: 'EnchaÃ®nement fatal', en: 'Fatal Chain', es: 'Encadenamiento fatal' },
+            name: { fr: 'Enchaînement fatal', en: 'Fatal Chain', es: 'Encadenamiento fatal' },
             effect: {
-              fr: 'Zone cercle taille 2 (0 PO), vole 100% armure ennemie et inflige des dÃ©gÃ¢ts terre.',
+              fr: 'Zone cercle taille 2 (0 PO), vole 100% armure ennemie et inflige des dégâts terre.',
               en: 'Size-2 circle AoE (0 range), steals 100% enemy armor and deals earth damage.',
-              es: 'Ãrea cÃ­rculo tamaÃ±o 2 (0 alcance), roba 100% armadura enemiga e inflige daÃ±o tierra.',
+              es: 'Área círculo tamaño 2 (0 alcance), roba 100% armadura enemiga e inflige daño tierra.',
             },
             cost: { fr: '5 PA', en: '5 AP', es: '5 PA' },
             limit: { fr: '1/tour', en: '1/turn', es: '1/turno' },
           },
         ],
         passive: {
-          fr: 'Bourreau de la fin: pose un glyphe cercle taille 2 quand il subit des dommages. Hors glyphe: -80% dommages reÃ§us. Depuis son glyphe: +50% dommages reÃ§us. Gagne Furieux si un dÃ©mon ne subit pas de dÃ©gÃ¢ts depuis un glyphe pendant un tour joueur ou en cas de tentative de retrait PM.',
+          fr: 'Bourreau de la fin: pose un glyphe cercle taille 2 quand il subit des dommages. Hors glyphe: -80% dommages reçus. Depuis son glyphe: +50% dommages reçus. Gagne Furieux si un démon ne subit pas de dégâts depuis un glyphe pendant un tour joueur ou en cas de tentative de retrait PM.',
           en: 'Executioner of the End: places a size-2 circle glyph when damaged. Off-glyph: -80% damage taken. From its glyph: +50% damage taken. Gains Furious if a demon takes no glyph-based damage during a player turn or when MP removal is attempted.',
-          es: 'Verdugo del fin: coloca un glifo cÃ­rculo tamaÃ±o 2 al recibir daÃ±o. Fuera del glifo: -80% daÃ±o recibido. Desde su glifo: +50% daÃ±o recibido. Gana Furioso si un demonio no recibe daÃ±o desde glifo durante un turno jugador o al intentar quitar PM.',
+          es: 'Verdugo del fin: coloca un glifo círculo tamaño 2 al recibir daño. Fuera del glifo: -80% daño recibido. Desde su glifo: +50% daño recibido. Gana Furioso si un demonio no recibe daño desde glifo durante un turno jugador o al intentar quitar PM.',
         },
         notes: [],
         stats: [
-          { fr: 'RÃ´le: contrÃ´le + punition', en: 'Role: control + punishment', es: 'Rol: control + castigo' },
+          { fr: 'Rôle: contrôle + punition', en: 'Role: control + punishment', es: 'Rol: control + castigo' },
         ],
       },
     ],
     boss: {
-      name: { fr: 'CratÃ©ros, Bourreau de la fin', en: 'Crateros, Executioner of the End', es: 'CratÃ©ros, Verdugo del fin' },
+      name: { fr: 'Cratéros, Bourreau de la fin', en: 'Crateros, Executioner of the End', es: 'Cratéros, Verdugo del fin' },
       level: { fr: 'Niv. 216+', en: 'Lvl. 216+', es: 'Niv. 216+' },
       description: {
-        fr: 'Boss stabilisÃ© qui force le jeu sur glyphes et punit les erreurs de placement.',
+        fr: 'Boss stabilisé qui force le jeu sur glyphes et punit les erreurs de placement.',
         en: 'Stabilized boss that forces glyph play and punishes positioning mistakes.',
         es: 'Jefe estabilizado que obliga a jugar sobre glifos y castiga errores de posicionamiento.',
       },
       spells: [
         {
-          name: { fr: 'Prison fatale', en: 'Fatal Prison', es: 'PrisiÃ³n fatal' },
+          name: { fr: 'Prison fatale', en: 'Fatal Prison', es: 'Prisión fatal' },
           effect: {
-            fr: 'RamÃ¨ne une cible distante dans sa zone de danger.',
+            fr: 'Ramène une cible distante dans sa zone de danger.',
             en: 'Pulls a distant target into its danger zone.',
             es: 'Trae un objetivo lejano a su zona de peligro.',
           },
@@ -2166,45 +2166,45 @@ export const dungeonGuides = [
         {
           name: { fr: 'Furieux', en: 'Furious', es: 'Furioso' },
           effect: {
-            fr: 'DurÃ©e infinie, max 50 niveaux. +5% dommages infligÃ©s par niveau et +1 PM tous les 4 niveaux.',
+            fr: 'Durée infinie, max 50 niveaux. +5% dommages infligés par niveau et +1 PM tous les 4 niveaux.',
             en: 'Infinite duration, max 50 levels. +5% damage dealt per level and +1 MP every 4 levels.',
-            es: 'DuraciÃ³n infinita, mÃ¡ximo 50 niveles. +5% daÃ±o infligido por nivel y +1 PM cada 4 niveles.',
+            es: 'Duración infinita, máximo 50 niveles. +5% daño infligido por nivel y +1 PM cada 4 niveles.',
           },
           notes: [],
         },
       ],
       stats: [
-        { fr: 'RÃ´le: boss de tempo', en: 'Role: tempo boss', es: 'Rol: jefe de tempo' },
+        { fr: 'Rôle: boss de tempo', en: 'Role: tempo boss', es: 'Rol: jefe de tempo' },
       ],
     },
     mechanics: [
       {
-        title: { fr: 'Lien de vie et glyphes', en: 'Life Link and glyphs', es: 'VÃ­nculo de vida y glifos' },
+        title: { fr: 'Lien de vie et glyphes', en: 'Life Link and glyphs', es: 'Vínculo de vida y glifos' },
         paragraphs: [
           {
-            fr: 'Tous les DÃ©mhorribles partagent un Ã©tat Lien de vie: les dommages rÃ©percutÃ©s prennent en compte les glyphes des DÃ©mhorribles.',
+            fr: 'Tous les Démhorribles partagent un état Lien de vie: les dommages répercutés prennent en compte les glyphes des Démhorribles.',
             en: 'All Demhorribles share a Life Link state: reflected damage interactions still account for Demhorribles glyph rules.',
-            es: 'Todos los DÃ©mhorribles comparten un estado VÃ­nculo de vida: las repercusiones de daÃ±o tambiÃ©n respetan las reglas de glifos.',
+            es: 'Todos los Démhorribles comparten un estado Vínculo de vida: las repercusiones de daño también respetan las reglas de glifos.',
           },
           {
-            fr: 'RÃ¨gle clÃ©: hors glyphe du monstre ciblÃ©, vos dÃ©gÃ¢ts sont fortement rÃ©duits.',
+            fr: 'Règle clé: hors glyphe du monstre ciblé, vos dégâts sont fortement réduits.',
             en: 'Key rule: outside the targeted monster glyph, your damage is heavily reduced.',
-            es: 'Regla clave: fuera del glifo del monstruo objetivo, tu daÃ±o se reduce fuertemente.',
+            es: 'Regla clave: fuera del glifo del monstruo objetivo, tu daño se reduce fuertemente.',
           },
         ],
       },
       {
-        title: { fr: 'Composition des salles', en: 'Room composition', es: 'ComposiciÃ³n de salas' },
+        title: { fr: 'Composition des salles', en: 'Room composition', es: 'Composición de salas' },
         paragraphs: [
           {
-            fr: 'Salle 1: 2x Sangsure, 2x Condamnateur, 2x Rapace dÃ©peceur.',
+            fr: 'Salle 1: 2x Sangsure, 2x Condamnateur, 2x Rapace dépeceur.',
             en: 'Room 1: 2x Bloodleech, 2x Condemner, 2x Rending Raptor.',
             es: 'Sala 1: 2x Sangsure, 2x Condenador, 2x Rapaz despellejador.',
           },
           {
-            fr: 'Salle boss: 1x CratÃ©ros + 1x Sangsure + 1x Condamnateur + 1x Rapace dÃ©peceur.',
+            fr: 'Salle boss: 1x Cratéros + 1x Sangsure + 1x Condamnateur + 1x Rapace dépeceur.',
             en: 'Boss room: 1x Crateros + 1x Bloodleech + 1x Condemner + 1x Rending Raptor.',
-            es: 'Sala de jefe: 1x CratÃ©ros + 1x Sangsure + 1x Condenador + 1x Rapaz despellejador.',
+            es: 'Sala de jefe: 1x Cratéros + 1x Sangsure + 1x Condenador + 1x Rapaz despellejador.',
           },
         ],
       },
@@ -2212,75 +2212,75 @@ export const dungeonGuides = [
         title: { fr: 'Exploits', en: 'Achievements', es: 'Logros' },
         paragraphs: [
           {
-            fr: 'Donjon DÃ©mhorribles I: terminer le donjon (5 Jetons Infernaux).',
+            fr: 'Donjon Démhorribles I: terminer le donjon (5 Jetons Infernaux).',
             en: 'Demhorribles Dungeon I: clear the dungeon (5 Infernal Tokens).',
-            es: 'Mazmorra DÃ©mhorribles I: completar la mazmorra (5 Fichas Infernales).',
+            es: 'Mazmorra Démhorribles I: completar la mazmorra (5 Fichas Infernales).',
           },
           {
-            fr: 'Donjon DÃ©mhorribles II: vaincre le boss en premier (5 Jetons Infernaux).',
+            fr: 'Donjon Démhorribles II: vaincre le boss en premier (5 Jetons Infernaux).',
             en: 'Demhorribles Dungeon II: defeat boss first (5 Infernal Tokens).',
-            es: 'Mazmorra DÃ©mhorribles II: vencer al jefe primero (5 Fichas Infernales).',
+            es: 'Mazmorra Démhorribles II: vencer al jefe primero (5 Fichas Infernales).',
           },
           {
-            fr: 'Donjon DÃ©mhorribles III: vaincre le boss en dernier (5 Jetons Infernaux).',
+            fr: 'Donjon Démhorribles III: vaincre le boss en dernier (5 Jetons Infernaux).',
             en: 'Demhorribles Dungeon III: defeat boss last (5 Infernal Tokens).',
-            es: 'Mazmorra DÃ©mhorribles III: vencer al jefe al final (5 Fichas Infernales).',
+            es: 'Mazmorra Démhorribles III: vencer al jefe al final (5 Fichas Infernales).',
           },
           {
-            fr: 'Donjon DÃ©mhorribles Final: terminer I, II et III (Miniature de CratÃ©ros + 5 Jetons Infernaux).',
+            fr: 'Donjon Démhorribles Final: terminer I, II et III (Miniature de Cratéros + 5 Jetons Infernaux).',
             en: 'Demhorribles Dungeon Final: complete I, II and III (Crateros Miniature + 5 Infernal Tokens).',
-            es: 'Mazmorra DÃ©mhorribles Final: completar I, II y III (Miniatura de CratÃ©ros + 5 Fichas Infernales).',
+            es: 'Mazmorra Démhorribles Final: completar I, II y III (Miniatura de Cratéros + 5 Fichas Infernales).',
           },
         ],
       },
     ],
     plan: {
-      fr: 'StratÃ©gie dÃ©taillÃ©e: Ã  venir.',
+      fr: 'Stratégie détaillée: à venir.',
       en: 'Detailed strategy: coming soon.',
-      es: 'Estrategia detallada: prÃ³ximamente.',
+      es: 'Estrategia detallada: próximamente.',
     },
     steles: {
       lead: {
-        fr: "StÃ¨le d'intervention Anathar: nÃ©cessite une Clef d'intervention d'Anathar.",
+        fr: "Stèle d'intervention Anathar: nécessite une Clef d'intervention d'Anathar.",
         en: 'Anathar intervention stele: requires an Anathar Intervention Key.',
-        es: 'Estela de intervenciÃ³n de Anathar: requiere una Llave de intervenciÃ³n de Anathar.',
+        es: 'Estela de intervención de Anathar: requiere una Llave de intervención de Anathar.',
       },
       notes: [
         {
-          fr: "Anathar observe les actions du joueur marquÃ© et en rÃ©plique jusqu'Ã  4 Ã  son tour suivant.",
+          fr: "Anathar observe les actions du joueur marqué et en réplique jusqu'à 4 à son tour suivant.",
           en: 'Anathar observes actions of the marked player and replicates up to 4 on its next turn.',
           es: 'Anathar observa las acciones del jugador marcado y replica hasta 4 en su siguiente turno.',
         },
         {
-          fr: "Avec moins de 4 actions observÃ©es, Infierno DemonÃ­aco peut dÃ©clencher dÃ©gÃ¢ts globaux, bonus ennemis, voire soin massif selon le nombre d'actions.",
+          fr: "Avec moins de 4 actions observées, Infierno Demoníaco peut déclencher dégâts globaux, bonus ennemis, voire soin massif selon le nombre d'actions.",
           en: 'With fewer than 4 observed actions, Demonic Hellfire can trigger global damage, enemy buffs, and even large healing depending on action count.',
-          es: 'Con menos de 4 acciones observadas, Infierno DemonÃ­aco puede activar daÃ±o global, buffs enemigos e incluso curaciÃ³n masiva segÃºn el nÃºmero de acciones.',
+          es: 'Con menos de 4 acciones observadas, Infierno Demoníaco puede activar daño global, buffs enemigos e incluso curación masiva según el número de acciones.',
         },
         {
-          fr: "Effet spÃ©cifique DÃ©mhorribles: Anathar gagne Lien de vie et ses PdV s'ajoutent au total du groupe; sa zone de vulnÃ©rabilitÃ© est CaC (1 case) + ligne Ã  3 cases.",
+          fr: "Effet spécifique Démhorribles: Anathar gagne Lien de vie et ses PdV s'ajoutent au total du groupe; sa zone de vulnérabilité est CaC (1 case) + ligne à 3 cases.",
           en: 'Demhorribles specific effect: Anathar gains Life Link and its HP is added to the shared pool; vulnerability zone is melee (1 cell) + 3-cell line range.',
-          es: 'Efecto especÃ­fico Demorribles: Anathar gana Enlace de Vida y sus PdV se suman al total; su zona de recibir daÃ±o es CaC (1 casilla) + lÃ­nea de 3 casillas.',
+          es: 'Efecto específico Demorribles: Anathar gana Enlace de Vida y sus PdV se suman al total; su zona de recibir daño es CaC (1 casilla) + línea de 3 casillas.',
         },
         {
-          fr: 'La table des effets par action (PM/PA, soins, armure, placements, dÃ©gÃ¢ts Ã©lÃ©mentaires) suit la table de rÃ©fÃ©rence Anathar.',
+          fr: 'La table des effets par action (PM/PA, soins, armure, placements, dégâts élémentaires) suit la table de référence Anathar.',
           en: 'The action-to-effect mapping (MP/AP, healing, armor, positioning, elemental damage) follows the Anathar reference table.',
-          es: 'El mapeo acciÃ³n-efecto (PM/PA, curas, armadura, posicionamiento, daÃ±os elementales) sigue la tabla de referencia de Anathar.',
+          es: 'El mapeo acción-efecto (PM/PA, curas, armadura, posicionamiento, daños elementales) sigue la tabla de referencia de Anathar.',
         },
       ],
       protoBosses: [],
       crystals: {
         types: [
           {
-            fr: "PrioritÃ©: contrÃ´ler le tour du marquÃ© et Ã©viter de gÃ©nÃ©rer des actions diffÃ©rentes inutiles.",
+            fr: "Priorité: contrôler le tour du marqué et éviter de générer des actions différentes inutiles.",
             en: 'Priority: control the marked player turn and avoid unnecessary different action types.',
             es: 'Prioridad: controlar el turno del marcado y evitar generar acciones diferentes innecesarias.',
           },
         ],
         notes: [
           {
-            fr: 'Le terme Â« combattants Â» inclut joueurs, monstres et boss.',
-            en: 'The term â€œcombatantsâ€ includes players, monsters and boss units.',
-            es: 'El tÃ©rmino â€œcombatientesâ€ incluye jugadores, mobs y jefe.',
+            fr: 'Le terme « combattants » inclut joueurs, monstres et boss.',
+            en: 'The term “combatants” includes players, monsters and boss units.',
+            es: 'El término “combatientes” incluye jugadores, mobs y jefe.',
           },
         ],
         stats: [],
@@ -2289,9 +2289,9 @@ export const dungeonGuides = [
     drops: {
       notes: [
         {
-          fr: 'Drops du donjon et du boss: liens directs Ã  ajouter.',
+          fr: 'Drops du donjon et du boss: liens directs à ajouter.',
           en: 'Dungeon and boss drops: direct links to add.',
-          es: 'Drops de mazmorra y jefe: enlaces directos por aÃ±adir.',
+          es: 'Drops de mazmorra y jefe: enlaces directos por añadir.',
         },
       ],
       monsterDrops: [],
@@ -2299,20 +2299,20 @@ export const dungeonGuides = [
     },
     croupier: {
       location: {
-        fr: 'Section Ã  complÃ©ter.',
+        fr: 'Section à compléter.',
         en: 'Section to be completed.',
-        es: 'SecciÃ³n por completar.',
+        es: 'Sección por completar.',
       },
       items: [],
     },
   },
   {
     id: 'vaciantes',
-    name: { fr: 'Donjon VidÃ©ants', en: 'Videants Dungeon', es: 'Mazmorra de los Vaciantes' },
+    name: { fr: 'Donjon Vidéants', en: 'Videants Dungeon', es: 'Mazmorra de los Vaciantes' },
     subtitle: {
-      fr: 'Boss: Arâ€™Nan, Augure du nÃ©ant',
-      en: 'Boss: Arâ€™Nan, Augur of the Void',
-      es: 'Jefe: Arâ€™Nan, Augur del VacÃ­o',
+      fr: 'Boss: Ar’Nan, Augure du néant',
+      en: 'Boss: Ar’Nan, Augur of the Void',
+      es: 'Jefe: Ar’Nan, Augur del Vacío',
     },
     levelRange: { fr: 'Niv. 216', en: 'Lvl. 216', es: 'Niv. 216' },
     summary: [
@@ -2322,24 +2322,24 @@ export const dungeonGuides = [
         es: 'Mazmorra para 6 jugadores, 2 salas y sin llave.',
       },
       {
-        fr: 'MÃ©canique centrale: provoquer lâ€™Ã©tat Inactif avec la bonne condition pour chaque monstre.',
+        fr: 'Mécanique centrale: provoquer l’état Inactif avec la bonne condition pour chaque monstre.',
         en: 'Core mechanic: trigger the Inactive state through each monster specific condition.',
-        es: 'MecÃ¡nica central: provocar el estado Inactivo cumpliendo la condiciÃ³n especÃ­fica de cada monstruo.',
+        es: 'Mecánica central: provocar el estado Inactivo cumpliendo la condición específica de cada monstruo.',
       },
       {
-        fr: 'Le NÃ©ant alterne ses zones et punit les entrÃ©es dans lâ€™aura (dÃ©gÃ¢ts stasis Ã©levÃ©s une fois par tour).',
+        fr: 'Le Néant alterne ses zones et punit les entrées dans l’aura (dégâts stasis élevés une fois par tour).',
         en: 'The Void alternates zones and punishes aura entries (heavy stasis damage once per turn).',
-        es: 'El VacÃ­o alterna zonas y castiga la entrada en el aura (daÃ±o estasis alto una vez por turno).',
+        es: 'El Vacío alterna zonas y castiga la entrada en el aura (daño estasis alto una vez por turno).',
       },
       {
-        fr: 'Certaines informations (stratÃ©gie dÃ©taillÃ©e, drops prÃ©cis, croupier) seront complÃ©tÃ©es ultÃ©rieurement.',
+        fr: 'Certaines informations (stratégie détaillée, drops précis, croupier) seront complétées ultérieurement.',
         en: 'Some details (detailed strategy, exact drops, croupier) will be completed later.',
-        es: 'Algunos detalles (estrategia detallada, drops exactos, crupier) se completarÃ¡n mÃ¡s adelante.',
+        es: 'Algunos detalles (estrategia detallada, drops exactos, crupier) se completarán más adelante.',
       },
     ],
     monsters: [
       {
-        name: { fr: 'EchinoidÃ©ant', en: 'Echinoideant', es: 'Equinoideante' },
+        name: { fr: 'Echinoidéant', en: 'Echinoideant', es: 'Equinoideante' },
         level: { fr: 'Niv. 216', en: 'Lvl. 216', es: 'Niv. 216' },
         bonus: {
           fr: 'Faiblesse principale: Air',
@@ -2347,45 +2347,45 @@ export const dungeonGuides = [
           es: 'Debilidad principal: Aire',
         },
         description: {
-          fr: 'Frontline de zone qui attire en mÃªlÃ©e et stabilise les cibles collÃ©es.',
+          fr: 'Frontline de zone qui attire en mêlée et stabilise les cibles collées.',
           en: 'AoE frontline unit that pulls into melee and stabilizes contacted enemies.',
-          es: 'Unidad de primera lÃ­nea en Ã¡rea que atrae a melee y estabiliza objetivos en contacto.',
+          es: 'Unidad de primera línea en área que atrae a melee y estabiliza objetivos en contacto.',
         },
         spells: [
           {
             name: { fr: 'Attaque', en: 'Attack', es: 'Ataque' },
             effect: {
-              fr: 'Zone croix taille 1 (0 PO), lourds dÃ©gÃ¢ts feu. LancÃ© automatiquement en dÃ©but de tour.',
+              fr: 'Zone croix taille 1 (0 PO), lourds dégâts feu. Lancé automatiquement en début de tour.',
               en: 'Size-1 cross AoE (0 range), heavy fire damage. Cast automatically at turn start.',
-              es: 'Ãrea cruz tamaÃ±o 1 (0 alcance), gran daÃ±o fuego. Se lanza automÃ¡ticamente al inicio del turno.',
+              es: 'Área cruz tamaño 1 (0 alcance), gran daño fuego. Se lanza automáticamente al inicio del turno.',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
           },
           {
-            name: { fr: 'Attirance', en: 'Attraction', es: 'AtracciÃ³n' },
+            name: { fr: 'Attirance', en: 'Attraction', es: 'Atracción' },
             effect: {
-              fr: 'Zone croix taille 10 (0 PO), dÃ©gÃ¢ts air et attire au contact. Les ennemis arrivÃ©s au contact deviennent StabilisÃ©s (1 tour).',
+              fr: 'Zone croix taille 10 (0 PO), dégâts air et attire au contact. Les ennemis arrivés au contact deviennent Stabilisés (1 tour).',
               en: 'Size-10 cross AoE (0 range), air damage and pulls to melee. Enemies pulled into contact become Stabilized (1 turn).',
-              es: 'Ãrea cruz tamaÃ±o 10 (0 alcance), daÃ±o aire y atrae al contacto. Enemigos que llegan al contacto quedan Estabilizados (1 turno).',
+              es: 'Área cruz tamaño 10 (0 alcance), daño aire y atrae al contacto. Enemigos que llegan al contacto quedan Estabilizados (1 turno).',
             },
             cost: { fr: '5 PA', en: '5 AP', es: '5 PA' },
             limit: { fr: '1/tour', en: '1/turn', es: '1/turno' },
           },
         ],
         passive: {
-          fr: 'EchinoidÃ©ant: devient Inactif (1 tour) sâ€™il subit des dommages au contact (1 fois par tour de lâ€™attaquant).',
+          fr: 'Echinoidéant: devient Inactif (1 tour) s’il subit des dommages au contact (1 fois par tour de l’attaquant).',
           en: 'Echinoideant: becomes Inactive (1 turn) if it takes melee damage (once per attacker turn).',
-          es: 'Equinoideante: se vuelve Inactivo (1 turno) si recibe daÃ±o en contacto (1 vez por turno del atacante).',
+          es: 'Equinoideante: se vuelve Inactivo (1 turno) si recibe daño en contacto (1 vez por turno del atacante).',
         },
         notes: [
           {
-            fr: 'Ã‰tat Inactif: passe son tour et gagne 400 RÃ©sistance Ã‰lÃ©mentaire.',
+            fr: 'État Inactif: passe son tour et gagne 400 Résistance Élémentaire.',
             en: 'Inactive state: skips turn and gains 400 Elemental Resistance.',
             es: 'Estado Inactivo: pasa turno y gana 400 Resistencia Elemental.',
           },
         ],
         stats: [
-          { fr: 'RÃ´le: traction / contrÃ´le melee', en: 'Role: pull / melee control', es: 'Rol: tracciÃ³n / control melee' },
+          { fr: 'Rôle: traction / contrôle melee', en: 'Role: pull / melee control', es: 'Rol: tracción / control melee' },
         ],
       },
       {
@@ -2397,17 +2397,17 @@ export const dungeonGuides = [
           es: 'Debilidad principal: Tierra',
         },
         description: {
-          fr: 'DPS mobile orientÃ© dos et retrait de PW en zone dâ€™arrivÃ©e.',
+          fr: 'DPS mobile orienté dos et retrait de PW en zone d’arrivée.',
           en: 'Mobile DPS focused on back damage and PW removal in arrival area.',
-          es: 'DPS mÃ³vil enfocado en daÃ±o por espalda y retiro de PW en zona de llegada.',
+          es: 'DPS móvil enfocado en daño por espalda y retiro de PW en zona de llegada.',
         },
         spells: [
           {
             name: { fr: 'Attaque', en: 'Attack', es: 'Ataque' },
             effect: {
-              fr: 'Monocible 1-3 PO, dÃ©gÃ¢ts terre.',
+              fr: 'Monocible 1-3 PO, dégâts terre.',
               en: 'Single-target 1-3 range, earth damage.',
-              es: 'Monobjetivo 1-3 alcance, daÃ±o tierra.',
+              es: 'Monobjetivo 1-3 alcance, daño tierra.',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             limit: { fr: '1/cible, 2/tour', en: '1/target, 2/turn', es: '1/objetivo, 2/turno' },
@@ -2415,32 +2415,32 @@ export const dungeonGuides = [
           {
             name: { fr: 'Saut', en: 'Jump', es: 'Salto' },
             effect: {
-              fr: 'TÃ©lÃ©portation 2-4 PO (sans ligne de vue), retire 1 PW aux ennemis dans la zone dâ€™arrivÃ©e (croix taille 1).',
+              fr: 'Téléportation 2-4 PO (sans ligne de vue), retire 1 PW aux ennemis dans la zone d’arrivée (croix taille 1).',
               en: '2-4 range teleport (no line of sight), removes 1 WP from enemies in the arrival zone (size-1 cross).',
-              es: 'Teletransporte 2-4 alcance (sin lÃ­nea de visiÃ³n), retira 1 PW a enemigos en la zona de llegada (cruz tamaÃ±o 1).',
+              es: 'Teletransporte 2-4 alcance (sin línea de visión), retira 1 PW a enemigos en la zona de llegada (cruz tamaño 1).',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             limit: { fr: '1/tour', en: '1/turn', es: '1/turno' },
           },
         ],
         passive: {
-          fr: 'Inanite: +25% dommages infligÃ©s de dos. Devient Inactif (1 tour) sâ€™il subit des dommages de dos.',
+          fr: 'Inanite: +25% dommages infligés de dos. Devient Inactif (1 tour) s’il subit des dommages de dos.',
           en: 'Inanite: +25% back damage dealt. Becomes Inactive (1 turn) if it takes back damage.',
-          es: 'Inanite: +25% daÃ±os infligidos por espalda. Se vuelve Inactivo (1 turno) si recibe daÃ±o por la espalda.',
+          es: 'Inanite: +25% daños infligidos por espalda. Se vuelve Inactivo (1 turno) si recibe daño por la espalda.',
         },
         notes: [
           {
-            fr: 'Ã‰tat Inactif: passe son tour et gagne 400 RÃ©sistance Ã‰lÃ©mentaire.',
+            fr: 'État Inactif: passe son tour et gagne 400 Résistance Élémentaire.',
             en: 'Inactive state: skips turn and gains 400 Elemental Resistance.',
             es: 'Estado Inactivo: pasa turno y gana 400 Resistencia Elemental.',
           },
         ],
         stats: [
-          { fr: 'RÃ´le: assassin de dos', en: 'Role: backline assassin', es: 'Rol: asesino de espalda' },
+          { fr: 'Rôle: assassin de dos', en: 'Role: backline assassin', es: 'Rol: asesino de espalda' },
         ],
       },
       {
-        name: { fr: 'Chrysavide', en: 'Chrysavide', es: 'CrisÃ¡vida' },
+        name: { fr: 'Chrysavide', en: 'Chrysavide', es: 'Crisávida' },
         level: { fr: 'Niv. 216', en: 'Lvl. 216', es: 'Niv. 216' },
         bonus: {
           fr: 'Faiblesse principale: Terre/Air',
@@ -2448,231 +2448,231 @@ export const dungeonGuides = [
           es: 'Debilidad principal: Tierra/Aire',
         },
         description: {
-          fr: 'Distance et contrÃ´le via piÃ¨ges PM.',
+          fr: 'Distance et contrôle via pièges PM.',
           en: 'Ranged pressure and control through MP trap fields.',
-          es: 'PresiÃ³n a distancia y control mediante trampas de PM.',
+          es: 'Presión a distancia y control mediante trampas de PM.',
         },
         spells: [
           {
             name: { fr: 'Attaque', en: 'Attack', es: 'Ataque' },
             effect: {
-              fr: 'Monocible 3-10 PO modifiable, dÃ©gÃ¢ts eau.',
+              fr: 'Monocible 3-10 PO modifiable, dégâts eau.',
               en: 'Single-target 3-10 modifiable range, water damage.',
-              es: 'Monobjetivo 3-10 alcance modificable, daÃ±o agua.',
+              es: 'Monobjetivo 3-10 alcance modificable, daño agua.',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             limit: { fr: '1/cible, 2/tour', en: '1/target, 2/turn', es: '1/objetivo, 2/turno' },
           },
           {
-            name: { fr: 'PiÃ¨ge', en: 'Trap', es: 'Trampa' },
+            name: { fr: 'Piège', en: 'Trap', es: 'Trampa' },
             effect: {
-              fr: 'Zone croix taille 5 (3-8 PO), pose un piÃ¨ge sur chaque case. Sur joueurs: dÃ©gÃ¢ts terre + -4 PM.',
+              fr: 'Zone croix taille 5 (3-8 PO), pose un piège sur chaque case. Sur joueurs: dégâts terre + -4 PM.',
               en: 'Size-5 cross AoE (3-8 range), places a trap on each cell. On players: earth damage + -4 MP.',
-              es: 'Ãrea cruz tamaÃ±o 5 (3-8 alcance), coloca una trampa en cada casilla. En jugadores: daÃ±o tierra + -4 PM.',
+              es: 'Área cruz tamaño 5 (3-8 alcance), coloca una trampa en cada casilla. En jugadores: daño tierra + -4 PM.',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             limit: { fr: '1/tour', en: '1/turn', es: '1/turno' },
           },
         ],
         passive: {
-          fr: 'Chrysavide: devient Inactif (1 tour) sâ€™il subit un dÃ©placement.',
+          fr: 'Chrysavide: devient Inactif (1 tour) s’il subit un déplacement.',
           en: 'Chrysavide: becomes Inactive (1 turn) if displaced.',
-          es: 'CrisÃ¡vida: se vuelve Inactivo (1 turno) si sufre un desplazamiento.',
+          es: 'Crisávida: se vuelve Inactivo (1 turno) si sufre un desplazamiento.',
         },
         notes: [
           {
-            fr: 'Ã‰tat Inactif: passe son tour et gagne 400 RÃ©sistance Ã‰lÃ©mentaire.',
+            fr: 'État Inactif: passe son tour et gagne 400 Résistance Élémentaire.',
             en: 'Inactive state: skips turn and gains 400 Elemental Resistance.',
             es: 'Estado Inactivo: pasa turno y gana 400 Resistencia Elemental.',
           },
         ],
         stats: [
-          { fr: 'RÃ´le: piÃ¨ges / contrÃ´le PM', en: 'Role: traps / MP control', es: 'Rol: trampas / control de PM' },
+          { fr: 'Rôle: pièges / contrôle PM', en: 'Role: traps / MP control', es: 'Rol: trampas / control de PM' },
         ],
       },
       {
-        name: { fr: 'Arâ€™Nan, Augure du nÃ©ant (Boss)', en: 'Arâ€™Nan, Augur of the Void (Boss)', es: 'Arâ€™Nan, Augur del VacÃ­o (Jefe)' },
+        name: { fr: 'Ar’Nan, Augure du néant (Boss)', en: 'Ar’Nan, Augur of the Void (Boss)', es: 'Ar’Nan, Augur del Vacío (Jefe)' },
         level: { fr: 'Boss', en: 'Boss', es: 'Jefe' },
         bonus: {
-          fr: 'Aura NÃ©ant alternante',
+          fr: 'Aura Néant alternante',
           en: 'Alternating Void aura',
-          es: 'Aura VacÃ­o alternante',
+          es: 'Aura Vacío alternante',
         },
         description: {
-          fr: 'Boss de contrÃ´le de zone et dâ€™inactivitÃ© conditionnelle.',
+          fr: 'Boss de contrôle de zone et d’inactivité conditionnelle.',
           en: 'Zone-control boss with conditional inactivity mechanics.',
-          es: 'Jefe de control de zona con mecÃ¡nica de inactividad condicional.',
+          es: 'Jefe de control de zona con mecánica de inactividad condicional.',
         },
         spells: [
           {
             name: { fr: 'Attaque', en: 'Attack', es: 'Ataque' },
             effect: {
-              fr: 'Monocible, toute la carte sans ligne de vue. DÃ©gÃ¢ts terre et -50 RÃ©sistance Ã‰lÃ©mentaire (cumulable, 4 tours).',
+              fr: 'Monocible, toute la carte sans ligne de vue. Dégâts terre et -50 Résistance Élémentaire (cumulable, 4 tours).',
               en: 'Single-target, map-wide without line of sight. Earth damage and -50 Elemental Resistance (stacking, 4 turns).',
-              es: 'Monobjetivo, todo el mapa sin lÃ­nea de visiÃ³n. DaÃ±o tierra y -50 Resistencia Elemental (acumulable, 4 turnos).',
+              es: 'Monobjetivo, todo el mapa sin línea de visión. Daño tierra y -50 Resistencia Elemental (acumulable, 4 turnos).',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             limit: { fr: '1/tour', en: '1/turn', es: '1/turno' },
           },
           {
-            name: { fr: 'PoussÃ©', en: 'Push', es: 'Empuje' },
+            name: { fr: 'Poussé', en: 'Push', es: 'Empuje' },
             effect: {
-              fr: 'Zone croix taille 1 (0 PO), dÃ©gÃ¢ts air, pousse de 7 cases et retire 66 RÃ©sistance Ã‰lÃ©mentaire (4 tours).',
+              fr: 'Zone croix taille 1 (0 PO), dégâts air, pousse de 7 cases et retire 66 Résistance Élémentaire (4 tours).',
               en: 'Size-1 cross AoE (0 range), air damage, pushes 7 cells and removes 66 Elemental Resistance (4 turns).',
-              es: 'Ãrea cruz tamaÃ±o 1 (0 alcance), daÃ±o aire, empuja 7 casillas y retira 66 Resistencia Elemental (4 turnos).',
+              es: 'Área cruz tamaño 1 (0 alcance), daño aire, empuja 7 casillas y retira 66 Resistencia Elemental (4 turnos).',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             limit: { fr: '1/tour', en: '1/turn', es: '1/turno' },
           },
           {
-            name: { fr: 'Attirance', en: 'Attraction', es: 'AtracciÃ³n' },
+            name: { fr: 'Attirance', en: 'Attraction', es: 'Atracción' },
             effect: {
-              fr: 'Zone croix taille 10 (0 PO), dÃ©gÃ¢ts air, attire de 4 cases et retire 75 RÃ©sistance Ã‰lÃ©mentaire (4 tours).',
+              fr: 'Zone croix taille 10 (0 PO), dégâts air, attire de 4 cases et retire 75 Résistance Élémentaire (4 tours).',
               en: 'Size-10 cross AoE (0 range), air damage, pulls 4 cells and removes 75 Elemental Resistance (4 turns).',
-              es: 'Ãrea cruz tamaÃ±o 10 (0 alcance), daÃ±o aire, atrae 4 casillas y retira 75 Resistencia Elemental (4 turnos).',
+              es: 'Área cruz tamaño 10 (0 alcance), daño aire, atrae 4 casillas y retira 75 Resistencia Elemental (4 turnos).',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             limit: { fr: '1/tour', en: '1/turn', es: '1/turno' },
           },
         ],
         passive: {
-          fr: 'Augure du nÃ©ant: le type dâ€™aura NÃ©ant change quand un monstre/joueur meurt ou passe Inactif. En fin de tour, gagne +1 PM cumulable (max 10) rÃ©initialisÃ© quand Arâ€™Nan devient Inactif.',
-          en: 'Augur of the Void: Void aura type changes when a monster/player dies or becomes Inactive. End of turn gains +1 stackable MP (max 10), reset when Arâ€™Nan becomes Inactive.',
-          es: 'Augur del VacÃ­o: el tipo de aura VacÃ­o cambia cuando un monstruo/jugador muere o queda Inactivo. Fin de turno gana +1 PM acumulable (mÃ¡x 10), se reinicia cuando Arâ€™Nan queda Inactivo.',
+          fr: 'Augure du néant: le type d’aura Néant change quand un monstre/joueur meurt ou passe Inactif. En fin de tour, gagne +1 PM cumulable (max 10) réinitialisé quand Ar’Nan devient Inactif.',
+          en: 'Augur of the Void: Void aura type changes when a monster/player dies or becomes Inactive. End of turn gains +1 stackable MP (max 10), reset when Ar’Nan becomes Inactive.',
+          es: 'Augur del Vacío: el tipo de aura Vacío cambia cuando un monstruo/jugador muere o queda Inactivo. Fin de turno gana +1 PM acumulable (máx 10), se reinicia cuando Ar’Nan queda Inactivo.',
         },
         notes: [
           {
-            fr: 'InactivitÃ© (passif): devient Inactif sâ€™il ne subit pas de dommages pendant un tour ou sâ€™il subit des dommages dans son aura. Inactif: passe son tour, -200 RÃ©sistance Ã‰lÃ©mentaire (2 tours), puis +40% dommages infligÃ©s (1 tour) en redevenant actif.',
+            fr: 'Inactivité (passif): devient Inactif s’il ne subit pas de dommages pendant un tour ou s’il subit des dommages dans son aura. Inactif: passe son tour, -200 Résistance Élémentaire (2 tours), puis +40% dommages infligés (1 tour) en redevenant actif.',
             en: 'Inactivity (passive): becomes Inactive if it takes no damage during a turn or if hit by a player inside its aura. Inactive: skips turn, -200 Elemental Resistance (2 turns), then +40% damage dealt (1 turn) when active again.',
-            es: 'Inactividad (pasivo): queda Inactivo si no recibe daÃ±o durante un turno o si recibe daÃ±o de un jugador dentro del aura. Inactivo: pasa turno, -200 Resistencia Elemental (2 turnos), luego +40% daÃ±os infligidos (1 turno) al reactivarse.',
+            es: 'Inactividad (pasivo): queda Inactivo si no recibe daño durante un turno o si recibe daño de un jugador dentro del aura. Inactivo: pasa turno, -200 Resistencia Elemental (2 turnos), luego +40% daños infligidos (1 turno) al reactivarse.',
           },
         ],
         stats: [
-          { fr: 'RÃ´le: boss de zoning', en: 'Role: zoning boss', es: 'Rol: jefe de zonificaciÃ³n' },
+          { fr: 'Rôle: boss de zoning', en: 'Role: zoning boss', es: 'Rol: jefe de zonificación' },
         ],
       },
     ],
     boss: {
-      name: { fr: 'Arâ€™Nan, Augure du nÃ©ant', en: 'Arâ€™Nan, Augur of the Void', es: 'Arâ€™Nan, Augur del VacÃ­o' },
+      name: { fr: 'Ar’Nan, Augure du néant', en: 'Ar’Nan, Augur of the Void', es: 'Ar’Nan, Augur del Vacío' },
       level: { fr: 'Niv. 216+', en: 'Lvl. 216+', es: 'Niv. 216+' },
       description: {
-        fr: 'Boss Ã  aura variable (cercle/anneau) qui punit fortement les entrÃ©es dans le NÃ©ant.',
+        fr: 'Boss à aura variable (cercle/anneau) qui punit fortement les entrées dans le Néant.',
         en: 'Variable-aura boss (circle/ring) that heavily punishes entries into the Void area.',
-        es: 'Jefe de aura variable (cÃ­rculo/anillo) que castiga fuertemente la entrada en el VacÃ­o.',
+        es: 'Jefe de aura variable (círculo/anillo) que castiga fuertemente la entrada en el Vacío.',
       },
       spells: [
         {
-          name: { fr: 'NÃ©ant', en: 'Void', es: 'VacÃ­o' },
+          name: { fr: 'Néant', en: 'Void', es: 'Vacío' },
           effect: {
-            fr: 'Aura alternante: cercle taille 3 puis anneau rayon 6 infini. Une fois par tour, entrÃ©e dans lâ€™aura = lourds dÃ©gÃ¢ts stasis.',
+            fr: 'Aura alternante: cercle taille 3 puis anneau rayon 6 infini. Une fois par tour, entrée dans l’aura = lourds dégâts stasis.',
             en: 'Alternating aura: size-3 circle then infinite size ring radius 6. Once per turn, entering aura = heavy stasis damage.',
-            es: 'Aura alternante: cÃ­rculo tamaÃ±o 3 y luego anillo de radio 6 infinito. Una vez por turno, entrar al aura = daÃ±o estasis alto.',
+            es: 'Aura alternante: círculo tamaño 3 y luego anillo de radio 6 infinito. Una vez por turno, entrar al aura = daño estasis alto.',
           },
           cost: { fr: 'Passif', en: 'Passive', es: 'Pasivo' },
         },
       ],
       passives: [
         {
-          name: { fr: 'InactivitÃ©', en: 'Inactivity', es: 'Inactividad' },
+          name: { fr: 'Inactivité', en: 'Inactivity', es: 'Inactividad' },
           effect: {
-            fr: 'DÃ©clenche Inactif selon conditions de dÃ©gÃ¢ts; Inactif applique -200 RÃ©sistance Ã‰lÃ©mentaire puis buff dÃ©gÃ¢ts au rÃ©veil.',
+            fr: 'Déclenche Inactif selon conditions de dégâts; Inactif applique -200 Résistance Élémentaire puis buff dégâts au réveil.',
             en: 'Triggers Inactive based on damage conditions; Inactive applies -200 Elemental Resistance then damage buff on wake-up.',
-            es: 'Activa Inactivo segÃºn condiciones de daÃ±o; Inactivo aplica -200 Resistencia Elemental y luego buff de daÃ±o al reactivarse.',
+            es: 'Activa Inactivo según condiciones de daño; Inactivo aplica -200 Resistencia Elemental y luego buff de daño al reactivarse.',
           },
           notes: [],
         },
       ],
       stats: [
-        { fr: 'RÃ´le: tempo / contrÃ´le de zone', en: 'Role: tempo / zone control', es: 'Rol: tempo / control de zona' },
+        { fr: 'Rôle: tempo / contrôle de zone', en: 'Role: tempo / zone control', es: 'Rol: tempo / control de zona' },
       ],
     },
     mechanics: [
       {
-        title: { fr: 'Inactif sur les VidÃ©ants', en: 'Inactive state on Videants', es: 'Estado Inactivo en Vaciantes' },
+        title: { fr: 'Inactif sur les Vidéants', en: 'Inactive state on Videants', es: 'Estado Inactivo en Vaciantes' },
         paragraphs: [
           {
-            fr: 'Chaque monstre a sa condition propre pour passer Inactif: contact (EchinoidÃ©ant), dos (Inanite), dÃ©placement subi (Chrysavide).',
+            fr: 'Chaque monstre a sa condition propre pour passer Inactif: contact (Echinoidéant), dos (Inanite), déplacement subi (Chrysavide).',
             en: 'Each monster has a specific condition to become Inactive: melee hit (Echinoideant), back hit (Inanite), displacement taken (Chrysavide).',
-            es: 'Cada monstruo tiene su condiciÃ³n para quedar Inactivo: daÃ±o en contacto (Equinoideante), daÃ±o por espalda (Inanite), desplazamiento recibido (CrisÃ¡vida).',
+            es: 'Cada monstruo tiene su condición para quedar Inactivo: daño en contacto (Equinoideante), daño por espalda (Inanite), desplazamiento recibido (Crisávida).',
           },
           {
-            fr: 'Ã‰tat Inactif: passe le tour et gagne 400 RÃ©sistance Ã‰lÃ©mentaire.',
+            fr: 'État Inactif: passe le tour et gagne 400 Résistance Élémentaire.',
             en: 'Inactive state: skips turn and gains 400 Elemental Resistance.',
             es: 'Estado Inactivo: pasa turno y gana 400 Resistencia Elemental.',
           },
         ],
       },
       {
-        title: { fr: 'NÃ©ant et Cristal du NÃ©ant', en: 'Void and Void Crystal', es: 'VacÃ­o y Cristal del VacÃ­o' },
+        title: { fr: 'Néant et Cristal du Néant', en: 'Void and Void Crystal', es: 'Vacío y Cristal del Vacío' },
         paragraphs: [
           {
-            fr: 'Salle 1: un Cristal du NÃ©ant apparaÃ®t avec une aura similaire au boss.',
+            fr: 'Salle 1: un Cristal du Néant apparaît avec une aura similaire au boss.',
             en: 'Room 1: a Void Crystal appears with an aura similar to the boss.',
-            es: 'Sala 1: aparece un Cristal del VacÃ­o con un aura similar a la del jefe.',
+            es: 'Sala 1: aparece un Cristal del Vacío con un aura similar a la del jefe.',
           },
           {
-            fr: 'Lâ€™aura alterne entre cercle taille 3 et anneau rayon 6 infini, et punit les entrÃ©es une fois par tour.',
+            fr: 'L’aura alterne entre cercle taille 3 et anneau rayon 6 infini, et punit les entrées une fois par tour.',
             en: 'The aura alternates between size-3 circle and infinite ring radius 6, punishing entries once per turn.',
-            es: 'El aura alterna entre cÃ­rculo tamaÃ±o 3 y anillo radio 6 infinito, castigando entradas una vez por turno.',
+            es: 'El aura alterna entre círculo tamaño 3 y anillo radio 6 infinito, castigando entradas una vez por turno.',
           },
         ],
       },
       {
-        title: { fr: 'Composition et exploits', en: 'Composition and achievements', es: 'ComposiciÃ³n y logros' },
+        title: { fr: 'Composition et exploits', en: 'Composition and achievements', es: 'Composición y logros' },
         paragraphs: [
           {
-            fr: 'Salle 1: 3x VidÃ©ant, 3x VidÃ©ant, 2x VidÃ©ant. Salle boss: 1x Arâ€™Nan + 3x VidÃ©ant + 2x VidÃ©ant + 2x VidÃ©ant.',
-            en: 'Room 1: 3x Videant, 3x Videant, 2x Videant. Boss room: 1x Arâ€™Nan + 3x Videant + 2x Videant + 2x Videant.',
-            es: 'Sala 1: 3x Vaciante, 3x Vaciante, 2x Vaciante. Sala boss: 1x Arâ€™Nan + 3x Vaciante + 2x Vaciante + 2x Vaciante.',
+            fr: 'Salle 1: 3x Vidéant, 3x Vidéant, 2x Vidéant. Salle boss: 1x Ar’Nan + 3x Vidéant + 2x Vidéant + 2x Vidéant.',
+            en: 'Room 1: 3x Videant, 3x Videant, 2x Videant. Boss room: 1x Ar’Nan + 3x Videant + 2x Videant + 2x Videant.',
+            es: 'Sala 1: 3x Vaciante, 3x Vaciante, 2x Vaciante. Sala boss: 1x Ar’Nan + 3x Vaciante + 2x Vaciante + 2x Vaciante.',
           },
           {
-            fr: 'Exploits: I (terminer), II (boss en premier), III (boss en dernier), Final (I+II+III) avec Miniature dâ€™Arâ€™Nan + 5 Jetons Infernaux.',
-            en: 'Achievements: I (clear), II (boss first), III (boss last), Final (I+II+III) with Arâ€™Nan Miniature + 5 Infernal Tokens.',
-            es: 'Logros: I (terminar), II (boss primero), III (boss Ãºltimo), Final (I+II+III) con Miniatura de Arâ€™Nan + 5 Fichas Infernales.',
+            fr: 'Exploits: I (terminer), II (boss en premier), III (boss en dernier), Final (I+II+III) avec Miniature d’Ar’Nan + 5 Jetons Infernaux.',
+            en: 'Achievements: I (clear), II (boss first), III (boss last), Final (I+II+III) with Ar’Nan Miniature + 5 Infernal Tokens.',
+            es: 'Logros: I (terminar), II (boss primero), III (boss último), Final (I+II+III) con Miniatura de Ar’Nan + 5 Fichas Infernales.',
           },
         ],
       },
     ],
     plan: {
-      fr: 'StratÃ©gie dÃ©taillÃ©e: Ã  venir.',
+      fr: 'Stratégie détaillée: à venir.',
       en: 'Detailed strategy: coming soon.',
-      es: 'Estrategia detallada: prÃ³ximamente.',
+      es: 'Estrategia detallada: próximamente.',
     },
     steles: {
       lead: {
-        fr: "StÃ¨le d'intervention Anathar: nÃ©cessite une Clef d'intervention d'Anathar.",
+        fr: "Stèle d'intervention Anathar: nécessite une Clef d'intervention d'Anathar.",
         en: 'Anathar intervention stele: requires an Anathar Intervention Key.',
-        es: 'Estela de intervenciÃ³n de Anathar: requiere una Llave de intervenciÃ³n de Anathar.',
+        es: 'Estela de intervención de Anathar: requiere una Llave de intervención de Anathar.',
       },
       notes: [
         {
-          fr: "Anathar marque un joueur, observe ses actions puis en rÃ©plique jusqu'Ã  4 au tour suivant.",
+          fr: "Anathar marque un joueur, observe ses actions puis en réplique jusqu'à 4 au tour suivant.",
           en: 'Anathar marks a player, observes actions, then replicates up to 4 on the next turn.',
           es: 'Anathar marca a un jugador, observa sus acciones y replica hasta 4 en el turno siguiente.',
         },
         {
-          fr: "Si moins de 4 actions sont observÃ©es, Infierno DemonÃ­aco s'active et devient plus dangereux.",
+          fr: "Si moins de 4 actions sont observées, Infierno Demoníaco s'active et devient plus dangereux.",
           en: 'If fewer than 4 actions are observed, Demonic Hellfire triggers and becomes more dangerous.',
-          es: 'Si observa menos de 4 acciones, se activa Infierno DemonÃ­aco y se vuelve mÃ¡s peligroso.',
+          es: 'Si observa menos de 4 acciones, se activa Infierno Demoníaco y se vuelve más peligroso.',
         },
         {
-          fr: 'Effet spÃ©cifique VidÃ©ants: Anathar obtient une Aura de NÃ©ant similaire au boss (alternance croix de 3 cases / 10 cases et +).',
+          fr: 'Effet spécifique Vidéants: Anathar obtient une Aura de Néant similaire au boss (alternance croix de 3 cases / 10 cases et +).',
           en: 'Videants specific effect: Anathar gains a Void Aura similar to boss behavior (alternating 3-cell cross / 10+ cells).',
-          es: 'Efecto especÃ­fico Vaciantes: Anathar obtiene un Aura de VacÃ­o similar al jefe (alterna cruz de 3 casillas / 10 casillas en adelante).',
+          es: 'Efecto específico Vaciantes: Anathar obtiene un Aura de Vacío similar al jefe (alterna cruz de 3 casillas / 10 casillas en adelante).',
         },
       ],
       protoBosses: [],
       crystals: {
         types: [
           {
-            fr: 'La table de rÃ©fÃ©rence Anathar (actions observÃ©es â†’ effets rÃ©pliquÃ©s) sâ€™applique aussi ici.',
-            en: 'The Anathar reference table (observed actions â†’ replicated effects) also applies here.',
-            es: 'La tabla de referencia de Anathar (acciones observadas â†’ efectos replicados) tambiÃ©n aplica aquÃ­.',
+            fr: 'La table de référence Anathar (actions observées → effets répliqués) s’applique aussi ici.',
+            en: 'The Anathar reference table (observed actions → replicated effects) also applies here.',
+            es: 'La tabla de referencia de Anathar (acciones observadas → efectos replicados) también aplica aquí.',
           },
         ],
         notes: [
           {
-            fr: 'RÃ©duire les actions diffÃ©rentes du joueur marquÃ© limite les rÃ©pliques dangereuses.',
+            fr: 'Réduire les actions différentes du joueur marqué limite les répliques dangereuses.',
             en: 'Reducing different actions on marked turns limits dangerous replications.',
             es: 'Reducir acciones diferentes en el turno marcado limita replicaciones peligrosas.',
           },
@@ -2683,9 +2683,9 @@ export const dungeonGuides = [
     drops: {
       notes: [
         {
-          fr: 'Drops du donjon et du boss: liens directs Ã  ajouter.',
+          fr: 'Drops du donjon et du boss: liens directs à ajouter.',
           en: 'Dungeon and boss drops: direct links to add.',
-          es: 'Drops de mazmorra y jefe: enlaces directos por aÃ±adir.',
+          es: 'Drops de mazmorra y jefe: enlaces directos por añadir.',
         },
       ],
       monsterDrops: [],
@@ -2693,9 +2693,9 @@ export const dungeonGuides = [
     },
     croupier: {
       location: {
-        fr: 'Section Ã  complÃ©ter.',
+        fr: 'Section à compléter.',
         en: 'Section to be completed.',
-        es: 'SecciÃ³n por completar.',
+        es: 'Sección por completar.',
       },
       items: [],
     },
@@ -2704,9 +2704,9 @@ export const dungeonGuides = [
     id: 'phytomorphes',
     name: { fr: 'Donjon Phytomorphes', en: 'Phytomorphes Dungeon', es: 'Mazmorra de los Fitoformes' },
     subtitle: {
-      fr: 'Boss: Vaalâ€™Enthia, Reine-dÃ©mone',
-      en: 'Boss: Vaalâ€™Enthia, Demon Queen',
-      es: 'Jefa: Vaalâ€™Enthia, Reina-demonio',
+      fr: 'Boss: Vaal’Enthia, Reine-démone',
+      en: 'Boss: Vaal’Enthia, Demon Queen',
+      es: 'Jefa: Vaal’Enthia, Reina-demonio',
     },
     levelRange: { fr: 'Niv. 216', en: 'Lvl. 216', es: 'Niv. 216' },
     summary: [
@@ -2716,19 +2716,19 @@ export const dungeonGuides = [
         es: 'Mazmorra para 6 jugadores, 2 salas y sin llave.',
       },
       {
-        fr: 'MÃ©canique centrale: gÃ©rer et transfÃ©rer correctement les Ã©tats Corruption.',
+        fr: 'Mécanique centrale: gérer et transférer correctement les états Corruption.',
         en: 'Core mechanic: correctly manage and transfer Corruption states.',
-        es: 'MecÃ¡nica central: gestionar y transferir correctamente los estados CorrupciÃ³n.',
+        es: 'Mecánica central: gestionar y transferir correctamente los estados Corrupción.',
       },
       {
-        fr: 'Les porteurs Incorruptibles ne peuvent Ãªtre endommagÃ©s que par des coups augmentÃ©s par la bonne Corruption.',
+        fr: 'Les porteurs Incorruptibles ne peuvent être endommagés que par des coups augmentés par la bonne Corruption.',
         en: 'Incorruptible targets can only be damaged by attacks boosted by the proper Corruption.',
-        es: 'Los portadores de Incorruptible solo reciben daÃ±o de golpes potenciados por la CorrupciÃ³n adecuada.',
+        es: 'Los portadores de Incorruptible solo reciben daño de golpes potenciados por la Corrupción adecuada.',
       },
       {
-        fr: 'Certaines informations (stratÃ©gie dÃ©taillÃ©e, drops et croupier) seront complÃ©tÃ©es ultÃ©rieurement.',
+        fr: 'Certaines informations (stratégie détaillée, drops et croupier) seront complétées ultérieurement.',
         en: 'Some details (detailed strategy, drops and croupier) will be completed later.',
-        es: 'Algunos detalles (estrategia detallada, drops y crupier) se completarÃ¡n mÃ¡s adelante.',
+        es: 'Algunos detalles (estrategia detallada, drops y crupier) se completarán más adelante.',
       },
     ],
     monsters: [
@@ -2741,17 +2741,17 @@ export const dungeonGuides = [
           es: 'Debilidad principal: Agua',
         },
         description: {
-          fr: 'DPS de dos avec transposition et pression en mÃªlÃ©e.',
+          fr: 'DPS de dos avec transposition et pression en mêlée.',
           en: 'Back-damage dealer with swap tools and melee pressure.',
-          es: 'DPS de espalda con transposiciÃ³n y presiÃ³n melee.',
+          es: 'DPS de espalda con transposición y presión melee.',
         },
         spells: [
           {
             name: { fr: 'Virescent Tinelle', en: 'Virescent Tinelle', es: 'Virescent Tinelle' },
             effect: {
-              fr: 'Monocible 2-4 PO en ligne sans ligne de vue, dÃ©gÃ¢ts air et Ã©change de position avec la cible.',
+              fr: 'Monocible 2-4 PO en ligne sans ligne de vue, dégâts air et échange de position avec la cible.',
               en: 'Single-target 2-4 in-line without line of sight, air damage and swaps position with target.',
-              es: 'Monobjetivo 2-4 en lÃ­nea sin lÃ­nea de visiÃ³n, daÃ±o aire e intercambio de posiciÃ³n con el objetivo.',
+              es: 'Monobjetivo 2-4 en línea sin línea de visión, daño aire e intercambio de posición con el objetivo.',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             limit: { fr: '1/tour', en: '1/turn', es: '1/turno' },
@@ -2759,22 +2759,22 @@ export const dungeonGuides = [
           {
             name: { fr: 'Inassou Virescent', en: 'Inassou Virescent', es: 'Inassou Virescent' },
             effect: {
-              fr: 'Monocible 1-2 PO en ligne sans ligne de vue, dÃ©gÃ¢ts eau trÃ¨s Ã©levÃ©s sur une cible de dos.',
+              fr: 'Monocible 1-2 PO en ligne sans ligne de vue, dégâts eau très élevés sur une cible de dos.',
               en: 'Single-target 1-2 in-line without line of sight, water damage, very high when hitting from back.',
-              es: 'Monobjetivo 1-2 en lÃ­nea sin lÃ­nea de visiÃ³n, daÃ±o agua muy alto sobre objetivo de espalda.',
+              es: 'Monobjetivo 1-2 en línea sin línea de visión, daño agua muy alto sobre objetivo de espalda.',
             },
             cost: { fr: '3 PA', en: '3 AP', es: '3 PA' },
             limit: { fr: '1/cible, 2/tour', en: '1/target, 2/turn', es: '1/objetivo, 2/turno' },
           },
         ],
         passive: {
-          fr: 'Corruption â€“ Virescent: +40% dommages de dos, -500 Esquive. Sous 50% PV ou KO, transfert de lâ€™Ã©tat Ã  lâ€™attaquant. Si volÃ©: +250 rÃ©sistances (2 tours).',
-          en: 'Corruption â€“ Virescent: +40% back damage, -500 Dodge. Under 50% HP or KO, transfers state to attacker. If stolen: +250 resistances (2 turns).',
-          es: 'CorrupciÃ³n â€“ Virescente: +40% daÃ±os por espalda, -500 Esquiva. Bajo 50% PV o KO, transfiere el estado al atacante. Si se roba: +250 resistencias (2 turnos).',
+          fr: 'Corruption – Virescent: +40% dommages de dos, -500 Esquive. Sous 50% PV ou KO, transfert de l’état à l’attaquant. Si volé: +250 résistances (2 tours).',
+          en: 'Corruption – Virescent: +40% back damage, -500 Dodge. Under 50% HP or KO, transfers state to attacker. If stolen: +250 resistances (2 turns).',
+          es: 'Corrupción – Virescente: +40% daños por espalda, -500 Esquiva. Bajo 50% PV o KO, transfiere el estado al atacante. Si se roba: +250 resistencias (2 turnos).',
         },
         notes: [],
         stats: [
-          { fr: 'RÃ´le: exÃ©cution de dos', en: 'Role: back execution', es: 'Rol: ejecuciÃ³n de espalda' },
+          { fr: 'Rôle: exécution de dos', en: 'Role: back execution', es: 'Rol: ejecución de espalda' },
         ],
       },
       {
@@ -2786,7 +2786,7 @@ export const dungeonGuides = [
           es: 'Debilidad principal: Tierra',
         },
         description: {
-          fr: 'Sniper distance avec poussÃ©e extrÃªme.',
+          fr: 'Sniper distance avec poussée extrême.',
           en: 'Long-range sniper with extreme push control.',
           es: 'Sniper a distancia con empuje extremo.',
         },
@@ -2794,9 +2794,9 @@ export const dungeonGuides = [
           {
             name: { fr: 'Bolet Titia', en: 'Bolet Titia', es: 'Bolet Titia' },
             effect: {
-              fr: 'Monocible 1 PO, dÃ©gÃ¢ts air et pousse de 10 cases.',
+              fr: 'Monocible 1 PO, dégâts air et pousse de 10 cases.',
               en: 'Single-target 1 range, air damage and pushes 10 cells.',
-              es: 'Monobjetivo 1 alcance, daÃ±o aire y empuja 10 casillas.',
+              es: 'Monobjetivo 1 alcance, daño aire y empuja 10 casillas.',
             },
             cost: { fr: '5 PA', en: '5 AP', es: '5 PA' },
             limit: { fr: '1/cible, 2/tour', en: '1/target, 2/turn', es: '1/objetivo, 2/turno' },
@@ -2804,26 +2804,26 @@ export const dungeonGuides = [
           {
             name: { fr: 'Fongus Tave', en: 'Fongus Tave', es: 'Fongus Tave' },
             effect: {
-              fr: 'Monocible 3-7 PO modifiable, lourds dÃ©gÃ¢ts air.',
+              fr: 'Monocible 3-7 PO modifiable, lourds dégâts air.',
               en: 'Single-target 3-7 modifiable range, heavy air damage.',
-              es: 'Monobjetivo 3-7 alcance modificable, daÃ±o aire alto.',
+              es: 'Monobjetivo 3-7 alcance modificable, daño aire alto.',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             limit: { fr: '1/cible, 3/tour', en: '1/target, 3/turn', es: '1/objetivo, 3/turno' },
           },
         ],
         passive: {
-          fr: 'Corruption â€“ Champidiable: +40% dommages Ã  distance, -3 PM max. Sous 50% PV ou KO, transfert de lâ€™Ã©tat Ã  lâ€™attaquant. Si volÃ©: +250 rÃ©sistances (2 tours).',
-          en: 'Corruption â€“ Champidiable: +40% ranged damage, -3 max MP. Under 50% HP or KO, transfers state to attacker. If stolen: +250 resistances (2 turns).',
-          es: 'CorrupciÃ³n â€“ Champidiable: +40% daÃ±os a distancia, -3 PM mÃ¡ximos. Bajo 50% PV o KO, transfiere el estado al atacante. Si se roba: +250 resistencias (2 turnos).',
+          fr: 'Corruption – Champidiable: +40% dommages à distance, -3 PM max. Sous 50% PV ou KO, transfert de l’état à l’attaquant. Si volé: +250 résistances (2 tours).',
+          en: 'Corruption – Champidiable: +40% ranged damage, -3 max MP. Under 50% HP or KO, transfers state to attacker. If stolen: +250 resistances (2 turns).',
+          es: 'Corrupción – Champidiable: +40% daños a distancia, -3 PM máximos. Bajo 50% PV o KO, transfiere el estado al atacante. Si se roba: +250 resistencias (2 turnos).',
         },
         notes: [],
         stats: [
-          { fr: 'RÃ´le: burst distance', en: 'Role: ranged burst', es: 'Rol: burst a distancia' },
+          { fr: 'Rôle: burst distance', en: 'Role: ranged burst', es: 'Rol: burst a distancia' },
         ],
       },
       {
-        name: { fr: 'MÃ©risthaine', en: 'Meristhaine', es: 'MÃ©risthaine' },
+        name: { fr: 'Méristhaine', en: 'Meristhaine', es: 'Méristhaine' },
         level: { fr: 'Niv. 216', en: 'Lvl. 216', es: 'Niv. 216' },
         bonus: {
           fr: 'Faiblesse principale: Eau',
@@ -2831,17 +2831,17 @@ export const dungeonGuides = [
           es: 'Debilidad principal: Agua',
         },
         description: {
-          fr: 'ContrÃ´le PM en mÃªlÃ©e et mi-distance.',
+          fr: 'Contrôle PM en mêlée et mi-distance.',
           en: 'MP control unit in melee and mid-range.',
           es: 'Unidad de control de PM en melee y media distancia.',
         },
         spells: [
           {
-            name: { fr: 'Regard mÃ©chant', en: 'Mean Stare', es: 'Mirada malvada' },
+            name: { fr: 'Regard méchant', en: 'Mean Stare', es: 'Mirada malvada' },
             effect: {
-              fr: 'Monocible 1-8 PO modifiable en ligne, dÃ©gÃ¢ts air et vole 4 PM.',
+              fr: 'Monocible 1-8 PO modifiable en ligne, dégâts air et vole 4 PM.',
               en: 'Single-target 1-8 modifiable in-line range, air damage and steals 4 MP.',
-              es: 'Monobjetivo 1-8 alcance modificable en lÃ­nea, daÃ±o aire y roba 4 PM.',
+              es: 'Monobjetivo 1-8 alcance modificable en línea, daño aire y roba 4 PM.',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             limit: { fr: '1/tour', en: '1/turn', es: '1/turno' },
@@ -2849,44 +2849,44 @@ export const dungeonGuides = [
           {
             name: { fr: 'Coup de corne', en: 'Horn Strike', es: 'Golpe de cuerno' },
             effect: {
-              fr: 'Monocible 1-3 PO modifiable, dÃ©gÃ¢ts terre et retire 4 PM.',
+              fr: 'Monocible 1-3 PO modifiable, dégâts terre et retire 4 PM.',
               en: 'Single-target 1-3 modifiable range, earth damage and removes 4 MP.',
-              es: 'Monobjetivo 1-3 alcance modificable, daÃ±o tierra y retira 4 PM.',
+              es: 'Monobjetivo 1-3 alcance modificable, daño tierra y retira 4 PM.',
             },
             cost: { fr: '6 PA', en: '6 AP', es: '6 PA' },
             limit: { fr: '1/cible, 2/tour', en: '1/target, 2/turn', es: '1/objetivo, 2/turno' },
           },
         ],
         passive: {
-          fr: 'Corruption â€“ MÃ©risthaine: +40% dommages mÃªlÃ©e, -60 VolontÃ©. Sous 50% PV ou KO, transfert de lâ€™Ã©tat Ã  lâ€™attaquant. Si volÃ©: +250 rÃ©sistances (2 tours).',
-          en: 'Corruption â€“ Meristhaine: +40% melee damage, -60 Willpower. Under 50% HP or KO, transfers state to attacker. If stolen: +250 resistances (2 turns).',
-          es: 'CorrupciÃ³n â€“ MÃ©risthaine: +40% daÃ±os cuerpo a cuerpo, -60 Voluntad. Bajo 50% PV o KO, transfiere el estado al atacante. Si se roba: +250 resistencias (2 turnos).',
+          fr: 'Corruption – Méristhaine: +40% dommages mêlée, -60 Volonté. Sous 50% PV ou KO, transfert de l’état à l’attaquant. Si volé: +250 résistances (2 tours).',
+          en: 'Corruption – Meristhaine: +40% melee damage, -60 Willpower. Under 50% HP or KO, transfers state to attacker. If stolen: +250 resistances (2 turns).',
+          es: 'Corrupción – Méristhaine: +40% daños cuerpo a cuerpo, -60 Voluntad. Bajo 50% PV o KO, transfiere el estado al atacante. Si se roba: +250 resistencias (2 turnos).',
         },
         notes: [],
         stats: [
-          { fr: 'RÃ´le: drain PM', en: 'Role: MP drain', es: 'Rol: drenaje de PM' },
+          { fr: 'Rôle: drain PM', en: 'Role: MP drain', es: 'Rol: drenaje de PM' },
         ],
       },
       {
-        name: { fr: 'Vaalâ€™Enthia, Reine-dÃ©mone (Boss)', en: 'Vaalâ€™Enthia, Demon Queen (Boss)', es: 'Vaalâ€™Enthia, Reina-demonio (Jefa)' },
+        name: { fr: 'Vaal’Enthia, Reine-démone (Boss)', en: 'Vaal’Enthia, Demon Queen (Boss)', es: 'Vaal’Enthia, Reina-demonio (Jefa)' },
         level: { fr: 'Boss', en: 'Boss', es: 'Jefa' },
         bonus: {
-          fr: 'Ã‰tat Incorruptible',
+          fr: 'État Incorruptible',
           en: 'Incorruptible state',
           es: 'Estado Incorruptible',
         },
         description: {
-          fr: 'Boss qui punit la mauvaise gestion des corruptions et exÃ©cute toute lâ€™Ã©quipe si elle obtient toutes les corruptions.',
+          fr: 'Boss qui punit la mauvaise gestion des corruptions et exécute toute l’équipe si elle obtient toutes les corruptions.',
           en: 'Boss punishing poor corruption management and wipes the team if all corruption states are gathered.',
-          es: 'Jefa que castiga mala gestiÃ³n de corrupciones y elimina al grupo si reÃºne todas las corrupciones.',
+          es: 'Jefa que castiga mala gestión de corrupciones y elimina al grupo si reúne todas las corrupciones.',
         },
         spells: [
           {
-            name: { fr: 'DÃ©esse poire', en: 'Pear Goddess', es: 'Diosa pera' },
+            name: { fr: 'Déesse poire', en: 'Pear Goddess', es: 'Diosa pera' },
             effect: {
-              fr: 'Monocible, toute la carte sans ligne de vue, dÃ©gÃ¢ts feu. LancÃ© au maximum avant le premier dÃ©placement du tour.',
+              fr: 'Monocible, toute la carte sans ligne de vue, dégâts feu. Lancé au maximum avant le premier déplacement du tour.',
               en: 'Single-target map-wide without line of sight, fire damage. Cast as many times as possible before first movement.',
-              es: 'Monobjetivo, todo el mapa sin lÃ­nea de visiÃ³n, daÃ±o fuego. Lo lanza el mÃ¡ximo de veces antes de su primer desplazamiento.',
+              es: 'Monobjetivo, todo el mapa sin línea de visión, daño fuego. Lo lanza el máximo de veces antes de su primer desplazamiento.',
             },
             cost: { fr: '4 PA', en: '4 AP', es: '4 PA' },
             limit: { fr: '1/cible, 3/tour', en: '1/target, 3/turn', es: '1/objetivo, 3/turno' },
@@ -2894,49 +2894,49 @@ export const dungeonGuides = [
           {
             name: { fr: 'Vaal Ancienne', en: 'Ancient Vaal', es: 'Vaal Antigua' },
             effect: {
-              fr: 'Monocible 1 PO, dÃ©gÃ¢ts eau, retire 100 RÃ©sistance Ã‰lÃ©mentaire (3 tours, cumulable) et 3 PA.',
+              fr: 'Monocible 1 PO, dégâts eau, retire 100 Résistance Élémentaire (3 tours, cumulable) et 3 PA.',
               en: 'Single-target 1 range, water damage, removes 100 Elemental Resistance (3 turns, stackable) and 3 AP.',
-              es: 'Monobjetivo 1 alcance, daÃ±o agua, retira 100 Resistencia Elemental (3 turnos, acumulable) y 3 PA.',
+              es: 'Monobjetivo 1 alcance, daño agua, retira 100 Resistencia Elemental (3 turnos, acumulable) y 3 PA.',
             },
             cost: { fr: '1 PA', en: '1 AP', es: '1 PA' },
             limit: { fr: '1/cible, 3/tour', en: '1/target, 3/turn', es: '1/objetivo, 3/turno' },
           },
           {
-            name: { fr: 'DÃ©sintÃ©gration', en: 'Disintegration', es: 'DesintegraciÃ³n' },
+            name: { fr: 'Désintégration', en: 'Disintegration', es: 'Desintegración' },
             effect: {
-              fr: 'Zone toute la carte, met hors-combat tous les ennemis. LancÃ© automatiquement si elle possÃ¨de tous les Ã©tats Corruption en jeu.',
+              fr: 'Zone toute la carte, met hors-combat tous les ennemis. Lancé automatiquement si elle possède tous les états Corruption en jeu.',
               en: 'Map-wide AoE, knocks all enemies out. Cast automatically if she has all Corruption states in play.',
-              es: 'Ãrea en todo el mapa, deja fuera de combate a todos los enemigos. Se lanza automÃ¡ticamente si posee todos los estados CorrupciÃ³n en juego.',
+              es: 'Área en todo el mapa, deja fuera de combate a todos los enemigos. Se lanza automáticamente si posee todos los estados Corrupción en juego.',
             },
             cost: { fr: '0 PA', en: '0 AP', es: '0 PA' },
           },
         ],
         passive: {
-          fr: 'Reine-dÃ©mone du dÃ©sespoir: tours pairs/impairs renforcent DÃ©esse poire selon visibilitÃ©. Gagne Ultime Ressort par alliÃ© tuÃ© et invoque des rochers (1 PV) en fin de tour. Incorruptible: vulnÃ©rable uniquement aux dommages augmentÃ©s par une corruption.',
+          fr: 'Reine-démone du désespoir: tours pairs/impairs renforcent Déesse poire selon visibilité. Gagne Ultime Ressort par allié tué et invoque des rochers (1 PV) en fin de tour. Incorruptible: vulnérable uniquement aux dommages augmentés par une corruption.',
           en: 'Demon Queen of Despair: even/odd turns amplify Pear Goddess based on visibility. Gains Ultimate Spring per ally killed and summons 1 HP rocks at end of turn. Incorruptible: vulnerable only to damage boosted by a corruption.',
-          es: 'Reina-demonio de la desesperaciÃ³n: turnos pares/impares potencian Diosa pera segÃºn visibilidad. Gana Ãšltimo Resorte por aliado muerto e invoca rocas de 1 PV al final del turno. Incorruptible: vulnerable solo a daÃ±os aumentados por una corrupciÃ³n.',
+          es: 'Reina-demonio de la desesperación: turnos pares/impares potencian Diosa pera según visibilidad. Gana Último Resorte por aliado muerto e invoca rocas de 1 PV al final del turno. Incorruptible: vulnerable solo a daños aumentados por una corrupción.',
         },
         notes: [],
         stats: [
-          { fr: 'RÃ´le: boss de check mÃ©canique', en: 'Role: mechanic-check boss', es: 'Rol: jefa de chequeo mecÃ¡nico' },
+          { fr: 'Rôle: boss de check mécanique', en: 'Role: mechanic-check boss', es: 'Rol: jefa de chequeo mecánico' },
         ],
       },
     ],
     boss: {
-      name: { fr: 'Vaalâ€™Enthia, Reine-dÃ©mone', en: 'Vaalâ€™Enthia, Demon Queen', es: 'Vaalâ€™Enthia, Reina-demonio' },
+      name: { fr: 'Vaal’Enthia, Reine-démone', en: 'Vaal’Enthia, Demon Queen', es: 'Vaal’Enthia, Reina-demonio' },
       level: { fr: 'Niv. 216+', en: 'Lvl. 216+', es: 'Niv. 216+' },
       description: {
-        fr: 'Boss axÃ© sur Incorruptible et le transfert des Corruptions. Mauvaise gestion = wipe via DÃ©sintÃ©gration.',
+        fr: 'Boss axé sur Incorruptible et le transfert des Corruptions. Mauvaise gestion = wipe via Désintégration.',
         en: 'Boss focused on Incorruptible and Corruption transfer. Poor management leads to a wipe through Disintegration.',
-        es: 'Jefa centrada en Incorruptible y transferencia de Corrupciones. Mala gestiÃ³n = wipe por DesintegraciÃ³n.',
+        es: 'Jefa centrada en Incorruptible y transferencia de Corrupciones. Mala gestión = wipe por Desintegración.',
       },
       spells: [
         {
-          name: { fr: 'DÃ©sintÃ©gration', en: 'Disintegration', es: 'DesintegraciÃ³n' },
+          name: { fr: 'Désintégration', en: 'Disintegration', es: 'Desintegración' },
           effect: {
-            fr: 'ExÃ©cute tous les ennemis si Vaalâ€™Enthia cumule toutes les Corruptions.',
-            en: 'Executes all enemies if Vaalâ€™Enthia gathers all Corruption states.',
-            es: 'Ejecuta a todos los enemigos si Vaalâ€™Enthia acumula todas las Corrupciones.',
+            fr: 'Exécute tous les ennemis si Vaal’Enthia cumule toutes les Corruptions.',
+            en: 'Executes all enemies if Vaal’Enthia gathers all Corruption states.',
+            es: 'Ejecuta a todos los enemigos si Vaal’Enthia acumula todas las Corrupciones.',
           },
           cost: { fr: '0 PA', en: '0 AP', es: '0 PA' },
         },
@@ -2945,15 +2945,15 @@ export const dungeonGuides = [
         {
           name: { fr: 'Incorruptible', en: 'Incorruptible', es: 'Incorruptible' },
           effect: {
-            fr: 'Ne subit que les dommages augmentÃ©s par une corruption adaptÃ©e.',
+            fr: 'Ne subit que les dommages augmentés par une corruption adaptée.',
             en: 'Only takes damage increased by a matching corruption.',
-            es: 'Solo recibe daÃ±o aumentado por una corrupciÃ³n adecuada.',
+            es: 'Solo recibe daño aumentado por una corrupción adecuada.',
           },
           notes: [],
         },
       ],
       stats: [
-        { fr: 'RÃ´le: boss de punition', en: 'Role: punishment boss', es: 'Rol: jefa de castigo' },
+        { fr: 'Rôle: boss de punition', en: 'Role: punishment boss', es: 'Rol: jefa de castigo' },
       ],
     },
     mechanics: [
@@ -2961,14 +2961,14 @@ export const dungeonGuides = [
         title: { fr: 'Corruptions et transferts', en: 'Corruptions and transfers', es: 'Corrupciones y transferencias' },
         paragraphs: [
           {
-            fr: 'Sous 50% PV ou KO, les Ã©tats Corruption sont transfÃ©rÃ©s Ã  lâ€™attaquant.',
+            fr: 'Sous 50% PV ou KO, les états Corruption sont transférés à l’attaquant.',
             en: 'Under 50% HP or on KO, Corruption states transfer to the attacker.',
-            es: 'Bajo 50% PV o al KO, los estados CorrupciÃ³n se transfieren al atacante.',
+            es: 'Bajo 50% PV o al KO, los estados Corrupción se transfieren al atacante.',
           },
           {
-            fr: 'Attaquer avec le bon angle/type (dos, distance, mÃªlÃ©e) est vital pour exploiter Incorruptible.',
+            fr: 'Attaquer avec le bon angle/type (dos, distance, mêlée) est vital pour exploiter Incorruptible.',
             en: 'Attacking with the correct angle/type (back, ranged, melee) is vital to exploit Incorruptible.',
-            es: 'Atacar con el Ã¡ngulo/tipo correcto (espalda, distancia, melee) es vital para explotar Incorruptible.',
+            es: 'Atacar con el ángulo/tipo correcto (espalda, distancia, melee) es vital para explotar Incorruptible.',
           },
         ],
       },
@@ -2976,75 +2976,75 @@ export const dungeonGuides = [
         title: { fr: 'Incorruptible en donjon', en: 'Incorruptible in dungeon', es: 'Incorruptible en mazmorra' },
         paragraphs: [
           {
-            fr: 'Au dÃ©but du combat, 3 Phytomorphes reÃ§oivent alÃ©atoirement Incorruptible (permanent).',
+            fr: 'Au début du combat, 3 Phytomorphes reçoivent aléatoirement Incorruptible (permanent).',
             en: 'At combat start, 3 Phytomorphes randomly receive permanent Incorruptible.',
             es: 'Al inicio del combate, 3 Fitoformes reciben aleatoriamente Incorruptible permanente.',
           },
           {
-            fr: 'Exemple: une corruption dos+mÃªlÃ©e permet de frapper en mÃªlÃ©e ou de dos, mais pas Ã  distance pure.',
+            fr: 'Exemple: une corruption dos+mêlée permet de frapper en mêlée ou de dos, mais pas à distance pure.',
             en: 'Example: a back+melee corruption allows melee or back hits, but not pure ranged hits.',
-            es: 'Ejemplo: una corrupciÃ³n espalda+melee permite pegar en melee o por espalda, pero no a distancia pura.',
+            es: 'Ejemplo: una corrupción espalda+melee permite pegar en melee o por espalda, pero no a distancia pura.',
           },
         ],
       },
       {
-        title: { fr: 'Composition et exploits', en: 'Composition and achievements', es: 'ComposiciÃ³n y logros' },
+        title: { fr: 'Composition et exploits', en: 'Composition and achievements', es: 'Composición y logros' },
         paragraphs: [
           {
-            fr: 'Salle 1: 3x Phytomorphe, 3x Phytomorphe, 2x Phytomorphe. Salle boss: 1x Vaalâ€™Enthia + 3x Phytomorphe + 2x Phytomorphe + 2x Phytomorphe.',
-            en: 'Room 1: 3x Phytomorphe, 3x Phytomorphe, 2x Phytomorphe. Boss room: 1x Vaalâ€™Enthia + 3x Phytomorphe + 2x Phytomorphe + 2x Phytomorphe.',
-            es: 'Sala 1: 3x Fitoforme, 3x Fitoforme, 2x Fitoforme. Sala de jefa: 1x Vaalâ€™Enthia + 3x Fitoforme + 2x Fitoforme + 2x Fitoforme.',
+            fr: 'Salle 1: 3x Phytomorphe, 3x Phytomorphe, 2x Phytomorphe. Salle boss: 1x Vaal’Enthia + 3x Phytomorphe + 2x Phytomorphe + 2x Phytomorphe.',
+            en: 'Room 1: 3x Phytomorphe, 3x Phytomorphe, 2x Phytomorphe. Boss room: 1x Vaal’Enthia + 3x Phytomorphe + 2x Phytomorphe + 2x Phytomorphe.',
+            es: 'Sala 1: 3x Fitoforme, 3x Fitoforme, 2x Fitoforme. Sala de jefa: 1x Vaal’Enthia + 3x Fitoforme + 2x Fitoforme + 2x Fitoforme.',
           },
           {
-            fr: 'Exploits: I (terminer), II (boss en premier), III (boss en dernier), Final (I+II+III) avec Miniature de Vaalâ€™Enthia + 5 Jetons Infernaux.',
-            en: 'Achievements: I (clear), II (boss first), III (boss last), Final (I+II+III) with Vaalâ€™Enthia Miniature + 5 Infernal Tokens.',
-            es: 'Logros: I (terminar), II (jefa primero), III (jefa al final), Final (I+II+III) con Miniatura de Vaalâ€™Enthia + 5 Fichas Infernales.',
+            fr: 'Exploits: I (terminer), II (boss en premier), III (boss en dernier), Final (I+II+III) avec Miniature de Vaal’Enthia + 5 Jetons Infernaux.',
+            en: 'Achievements: I (clear), II (boss first), III (boss last), Final (I+II+III) with Vaal’Enthia Miniature + 5 Infernal Tokens.',
+            es: 'Logros: I (terminar), II (jefa primero), III (jefa al final), Final (I+II+III) con Miniatura de Vaal’Enthia + 5 Fichas Infernales.',
           },
         ],
       },
     ],
     plan: {
-      fr: 'StratÃ©gie dÃ©taillÃ©e: Ã  venir.',
+      fr: 'Stratégie détaillée: à venir.',
       en: 'Detailed strategy: coming soon.',
-      es: 'Estrategia detallada: prÃ³ximamente.',
+      es: 'Estrategia detallada: próximamente.',
     },
     steles: {
       lead: {
-        fr: "StÃ¨le d'intervention Anathar: nÃ©cessite une Clef d'intervention d'Anathar.",
+        fr: "Stèle d'intervention Anathar: nécessite une Clef d'intervention d'Anathar.",
         en: 'Anathar intervention stele: requires an Anathar Intervention Key.',
-        es: 'Estela de intervenciÃ³n de Anathar: requiere una Llave de intervenciÃ³n de Anathar.',
+        es: 'Estela de intervención de Anathar: requiere una Llave de intervención de Anathar.',
       },
       notes: [
         {
-          fr: "Anathar observe et rÃ©plique jusqu'Ã  4 actions du joueur marquÃ© au tour suivant.",
+          fr: "Anathar observe et réplique jusqu'à 4 actions du joueur marqué au tour suivant.",
           en: 'Anathar observes and replicates up to 4 actions from the marked player on next turn.',
           es: 'Anathar observa y replica hasta 4 acciones del jugador marcado en el siguiente turno.',
         },
         {
-          fr: "Effet spÃ©cifique Phytomorphes: Anathar obtient l'Ã©tat Incorruptible, comme Vaalâ€™Enthia.",
-          en: 'Phytomorphes specific effect: Anathar gains Incorruptible, like Vaalâ€™Enthia.',
-          es: 'Efecto especÃ­fico Fitoformes: Anathar obtiene el estado Incorruptible, como Vaalâ€™Enthia.',
+          fr: "Effet spécifique Phytomorphes: Anathar obtient l'état Incorruptible, comme Vaal’Enthia.",
+          en: 'Phytomorphes specific effect: Anathar gains Incorruptible, like Vaal’Enthia.',
+          es: 'Efecto específico Fitoformes: Anathar obtiene el estado Incorruptible, como Vaal’Enthia.',
         },
         {
-          fr: 'La table de rÃ©fÃ©rence Anathar (actions observÃ©es â†’ effets rÃ©pliquÃ©s) sâ€™applique ici.',
-          en: 'The Anathar reference table (observed actions â†’ replicated effects) applies here.',
-          es: 'La tabla de referencia de Anathar (acciones observadas â†’ efectos replicados) aplica aquÃ­.',
+          fr: 'La table de référence Anathar (actions observées → effets répliqués) s’applique ici.',
+          en: 'The Anathar reference table (observed actions → replicated effects) applies here.',
+          es: 'La tabla de referencia de Anathar (acciones observadas → efectos replicados) aplica aquí.',
         },
       ],
       protoBosses: [],
       crystals: {
         types: [
           {
-            fr: 'Objectif: limiter les actions diffÃ©rentes du joueur marquÃ© pour contrÃ´ler la rÃ©plication.',
+            fr: 'Objectif: limiter les actions différentes du joueur marqué pour contrôler la réplication.',
             en: 'Objective: limit different action types on the marked player turn to control replication.',
-            es: 'Objetivo: limitar acciones diferentes en el turno marcado para controlar la replicaciÃ³n.',
+            es: 'Objetivo: limitar acciones diferentes en el turno marcado para controlar la replicación.',
           },
         ],
         notes: [
           {
-            fr: 'â€œCombattantsâ€ inclut joueurs, monstres et boss.',
-            en: 'â€œCombatantsâ€ includes players, monsters and boss units.',
-            es: 'â€œCombatientesâ€ incluye jugadores, monstruos y jefa.',
+            fr: '“Combattants” inclut joueurs, monstres et boss.',
+            en: '“Combatants” includes players, monsters and boss units.',
+            es: '“Combatientes” incluye jugadores, monstruos y jefa.',
           },
         ],
         stats: [],
@@ -3053,9 +3053,9 @@ export const dungeonGuides = [
     drops: {
       notes: [
         {
-          fr: 'Drops du donjon et du boss: liens directs Ã  ajouter.',
+          fr: 'Drops du donjon et du boss: liens directs à ajouter.',
           en: 'Dungeon and boss drops: direct links to add.',
-          es: 'Drops de mazmorra y jefa: enlaces directos por aÃ±adir.',
+          es: 'Drops de mazmorra y jefa: enlaces directos por añadir.',
         },
       ],
       monsterDrops: [],
@@ -3063,9 +3063,541 @@ export const dungeonGuides = [
     },
     croupier: {
       location: {
-        fr: 'Section Ã  complÃ©ter.',
+        fr: 'Section à compléter.',
         en: 'Section to be completed.',
-        es: 'SecciÃ³n por completar.',
+        es: 'Sección por completar.',
+      },
+      items: [],
+    },
+  },
+  {
+    id: 'ferociraptor',
+    name: { fr: 'Donjon Ferociraptor', en: 'Ferociraptor Dungeon', es: 'Mazmorra Ferociraptor' },
+    subtitle: { fr: 'Boss: En cours', en: 'Boss: In progress', es: 'Jefe: En proceso' },
+    levelRange: { fr: 'Niv. 231-245', en: 'Lvl. 231-245', es: 'Niv. 231-245' },
+    summary: [
+      {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+    ],
+    monsters: [],
+    boss: {
+      name: { fr: 'À confirmer', en: 'To be confirmed', es: 'Por confirmar' },
+      level: { fr: 'Niv. 231-245', en: 'Lvl. 231-245', es: 'Niv. 231-245' },
+      description: {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+      spells: [],
+      passives: [],
+      stats: [],
+    },
+    mechanics: [
+      {
+        title: { fr: 'Mécaniques', en: 'Mechanics', es: 'Mecánicas' },
+        paragraphs: [
+          {
+            fr: 'Guide en cours de rédaction.',
+            en: 'Guide in progress.',
+            es: 'Guía en proceso.',
+          },
+        ],
+      },
+    ],
+    plan: {
+      fr: 'Stratégie détaillée: à venir.',
+      en: 'Detailed strategy: coming soon.',
+      es: 'Estrategia detallada: próximamente.',
+    },
+    steles: {
+      lead: {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+      notes: [],
+      protoBosses: [],
+      crystals: {
+        types: [],
+        notes: [],
+        stats: [],
+      },
+    },
+    drops: {
+      notes: [
+        {
+          fr: 'Guide en cours de rédaction.',
+          en: 'Guide in progress.',
+          es: 'Guía en proceso.',
+        },
+      ],
+      monsterDrops: [],
+      bossDrops: [],
+    },
+    croupier: {
+      location: {
+        fr: 'Section à compléter.',
+        en: 'Section to be completed.',
+        es: 'Sección por completar.',
+      },
+      items: [],
+    },
+  },
+  {
+    id: 'primount',
+    name: { fr: 'Donjon Primount', en: 'Primount Dungeon', es: 'Mazmorra Primacizos' },
+    subtitle: { fr: 'Boss: En cours', en: 'Boss: In progress', es: 'Jefe: En proceso' },
+    levelRange: { fr: 'Niv. 231-245', en: 'Lvl. 231-245', es: 'Niv. 231-245' },
+    summary: [
+      {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+    ],
+    monsters: [],
+    boss: {
+      name: { fr: 'À confirmer', en: 'To be confirmed', es: 'Por confirmar' },
+      level: { fr: 'Niv. 231-245', en: 'Lvl. 231-245', es: 'Niv. 231-245' },
+      description: {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+      spells: [],
+      passives: [],
+      stats: [],
+    },
+    mechanics: [
+      {
+        title: { fr: 'Mécaniques', en: 'Mechanics', es: 'Mecánicas' },
+        paragraphs: [
+          {
+            fr: 'Guide en cours de rédaction.',
+            en: 'Guide in progress.',
+            es: 'Guía en proceso.',
+          },
+        ],
+      },
+    ],
+    plan: {
+      fr: 'Stratégie détaillée: à venir.',
+      en: 'Detailed strategy: coming soon.',
+      es: 'Estrategia detallada: próximamente.',
+    },
+    steles: {
+      lead: {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+      notes: [],
+      protoBosses: [],
+      crystals: {
+        types: [],
+        notes: [],
+        stats: [],
+      },
+    },
+    drops: {
+      notes: [
+        {
+          fr: 'Guide en cours de rédaction.',
+          en: 'Guide in progress.',
+          es: 'Guía en proceso.',
+        },
+      ],
+      monsterDrops: [],
+      bossDrops: [],
+    },
+    croupier: {
+      location: {
+        fr: 'Section à compléter.',
+        en: 'Section to be completed.',
+        es: 'Sección por completar.',
+      },
+      items: [],
+    },
+  },
+  {
+    id: 'starvannah',
+    name: { fr: 'Donjon Starvannah', en: 'Starvannah Dungeon', es: 'Mazmorra Sabanastrales' },
+    subtitle: { fr: 'Boss: En cours', en: 'Boss: In progress', es: 'Jefe: En proceso' },
+    levelRange: { fr: 'Niv. 231-245', en: 'Lvl. 231-245', es: 'Niv. 231-245' },
+    summary: [
+      {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+    ],
+    monsters: [],
+    boss: {
+      name: { fr: 'À confirmer', en: 'To be confirmed', es: 'Por confirmar' },
+      level: { fr: 'Niv. 231-245', en: 'Lvl. 231-245', es: 'Niv. 231-245' },
+      description: {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+      spells: [],
+      passives: [],
+      stats: [],
+    },
+    mechanics: [
+      {
+        title: { fr: 'Mécaniques', en: 'Mechanics', es: 'Mecánicas' },
+        paragraphs: [
+          {
+            fr: 'Guide en cours de rédaction.',
+            en: 'Guide in progress.',
+            es: 'Guía en proceso.',
+          },
+        ],
+      },
+    ],
+    plan: {
+      fr: 'Stratégie détaillée: à venir.',
+      en: 'Detailed strategy: coming soon.',
+      es: 'Estrategia detallada: próximamente.',
+    },
+    steles: {
+      lead: {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+      notes: [],
+      protoBosses: [],
+      crystals: {
+        types: [],
+        notes: [],
+        stats: [],
+      },
+    },
+    drops: {
+      notes: [
+        {
+          fr: 'Guide en cours de rédaction.',
+          en: 'Guide in progress.',
+          es: 'Guía en proceso.',
+        },
+      ],
+      monsterDrops: [],
+      bossDrops: [],
+    },
+    croupier: {
+      location: {
+        fr: 'Section à compléter.',
+        en: 'Section to be completed.',
+        es: 'Sección por completar.',
+      },
+      items: [],
+    },
+  },
+  {
+    id: 'bworkana-clan',
+    name: { fr: 'Donjon Clan Bworkana', en: 'Bworkana Clan Dungeon', es: 'Mazmorra Clan Bworkana' },
+    subtitle: { fr: 'Boss: En cours', en: 'Boss: In progress', es: 'Jefe: En proceso' },
+    levelRange: { fr: 'Niv. 231-245', en: 'Lvl. 231-245', es: 'Niv. 231-245' },
+    summary: [
+      {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+    ],
+    monsters: [],
+    boss: {
+      name: { fr: 'À confirmer', en: 'To be confirmed', es: 'Por confirmar' },
+      level: { fr: 'Niv. 231-245', en: 'Lvl. 231-245', es: 'Niv. 231-245' },
+      description: {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+      spells: [],
+      passives: [],
+      stats: [],
+    },
+    mechanics: [
+      {
+        title: { fr: 'Mécaniques', en: 'Mechanics', es: 'Mecánicas' },
+        paragraphs: [
+          {
+            fr: 'Guide en cours de rédaction.',
+            en: 'Guide in progress.',
+            es: 'Guía en proceso.',
+          },
+        ],
+      },
+    ],
+    plan: {
+      fr: 'Stratégie détaillée: à venir.',
+      en: 'Detailed strategy: coming soon.',
+      es: 'Estrategia detallada: próximamente.',
+    },
+    steles: {
+      lead: {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+      notes: [],
+      protoBosses: [],
+      crystals: {
+        types: [],
+        notes: [],
+        stats: [],
+      },
+    },
+    drops: {
+      notes: [
+        {
+          fr: 'Guide en cours de rédaction.',
+          en: 'Guide in progress.',
+          es: 'Guía en proceso.',
+        },
+      ],
+      monsterDrops: [],
+      bossDrops: [],
+    },
+    croupier: {
+      location: {
+        fr: 'Section à compléter.',
+        en: 'Section to be completed.',
+        es: 'Sección por completar.',
+      },
+      items: [],
+    },
+  },
+  {
+    id: 'nox-machines',
+    name: { fr: 'Donjon Machines de Nox', en: 'Nox Machines Dungeon', es: 'Mazmorra Maquinas de Nox' },
+    subtitle: { fr: 'Boss: En cours', en: 'Boss: In progress', es: 'Jefe: En proceso' },
+    levelRange: { fr: 'Niv. 231-245', en: 'Lvl. 231-245', es: 'Niv. 231-245' },
+    summary: [
+      {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+    ],
+    monsters: [],
+    boss: {
+      name: { fr: 'À confirmer', en: 'To be confirmed', es: 'Por confirmar' },
+      level: { fr: 'Niv. 231-245', en: 'Lvl. 231-245', es: 'Niv. 231-245' },
+      description: {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+      spells: [],
+      passives: [],
+      stats: [],
+    },
+    mechanics: [
+      {
+        title: { fr: 'Mécaniques', en: 'Mechanics', es: 'Mecánicas' },
+        paragraphs: [
+          {
+            fr: 'Guide en cours de rédaction.',
+            en: 'Guide in progress.',
+            es: 'Guía en proceso.',
+          },
+        ],
+      },
+    ],
+    plan: {
+      fr: 'Stratégie détaillée: à venir.',
+      en: 'Detailed strategy: coming soon.',
+      es: 'Estrategia detallada: próximamente.',
+    },
+    steles: {
+      lead: {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+      notes: [],
+      protoBosses: [],
+      crystals: {
+        types: [],
+        notes: [],
+        stats: [],
+      },
+    },
+    drops: {
+      notes: [
+        {
+          fr: 'Guide en cours de rédaction.',
+          en: 'Guide in progress.',
+          es: 'Guía en proceso.',
+        },
+      ],
+      monsterDrops: [],
+      bossDrops: [],
+    },
+    croupier: {
+      location: {
+        fr: 'Section à compléter.',
+        en: 'Section to be completed.',
+        es: 'Sección por completar.',
+      },
+      items: [],
+    },
+  },
+  {
+    id: 'timeless-theater',
+    name: { fr: 'Donjon Théâtre Intemporel', en: 'Timeless Theater Dungeon', es: 'Mazmorra Teatro Intemporal' },
+    subtitle: { fr: 'Boss: En cours', en: 'Boss: In progress', es: 'Jefe: En proceso' },
+    levelRange: { fr: 'Niv. 231-245', en: 'Lvl. 231-245', es: 'Niv. 231-245' },
+    summary: [
+      {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+    ],
+    monsters: [],
+    boss: {
+      name: { fr: 'À confirmer', en: 'To be confirmed', es: 'Por confirmar' },
+      level: { fr: 'Niv. 231-245', en: 'Lvl. 231-245', es: 'Niv. 231-245' },
+      description: {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+      spells: [],
+      passives: [],
+      stats: [],
+    },
+    mechanics: [
+      {
+        title: { fr: 'Mécaniques', en: 'Mechanics', es: 'Mecánicas' },
+        paragraphs: [
+          {
+            fr: 'Guide en cours de rédaction.',
+            en: 'Guide in progress.',
+            es: 'Guía en proceso.',
+          },
+        ],
+      },
+    ],
+    plan: {
+      fr: 'Stratégie détaillée: à venir.',
+      en: 'Detailed strategy: coming soon.',
+      es: 'Estrategia detallada: próximamente.',
+    },
+    steles: {
+      lead: {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+      notes: [],
+      protoBosses: [],
+      crystals: {
+        types: [],
+        notes: [],
+        stats: [],
+      },
+    },
+    drops: {
+      notes: [
+        {
+          fr: 'Guide en cours de rédaction.',
+          en: 'Guide in progress.',
+          es: 'Guía en proceso.',
+        },
+      ],
+      monsterDrops: [],
+      bossDrops: [],
+    },
+    croupier: {
+      location: {
+        fr: 'Section à compléter.',
+        en: 'Section to be completed.',
+        es: 'Sección por completar.',
+      },
+      items: [],
+    },
+  },
+  {
+    id: 'heart-of-nox-clock',
+    name: { fr: 'Donjon Cœur de l’Horloge de Nox', en: 'Heart of Nox Clock Dungeon', es: 'Mazmorra Corazon del Reloj de Nox' },
+    subtitle: { fr: 'Boss: En cours', en: 'Boss: In progress', es: 'Jefe: En proceso' },
+    levelRange: { fr: 'Niv. 231-245', en: 'Lvl. 231-245', es: 'Niv. 231-245' },
+    summary: [
+      {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+    ],
+    monsters: [],
+    boss: {
+      name: { fr: 'À confirmer', en: 'To be confirmed', es: 'Por confirmar' },
+      level: { fr: 'Niv. 231-245', en: 'Lvl. 231-245', es: 'Niv. 231-245' },
+      description: {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+      spells: [],
+      passives: [],
+      stats: [],
+    },
+    mechanics: [
+      {
+        title: { fr: 'Mécaniques', en: 'Mechanics', es: 'Mecánicas' },
+        paragraphs: [
+          {
+            fr: 'Guide en cours de rédaction.',
+            en: 'Guide in progress.',
+            es: 'Guía en proceso.',
+          },
+        ],
+      },
+    ],
+    plan: {
+      fr: 'Stratégie détaillée: à venir.',
+      en: 'Detailed strategy: coming soon.',
+      es: 'Estrategia detallada: próximamente.',
+    },
+    steles: {
+      lead: {
+        fr: 'Guide en cours de rédaction.',
+        en: 'Guide in progress.',
+        es: 'Guía en proceso.',
+      },
+      notes: [],
+      protoBosses: [],
+      crystals: {
+        types: [],
+        notes: [],
+        stats: [],
+      },
+    },
+    drops: {
+      notes: [
+        {
+          fr: 'Guide en cours de rédaction.',
+          en: 'Guide in progress.',
+          es: 'Guía en proceso.',
+        },
+      ],
+      monsterDrops: [],
+      bossDrops: [],
+    },
+    croupier: {
+      location: {
+        fr: 'Section à compléter.',
+        en: 'Section to be completed.',
+        es: 'Sección por completar.',
       },
       items: [],
     },
@@ -3077,7 +3609,7 @@ export const content = {
   es: {
     badge: 'The Bloody Brotherhood',
     navTitle: 'Endgame 230-245',
-    navToggle: 'MenÃº',
+    navToggle: 'Menú',
     title: 'Impulso Contenido Endgame 230-245',
     subtitle:
       'Un plan claro para avanzar, aprender mecanicas y coordinar contenido alto nivel con apoyo real del gremio.',
@@ -3098,9 +3630,9 @@ export const content = {
       objetivo: 'Que buscamos lograr con el impulso',
       plan: 'Impulsar el contenido 230-245 de forma organizada para que mas jugadores puedan llegar y mantenerse en estas franjas.',
       guias: 'Materiales y practicas guiadas',
-      estelas: 'GuÃ­as de estela de intervenciÃ³n',
+      estelas: 'Guías de estela de intervención',
       bosses: 'Primer set de dungeons clave',
-      clases: 'Roles, builds y guÃ­as por clase',
+      clases: 'Roles, builds y guías por clase',
       equipamiento: 'Circulacion de piezas utiles',
       registro: 'Formulario para coordinar roles',
       resumen: 'Puntos clave del anuncio',
@@ -3193,7 +3725,7 @@ export const content = {
       title: 'Bosses 230 (primera etapa)',
       lead:
         'Seleccion inicial para mecanicas y practicas guiadas.',
-      guideCta: 'Ver guÃ­a relacionada',
+      guideCta: 'Ver guía relacionada',
       items: [
         {
           id: 180,
@@ -3244,67 +3776,116 @@ export const content = {
           guideId: 'steamers',
           mechanics: ['Reserva de stasis', 'Posicionamiento vs zonas', 'Control de mecanos'],
         },
+        {
+          id: 197,
+          name: 'Mazmorra Ferociraptor',
+          image: '/wakassets/bossIllustrations/197.png',
+          guideId: 'ferociraptor',
+          mechanics: ['Guia en proceso'],
+        },
+        {
+          id: 198,
+          name: 'Mazmorra Primacizos',
+          image: '/wakassets/bossIllustrations/198.png',
+          guideId: 'primount',
+          mechanics: ['Guia en proceso'],
+        },
+        {
+          id: 199,
+          name: 'Mazmorra Sabanastrales',
+          image: '/wakassets/bossIllustrations/199.png',
+          guideId: 'starvannah',
+          mechanics: ['Guia en proceso'],
+        },
+        {
+          id: 200,
+          name: 'Mazmorra Clan Bworkana',
+          image: '/wakassets/bossIllustrations/200.png',
+          guideId: 'bworkana-clan',
+          mechanics: ['Guia en proceso'],
+        },
+        {
+          id: 201,
+          name: 'Mazmorra Maquinas de Nox',
+          image: '/wakassets/bossIllustrations/201.png',
+          guideId: 'nox-machines',
+          mechanics: ['Guia en proceso'],
+        },
+        {
+          id: 202,
+          name: 'Mazmorra Teatro Intemporal',
+          image: '/wakassets/bossIllustrations/202.png',
+          guideId: 'timeless-theater',
+          mechanics: ['Guia en proceso'],
+        },
+        {
+          id: 203,
+          name: 'Mazmorra Corazon del Reloj de Nox',
+          image: '/wakassets/bossIllustrations/203.png',
+          guideId: 'heart-of-nox-clock',
+          mechanics: ['Guia en proceso'],
+        },
       ],
     },
     stelesHub: {
-      title: 'GuÃ­as de Estelas de intervenciÃ³n',
-      lead: 'Referencia central de estelas para no mezclar mecÃ¡nicas entre dungeons.',
+      title: 'Guías de Estelas de intervención',
+      lead: 'Referencia central de estelas para no mezclar mecánicas entre dungeons.',
       guides: [
         {
           id: 'anathar',
           name: 'Anathar',
-          keyRequired: 'Llave de intervenciÃ³n de Anathar',
+          keyRequired: 'Llave de intervención de Anathar',
           appliesTo: ['Devastadores', 'Idos', 'Demorribles', 'Vaciantes', 'Fitoformes'],
           overview: [
-            'Marca de Anathar suele caer en el jugador mÃ¡s lejano.',
+            'Marca de Anathar suele caer en el jugador más lejano.',
             'Anathar observa el turno del marcado y replica hasta 4 acciones distintas al inicio de su siguiente turno.',
-            'Si observa menos de 4 acciones, usa Infierno DemonÃ­aco y castiga mÃ¡s cuanto menos acciones haya.',
+            'Si observa menos de 4 acciones, usa Infierno Demoníaco y castiga más cuanto menos acciones haya.',
           ],
           table: {
-            actionHeader: 'AcciÃ³n del jugador marcado',
-            effectHeader: 'AcciÃ³n replicada de Anathar',
+            actionHeader: 'Acción del jugador marcado',
+            effectHeader: 'Acción replicada de Anathar',
             rows: [
-              { action: 'Retirar PM a un objetivo', effect: 'Retira 3 PM a combatientes que no esten en su lÃ­nea de visiÃ³n.' },
-              { action: 'Retirar PA a un objetivo', effect: 'Retira 3 PA a combatientes que esten en su lÃ­nea de visiÃ³n.' },
+              { action: 'Retirar PM a un objetivo', effect: 'Retira 3 PM a combatientes que no esten en su línea de visión.' },
+              { action: 'Retirar PA a un objetivo', effect: 'Retira 3 PA a combatientes que esten en su línea de visión.' },
               { action: 'Dar PM a un objetivo', effect: 'Da 1PM a los combatientes (excepto Anathar).' },
-              { action: 'Dar PA a un objetivo', effect: 'Da 40 de Voluntad a los 3 combatientes mÃ¡s cercanos.' },
+              { action: 'Dar PA a un objetivo', effect: 'Da 40 de Voluntad a los 3 combatientes más cercanos.' },
               { action: 'Curar a un objetivo', effect: 'Cura un 35% de PdV perdidos a los 3 combatientes cercanos.' },
-              { action: 'Dar armadura', effect: 'Da 5.000 armadura a los 3 combatientes mÃ¡s alejados.' },
-              { action: 'Retirar esquiva', effect: 'Retira 500 esquiva a los 3 combatientes mÃ¡s cercanos.' },
-              { action: 'Aumentar esquiva', effect: 'Da 500 esquiva a los 3 combatientes mÃ¡s alejados.' },
+              { action: 'Dar armadura', effect: 'Da 5.000 armadura a los 3 combatientes más alejados.' },
+              { action: 'Retirar esquiva', effect: 'Retira 500 esquiva a los 3 combatientes más cercanos.' },
+              { action: 'Aumentar esquiva', effect: 'Da 500 esquiva a los 3 combatientes más alejados.' },
               { action: 'Retirar placaje', effect: 'Retira 500 placaje a combatientes que tengan al menos un combatiente en contacto.' },
-              { action: 'Aumentar placaje', effect: 'Da 500 placaje a combatientes que no tengan contacto con ningÃºn otro combatiente.' },
+              { action: 'Aumentar placaje', effect: 'Da 500 placaje a combatientes que no tengan contacto con ningún otro combatiente.' },
               { action: 'Empujar', effect: 'Empuja(4c) aliados alineados al iniciar turno.' },
               { action: 'Atraer', effect: 'Atrae(8c) aliados alineados al iniciar turno.' },
-              { action: 'Cambiar lugar', effect: 'Cambia de lugar con el combatiente mÃ¡s alejado.' },
+              { action: 'Cambiar lugar', effect: 'Cambia de lugar con el combatiente más alejado.' },
               { action: 'Teletransportar', effect: 'Teleporta enemigos a posiciones aleatorias (3 casillas alrededor de un jugador).' },
-              { action: 'DaÃ±o fuego', effect: 'Causa daÃ±o fuego al combatiente mÃ¡s alejado.' },
-              { action: 'DaÃ±o aire', effect: 'Causa daÃ±o aire a combatientes a mÃ¡s de 7 casillas.' },
-              { action: 'DaÃ±o tierra', effect: 'Causa daÃ±o tierra a combatientes a 3 casillas o menos.' },
-              { action: 'DaÃ±o agua', effect: 'Causa daÃ±o agua en cÃ­rculo de 2 casillas alrededor de combatientes.' },
+              { action: 'Daño fuego', effect: 'Causa daño fuego al combatiente más alejado.' },
+              { action: 'Daño aire', effect: 'Causa daño aire a combatientes a más de 7 casillas.' },
+              { action: 'Daño tierra', effect: 'Causa daño tierra a combatientes a 3 casillas o menos.' },
+              { action: 'Daño agua', effect: 'Causa daño agua en círculo de 2 casillas alrededor de combatientes.' },
             ],
           },
           dungeonEffects: [
             'Devastadores: al morir deja un Residuo.',
-            'Idos: tambiÃ©n debe quedar a 1 PdV.',
+            'Idos: también debe quedar a 1 PdV.',
             'Demorribles: tiene Enlace de Vida y suma sus PdV al total.',
-            'Vaciantes: obtiene Aura de VacÃ­o similar al jefe.',
+            'Vaciantes: obtiene Aura de Vacío similar al jefe.',
             'Fitoformes: obtiene Incorruptible como Vaalenthia.',
           ],
           tips: [
-            'En el turno marcado evita acciones innecesarias para no regalar rÃ©plicas peligrosas.',
-            'Con â€œcombatienteâ€ se incluyen jugadores, mobs y boss.',
+            'En el turno marcado evita acciones innecesarias para no regalar réplicas peligrosas.',
+            'Con “combatiente” se incluyen jugadores, mobs y boss.',
           ],
         },
         {
           id: 'cire-momore',
           name: 'Cire Momore',
-          keyRequired: 'Llave de intervenciÃ³n de Cire Momore',
+          keyRequired: 'Llave de intervención de Cire Momore',
           appliesTo: ['Steamers', 'Pezgajosos Abisales'],
           overview: [
             'Inicia combate en la esquina superior izquierda (Steamers y Pezgajosos Abisales).',
             'Comienza con 3 PM y gana +2 PM por turno.',
-            'Al usar AspiraciÃ³n de Alma y absorber una flor, reinicia sus PM.',
+            'Al usar Aspiración de Alma y absorber una flor, reinicia sus PM.',
             'Al invocar a Cire Momore, una Asesirena o Unidad stasificadora abandona el combate.',
           ],
           table: {
@@ -3313,17 +3894,17 @@ export const content = {
             rows: [
               { action: 'Flores', effect: 'Cuando muere un mob (excepto Raeliss/Sir Kurn Flex), aparece una flor. Un jugador debe pisarla para obtenerla.' },
               { action: 'Bonus de flor', effect: 'Otorga +4 PA y +2 PM. Los bonus no son acumulables.' },
-              { action: 'AspiraciÃ³n de Alma (con flor)', effect: 'Pierdes la flor y Cire Momore reinicia sus PM.' },
-              { action: 'AspiraciÃ³n de Alma (sin flor)', effect: 'Pierdes 4000 PdV mÃ¡ximos (acumulable).' },
-              { action: 'AspiraciÃ³n x3', effect: 'Si un jugador recibe 3 Aspiraciones, muere directamente (sin K.O.).' },
-              { action: 'Fatalidad', effect: 'DaÃ±o Stasis en lÃ­nea, alcance 2-6.' },
-              { action: 'Rompespanima', effect: 'DaÃ±o Stasis constante, alcance 1-12, hasta 2 veces por turno.' },
-              { action: 'AspiraciÃ³n de Alma', effect: 'Zona CaC. Absorbe flores, reinicia PM y castiga con pÃ©rdida de vida mÃ¡xima.' },
+              { action: 'Aspiración de Alma (con flor)', effect: 'Pierdes la flor y Cire Momore reinicia sus PM.' },
+              { action: 'Aspiración de Alma (sin flor)', effect: 'Pierdes 4000 PdV máximos (acumulable).' },
+              { action: 'Aspiración x3', effect: 'Si un jugador recibe 3 Aspiraciones, muere directamente (sin K.O.).' },
+              { action: 'Fatalidad', effect: 'Daño Stasis en línea, alcance 2-6.' },
+              { action: 'Rompespanima', effect: 'Daño Stasis constante, alcance 1-12, hasta 2 veces por turno.' },
+              { action: 'Aspiración de Alma', effect: 'Zona CaC. Absorbe flores, reinicia PM y castiga con pérdida de vida máxima.' },
             ],
           },
           dungeonEffects: [
             'Es fundamental no terminar turno en CaC de Cire Momore.',
-            'Prioriza limpiar mobs rÃ¡pido para generar flores y repartirlas con orden.',
+            'Prioriza limpiar mobs rápido para generar flores y repartirlas con orden.',
           ],
           tips: [
             'Pegar y moverse: evita quedarte expuesto cerca del jefe.',
@@ -3335,7 +3916,7 @@ export const content = {
     },
     schedule: {
       title: 'Actividades sugeridas',
-      lead: 'Cadencia propuesta para mantener progreso y prÃ¡ctica de mecÃ¡nicas.',
+      lead: 'Cadencia propuesta para mantener progreso y práctica de mecánicas.',
       items: [
         {
           name: 'Ereboria',
@@ -3396,7 +3977,7 @@ export const content = {
         contact: 'Ej: usuario#0000',
         build: 'Ej: build crit con foco en distancia, necesito cerrar resistencias',
       },
-      weekDays: ['Lun', 'Mar', 'MiÃ©', 'Jue', 'Vie', 'SÃ¡b', 'Dom'],
+      weekDays: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'],
       timeRange: 'Rango horario',
       from: 'Desde',
       to: 'Hasta',
@@ -3417,7 +3998,7 @@ export const content = {
       empty: 'Aun no hay registros para esta seccion.',
       interested: 'interesados',
       needHelp: 'necesitan ayuda',
-      andMore: '+ {count} mÃ¡s',
+      andMore: '+ {count} más',
       gearRequests: 'Solicitudes de equipo',
       bossesTitle: 'Interes por boss',
       activitiesTitle: 'Interes por clases',
@@ -3611,6 +4192,55 @@ export const content = {
           guideId: 'steamers',
           mechanics: ['Stasis reserve', 'Positioning vs zones', 'Mekano control'],
         },
+        {
+          id: 197,
+          name: 'Ferociraptor Dungeon',
+          image: '/wakassets/bossIllustrations/197.png',
+          guideId: 'ferociraptor',
+          mechanics: ['Guide in progress'],
+        },
+        {
+          id: 198,
+          name: 'Primount Dungeon',
+          image: '/wakassets/bossIllustrations/198.png',
+          guideId: 'primount',
+          mechanics: ['Guide in progress'],
+        },
+        {
+          id: 199,
+          name: 'Starvannah Dungeon',
+          image: '/wakassets/bossIllustrations/199.png',
+          guideId: 'starvannah',
+          mechanics: ['Guide in progress'],
+        },
+        {
+          id: 200,
+          name: 'Bworkana Clan Dungeon',
+          image: '/wakassets/bossIllustrations/200.png',
+          guideId: 'bworkana-clan',
+          mechanics: ['Guide in progress'],
+        },
+        {
+          id: 201,
+          name: 'Nox Machines Dungeon',
+          image: '/wakassets/bossIllustrations/201.png',
+          guideId: 'nox-machines',
+          mechanics: ['Guide in progress'],
+        },
+        {
+          id: 202,
+          name: 'Timeless Theater Dungeon',
+          image: '/wakassets/bossIllustrations/202.png',
+          guideId: 'timeless-theater',
+          mechanics: ['Guide in progress'],
+        },
+        {
+          id: 203,
+          name: 'Heart of Nox Clock Dungeon',
+          image: '/wakassets/bossIllustrations/203.png',
+          guideId: 'heart-of-nox-clock',
+          mechanics: ['Guide in progress'],
+        },
       ],
     },
     stelesHub: {
@@ -3660,7 +4290,7 @@ export const content = {
           ],
           tips: [
             'On marked turns, avoid unnecessary action types to reduce dangerous replications.',
-            'â€œCombatantâ€ includes players, mobs, and boss units.',
+            '“Combatant” includes players, mobs, and boss units.',
           ],
         },
         {
@@ -3811,16 +4441,15 @@ export const content = {
 export const uiLabels = {
   monstres: { fr: 'Monstres', en: 'Monsters', es: 'Monstruos' },
   boss: { fr: 'Boss', en: 'Boss', es: 'Jefe' },
-  mecaniques: { fr: 'Mecaniques et strategie', en: 'Mechanics and Strategy', es: 'MecÃ¡nicas y Estrategia' },
+  mecaniques: { fr: 'Mecaniques et strategie', en: 'Mechanics and Strategy', es: 'Mecánicas y Estrategia' },
   planDonjon: { fr: 'Plan du donjon', en: 'Dungeon Plan', es: 'Plano de la Mazmorra' },
   steles: { fr: 'Steles', en: 'Steles', es: 'Estelas' },
-  drops: { fr: 'Drops', en: 'Drops', es: 'BotÃ­n' },
+  drops: { fr: 'Drops', en: 'Drops', es: 'Botín' },
   croupier: { fr: 'Croupier', en: 'Croupier', es: 'Crupier' },
-  passifArtillerie: { fr: "Passifs d'artillerie", en: 'Artillery Passives', es: 'Pasivos de ArtillerÃ­a' },
+  passifArtillerie: { fr: "Passifs d'artillerie", en: 'Artillery Passives', es: 'Pasivos de Artillería' },
   protoBoss: { fr: 'Proto-boss', en: 'Proto-boss', es: 'Proto-jefe' },
   cristalStasis: { fr: 'Cristal de Stasis', en: 'Stasis Crystal', es: 'Cristal de Estasis' },
-  dropsMonstres: { fr: 'Drops des monstres', en: 'Monster Drops', es: 'BotÃ­n de Monstruos' },
-  dropsBoss: { fr: 'Drops du boss', en: 'Boss Drops', es: 'BotÃ­n del Jefe' },
+  dropsMonstres: { fr: 'Drops des monstres', en: 'Monster Drops', es: 'Botín de Monstruos' },
+  dropsBoss: { fr: 'Drops du boss', en: 'Boss Drops', es: 'Botín del Jefe' },
   passif: { fr: 'Passif:', en: 'Passive:', es: 'Pasivo:' },
 } as const
-
