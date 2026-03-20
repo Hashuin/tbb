@@ -125,13 +125,12 @@ export const RegisterView = ({
               ))}
             </select>
           </label>
-          <div style={{ marginBottom: '1rem' }}>
-            <label style={{ display: 'block', marginBottom: '0.5rem' }}>
-              {data.form.fields.availability}
-            </label>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.75rem' }}>
+          <div className="availability">
+            <div className="availability-label">{data.form.fields.availability}</div>
+            <div className="availability-days">
               {data.form.weekDays.map((day) => (
-                <label key={day} style={{ display: 'flex', alignItems: 'center', gap: '0.25rem', cursor: 'pointer' }}>
+                <label key={day} className="availability-option">
+                  <span>{day}</span>
                   <input
                     type="checkbox"
                     checked={availabilityDays.includes(day)}
@@ -143,27 +142,24 @@ export const RegisterView = ({
                       }
                     }}
                   />
-                  <span>{day}</span>
                 </label>
               ))}
             </div>
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-              <label style={{ flex: '1', minWidth: '120px' }}>
-                {data.form.from}
+            <div className="availability-times">
+              <label className="availability-time">
+                <span>{data.form.from}</span>
                 <input
                   type="time"
                   value={availabilityStart}
                   onChange={(e) => setAvailabilityStart(e.target.value)}
-                  required
                 />
               </label>
-              <label style={{ flex: '1', minWidth: '120px' }}>
-                {data.form.to}
+              <label className="availability-time">
+                <span>{data.form.to}</span>
                 <input
                   type="time"
                   value={availabilityEnd}
                   onChange={(e) => setAvailabilityEnd(e.target.value)}
-                  required
                 />
               </label>
             </div>

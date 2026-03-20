@@ -59,6 +59,12 @@ export const GuidesIndexView = <TDungeon extends GuideSummary>({
           <p>{data.guides.lead}</p>
         </div>
         <div className="steps">
+          {data.guides.steps.map((step, index) => (
+            <article className="step" key={`${step.slice(0, 40)}-${index}`}>
+              <div className="step-index">{String(index + 1).padStart(2, '0')}</div>
+              <p>{step}</p>
+            </article>
+          ))}
         </div>
       </section>
       {mergedDungeonGuides.length > 0 ? (
@@ -100,7 +106,7 @@ export const GuidesIndexView = <TDungeon extends GuideSummary>({
                     </div>
                   ) : null}
                   <div className="guide-index-actions">
-                    <Link className="button small" to={`${sectionRoutes.guias}/${dungeon.id}`}>
+                    <Link className="ghost small" to={`${sectionRoutes.guias}/${dungeon.id}`}>
                       {language === 'es' ? 'Abrir guia completa' : 'Open full guide'}
                     </Link>
                   </div>

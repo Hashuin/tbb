@@ -526,14 +526,6 @@ function App() {
           return <li key={String(text).slice(0, 50)}>{text}</li>
         })}
       </ul>
-      {interested.length > 0 ? (
-        <div className="interest-summary">
-          <strong>
-            {interested.length} {data.interests.needHelp}
-          </strong>
-          {renderEntryList(interested)}
-        </div>
-      ) : null}
       <div className="dungeon-details">
         <details className="dungeon-section">
           <summary>{getText(uiLabels.monstres, language)}</summary>
@@ -666,6 +658,16 @@ function App() {
             </div>
           </div>
         </details>
+        {interested.length > 0 ? (
+          <details className="dungeon-section">
+            <summary>
+              {interested.length} {data.interests.needHelp}
+            </summary>
+            <div className="dungeon-section__body">
+              {renderEntryList(interested)}
+            </div>
+          </details>
+        ) : null}
       </div>
     </article>
   )
@@ -944,7 +946,6 @@ function App() {
               mergedDungeonGuides={mergedDungeonGuides}
               interestByGuide={interestByGuide}
               bossGuideById={bossGuideById}
-              renderEntryList={renderEntryList}
             />
           }
         />

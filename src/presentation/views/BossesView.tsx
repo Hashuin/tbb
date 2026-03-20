@@ -1,4 +1,4 @@
-import type { ComponentType, ReactNode } from 'react'
+import type { ComponentType } from 'react'
 import { Link } from 'react-router-dom'
 import type { InterestEntry } from '../../domain/interest/entities'
 
@@ -37,7 +37,6 @@ type BossesViewProps = {
   mergedDungeonGuides: readonly DungeonRef[]
   interestByGuide: Map<string, InterestEntry[]>
   bossGuideById: Map<number, string>
-  renderEntryList: (entries: InterestEntry[]) => ReactNode
 }
 
 export const BossesView = ({
@@ -47,7 +46,6 @@ export const BossesView = ({
   mergedDungeonGuides,
   interestByGuide,
   bossGuideById,
-  renderEntryList,
 }: BossesViewProps) => {
   return (
     <div className="route-view">
@@ -95,7 +93,6 @@ export const BossesView = ({
                       <strong>
                         {interested.length} {data.interests.interested}
                       </strong>
-                      {renderEntryList(interested)}
                     </div>
                   )}
                 </div>
