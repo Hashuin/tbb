@@ -212,6 +212,32 @@ function App() {
 
     return [...merged, ...extraCustom]
   }, [data.guides.dungeons])
+  const mergedBossItems = useMemo(() => {
+    const baseItems = content[language].bosses?.items || []
+    const currentItems = data.bosses?.items || []
+    const currentById = new Map(currentItems.map((boss) => [boss.id, boss]))
+
+    const merged = baseItems.map((baseBoss) => {
+      const customBoss = currentById.get(baseBoss.id)
+      return customBoss || baseBoss
+    })
+
+    const extraCustom = currentItems.filter(
+      (customBoss) => !merged.some((mergedBoss) => mergedBoss.id === customBoss.id),
+    )
+
+    return [...merged, ...extraCustom]
+  }, [content, data.bosses?.items, language])
+  const bossesViewData = useMemo(
+    () => ({
+      ...data,
+      bosses: {
+        ...data.bosses,
+        items: mergedBossItems,
+      },
+    }),
+    [data, mergedBossItems],
+  )
   const isAdminRoute = location.pathname === '/admin'
 
   useEffect(() => {
@@ -298,6 +324,13 @@ function App() {
       [179, 'egares'],
       [187, 'poisseux-abyssaux'],
       [188, 'steamers'],
+      [197, 'ferociraptor'],
+      [198, 'primount'],
+      [199, 'starvannah'],
+      [200, 'bworkana-clan'],
+      [201, 'nox-machines'],
+      [202, 'timeless-theater'],
+      [203, 'heart-of-nox-clock'],
     ]),
     [],
   )
@@ -941,7 +974,7 @@ function App() {
           element={
             <BossesView
               ViewHeader={ViewHeader}
-              data={data}
+              data={bossesViewData}
               sectionRoutes={sectionRoutes}
               mergedDungeonGuides={mergedDungeonGuides}
               interestByGuide={interestByGuide}
