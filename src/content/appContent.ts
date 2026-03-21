@@ -4861,8 +4861,6 @@ export const content = {
       'Un plan claro para avanzar, aprender mecanicas y coordinar contenido alto nivel con apoyo real del gremio.',
     ctaPrimary: 'Quiero sumarme',
     ctaSecondary: 'Ver el plan',
-    themeToggle: 'Modo',
-    themeOptions: { dark: 'Oscuro', light: 'Claro' },
     nav: [
       { id: 'inicio', label: 'Inicio' },
       { id: 'plan', label: 'Plan' },
@@ -5278,8 +5276,6 @@ export const content = {
       'A clear plan to progress, learn mechanics, and coordinate high level content with real guild support.',
     ctaPrimary: 'I want to join',
     ctaSecondary: 'See the plan',
-    themeToggle: 'Theme',
-    themeOptions: { dark: 'Dark', light: 'Light' },
     nav: [
       { id: 'inicio', label: 'Home' },
       { id: 'plan', label: 'Plan' },

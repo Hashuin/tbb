@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useState } from 'react'
+﻿import { useEffect, useMemo, useState, type CSSProperties } from 'react'
 import { Link, NavLink, Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import './App.css'
 import { isSupabaseConfigured, supabase } from './lib/supabase'
@@ -24,7 +24,6 @@ import type {
   ClassSetLink,
   Language,
   MultiidiomaTrad,
-  Theme,
 } from './domain/content/types'
 import type { ClassGender } from './content/classBreeds'
 
@@ -41,11 +40,44 @@ const getText = (
   return ''
 }
 
+function buildAmbientParticleSeed(count: number): Array<{
+  x: string
+  size: string
+  drift: string
+  delay: string
+  duration: string
+}> {
+  return Array.from({ length: count }, (_, index) => {
+    const x = `${Math.round((index * 61) % 100)}%`
+    const size = `${2 + ((index * 13) % 5)}px`
+    const drift = `${((index * 19) % 15) - 7}px`
+    const delay = `${((index * 17) % 30) / 10}s`
+    const duration = `${8 + ((index * 7) % 12)}s`
+    return { x, size, drift, delay, duration }
+  })
+}
+
+function buildAmbientFlashSeed(count: number): Array<{
+  x: string
+  y: string
+  size: string
+  delay: string
+  duration: string
+}> {
+  return Array.from({ length: count }, (_, index) => {
+    const x = `${Math.round((index * 47) % 100)}%`
+    const y = `${Math.round((index * 29) % 100)}%`
+    const size = `${10 + ((index * 9) % 22)}px`
+    const delay = `${((index * 13) % 80) / 10}s`
+    const duration = `${6 + ((index * 5) % 8)}s`
+    return { x, y, size, delay, duration }
+  })
+}
+
 // UI Labels translations for dungeon sections
 
 function App() {
   const [language, setLanguage] = useState<Language>('es')
-  const [theme, setTheme] = useState<Theme>('dark')
   const [navOpen, setNavOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [submitted, setSubmitted] = useState(false)
@@ -58,7 +90,10 @@ function App() {
   const [customContent, setCustomContent] = useState<typeof content | null>(null)
   const [contentLoading, setContentLoading] = useState(true)
   const [adminAuthenticated, setAdminAuthenticated] = useState(false)
+  const [particlesEnabled, setParticlesEnabled] = useState(true)
   const location = useLocation()
+  const ambientParticles = useMemo(() => buildAmbientParticleSeed(34), [])
+  const ambientFlashes = useMemo(() => buildAmbientFlashSeed(8), [])
 
   const interestCache = useMemo(() => new LocalStorageInterestCache(), [])
   const interestRepository = useMemo(() => {
@@ -239,10 +274,30 @@ function App() {
     [data, mergedBossItems],
   )
   const isAdminRoute = location.pathname === '/admin'
+  
+  // Set dark theme on mount
+  useEffect(() => {
+    document.documentElement.dataset.theme = 'dark'
+  }, [])
 
   useEffect(() => {
-    document.documentElement.dataset.theme = theme
-  }, [theme])
+    try {
+      const stored = localStorage.getItem('ui_particles_enabled')
+      if (stored !== null) {
+        setParticlesEnabled(stored === '1')
+      }
+    } catch {
+      // Ignore storage read failures and keep default setting.
+    }
+  }, [])
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('ui_particles_enabled', particlesEnabled ? '1' : '0')
+    } catch {
+      // Ignore storage write failures.
+    }
+  }, [particlesEnabled])
 
   useEffect(() => {
     setNavOpen(false)
@@ -362,6 +417,15 @@ function App() {
     currentSection === 'inicio'
       ? ''
       : data.viewSubtitles[currentSection as keyof typeof data.viewSubtitles] || ''
+  const particlesLabel = language === 'es' ? 'Particulas' : 'Particles'
+  const particlesToggleTitle =
+    language === 'es'
+      ? particlesEnabled
+        ? 'Desactivar particulas'
+        : 'Activar particulas'
+      : particlesEnabled
+        ? 'Disable particles'
+        : 'Enable particles'
 
   const ViewHeader = () => (
     <div className="view-header">
@@ -719,6 +783,40 @@ function App() {
 
   return (
     <div className="page">
+      {!isAdminRoute && particlesEnabled ? (
+        <div className="ambient-particles" aria-hidden>
+          {ambientFlashes.map((flash, index) => (
+            <span
+              key={`ambient-flash-${index}`}
+              className="ambient-flash"
+              style={
+                {
+                  '--x': flash.x,
+                  '--y': flash.y,
+                  '--size': flash.size,
+                  '--duration': flash.duration,
+                  animationDelay: flash.delay,
+                } as CSSProperties
+              }
+            />
+          ))}
+          {ambientParticles.map((particle, index) => (
+            <span
+              key={index}
+              className={`ambient-particle ${index % 3 === 0 ? 'ambient-particle--far' : ''}`}
+              style={
+                {
+                  '--x': particle.x,
+                  '--size': particle.size,
+                  '--drift': particle.drift,
+                  '--duration': particle.duration,
+                  animationDelay: particle.delay,
+                } as CSSProperties
+              }
+            />
+          ))}
+        </div>
+      ) : null}
       {!isAdminRoute && (
         <nav className={`navbar ${navOpen ? 'open' : ''} ${scrolled ? 'scrolled' : ''}`} aria-label="Primary">
           <div className="nav-inner">
@@ -791,28 +889,20 @@ function App() {
                     <span className="sr-only">EN</span>
                   </button>
                 </div>
-                <div className="theme-toggle icon-toggle" role="group" aria-label="Theme">
+                <div className="fx-toggle icon-toggle" role="group" aria-label={particlesLabel}>
                   <button
-                    className={theme === 'dark' ? 'active' : ''}
-                    onClick={() => setTheme('dark')}
+                    className={particlesEnabled ? 'active' : ''}
+                    onClick={() => setParticlesEnabled((enabled) => !enabled)}
                     type="button"
-                    aria-label={data.themeOptions.dark}
-                    title={data.themeOptions.dark}
+                    aria-label={particlesToggleTitle}
+                    aria-pressed={particlesEnabled}
+                    title={particlesToggleTitle}
                   >
-                    🌙
-                    <span className="sr-only">{data.themeOptions.dark}</span>
-                  </button>
-                  <button
-                    className={theme === 'light' ? 'active' : ''}
-                    onClick={() => setTheme('light')}
-                    type="button"
-                    aria-label={data.themeOptions.light}
-                    title={data.themeOptions.light}
-                  >
-                    ☀️
-                    <span className="sr-only">{data.themeOptions.light}</span>
+                    FX
+                    <span className="sr-only">{particlesLabel}</span>
                   </button>
                 </div>
+
               </div>
             </div>
           </div>

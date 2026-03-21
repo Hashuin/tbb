@@ -3,7 +3,97 @@
   margin: 0 auto;
   padding: 120px 24px 72px;
   position: relative;
+  isolation: isolate;
 }
+
+.page > :not(.ambient-particles) {
+  position: relative;
+  z-index: 1;
+}
+
+.ambient-particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.ambient-particle {
+  position: absolute;
+  left: var(--x);
+  bottom: -24px;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 999px;
+  opacity: 0;
+  background: radial-gradient(circle, rgba(192, 237, 255, 0.95), rgba(108, 175, 255, 0.16) 75%, transparent 85%);
+  filter: drop-shadow(0 0 9px rgba(118, 197, 255, 0.55));
+  animation: ambientRise var(--duration) linear infinite;
+}
+
+.ambient-particle--far {
+  opacity: 0;
+  filter: blur(0.7px) drop-shadow(0 0 6px rgba(118, 197, 255, 0.35));
+  animation-duration: calc(var(--duration) + 5s);
+}
+
+.ambient-flash {
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 999px;
+  opacity: 0;
+  background: radial-gradient(circle, rgba(219, 248, 255, 0.8), rgba(116, 196, 255, 0.18) 68%, transparent 82%);
+  filter: blur(0.5px) drop-shadow(0 0 12px rgba(134, 210, 255, 0.5));
+  animation: ambientFlash var(--duration) linear infinite;
+}
+
+
+@keyframes ambientRise {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(0.65);
+  }
+  12% {
+    opacity: 0.85;
+  }
+  88% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--drift), -108vh, 0) scale(1);
+  }
+}
+
+@keyframes ambientFlash {
+  0%,
+  78%,
+  100% {
+    opacity: 0;
+    transform: scale(0.55);
+  }
+  80% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  81% {
+    opacity: 0.06;
+    transform: scale(0.82);
+  }
+  82% {
+    opacity: 0.35;
+    transform: scale(1.08);
+  }
+  83% {
+    opacity: 0;
+    transform: scale(0.72);
+  }
+}
+
 
 .navbar {
   position: sticky;
@@ -275,7 +365,7 @@
 }
 
 .lang-toggle,
-.theme-toggle {
+.fx-toggle {
   background: rgba(12, 17, 23, 0.6);
   border-radius: 999px;
   padding: 2px;
@@ -286,7 +376,7 @@
 }
 
 .lang-toggle button,
-.theme-toggle button {
+.fx-toggle button {
   border: none;
   width: 28px;
   height: 28px;
@@ -303,15 +393,23 @@
 }
 
 .lang-toggle button:hover,
-.theme-toggle button:hover {
+.fx-toggle button:hover {
   transform: translateY(-1px);
   background: rgba(255, 255, 255, 0.06);
 }
 
 .lang-toggle button.active,
-.theme-toggle button.active {
+.fx-toggle button.active {
   background: rgba(178, 138, 79, 0.25);
   color: var(--accent-strong);
+}
+
+.fx-toggle button {
+  width: auto;
+  min-width: 34px;
+  padding: 0 10px;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
 }
 
 .hero-content {
@@ -1894,6 +1992,16 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .ambient-particle {
+    animation: none;
+    opacity: 0;
+  }
+
+  .ambient-flash {
+    animation: none;
+    opacity: 0;
+  }
+
   .route-view,
   .reveal,
   .quick-card,

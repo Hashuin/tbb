@@ -1,7 +1,5 @@
 export type Language = 'es' | 'en'
 
-export type Theme = 'dark' | 'light'
-
 export type MultiidiomaTrad = {
   fr: string
   en: string
@@ -21,8 +19,6 @@ type AppContentSchema = {
   subtitle: string
   ctaPrimary: string
   ctaSecondary: string
-  themeToggle: string
-  themeOptions: { dark: string; light: string }
   nav: readonly { id: string; label: string }[]
   viewSubtitles: Record<string, string>
   transition: string
