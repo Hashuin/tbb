@@ -304,6 +304,22 @@ function App() {
   }, [location.pathname])
 
   useEffect(() => {
+    if (!navOpen) {
+      document.body.classList.remove('mobile-nav-open')
+      return
+    }
+
+    const previousOverflow = document.body.style.overflow
+    document.body.classList.add('mobile-nav-open')
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      document.body.classList.remove('mobile-nav-open')
+      document.body.style.overflow = previousOverflow
+    }
+  }, [navOpen])
+
+  useEffect(() => {
     if (location.pathname !== sectionRoutes.guias || !location.hash) return
 
     const id = location.hash.replace('#', '')
