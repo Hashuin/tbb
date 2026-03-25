@@ -1,4 +1,4 @@
-import { StrictMode, useCallback, useState } from 'react'
+import { StrictMode, useCallback, useEffect, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import './index.css'
@@ -16,13 +16,27 @@ function AppBootstrap() {
     setShowSplash(false)
   }, [])
 
+  useEffect(() => {
+    if (!showSplash) {
+      return
+    }
+
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      document.body.style.overflow = previousOverflow
+    }
+  }, [showSplash])
+
+  if (showSplash) {
+    return <CinematicSplash onComplete={handleSplashComplete} />
+  }
+
   return (
-    <>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-      {showSplash ? <CinematicSplash onComplete={handleSplashComplete} /> : null}
-    </>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   )
 }
 

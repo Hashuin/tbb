@@ -35,14 +35,17 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+  min-height: 100dvh;
   color: var(--ink);
   background: radial-gradient(circle at top, #1c2430, #0b0f14 50%, #080b0f 100%);
   transition: background 0.3s ease, color 0.3s ease;
+  overflow-x: clip;
 }
 
 [data-theme='light'] body {
@@ -60,6 +63,8 @@ p {
 
 #root {
   min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: clip;
 }
 
 button {
